@@ -1,0 +1,87 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Stay",
+        "title_short_nav": "Stay",
+        "title_long_prefix": "Sleep, eat, gather —",
+        "title_long": "{{your basecamp}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleStack",
+      "locales": {
+        "en": {
+          "category_all": "All",
+          "category_rooms": "Rooms",
+          "category_outdoors": "Outdoors",
+          "category_house": "House Features",
+          "category_rules": "House Rules"
+        }
+      },
+      "settings": {
+        "categorize_by": ["category_rooms", "category_outdoors", "category_house", "category_rules"],
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "categoryId": "category_outdoors",
+          "img": "images/villa_bagara/stay/stay_01_porch.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Big porch for sunsets, coffee, and long talks" } }
+        },
+        {
+          "id": 2,
+          "categoryId": "category_outdoors",
+          "img": "images/villa_bagara/stay/stay_03_dining-grill-area.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Grill zone + gathering area (party-ready)" } }
+        },
+        {
+          "id": 3,
+          "categoryId": "category_house",
+          "faIcon": "fa-solid fa-road",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#64748b", "fillLight": "" },
+          "locales": { "en": { "title": "Cobblestone driveway + easy parking" } }
+        },
+        {
+          "id": 4,
+          "categoryId": "category_rooms",
+          "img": "images/villa_bagara/stay/stay_04_bedroom-a.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Bedroom A (placeholder)" } }
+        },
+        {
+          "id": 5,
+          "categoryId": "category_rooms",
+          "img": "images/villa_bagara/stay/stay_05_bedroom-b.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Bedroom B (placeholder)" } }
+        },
+        {
+          "id": 6,
+          "categoryId": "category_rules",
+          "faIcon": "fa-solid fa-volume-low",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#0ea5e9", "fillLight": "" },
+          "locales": { "en": { "title": "Quiet hours (define later)" } }
+        },
+        {
+          "id": 7,
+          "categoryId": "category_rules",
+          "faIcon": "fa-solid fa-people-roof",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#22c55e", "fillLight": "" },
+          "locales": { "en": { "title": "Group & party rules (define later)" } }
+        }
+      ]
+    }
+  ]
+}

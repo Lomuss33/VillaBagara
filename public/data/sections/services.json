@@ -1,0 +1,89 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Services",
+        "title_short_nav": "Services",
+        "title_long_prefix": "Prepared ideas for",
+        "title_long": "{{zero-stress adventure}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleStack",
+      "locales": {
+        "en": {
+          "category_all": "All",
+          "category_food": "Food & Supplies",
+          "category_mobility": "Mobility & Rentals",
+          "category_routes": "Routes & Guidance",
+          "category_experience": "Experience"
+        }
+      },
+      "settings": {
+        "categorize_by": ["category_food", "category_mobility", "category_routes", "category_experience"],
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "categoryId": "category_food",
+          "img": "images/villa_bagara/services/services_01_supermarket-run.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Supermarket run (planned list + pickup)" } }
+        },
+        {
+          "id": 2,
+          "categoryId": "category_food",
+          "img": "images/villa_bagara/services/services_02_supermarket-delivery.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Supermarket delivery coordination" } }
+        },
+        {
+          "id": 3,
+          "categoryId": "category_food",
+          "img": "images/villa_bagara/services/services_05_fresh-food-garden.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Fresh food / garden basics (seasonal)" } }
+        },
+        {
+          "id": 4,
+          "categoryId": "category_mobility",
+          "img": "images/villa_bagara/services/services_03_ebike-rental.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "E‑bike rental (delivery + charging plan)" } }
+        },
+        {
+          "id": 5,
+          "categoryId": "category_mobility",
+          "img": "images/villa_bagara/services/services_04_dirtbike-rental.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Dirt bike rental (routes + rules)" } }
+        },
+        {
+          "id": 6,
+          "categoryId": "category_routes",
+          "img": "images/villa_bagara/services/services_06_planned-routes.png",
+          "faIcon": "",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
+          "locales": { "en": { "title": "Planned routes: hiking / e‑bike / viewpoints" } }
+        },
+        {
+          "id": 7,
+          "categoryId": "category_experience",
+          "faIcon": "fa-solid fa-fire",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#f97316", "fillLight": "" },
+          "locales": { "en": { "title": "Grill night setup (shopping list + timing)" } }
+        }
+      ]
+    }
+  ]
+}

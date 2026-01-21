@@ -2,402 +2,133 @@
   "title": {
     "locales": {
       "en": {
-        "title_short": "Hello!",
-        "title_short_nav": "Home",
-        "title_long_prefix": "Hello friend,",
-        "title_long": "Welcome to {{my corner}} of the internet!"
-      },
-      "de": {
-        "title_short": "Hallo!",
-        "title_short_nav": "Startseite",
-        "title_long_prefix": "Hallo Freund,",
-        "title_long": "Willkommen in {{meiner Ecke}} des Internets!"
-      },
-      "hr": {
-        "title_short": "Bok!",
-        "title_short_nav": "Početna",
-        "title_long_prefix": "Bok prijatelji,",
-        "title_long": "Dobrodošli u {{moj kutak}} interneta!"
-      },
-      "tr": {
-        "title_short": "Merhaba!",
-        "title_short_nav": "Anasayfa",
-        "title_long_prefix": "Merhaba arkadaşım,",
-        "title_long": "İnternetteki {{köşeme}} hoş geldin!"
+        "title_short": "Villa Bagara",
+        "title_short_nav": "Overview",
+        "title_long_prefix": "Welcome to",
+        "title_long": "{{Villa Bagara}}"
       }
     }
   },
   "articles": [
     {
       "id": 1,
-      "component": "ArticleInlineList",
-      "locales": {},
-      "settings": {
-        "order_items_by": "id",
-        "order_items_sort": "asc",
-        "display_as_list_if_width_is_lower_than": 380
-      },
-      "items": [
-        {
-          "id": 1,
-          "label": "contact@lovro-music.de",
-          "link": { "href": "mailto:contact@lovro-music.de", "tooltipString": "email_me" },
-          "faIcon": "fa-regular fa-envelope"
-        },        {
-          "id": 2,
-          "label": "+49 176 62236934",
-          "link": { "href": "", "tooltipString": "" },
-          "faIcon": "fa-regular fa-address-book"
-        },
-        {
-          "id": 3,
-          "label": "LinkedIn",
-          "link": { "href": "https://www.linkedin.com/in/lovro-musi%C4%87/", "tooltipString": "open_website" },
-          "faIcon": "fa-brands fa-linkedin"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "component": "ArticleText",
+      "component": "ArticleThread",
       "locales": {
-        "en": {
-          "title": "{{A little bit}} about me..."
-        },
-        "de": {
-          "title": "{{Ein bisschen}} über mich..."
-        },
-        "hr": {
-          "title": "{{Malo}} o meni..."
-        },
-        "tr": {
-          "title": "{{Biraz}} hakkında..."
-        }
+        "en": { "title": "The {{Feeling}}" }
       },
       "settings": {
-        "order_items_by": "id",
-        "order_items_sort": "asc"
+        "max_rows_collapse_threshold": 3,
+        "order_items_by": "date",
+        "order_items_sort": "desc"
       },
       "items": [
         {
           "id": 1,
-          "img": "/images/contant/engineer.svg",
-          "faIcon": "",
-          "faIconColors": { "bg": "", "fill": "", "fillLight": "" },
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [
+              { "href": "#book", "tooltipString": "book_now", "faIcon": "fa-solid fa-calendar-check" }
+            ],
+            "screenshots": ["images/villa_bagara/hero/hero_01_front-porch.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
           "locales": {
             "en": {
-              "text": "{{Lovro Musić :}} Hi, I'm an aspiring hardware engineer in the beautiful Rhein-Main area. Growing up in a small village in the Bosnian mountains as a Croatian kid, I came to this land of possibilities in my early teens. I was fascinated by the advanced and diverse German engineering culture, something I had only dreamed of on TV. I started an apprenticeship with a Swiss enterprise as an Elektroniker für Automatisierungstechnik, which opened a Pandora's box and shaped me into the motivated and versatile tool I am today."
-            },
-            "de": {
-              "text": "{{Lovro Musić :}} Hallo, ich bin ein angehender Signal-Ingenieur in der schönen Rhein-Main-Region. Als kroatisches Kind, das in einem kleinen Dorf in den bosnischen Bergen aufwuchs, kam ich in meiner frühen Jugend in dieses Land der Möglichkeiten. Ich war fasziniert von der fortschrittlichen und vielfältigen deutschen Ingenieurkultur, von der ich nur im Fernsehen geträumt hatte. Ich begann eine Ausbildung bei einem Schweizer Unternehmen als Elektroniker für Automatisierungstechnik, die mir eine Pandora-Box öffnete und mich zu dem motivierten und vielseitigen Werkzeug machte, das ich heute bin."
-            },
-            "hr": {
-              "text": "{{Lovro Musić :}} Bok, ja sam budući inženjer singnalizacije u prelijepoj regiji Rhein-Main. Odrastajući u malom selu u bosanskim planinama kao hrvatski dječak, došao sam u ovu zemlju mogućnosti u svojim ranim tinejdžerskim godinama. Bio sam fasciniran naprednom i raznolikom njemačkom inženjerskom kulturom, o kojoj sam samo sanjao na televiziji. Počeo sam karijeru sa švicarskom firmom kao Elektroničar za automatizaciju, što mi je otvorilo Pandorinu kutiju i oblikovalo me u motivirani i raznovrstan alat kakav sam danas."
-            },
-            "tr": {
-              "text": "{{Lovro Musić :}} Merhaba, ben güzel Rhein-Main bölgesinde bir hırslı donanım mühendisiyim. Bosna dağlarında küçük bir köyde Hırvat çocuğu olarak büyüyerek, ergenliğimin başında bu fırsatlar diyarına geldim. Gelişmiş ve çeşitli Alman mühendislik kültürü beni çok etkiledi; bunu yalnızca televizyonda hayal etmiştim. İleri otomasyon teknolojinleri üzerine uzmanlaşmak için bir İsviçre şirketinde staj yapmaya başladım; bu deneyim beni bugünkü motivasyonu yüksek ve çok yönlü bir alet haline getirdi."
+              "title": "Isolation meets connection to earth",
+              "province": "Gornji Brisnik",
+              "country": "Tomislavgrad (BIH)",
+              "institution": "Villa Bagara",
+              "text": "A rustic adventure villa above the village: wide space front & back, oldtimer feeling, stone-hut history nearby, and mountains right behind the garden."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [{ "href": "#services", "tooltipString": "see_services", "faIcon": "fa-solid fa-concierge-bell" }],
+            "screenshots": ["images/villa_bagara/hero/hero_03_back-garden-view.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Built for groups — up to 30 for parties",
+              "province": "Edge of an old stone village",
+              "country": "Herzegovina mountains",
+              "institution": "Villa Bagara",
+              "text": "From a rich-family retreat to a bachelor party basecamp: space, grill, routes, rentals, and help with logistics."
             }
           }
         }
       ]
     },
     {
-      "id": 4,
-      "component": "ArticleInfoList",
-      "settings": {
-        "order_items_by": "id",
-        "order_items_sort": "asc"
-      },
+      "id": 2,
+      "component": "ArticleStack",
       "locales": {
-        "en": { "title": "Technical skills:" },
-        "de": { "title": "Technische Fähigkeiten:" },
-        "hr": { "title": "Tehničke vještine:" },
-        "tr": { "title": "Teknik beceriler:" }
-      },
-      "items": [
-        {
-          "id": 1,
-          "faIcon": "fa-solid fa-laptop-code",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Programming", "text": "C, C++, Python, Java, HTML, TypeScript... able to learn new languages and tools quickly." },
-            "de": { "title": "Programmierung", "text": "C, C++, Python, Java, HTML, TypeScript... lerne neue Sprachen und Werkzeuge sehr schnell." },
-            "hr": { "title": "Programiranje", "text": "C, C++, Python, Java, HTML, TypeScript... vrlo brzo učim nove jezike i alate." },
-            "tr": { "title": "Programlama", "text": "C, C++, Python, Java, HTML, TypeScript... yeni dilleri ve araçları hızlıca öğrenebilirim." }
-          }
-        },
-        {
-          "id": 2,
-          "faIcon": "fa-solid fa-microchip",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "PLC programming & industrial automation", "text": "Experience with Siemens TIA Portal (S7) and practice with Yokogawa, Allen-Bradley, and Schneider PLC systems." },
-            "de": { "title": "SPS-Programmierung & Automatisierungstechnik", "text": "Erfahrung mit Siemens TIA Portal (S7) sowie Praxis mit Yokogawa-, Allen-Bradley- und Schneider-SPS-Systemen." },
-            "hr": { "title": "PLC programiranje i industrijska automatizacija", "text": "Iskustvo s Siemens TIA Portalom (S7) te praksa s Yokogawa, Allen-Bradley i Schneider PLC sustavima." },
-            "tr": { "title": "PLC programlama ve endüstriyel otomasyon", "text": "Siemens TIA Portal (S7) deneyimi ve Yokogawa, Allen-Bradley ve Schneider PLC sistemleriyle pratik." }
-          }
-        },
-        {
-          "id": 3,
-          "faIcon": "fa-solid fa-bolt",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Electrical installation & maintenance", "text": "Hands-on experience with industrial and residential electrical systems, including installation, troubleshooting, and safety." },
-            "de": { "title": "Elektroinstallation & Wartung", "text": "Praktische Erfahrung mit industriellen und privaten Elektroanlagen, inklusive Installation, Fehlersuche und Sicherheit." },
-            "hr": { "title": "Elektroinstalacije i održavanje", "text": "Praktično iskustvo s industrijskim i kućnim električnim instalacijama, uključujući montažu, dijagnostiku i sigurnost." },
-            "tr": { "title": "Elektrik tesisatı ve bakım", "text": "Endüstriyel ve ev tipi elektrik sistemlerinde kurulum, arıza giderme ve güvenlik konularında pratik deneyim." }
-          }
-        },
-        {
-          "id": 4,
-          "faIcon": "fa-solid fa-network-wired",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "IT & networking (Level 2)", "text": "Skills in network configuration, troubleshooting, hardware/software setup, and user support." },
-            "de": { "title": "IT & Netzwerke (Level 2)", "text": "Fähigkeiten in Netzwerkkonfiguration, Fehlersuche, Hardware/Software-Einrichtung und Benutzersupport." },
-            "hr": { "title": "IT i mreže (razina 2)", "text": "Vještine u konfiguraciji mreža, rješavanju problema, postavljanju hardvera/softvera i korisničkoj podršci." },
-            "tr": { "title": "BT ve ağlar (Seviye 2)", "text": "Ağ yapılandırma, sorun giderme, donanım/yazılım kurulumu ve kullanıcı desteği becerileri." }
-          }
-        },
-        {
-          "id": 5,
-          "faIcon": "fa-solid fa-brain",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Machine learning & deep learning", "text": "Understanding of core ML/DL concepts, model training workflows, and practical use of modern frameworks." },
-            "de": { "title": "Machine Learning & Deep Learning", "text": "Verständnis zentraler ML/DL-Konzepte, Trainings-Workflows und praktischer Einsatz moderner Frameworks." },
-            "hr": { "title": "Strojno učenje i duboko učenje", "text": "Razumijevanje osnovnih ML/DL koncepata, procesa treniranja modela i praktične primjene modernih okvira." },
-            "tr": { "title": "Makine öğrenimi ve derin öğrenme", "text": "Temel ML/DL kavramlarına, model eğitimi süreçlerine ve modern çerçevelerin pratik kullanımına hakimiyet." }
-          }
-        },
-        {
-          "id": 6,
-          "faIcon": "fa-solid fa-flask",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Science background", "text": "Deep understanding of chemistry, physics, and biology with a focus on real-world applications." },
-            "de": { "title": "Wissenschaftlicher Hintergrund", "text": "Tiefes Verständnis von Chemie, Physik und Biologie mit Schwerpunkt auf praktischen Anwendungen." },
-            "hr": { "title": "Znanstvena podloga", "text": "Duboko razumijevanje kemije, fizike i biologije s naglaskom na stvarne primjene." },
-            "tr": { "title": "Bilimsel altyapı", "text": "Kimya, fizik ve biyoloji alanlarında derin anlayış ve gerçek hayat uygulamalarına odak." }
-          }
-        },
-        {
-          "id": 7,
-          "faIcon": "fa-brands fa-microsoft",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Data analysis & Microsoft tools", "text": "Advanced Excel (formulas, PivotTables, Power Query), Power BI (DAX, dashboards), and strong proficiency with Word, PowerPoint, Teams, and SharePoint." },
-            "de": { "title": "Datenanalyse & Microsoft‑Werkzeuge", "text": "Fortgeschritten in Excel (Formeln, PivotTables, Power Query), Power BI (DAX, Dashboards) sowie sicher in Word, PowerPoint, Teams und SharePoint." },
-            "hr": { "title": "Analiza podataka i Microsoft alati", "text": "Napredno poznavanje Excela (formule, pivot tablice, Power Query), Power BI‑ja (DAX, nadzorne ploče) te snažno poznavanje Worda, PowerPointa, Teamsa i SharePointa." },
-            "tr": { "title": "Veri analizi ve Microsoft araçları", "text": "İleri seviye Excel (formüller, PivotTable, Power Query), Power BI (DAX, panolar) ve Word, PowerPoint, Teams, SharePoint’te güçlü yetkinlik." }
-          }
+        "en": {
+          "category_all": "All",
+          "category_facts": "Quick Facts",
+          "category_distances": "Distances",
+          "category_highlights": "Highlights"
         }
-      ]
-    },
-    {
-      "id": 5,
-      "component": "ArticleInfoList",
+      },
       "settings": {
+        "categorize_by": ["category_facts", "category_distances", "category_highlights"],
         "order_items_by": "id",
         "order_items_sort": "asc"
-      },
-      "locales": {
-        "en": { "title": "Soft skills:" },
-        "de": { "title": "Soziale Kompetenzen:" },
-        "hr": { "title": "Meke vještine:" },
-        "tr": { "title": "Sosyal beceriler:" }
       },
       "items": [
         {
           "id": 1,
-          "faIcon": "fa-solid fa-comments",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Communication & social skills", "text": "Strong interpersonal skills and clear communication with both technical and non-technical people." },
-            "de": { "title": "Kommunikation & soziale Fähigkeiten", "text": "Ausgeprägte zwischenmenschliche Fähigkeiten und klare Kommunikation mit technischen und nicht-technischen Personen." },
-            "hr": { "title": "Komunikacija i društvene vještine", "text": "Snažne međuljudske vještine i jasna komunikacija s tehničkim i netehničkim osobama." },
-            "tr": { "title": "İletişim ve sosyal beceriler", "text": "Güçlü kişilerarası beceriler ve teknik/teknik olmayan kişilerle açık iletişim." }
-          }
+          "categoryId": "category_facts",
+          "faIcon": "fa-solid fa-bed",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#22c55e", "fillLight": "" },
+          "locales": { "en": { "title": "5 beds (group-friendly setup)" } }
         },
         {
           "id": 2,
+          "categoryId": "category_facts",
           "faIcon": "fa-solid fa-people-group",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Teamwork & collaboration", "text": "Comfortable working in diverse teams and contributing actively to shared goals." },
-            "de": { "title": "Teamarbeit & Zusammenarbeit", "text": "Arbeitet gerne in vielfältigen Teams und trägt aktiv zu gemeinsamen Zielen bei." },
-            "hr": { "title": "Timski rad i suradnja", "text": "Ugodno mi je raditi u raznolikim timovima i aktivno doprinositi zajedničkim ciljevima." },
-            "tr": { "title": "Takım çalışması ve işbirliği", "text": "Farklı ekiplerle çalışmayı seviyorum ve ortak hedeflere aktif olarak katkı sağlıyorum." }
-          }
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#0ea5e9", "fillLight": "" },
+          "locales": { "en": { "title": "Up to 30 people for parties" } }
         },
         {
           "id": 3,
-          "faIcon": "fa-solid fa-chalkboard-user",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Teaching & knowledge sharing", "text": "Able to explain complex topics simply and support others in learning." },
-            "de": { "title": "Lehren & Wissensweitergabe", "text": "Kann komplexe Themen einfach erklären und andere beim Lernen unterstützen." },
-            "hr": { "title": "Podučavanje i dijeljenje znanja", "text": "Mogu jednostavno objasniti složene teme i pomoći drugima u učenju." },
-            "tr": { "title": "Öğretme ve bilgi paylaşımı", "text": "Karmaşık konuları basitçe açıklayabiliyor ve başkalarının öğrenmesine destek olabiliyorum." }
-          }
+          "categoryId": "category_highlights",
+          "faIcon": "fa-solid fa-fire",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#f97316", "fillLight": "" },
+          "locales": { "en": { "title": "Grill nights + big porch energy" } }
         },
         {
           "id": 4,
-          "faIcon": "fa-solid fa-magnifying-glass",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Problem solving & analytical thinking", "text": "Systematic approach to diagnosing issues, finding root causes, and implementing practical solutions." },
-            "de": { "title": "Problemlösung & analytisches Denken", "text": "Systematischer Ansatz zur Fehlersuche, Ursachenanalyse und Umsetzung praktischer Lösungen." },
-            "hr": { "title": "Rješavanje problema i analitičko razmišljanje", "text": "Sustavan pristup dijagnostici problema, pronalaženju uzroka i primjeni praktičnih rješenja." },
-            "tr": { "title": "Problem çözme ve analitik düşünme", "text": "Sorunları teşhis etme, kök neden bulma ve pratik çözümler uygulamada sistematik yaklaşım." }
-          }
+          "categoryId": "category_highlights",
+          "faIcon": "fa-solid fa-tree",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#16a34a", "fillLight": "" },
+          "locales": { "en": { "title": "Grass, fruit trees, trimmed trees around the house" } }
         },
         {
           "id": 5,
-          "faIcon": "fa-solid fa-arrows-rotate",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Adaptability & fast learning", "text": "Able to quickly pick up new tools, technologies, and processes in changing environments." },
-            "de": { "title": "Anpassungsfähigkeit & schnelles Lernen", "text": "Kann neue Werkzeuge, Technologien und Prozesse in wechselnden Umgebungen schnell erlernen." },
-            "hr": { "title": "Prilagodljivost i brzo učenje", "text": "Brzo usvajam nove alate, tehnologije i procese u promjenjivim okruženjima." },
-            "tr": { "title": "Uyum sağlama ve hızlı öğrenme", "text": "Değişen ortamlarda yeni araçları, teknolojileri ve süreçleri hızla öğrenebilirim." }
-          }
+          "categoryId": "category_distances",
+          "faIcon": "fa-solid fa-mountain",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#64748b", "fillLight": "" },
+          "locales": { "en": { "title": "Hikes: mountains reachable in ~30 min" } }
         },
         {
           "id": 6,
-          "faIcon": "fa-solid fa-pen",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Writing & documentation", "text": "Academic and professional writing; clear technical documentation, reports, and presentations; familiar with academic conventions and versioned documents." },
-            "de": { "title": "Schreiben & Dokumentation", "text": "Akademisches und berufliches Schreiben; klare technische Dokumentation, Berichte und Präsentationen; vertraut mit akademischen Standards und versionierten Dokumenten." },
-            "hr": { "title": "Pisanje i dokumentacija", "text": "Akademsko i profesionalno pisanje; jasna tehnička dokumentacija, izvještaji i prezentacije; upoznat s akademskim standardima i verzioniranim dokumentima." },
-            "tr": { "title": "Yazım ve dokümantasyon", "text": "Akademik ve profesyonel yazım; net teknik dokümantasyon, rapor ve sunumlar; akademik normlara ve sürümlü belgelere aşina." }
-          }
+          "categoryId": "category_distances",
+          "faIcon": "fa-solid fa-umbrella-beach",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#38bdf8", "fillLight": "" },
+          "locales": { "en": { "title": "Beach: ~1 hour drive" } }
         },
         {
           "id": 7,
-          "faIcon": "fa-solid fa-globe",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Intercultural communication & languages", "text": "Comfortable working across cultures; international study and volunteering experience; languages: Croatian (native), English (advanced), German (upper‑intermediate), basic Macedonian and Turkish." },
-            "de": { "title": "Interkulturelle Kommunikation & Sprachen", "text": "Sicher im interkulturellen Umfeld; internationale Studien‑ und Ehrenamtserfahrung; Sprachen: Kroatisch (Muttersprache), Englisch (fortgeschritten), Deutsch (obere Mittelstufe), Grundkenntnisse in Mazedonisch und Türkisch." },
-            "hr": { "title": "Međukulturalna komunikacija i jezici", "text": "Ugodan rad u različitim kulturama; međunarodno iskustvo studiranja i volontiranja; jezici: hrvatski (izvorni), engleski (napredno), njemački (viša srednja razina), osnovno makedonski i turski." },
-            "tr": { "title": "Kültürler arası iletişim ve diller", "text": "Farklı kültürlerle çalışmada rahatim; uluslararası öğrenim ve gönüllülük deneyimi; diller: Hırvatça (anadil), İngilizce (ileri), Almanca (üst‑orta), temel Makedonca ve Türkçe." }
-          }
-        },
-        {
-          "id": 8,
-          "faIcon": "fa-regular fa-face-smile",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Positive attitude & calm presence", "text": "Consistently calm, respectful, and solution‑oriented; positive team presence, even under pressure." },
-            "de": { "title": "Positive Haltung & ruhige Ausstrahlung", "text": "Durchgehend ruhig, respektvoll und lösungsorientiert; positive Teampräsenz, auch unter Druck." },
-            "hr": { "title": "Pozitivan stav i smirena prisutnost", "text": "Dosljedno miran, pun poštovanja i usmjeren na rješenja; pozitivan utjecaj u timu, čak i pod pritiskom." },
-            "tr": { "title": "Pozitif tutum ve sakin duruş", "text": "Sürekli sakin, saygılı ve çözüm odaklı; baskı altında bile takıma olumlu etki." }
-          }
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "component": "ArticleInfoList",
-      "settings": {
-        "order_items_by": "id",
-        "order_items_sort": "asc"
-      },
-      "locales": {
-        "en": { "title": "Additional skills:" },
-        "de": { "title": "Zusätzliche Fähigkeiten:" },
-        "hr": { "title": "Dodatne vještine:" },
-        "tr": { "title": "Ek beceriler:" }
-      },
-      "items": [
-        {
-          "id": 1,
-          "faIcon": "fa-solid fa-car",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Driving license (B, 7 years)", "text": "Category B driving license with 7 years of experience and readiness for regular business travel." },
-            "de": { "title": "Führerschein (Klasse B, 7 Jahre)", "text": "Führerschein der Klasse B mit 7 Jahren Fahrpraxis und Bereitschaft für regelmäßige Dienstreisen." },
-            "hr": { "title": "Vozačka dozvola (B, 7 godina)", "text": "Vozačka dozvola B kategorije sa 7 godina iskustva i spremnošću za poslovna putovanja." },
-            "tr": { "title": "Sürücü belgesi (B, 7 yıl)", "text": "7 yıllık deneyime sahip B sınıfı sürücü belgesi ve düzenli iş seyahatlerine hazır." }
-          }
-        },
-        {
-          "id": 2,
-          "faIcon": "fa-solid fa-helmet-safety",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Safety & responsibility mindset", "text": "Used to working safely in electrical and industrial environments with strong sense of responsibility." },
-            "de": { "title": "Sicherheits- & Verantwortungsbewusstsein", "text": "Gewohnt sicher in Elektro- und Industrieumgebungen zu arbeiten, mit hohem Verantwortungsgefühl." },
-            "hr": { "title": "Sigurnost i odgovornost", "text": "Naviknut raditi sigurno u elektro i industrijskim okruženjima, s jakim osjećajem odgovornosti." },
-            "tr": { "title": "Güvenlik ve sorumluluk bilinci", "text": "Elektrik ve endüstriyel ortamlarda güvenli çalışmaya ve yüksek sorumluluk bilincine alışkın." }
-          }
-        },
-        {
-          "id": 3,
-          "faIcon": "fa-solid fa-circle-check",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "", "fillLight": "" },
-          "label": null,
-          "link": { "href": null, "tooltipString": null },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": { "title": "Work ethic & reliability", "text": "Motivated, dependable, and committed to delivering high-quality work." },
-            "de": { "title": "Arbeitsmoral & Zuverlässigkeit", "text": "Motiviert, zuverlässig und engagiert, qualitativ hochwertige Arbeit zu liefern." },
-            "hr": { "title": "Radna etika i pouzdanost", "text": "Motiviran, pouzdan i posvećen isporuci kvalitetnog rada." },
-            "tr": { "title": "Çalışma disiplini ve güvenilirlik", "text": "Motivasyonu yüksek, güvenilir ve kaliteli iş çıkarmaya odaklı." }
-          }
+          "categoryId": "category_distances",
+          "faIcon": "fa-solid fa-city",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#a855f7", "fillLight": "" },
+          "locales": { "en": { "title": "3 big cities: within ~2 hours" } }
         }
       ]
     }

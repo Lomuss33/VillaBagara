@@ -1,0 +1,64 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Explore",
+        "title_short_nav": "Explore",
+        "title_long_prefix": "Routes, views, and",
+        "title_long": "{{wild places}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleThread",
+      "locales": { "en": { "title": "Adventure Radius" } },
+      "settings": {
+        "max_rows_collapse_threshold": 4,
+        "order_items_by": "date",
+        "order_items_sort": "desc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/explore/explore_02_viewpoint-30min-hike.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "30‑minute hikes (from the villa vibe)",
+              "province": "Herzegovina mountains",
+              "country": "Tomislavgrad region",
+              "institution": "Trail starter pack",
+              "text": "Short routes to viewpoints and rocky bush landscapes — perfect for sunrise or pre‑grill walks."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/explore/explore_04_beach-daytrip.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Beach day (≈ 1 hour)",
+              "province": "Day trip",
+              "country": "Adriatic direction",
+              "institution": "Escape hatch",
+              "text": "Go from mountain air to sea salt in one ride. Best for reset days."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

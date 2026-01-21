@@ -1,0 +1,64 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Story",
+        "title_short_nav": "Story",
+        "title_long_prefix": "A villa with",
+        "title_long": "{{roots}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleThread",
+      "locales": { "en": { "title": "Timeline" } },
+      "settings": {
+        "max_rows_collapse_threshold": 4,
+        "order_items_by": "date",
+        "order_items_sort": "desc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "date": { "year": 1800, "month": 1 },
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/story/story_01_stone-huts-18th-century.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "18th‑century stone huts — the original village edge",
+              "province": "Gornji Brisnik",
+              "country": "Tomislavgrad (BIH)",
+              "institution": "Village context",
+              "text": "An overgrown stone-hut village history surrounds the villa area — the feeling of time, stone, wind, and silence."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/story/story_02_old-village-edge.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Villa Bagara today",
+              "province": "15 min uphill above the newer village",
+              "country": "Herzegovina mountains",
+              "institution": "Villa Bagara",
+              "text": "A basecamp for isolation + adventure: cobblestone driveway, porch life, big gardens, and routes in every direction."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

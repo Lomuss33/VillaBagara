@@ -1,0 +1,64 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Gallery",
+        "title_short_nav": "Gallery",
+        "title_long_prefix": "Look through the",
+        "title_long": "{{villa moments}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleThread",
+      "locales": { "en": { "title": "Albums" } },
+      "settings": {
+        "max_rows_collapse_threshold": 6,
+        "order_items_by": "date",
+        "order_items_sort": "desc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/gallery/album_01_villa-exterior.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Exterior & Arrival",
+              "province": "Villa Bagara",
+              "country": "Gornji Brisnik",
+              "institution": "Album",
+              "text": "Porch, cobblestone driveway, roofline, and the first breath of mountain air."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "date": { "year": 2026, "month": 1 },
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/gallery/album_02_villa-interior.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Interior & Oldtimer Feeling",
+              "province": "Villa Bagara",
+              "country": "Tomislavgrad",
+              "institution": "Album",
+              "text": "Warm rooms, space to gather, and details that feel like home."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

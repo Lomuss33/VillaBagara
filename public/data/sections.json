@@ -1,52 +1,11 @@
 {
   "sections": [
-        {
-        "id": "about",
-        "categoryId": "home",
-        "jsonPath": "/data/sections/home.json",
-        "faIcon": "fa-solid fa-address-card"
-        },
-        {
-        "id": "experience",
-        "categoryId": "history",
-        "jsonPath": "/data/sections/experience.json",
-        "faIcon": "fa-solid fa-tools"
-        },
-        {
-        "id": "education",
-        "categoryId": "history",
-        "jsonPath": "/data/sections/education.json",
-        "faIcon": "fa-solid fa-pen-to-square"
-        },
-        {
-        "id": "my-hardware",
-        "categoryId": "hobbys",
-        "jsonPath": "/data/sections/my-hardware.json",
-        "faIcon": "fa-solid fa-screwdriver-wrench"
-        },
-        {
-        "id": "my-software",
-        "categoryId": "hobbys",
-        "jsonPath": "/data/sections/my-software.json",
-        "faIcon": "fa-solid fa-code"
-        },
-        {
-          "id": "my-writings",
-          "categoryId": "hobbys",
-          "jsonPath": "/data/sections/my-writings.json",
-          "faIcon": "fa-solid fa-pen-nib"
-        },
-                {
-        "id": "my-art",
-        "categoryId": "hobbys",
-        "jsonPath": "/data/sections/my-art.json",
-        "faIcon": "fa-solid fa-palette"
-        },
-        {
-        "id": "contact",
-        "categoryId": "contact",
-        "jsonPath": "/data/sections/contact.json",
-        "faIcon": "fa-solid fa-paper-plane"
-        }
-    ]
+    { "id": "home", "categoryId": "home", "jsonPath": "/data/sections/home.json", "faIcon": "fa-solid fa-house" },
+    { "id": "story", "categoryId": "story", "jsonPath": "/data/sections/story.json", "faIcon": "fa-solid fa-landmark" },
+    { "id": "stay", "categoryId": "stay", "jsonPath": "/data/sections/stay.json", "faIcon": "fa-solid fa-bed" },
+    { "id": "explore", "categoryId": "explore", "jsonPath": "/data/sections/explore.json", "faIcon": "fa-solid fa-mountain-sun" },
+    { "id": "services", "categoryId": "services", "jsonPath": "/data/sections/services.json", "faIcon": "fa-solid fa-concierge-bell" },
+    { "id": "gallery", "categoryId": "gallery", "jsonPath": "/data/sections/gallery.json", "faIcon": "fa-solid fa-images" },
+    { "id": "book", "categoryId": "book", "jsonPath": "/data/sections/book.json", "faIcon": "fa-solid fa-calendar-check" }
+  ]
 }

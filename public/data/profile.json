@@ -1,62 +1,62 @@
 {
-    "name": "Lovro Musić",
-    "profilePictureUrl": "images/contant/profil2.jpg",
-    "resumePdfUrl": "",
-    "statusCircleVisible": true,
-    "statusCircleVariant": "available",
-    "statusCircleHoverMessage": "status_message_available_for_freelance",
-    "locales": {
-        "en": {
-            "localized_name": "Lovro Musić",
-            "localized_name_stylized": "<strong>Lovro {{Musić}}</strong>",
-            "status_message_available_for_freelance": "Available for hire!",
-            "roles": [
-                "Network Security Engineer",
-                "Embedded Systems Engineer",
-                "ERP Data Engineer",
-                "Industrial Automation Engineer"
-            ],
-            "name_pronunciation_ipa": "",
-            "name_pronunciation_audio_url": ""
-        },
-        "de": {
-            "localized_name": "Lovro Musić",
-            "localized_name_stylized": "<strong>Lovro {{Musić}}</strong>",
-            "status_message_available_for_freelance": "Verfügbar zur Anstellung!",
-            "roles": [
-                "Netzwerksicherheitsingenieur",
-                "Embedded Systems Ingenieur",
-                "ERP-Dateningenieur",
-                "Industrielle Automatisierungsingenieur"
-            ],
-            "name_pronunciation_ipa": "",
-            "name_pronunciation_audio_url": ""
-        },
-        "hr": {
-            "localized_name": "Lovro Musić",
-            "localized_name_stylized": "<strong>Lovro {{Musić}}</strong>",
-            "status_message_available_for_freelance": "Dostupan za angažman!",
-            "roles": [
-                "Inženjer za sigurnost mreže",
-                "Inženjer za ugrađene sustave",
-                "Inženjer ERP podataka",
-                "Inženjer za industrijsku automatizaciju"
-            ],
-            "name_pronunciation_ipa": "",
-            "name_pronunciation_audio_url": ""
-        },
-        "tr": {
-            "localized_name": "Lovro Musić",
-            "localized_name_stylized": "<strong>Lovro {{Musić}}</strong>",
-            "status_message_available_for_freelance": "İş için uygun!",
-            "roles": [
-                "Ağ Güvenliği Mühendisi",
-                "Gömülü Sistemler Mühendisi",
-                "ERP Veri Mühendisi",
-                "Endüstriyel Otomasyon Mühendisi"
-            ],
-            "name_pronunciation_ipa": "",
-            "name_pronunciation_audio_url": ""
-        }
+  "name": "Villa Bagara",
+  "profilePictureUrl": "images/villa_bagara/hero/hero_01_front-porch.png",
+  "resumePdfUrl": "",
+  "statusCircleVisible": true,
+  "statusCircleVariant": "available",
+  "statusCircleHoverMessage": "status_message_available_for_booking",
+  "locales": {
+    "en": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Available for booking!",
+      "roles": [
+        "Rustic Adventure Villa",
+        "Group Getaway & Party Base (up to 30)",
+        "Mountain Basecamp (Tomislavgrad)",
+        "Services: Routes • Rentals • Supplies"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    },
+    "de": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Jetzt buchbar!",
+      "roles": [
+        "Rustikale Abenteuer‑Villa",
+        "Gruppenurlaub & Party‑Base (bis 30)",
+        "Berg‑Basecamp (Tomislavgrad)",
+        "Services: Routen • Verleih • Versorgung"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    },
+    "hr": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Dostupno za rezervaciju!",
+      "roles": [
+        "Rustikalna avanturistička vila",
+        "Odmor za grupe & party baza (do 30)",
+        "Planinski basecamp (Tomislavgrad)",
+        "Usluge: rute • najam • opskrba"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    },
+    "tr": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Rezervasyona uygun!",
+      "roles": [
+        "Rustik macera villası",
+        "Grup tatili ve parti üssü (30’a kadar)",
+        "Dağ basecamp’i (Tomislavgrad)",
+        "Hizmetler: rotalar • kiralama • tedarik"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
     }
+  }
 }

@@ -1,0 +1,74 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Book",
+        "title_short_nav": "Book",
+        "title_long_prefix": "Let’s plan your",
+        "title_long": "{{stay}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleStack",
+      "locales": {
+        "en": {
+          "category_all": "All",
+          "category_contact": "Contact",
+          "category_how": "How it works"
+        }
+      },
+      "settings": {
+        "categorize_by": ["category_contact", "category_how"],
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "categoryId": "category_contact",
+          "faIcon": "fa-brands fa-whatsapp",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#25D366", "fillLight": "" },
+          "locales": { "en": { "title": "WhatsApp booking (fastest)" } }
+        },
+        {
+          "id": 2,
+          "categoryId": "category_contact",
+          "faIcon": "fa-solid fa-envelope",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#0ea5e9", "fillLight": "" },
+          "locales": { "en": { "title": "Email booking (details & offers)" } }
+        },
+        {
+          "id": 3,
+          "categoryId": "category_contact",
+          "faIcon": "fa-solid fa-pen-to-square",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#a855f7", "fillLight": "" },
+          "locales": { "en": { "title": "Website form (structured request)" } }
+        },
+        {
+          "id": 4,
+          "categoryId": "category_how",
+          "faIcon": "fa-solid fa-list-check",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#22c55e", "fillLight": "" },
+          "locales": { "en": { "title": "1) Send dates + group size + needs" } }
+        },
+        {
+          "id": 5,
+          "categoryId": "category_how",
+          "faIcon": "fa-solid fa-route",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#f59e0b", "fillLight": "" },
+          "locales": { "en": { "title": "2) Pick packages (e‑bike / supplies / routes)" } }
+        },
+        {
+          "id": 6,
+          "categoryId": "category_how",
+          "faIcon": "fa-solid fa-key",
+          "faIconColors": { "bg": "", "bgLight": "", "fill": "#64748b", "fillLight": "" },
+          "locales": { "en": { "title": "3) Confirm & get check‑in instructions" } }
+        }
+      ]
+    }
+  ]
+}
