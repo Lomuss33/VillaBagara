@@ -2,7 +2,7 @@
   "title": {
     "locales": {
       "en": {
-        "title_short": "Villa Bagara",
+        "title_short": "🐣🐣🐣🐣🐣🐣🐣",
         "title_short_nav": "Overview",
         "title_long_prefix": "Welcome to",
         "title_long": "{{Villa Bagara}}"
@@ -10,8 +10,32 @@
     }
   },
   "articles": [
+        {
+        "id": 1,
+        "component": "ArticleText",
+        "locales": {
+            "en": {"title": ""}
+        },
+        "settings": {
+            "order_items_by": "id",
+            "order_items_sort": "asc"
+        },
+        "items": [
+            {
+                "id": 1,
+                "animation": "hero-animation",
+                "faIcon": "",
+                "faIconColors": {"bg": "", "fill": "", "fillLight": ""},
+                "locales": {
+                    "en": {
+                        "text": "Midena se nalazi između Buškog jezera na zapadu i Duvanjskog polja na sjeveroistoku. Najbliži susjedi Midene su Oštrc na jugoistoku, Štitar na istoku, Lib planina na sjeveroistoku i Zavelim na jugozapadu. Najviši vrh je Sinjal sa 1224 metra nadmorske visine. Na Mideni je izgrađen vjetropark, kao i na monogim planinama u njenom susjedstvu. Srećom, pristup vrhu je moguć jugoistoćne strane, tako da se ne moraju koristiti putevi vjetroparka koji potpuno kvare ugođaj planinarenja."
+                    }
+                }
+            }
+        ]
+    },
     {
-      "id": 1,
+      "id": 2,
       "component": "ArticleThread",
       "locales": {
         "en": { "title": "The {{Feeling}}" }
@@ -65,7 +89,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "component": "ArticleStack",
       "locales": {
         "en": {
