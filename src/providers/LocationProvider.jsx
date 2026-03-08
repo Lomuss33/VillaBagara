@@ -39,6 +39,15 @@ function LocationProvider({ children, sections, categories }) {
         return sections.find(section => section.id === activeSectionId)
     }
 
+    const _resolveSectionAlias = (sectionId) => {
+        const aliases = {
+            book: "contact",
+            explore: "services"
+        }
+
+        return aliases[sectionId] || sectionId
+    }
+
     const getActiveCategory = () => {
         const activeSection = getActiveSection()
         if(!activeSection)
@@ -64,7 +73,8 @@ function LocationProvider({ children, sections, categories }) {
     }
 
     const goToSectionWithId = (sectionId) => {
-        const section = sections.find(section => section.id === sectionId)
+        const resolvedSectionId = _resolveSectionAlias(sectionId)
+        const section = sections.find(section => section.id === resolvedSectionId)
         if(section) {
             goToSection(section)
         }
@@ -88,7 +98,13 @@ function LocationProvider({ children, sections, categories }) {
     }
 
     const _onHashEvent = () => {
-        const hash = window.location.hash.replace("#", "")
+        const rawHash = window.location.hash.replace("#", "")
+        const hash = _resolveSectionAlias(rawHash)
+        if(rawHash && rawHash !== hash) {
+            window.location.hash = hash
+            return
+        }
+
         const targetSection = sections.find(section => section.id === hash)
         if(targetSection) {
             setNextSectionId(targetSection.id)

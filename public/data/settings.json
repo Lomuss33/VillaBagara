@@ -1,122 +1,122 @@
 {
-    "developerSettings": {
-        "debugMode": false,
-        "fakeEmailRequests": false,
-        "stayOnThePreloaderScreen": false,
-        "version": "1.0.1"
+  "developerSettings": {
+    "debugMode": false,
+    "fakeEmailRequests": false,
+    "stayOnThePreloaderScreen": false,
+    "version": "1.0.1"
+  },
+  "preloaderSettings": {
+    "enabled": false,
+    "title": "Villa <b>Bagara</b>",
+    "subtitle": "Mountain land. Quiet comfort. Thoughtful stays.",
+    "logoOffset": {
+      "right": 0,
+      "top": 0,
+      "bottom": 50
+    }
+  },
+  "templateSettings": {
+    "animatedCursorEnabled": true,
+    "backgroundStyle": "animated",
+    "defaultLanguageId": "en",
+    "defaultThemeId": "dark",
+    "fullscreenEnabled": true,
+    "showSpinnerOnThemeChange": false
+  },
+  "supportedLanguages": [
+    {
+      "name": "English",
+      "id": "en",
+      "flagUrl": "images/flags/en-uk.png"
     },
-    "preloaderSettings": {
-        "enabled": false,
-        "title": "Villa <b>Bagara</b>",
-        "subtitle": "Isolation meets connection to earth",
-        "logoOffset": {
-            "right": 0,
-            "top": 0,
-            "bottom": 50
+    {
+      "name": "Deutsch",
+      "id": "de",
+      "flagUrl": "images/flags/de.png"
+    },
+    {
+      "name": "Hrvatski",
+      "id": "hr",
+      "flagUrl": "images/flags/hr.png"
+    },
+    {
+      "name": "Türkçe",
+      "id": "tr",
+      "flagUrl": "images/flags/tr.png"
+    }
+  ],
+  "supportedThemes": [
+    {
+      "id": "dark",
+      "icon": "fa-solid fa-moon",
+      "dark": true,
+      "locales": {
+        "en": {
+          "name": "Dark Mode"
+        },
+        "de": {
+          "name": "Dunkler Modus"
+        },
+        "hr": {
+          "name": "Tamni način"
+        },
+        "tr": {
+          "name": "Karanlık mod"
         }
+      }
     },
-    "templateSettings": {
-        "animatedCursorEnabled": true,
-        "backgroundStyle": "animated",
-        "defaultLanguageId": "en",
-        "defaultThemeId": "dark",
-        "fullscreenEnabled": true,
-        "showSpinnerOnThemeChange": false
-    },
-    "supportedLanguages": [
-        {
-            "name": "English",
-            "id": "en",
-            "flagUrl": "images/flags/en-uk.png"
+    {
+      "id": "light",
+      "icon": "fa-solid fa-sun",
+      "dark": false,
+      "locales": {
+        "en": {
+          "name": "Light Mode"
         },
-        {
-            "name": "Deutsch",
-            "id": "de",
-            "flagUrl": "images/flags/de.png"
+        "de": {
+          "name": "Heller Modus"
         },
-        {
-            "name": "Hrvatski",
-            "id": "hr",
-            "flagUrl": "images/flags/hr.png"
+        "hr": {
+          "name": "Svijetli način"
         },
-        {
-            "name": "Türkçe",
-            "id": "tr",
-            "flagUrl": "images/flags/tr.png"
+        "tr": {
+          "name": "Aydınlık mod"
         }
-    ],
-    "supportedThemes": [
-        {
-            "id": "dark",
-            "icon": "fa-solid fa-moon",
-            "dark": true,
-            "locales": {
-                "en": {
-                    "name": "Dark Mode"
-                },
-                "de": {
-                    "name": "Dunkler Modus"
-                },
-                "hr": {
-                    "name": "Tamni Način"
-                },
-                "tr": {
-                    "name": "Karanlık Mod"
-                }
-            }
-        },
-        {
-            "id": "light",
-            "icon": "fa-solid fa-sun",
-            "dark": false,
-            "locales": {
-                "en": {
-                    "name": "Light Mode"
-                },
-                "de": {
-                    "name": "Heller Modus"
-                },
-                "hr": {
-                    "name": "Svijetli Način"
-                },
-                "tr": {
-                    "name": "Aydınlık Mod"
-                }
-            }
-        }
-    ],
-    "consoleMessageForDevelopers": {
-        "title": {
-            "en": "🖥️ Hey there, fellow developer!",
-            "de": "🖥️ Hallo, mitentwickler!",
-            "hr": "🖥️ Pozdrav, dragi programeru!",
-            "tr": "🖥️ Merhaba, sevgili geliştirici!"
-        },
-        "items": [
-            {
-                "description": {
-                    "en": "This is an open-source template based on the React framework.",
-                    "de": "Dies ist eine Open-Source-Vorlage, die auf dem React-Framework basiert.",
-                    "hr": "Ovo je open-source predložak zasnovan na React frameworku.",
-                    "tr": "Bu, React çerçevesine dayanan açık kaynaklı bir şablondur."
-                },
-                "list": [],
-                "listStyle": "none"
-            },
-            {
-                "description": {
-                    "en": "Like what you see? Let's connect!",
-                    "de": "Gefällt dir, was du siehst? Lass uns verbinden!",
-                    "hr": "Sviđa ti se što vidiš? Povežimo se!",
-                    "tr": "Beğendin mi? Bağlanalım!"
-                },
-                "list": [
-                    "GitHub: https://github.com/username",
-                    "Website: https://website.com"
-                ],
-                "listStyle": "bulleted"
-            }
-        ]
+      }
+    }
+  ],
+  "consoleMessageForDevelopers": {
+    "title": {
+      "en": "Hey there, fellow developer!",
+      "de": "Hallo, Mitentwickler!",
+      "hr": "Pozdrav, programeru!",
+      "tr": "Merhaba, geliştirici!"
     },
-    "imagesToCache": []
+    "items": [
+      {
+        "description": {
+          "en": "This is an open-source template based on the React framework.",
+          "de": "Dies ist eine Open-Source-Vorlage auf Basis des React-Frameworks.",
+          "hr": "Ovo je open-source predložak temeljen na React frameworku.",
+          "tr": "Bu, React tabanlı açık kaynaklı bir şablondur."
+        },
+        "list": [],
+        "listStyle": "none"
+      },
+      {
+        "description": {
+          "en": "Like what you see? Let's connect!",
+          "de": "Gefällt dir, was du siehst? Lass uns vernetzen!",
+          "hr": "Sviđa ti se što vidiš? Povežimo se!",
+          "tr": "Gördüklerin hoşuna gitti mi? Bağlantı kuralım!"
+        },
+        "list": [
+          "GitHub: https://github.com/username",
+          "Website: https://website.com"
+        ],
+        "listStyle": "bulleted"
+      }
+    ]
+  },
+  "imagesToCache": []
 }

@@ -2,28 +2,28 @@
   "title": {
     "locales": {
       "en": {
-        "title_short": "Contact",
-        "title_short_nav": "Contact",
-        "title_long_prefix": "Let's get in touch",
-        "title_long": "Here’s how you can {{reach me}}"
+        "title_short": "Contact us",
+        "title_short_nav": "Contact us",
+        "title_long_prefix": "Plan your",
+        "title_long": "{{stay with Villa Bagara}}"
       },
       "de": {
         "title_short": "Kontakt",
         "title_short_nav": "Kontakt",
-        "title_long_prefix": "Lass uns in Kontakt treten",
-        "title_long": "So kannst du {{mich erreichen}}"
+        "title_long_prefix": "Planen Sie Ihren",
+        "title_long": "{{Aufenthalt in Villa Bagara}}"
       },
       "hr": {
         "title_short": "Kontakt",
         "title_short_nav": "Kontakt",
-        "title_long_prefix": "Započnimo komunikaciju",
-        "title_long": "Evo kako {{me možeš kontaktirati}}"
+        "title_long_prefix": "Isplaniraj svoj",
+        "title_long": "{{boravak u Villi Bagara}}"
       },
       "tr": {
-        "title_short": "İletişim",
-        "title_short_nav": "İletişim",
-        "title_long_prefix": "Haydi bağlantı kuralım",
-        "title_long": "Bana {{ulaşmanın yolları}} burada"
+        "title_short": "Bize ulaşın",
+        "title_short_nav": "Bize ulaşın",
+        "title_long_prefix": "",
+        "title_long": "{{Villa Bagara'daki konaklamanızı}} planlayın"
       }
     }
   },
@@ -37,16 +37,16 @@
       },
       "locales": {
         "en": {
-          "title": "More ways to {{reach me}}:"
+          "title": "Choose the easiest way to {{reach us}}"
         },
         "de": {
-          "title": "Weitere Möglichkeiten, {{mich zu erreichen}}:"
+          "title": "Wählen Sie den einfachsten Weg, uns {{zu erreichen}}"
         },
         "hr": {
-          "title": "Još načina kako me {{kontaktirati}}:"
+          "title": "Odaberi najlakši način da nas {{kontaktiraš}}"
         },
         "tr": {
-          "title": "Bana ulaşmanın {{diğer yolları}}:"
+          "title": "Bize ulaşmanın en kolay yolunu {{seçin}}"
         }
       },
       "items": [
@@ -59,198 +59,67 @@
             "fill": "#25D366",
             "fillLight": "#1FA955"
           },
-          "label": " Quick connect!",
           "link": {
             "href": "https://wa.me/4917662236934",
             "tooltipString": "open_website"
           },
-          "copyToClipboardButton": false,
           "locales": {
             "en": {
               "title": "WhatsApp",
-              "text": "Quick chat for scheduling and follow-ups."
+              "text": "Best for fast availability checks, date ideas, and a direct first conversation.",
+              "label": "Start on WhatsApp"
             },
             "de": {
               "title": "WhatsApp",
-              "text": "Schneller Chat für Terminabsprachen und Follow-ups."
+              "text": "Am besten für schnelle Verfügbarkeitsfragen, Datumsabstimmung und ein direktes Erstgespräch.",
+              "label": "Per WhatsApp starten"
             },
             "hr": {
               "title": "WhatsApp",
-              "text": "Brzi chat za dogovore i praćenja."
+              "text": "Najbolje za brzu provjeru dostupnosti, dogovor oko datuma i prvi izravni razgovor.",
+              "label": "Započni na WhatsAppu"
             },
             "tr": {
               "title": "WhatsApp",
-              "text": "Hızlı sohbet; randevu ve kısa notlar için."
-            }
-          }
-        },
-        {
-          "id": 4,
-          "faIcon": "fa-brands fa-telegram",
-          "faIconColors": {
-            "bg": "#061923",
-            "bgLight": "#E8F6FD",
-            "fill": "#0088CC",
-            "fillLight": "#007BB5"
-          },
-          "label": " @lovromusic",
-          "link": {
-            "href": "https://t.me/lovromusic",
-            "tooltipString": "open_website"
-          },
-          "copyToClipboardButton": true,
-          "locales": {
-            "en": {
-              "title": "Telegram",
-              "text": "Preferred for technical links/files."
-            },
-            "de": {
-              "title": "Telegram",
-              "text": "Bevorzugt für technische Links/Dateien."
-            },
-            "hr": {
-              "title": "Telegram",
-              "text": "Preferiram za tehničke linkove/datoteke."
-            },
-            "tr": {
-              "title": "Telegram",
-              "text": "Teknik bağlantılar/dosyalar için tercihim."
-            }
-          }
-        },
-        {
-          "id": 3,
-          "faIcon": "fa-brands fa-google",
-          "faIconColors": {
-            "bg": "#2A0A07",
-            "bgLight": "#FDECEA",
-            "fill": "#EA4335",
-            "fillLight": "#D33426"
-          },
-          "label": " Open Gmail",
-          "link": {
-            "href": "https://mail.google.com/mail/?view=cm&to=contact@lovro-music.de&su=HelloFromMyWebsite&fs=1&tf=1",
-            "tooltipString": "open_website"
-          },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": {
-              "title": "Gmail",
-              "text": "Compose in Gmail with my address pre-filled."
-            },
-            "de": {
-              "title": "Gmail",
-              "text": "In Gmail verfassen – Adresse ist bereits vorausgefüllt."
-            },
-            "hr": {
-              "title": "Gmail",
-              "text": "Napiši u Gmailu – moja adresa je već popunjena."
-            },
-            "tr": {
-              "title": "Gmail",
-              "text": "Gmail'de hazır adresle yeni e‑posta oluştur."
+              "text": "Hızlı müsaitlik kontrolü, tarih fikri ve doğrudan ilk görüşme için en uygunudur.",
+              "label": "WhatsApp ile başlayın"
             }
           }
         },
         {
           "id": 2,
-          "faIcon": "fa-brands fa-linkedin",
+          "faIcon": "fa-solid fa-envelope",
           "faIconColors": {
-            "bg": "#061B2C",
-            "bgLight": "#E8F3FD",
-            "fill": "#0A66C2",
-            "fillLight": "#0A57A5"
+            "bg": "#0E1826",
+            "bgLight": "#EAF2FD",
+            "fill": "#4D8AE6",
+            "fillLight": "#356BC2"
           },
-          "label": " Profile Page",
           "link": {
-            "href": "https://www.linkedin.com/in/lovro-musi%C4%87/",
-            "tooltipString": "open_website"
-          },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": {
-              "title": "LinkedIn",
-              "text": "Professional networking."
-            },
-            "de": {
-              "title": "LinkedIn",
-              "text": "Professionelles Networking."
-            },
-            "hr": {
-              "title": "LinkedIn",
-              "text": "Profesionalno umrežavanje."
-            },
-            "tr": {
-              "title": "LinkedIn",
-              "text": "Profesyonel bağlantı için."
-            }
-          }
-        },
-        {
-          "id": 5,
-          "faIcon": "fa-brands fa-discord",
-          "faIconColors": {
-            "bg": "#0C0F2B",
-            "bgLight": "#ECEEFF",
-            "fill": "#5865F2",
-            "fillLight": "#4752C4"
-          },
-          "label": " @lomus33",
-          "link": {
-            "href": "https://discordapp.com/users/lomus33",
-            "tooltipString": "open_website"
+            "href": "mailto:contact@lovro-music.de",
+            "tooltipString": "email"
           },
           "copyToClipboardButton": true,
           "locales": {
             "en": {
-              "title": "Discord",
-              "text": "DMs open; good for quick voice/chat."
+              "title": "E-mail",
+              "text": "Best for detailed planning, preferred dates, group size, and special requests.",
+              "label": "contact@lovro-music.de"
             },
             "de": {
-              "title": "Discord",
-              "text": "DMs offen; gut für schnellen Voice/Chat."
+              "title": "E-Mail",
+              "text": "Am besten für detaillierte Planung, Wunschdaten, Gruppengröße und besondere Wünsche.",
+              "label": "contact@lovro-music.de"
             },
             "hr": {
-              "title": "Discord",
-              "text": "DM-ovi otvoreni; dobro za brzi voice/chat."
+              "title": "E-pošta",
+              "text": "Najbolje za detaljno planiranje, željene datume, veličinu grupe i posebne zahtjeve.",
+              "label": "contact@lovro-music.de"
             },
             "tr": {
-              "title": "Discord",
-              "text": "DM açık; hızlı sesli/sohbet için uygun."
-            }
-          }
-        },
-        {
-          "id": 6,
-          "faIcon": "fa-brands fa-instagram",
-          "faIconColors": {
-            "bg": "#2B0A12",
-            "bgLight": "#FFE8ED",
-            "fill": "#E4405F",
-            "fillLight": "#C3324C"
-          },
-          "label": " @snopdan_dogovic",
-          "link": {
-            "href": "https://instagram.com/your_username",
-            "tooltipString": "open_website"
-          },
-          "copyToClipboardButton": false,
-          "locales": {
-            "en": {
-              "title": "Instagram",
-              "text": "Casual updates; feel free to say hi."
-            },
-            "de": {
-              "title": "Instagram",
-              "text": "Lockere Updates; sag gerne Hallo."
-            },
-            "hr": {
-              "title": "Instagram",
-              "text": "Ležerni updateovi; slobodno se javi."
-            },
-            "tr": {
-              "title": "Instagram",
-              "text": "Günlük paylaşımlar; merhaba demekten çekinme."
+              "title": "E-posta",
+              "text": "Detaylı planlama, tercih edilen tarihler, grup büyüklüğü ve özel talepler için en uygunudur.",
+              "label": "contact@lovro-music.de"
             }
           }
         }
@@ -266,28 +135,28 @@
       },
       "locales": {
         "en": {
-          "contact_thank_you_title": "{{Thanks}} for the contact!",
-          "contact_thank_you_body": "Your message has been received, and I'll be reaching out to you soon. I appreciate your time and look forward to connecting with you!",
-          "contact_thank_you_footer": "The reply will be sent to your email address: {{$email}}",
-          "title": "Send me a {{message}}"
+          "contact_thank_you_title": "{{Thank you}} for your inquiry",
+          "contact_thank_you_body": "Your stay inquiry has been received. We will come back to you soon with the next steps and any details needed for your dates.",
+          "contact_thank_you_footer": "The reply will be sent to your e-mail address: {{$email}}",
+          "title": "Send a stay {{inquiry}}"
         },
         "de": {
-          "contact_thank_you_title": "{{Danke}} für deine Nachricht!",
-          "contact_thank_you_body": "Deine Nachricht ist angekommen, und ich werde mich bald bei dir melden. Vielen Dank für deine Zeit – ich freue mich darauf, mit dir in Kontakt zu kommen!",
-          "contact_thank_you_footer": "Die Antwort wird an deine E-Mail-Adresse gesendet: {{$email}}",
-          "title": "Schreib mir eine {{Nachricht}}"
+          "contact_thank_you_title": "{{Danke}} für Ihre Anfrage",
+          "contact_thank_you_body": "Ihre Aufenthaltsanfrage ist eingegangen. Wir melden uns in Kürze mit den nächsten Schritten und allen nötigen Details zu Ihren Daten.",
+          "contact_thank_you_footer": "Die Antwort wird an Ihre E-Mail-Adresse gesendet: {{$email}}",
+          "title": "Senden Sie eine {{Anfrage}}"
         },
         "hr": {
-          "contact_thank_you_title": "{{Hvala}} na javljanju!",
-          "contact_thank_you_body": "Tvoja poruka je zaprimljena i uskoro ću ti se javiti. Hvala ti na vremenu i veselim se našem daljnjem kontaktu!",
+          "contact_thank_you_title": "{{Hvala}} na upitu",
+          "contact_thank_you_body": "Tvoj upit za boravak je zaprimljen. Uskoro ćemo ti se javiti sa sljedećim koracima i svim detaljima za tvoje datume.",
           "contact_thank_you_footer": "Odgovor će biti poslan na tvoju e-mail adresu: {{$email}}",
-          "title": "Pošalji mi {{poruku}}"
+          "title": "Pošalji {{upit za boravak}}"
         },
         "tr": {
-          "contact_thank_you_title": "Mesajın için {{teşekkürler}}!",
-          "contact_thank_you_body": "Mesajın ulaştı, en kısa zamanda sana geri döneceğim. Zaman ayırdığın için teşekkür ederim; seninle iletişim kurmak için sabırsızlanıyorum!",
-          "contact_thank_you_footer": "Cevap şu e-posta adresine gönderilecek: {{$email}}",
-          "title": "Bana bir {{mesaj}} gönder"
+          "contact_thank_you_title": "Talebiniz için {{teşekkür ederiz}}",
+          "contact_thank_you_body": "Konaklama talebiniz alındı. Tarihleriniz ve gerekli sonraki adımlar için size kısa süre içinde dönüş yapacağız.",
+          "contact_thank_you_footer": "Yanıt şu e-posta adresine gönderilecektir: {{$email}}",
+          "title": "Bir konaklama {{talebi}} gönderin"
         }
       },
       "items": null

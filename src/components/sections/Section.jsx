@@ -140,11 +140,14 @@ function SectionFocusManager({ section, status }) {
     }, [input.lastKeyPressed])
 
     const _getScrollableElement = () => {
+        if(!section?.id)
+            return null
+
         const sectionEl = document.getElementById(`section-${section.id}`)
         if(!sectionEl)
             return null
 
-        return document.getElementById(`section-${section.id}`).querySelector('.scrollable')
+        return sectionEl.querySelector('.scrollable')
     }
 
     const _focus = () => {
@@ -152,7 +155,7 @@ function SectionFocusManager({ section, status }) {
         if(!sectionScrollableEl)
             return
 
-        if(!isFocusingForbidden)
+        if(!isFocusingForbidden && document.activeElement !== sectionScrollableEl)
             sectionScrollableEl.focus()
     }
 
@@ -161,7 +164,7 @@ function SectionFocusManager({ section, status }) {
         if(!sectionScrollableEl)
             return
 
-        if(!isFocusingForbidden)
+        if(!isFocusingForbidden && document.activeElement === sectionScrollableEl)
             sectionScrollableEl.blur()
     }
 }

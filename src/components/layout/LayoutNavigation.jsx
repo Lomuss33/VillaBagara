@@ -10,7 +10,7 @@ function LayoutNavigation({ children, profile = null, sectionLinks = [], categor
     const viewport = useViewport()
 
     const isMobileLayout = viewport.isMobileLayout()
-    const targetCategoryId = categoryLinks.find(link => link.active)?.id
+    const targetCategoryId = categoryLinks.find(link => link.active)?.id || categoryLinks[0]?.id
     const currentCategorySectionLinks = sectionLinks.filter(link => link.categoryId === targetCategoryId)
 
     const shouldAddFooterOffset = viewport.getLayoutConstraints()?.shouldAddFooterOffset

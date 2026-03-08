@@ -4,57 +4,193 @@
       "en": {
         "title_short": "Story",
         "title_short_nav": "Story",
-        "title_long_prefix": "A villa with",
-        "title_long": "{{roots}}"
+        "title_long_prefix": "An estate with",
+        "title_long": "{{memory}}"
+      },
+      "de": {
+        "title_short": "Geschichte",
+        "title_short_nav": "Geschichte",
+        "title_long_prefix": "Ein Anwesen mit",
+        "title_long": "{{Erinnerung}}"
+      },
+      "hr": {
+        "title_short": "Priča",
+        "title_short_nav": "Priča",
+        "title_long_prefix": "Imanje s",
+        "title_long": "{{pamćenjem}}"
+      },
+      "tr": {
+        "title_short": "Hikâye",
+        "title_short_nav": "Hikâye",
+        "title_long_prefix": "",
+        "title_long": "{{Hafızası olan}} bir mülk"
       }
     }
   },
   "articles": [
     {
       "id": 1,
-      "component": "ArticleThread",
-      "locales": { "en": { "title": "Timeline" } },
+      "component": "ArticleText",
+      "locales": {
+        "en": {
+          "title": "The idea behind the {{place}}"
+        },
+        "de": {
+          "title": "Die Idee hinter dem {{Ort}}"
+        },
+        "hr": {
+          "title": "Ideja iza ovog {{mjesta}}"
+        },
+        "tr": {
+          "title": "Bu {{yerin}} arkasındaki fikir"
+        }
+      },
       "settings": {
-        "max_rows_collapse_threshold": 4,
-        "order_items_by": "date",
-        "order_items_sort": "desc"
+        "order_items_by": "id",
+        "order_items_sort": "asc"
       },
       "items": [
         {
           "id": 1,
-          "date": { "year": 1800, "month": 1 },
-          "preview": {
-            "links": [],
-            "screenshots": ["images/villa_bagara/story/story_01_stone-huts-18th-century.png"],
-            "screenshotsAspectRatio": "16:9",
-            "youtubeVideo": ""
-          },
+          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
           "locales": {
             "en": {
-              "title": "18th‑century stone huts — the original village edge",
-              "province": "Gornji Brisnik",
-              "country": "Tomislavgrad (BIH)",
-              "institution": "Village context",
-              "text": "An overgrown stone-hut village history surrounds the villa area — the feeling of time, stone, wind, and silence."
+              "text": "Villa Bagara should be sold as a place with continuity. The house, porch, stone context, and mountain frame all support the sense that this stay belongs to a longer story than a short rental listing. That difference matters to the guest who wants more than convenience."
+            },
+            "de": {
+              "text": "Villa Bagara sollte als Ort mit Kontinuität erzählt werden. Haus, Veranda, steinerner Kontext und Bergkulisse unterstützen das Gefühl, dass dieser Aufenthalt zu einer längeren Geschichte gehört als zu einem kurzen Vermietungsinserat. Genau das ist wichtig für Gäste, die mehr als bloße Bequemlichkeit suchen."
+            },
+            "hr": {
+              "text": "Villu Bagara treba predstavljati kao mjesto s kontinuitetom. Kuća, trijem, kameni kontekst i planinski okvir podržavaju osjećaj da ovaj boravak pripada duljoj priči od običnog oglasa za najam. Upravo ta razlika znači gostu koji traži više od puke praktičnosti."
+            },
+            "tr": {
+              "text": "Villa Bagara sürekliliği olan bir yer olarak anlatılmalıdır. Ev, veranda, taş bağlam ve dağ çerçevesi; bu konaklamanın kısa süreli bir ilan yerine daha uzun bir hikâyeye ait olduğu hissini güçlendirir. Sadece kolaylık değil, anlam da arayan misafir için bu fark önemlidir."
             }
           }
         },
         {
           "id": 2,
-          "date": { "year": 2026, "month": 1 },
-          "preview": {
-            "links": [],
-            "screenshots": ["images/villa_bagara/story/story_02_old-village-edge.png"],
-            "screenshotsAspectRatio": "16:9",
-            "youtubeVideo": ""
+          "img": "images/villa_bagara/hero/Midena.jpg",
+          "locales": {
+            "en": {
+              "text": "The land around the estate gives the story its emotional depth: wind, distance, weather, stone, and a pace that feels older than the feed-based world guests leave behind. The result should feel thoughtful, rooted, and worth remembering."
+            },
+            "de": {
+              "text": "Das Land rund um das Anwesen verleiht der Geschichte ihre emotionale Tiefe: Wind, Distanz, Wetter, Stein und ein Rhythmus, der älter wirkt als die feed-basierte Welt, die Gäste hinter sich lassen. Das Ergebnis soll durchdacht, verwurzelt und erinnerungswürdig wirken."
+            },
+            "hr": {
+              "text": "Zemlja oko imanja daje priči emocionalnu dubinu: vjetar, distanca, vrijeme, kamen i ritam koji djeluje starije od svijeta temeljenog na feedovima koji gosti ostavljaju iza sebe. Rezultat treba djelovati promišljeno, ukorijenjeno i vrijedno pamćenja."
+            },
+            "tr": {
+              "text": "Mülkün çevresindeki arazi hikâyeye duygusal derinliğini verir: rüzgâr, mesafe, hava, taş ve misafirlerin geride bıraktığı akış-temelli dünyadan daha eski hissettiren bir tempo. Sonuç; düşünülmüş, köklü ve hatırlanmaya değer olmalıdır."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "component": "ArticleInfoList",
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "Why it feels {{different}}"
+        },
+        "de": {
+          "title": "Warum es sich {{anders}} anfühlt"
+        },
+        "hr": {
+          "title": "Zašto djeluje {{drukčije}}"
+        },
+        "tr": {
+          "title": "Neden {{farklı}} hissettiriyor"
+        }
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-landmark",
+          "faIconColors": {
+            "bg": "#1d1714",
+            "bgLight": "#f8f0eb",
+            "fill": "#c38f62",
+            "fillLight": "#a86e41"
           },
           "locales": {
             "en": {
-              "title": "Villa Bagara today",
-              "province": "15 min uphill above the newer village",
-              "country": "Herzegovina mountains",
-              "institution": "Villa Bagara",
-              "text": "A basecamp for isolation + adventure: cobblestone driveway, porch life, big gardens, and routes in every direction."
+              "title": "Rooted atmosphere",
+              "text": "The place should feel inherited and considered, not assembled to imitate luxury."
+            },
+            "de": {
+              "title": "Verwurzelte Atmosphäre",
+              "text": "Der Ort soll geerbt und durchdacht wirken, nicht künstlich zu Luxus zusammengesetzt."
+            },
+            "hr": {
+              "title": "Ukorijenjen ugođaj",
+              "text": "Mjesto treba djelovati naslijeđeno i promišljeno, a ne složeno da imitira luksuz."
+            },
+            "tr": {
+              "title": "Köklü atmosfer",
+              "text": "Mekân lüksü taklit etmek için birleştirilmiş değil; devralınmış ve düşünülmüş hissettirmelidir."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-hourglass-half",
+          "faIconColors": {
+            "bg": "#17191e",
+            "bgLight": "#eff2f7",
+            "fill": "#7e91b5",
+            "fillLight": "#61759a"
+          },
+          "locales": {
+            "en": {
+              "title": "A slower social life",
+              "text": "Meals, conversation, rest, and movement all have room here; urgency is not the core product."
+            },
+            "de": {
+              "title": "Ein langsameres soziales Leben",
+              "text": "Mahlzeiten, Gespräche, Ruhe und Bewegung haben hier Platz; Dringlichkeit ist nicht das eigentliche Produkt."
+            },
+            "hr": {
+              "title": "Sporiji društveni život",
+              "text": "Obroci, razgovor, odmor i kretanje ovdje imaju prostora; hitnost nije glavni proizvod."
+            },
+            "tr": {
+              "title": "Daha yavaş bir sosyal hayat",
+              "text": "Yemek, sohbet, dinlenme ve hareket burada yer bulur; aciliyet temel ürün değildir."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-earth-europe",
+          "faIconColors": {
+            "bg": "#132022",
+            "bgLight": "#ecf7f9",
+            "fill": "#66adc3",
+            "fillLight": "#458fa5"
+          },
+          "locales": {
+            "en": {
+              "title": "House and landscape belong together",
+              "text": "The value does not stop at the walls. The region, weather, and horizon finish the experience."
+            },
+            "de": {
+              "title": "Haus und Landschaft gehören zusammen",
+              "text": "Der Wert endet nicht an den Wänden. Region, Wetter und Horizont vollenden das Erlebnis."
+            },
+            "hr": {
+              "title": "Kuća i krajolik pripadaju zajedno",
+              "text": "Vrijednost ne završava na zidovima. Regija, vrijeme i horizont dovršavaju doživljaj."
+            },
+            "tr": {
+              "title": "Ev ve peyzaj birlikte anlamlıdır",
+              "text": "Değer duvarlarda bitmez. Bölge, hava ve ufuk deneyimi tamamlar."
             }
           }
         }

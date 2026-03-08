@@ -47,7 +47,12 @@ function NavProfileCard({ profile, expanded }) {
         : ""
 
     const _onStatusBadgeClicked = () => {
-        navigation.navigateToSectionWithId("contact")
+        const preferredSectionId = ["contact", "home", "stay"]
+            .find(sectionId => navigation.sectionLinks?.some(link => link.id === sectionId))
+        const fallbackSectionId = preferredSectionId || navigation.sectionLinks?.[0]?.id
+        if(fallbackSectionId) {
+            navigation.navigateToSectionWithId(fallbackSectionId)
+        }
     }
 
     return (

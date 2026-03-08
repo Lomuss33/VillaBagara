@@ -5,61 +5,52 @@
       "faIcon": "fa-solid fa-house",
       "locales": {
         "en": {
-          "title": "Overview"
+          "title": "Home"
+        },
+        "de": {
+          "title": "Start"
+        },
+        "hr": {
+          "title": "Početna"
+        },
+        "tr": {
+          "title": "Ana sayfa"
         }
       }
     },
     {
-      "id": "story",
-      "faIcon": "fa-solid fa-landmark",
-      "locales": {
-        "en": {
-          "title": "Story"
-        }
-      }
-    },
-    {
-      "id": "stay",
-      "faIcon": "fa-solid fa-bed",
-      "locales": {
-        "en": {
-          "title": "Stay"
-        }
-      }
-    },
-    {
-      "id": "explore",
+      "id": "experience",
       "faIcon": "fa-solid fa-mountain-sun",
       "locales": {
         "en": {
-          "title": "Explore"
+          "title": "Experience"
+        },
+        "de": {
+          "title": "Erlebnis"
+        },
+        "hr": {
+          "title": "Doživljaj"
+        },
+        "tr": {
+          "title": "Deneyim"
         }
       }
     },
     {
-      "id": "services",
-      "faIcon": "fa-solid fa-concierge-bell",
+      "id": "contact",
+      "faIcon": "fa-solid fa-envelope-open-text",
       "locales": {
         "en": {
-          "title": "Services"
-        }
-      }
-    },
-    {
-      "id": "gallery",
-      "faIcon": "fa-solid fa-images",
-      "locales": {
-        "en": {
-          "title": "Gallery"
-        }
-      }
-    },
-    {
-      "id": "book",
-      "faIcon": "fa-solid fa-calendar-check",
-      "locales": {
-        "en": {
-          "title": "Book"
+          "title": "Contact us"
+        },
+        "de": {
+          "title": "Kontakt"
+        },
+        "hr": {
+          "title": "Kontakt"
+        },
+        "tr": {
+          "title": "Bize ulaşın"
         }
       }
     }

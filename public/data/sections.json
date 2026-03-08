@@ -7,40 +7,40 @@
       "faIcon": "fa-solid fa-house"
     },
     {
-      "id": "story",
-      "categoryId": "story",
-      "jsonPath": "/data/sections/story.json",
-      "faIcon": "fa-solid fa-landmark"
-    },
-    {
       "id": "stay",
-      "categoryId": "stay",
+      "categoryId": "experience",
       "jsonPath": "/data/sections/stay.json",
       "faIcon": "fa-solid fa-bed"
     },
     {
-      "id": "explore",
-      "categoryId": "explore",
-      "jsonPath": "/data/sections/explore.json",
-      "faIcon": "fa-solid fa-mountain-sun"
-    },
-    {
       "id": "services",
-      "categoryId": "services",
+      "categoryId": "experience",
       "jsonPath": "/data/sections/services.json",
       "faIcon": "fa-solid fa-concierge-bell"
     },
     {
+      "id": "story",
+      "categoryId": "experience",
+      "jsonPath": "/data/sections/story.json",
+      "faIcon": "fa-solid fa-landmark"
+    },
+    {
       "id": "gallery",
-      "categoryId": "gallery",
+      "categoryId": "experience",
       "jsonPath": "/data/sections/gallery.json",
       "faIcon": "fa-solid fa-images"
     },
     {
-      "id": "book",
-      "categoryId": "book",
-      "jsonPath": "/data/sections/book.json",
-      "faIcon": "fa-solid fa-calendar-check"
+      "id": "videos",
+      "categoryId": "experience",
+      "jsonPath": "/data/sections/videos.json",
+      "faIcon": "fa-solid fa-circle-play"
+    },
+    {
+      "id": "contact",
+      "categoryId": "contact",
+      "jsonPath": "/data/sections/contact.json",
+      "faIcon": "fa-solid fa-envelope-open-text"
     }
   ]
 }

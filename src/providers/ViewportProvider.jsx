@@ -4,7 +4,7 @@
  * @description This provider tracks the viewport size and scroll position, and provides utility functions to manage breakpoints and layout constraints.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
+import React, {createContext, useContext, useEffect, useRef, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 import {useScheduler} from "/src/hooks/scheduler.js"
 import {useData} from "/src/providers/DataProvider.jsx"
@@ -23,6 +23,7 @@ function ViewportProvider({ children }) {
     const [innerHeight, setInnerHeight] = useState(window.innerHeight)
     const [didCreateListeners, setDidCreateListeners] = useState(false)
     const [clipboardText, setClipboardText] = useState(null)
+    const resizeFrameRef = useRef(null)
 
     useEffect(() => {
         _createListeners()
@@ -45,6 +46,11 @@ function ViewportProvider({ children }) {
         window.removeEventListener('scroll', _onScroll)
         window.removeEventListener('resize', _onResize)
 
+        if(resizeFrameRef.current) {
+            cancelAnimationFrame(resizeFrameRef.current)
+            resizeFrameRef.current = null
+        }
+
         scheduler.clearAllWithTag(tag)
         setDidCreateListeners(false)
     }
@@ -55,8 +61,19 @@ function ViewportProvider({ children }) {
     }
 
     const _onResize = () => {
-        setInnerWidth(window.innerWidth)
-        setInnerHeight(window.innerHeight)
+        if(resizeFrameRef.current) {
+            cancelAnimationFrame(resizeFrameRef.current)
+        }
+
+        resizeFrameRef.current = requestAnimationFrame(() => {
+            resizeFrameRef.current = null
+
+            const nextInnerWidth = window.innerWidth
+            const nextInnerHeight = window.innerHeight
+
+            setInnerWidth(prev => prev === nextInnerWidth ? prev : nextInnerWidth)
+            setInnerHeight(prev => prev === nextInnerHeight ? prev : nextInnerHeight)
+        })
     }
 
     const isBreakpoint = (breakpoint) => {
@@ -97,8 +114,10 @@ function ViewportProvider({ children }) {
     }
 
     const getLayoutConstraints = () => {
+        const fullscreenEnabled = Boolean(data.getSettings()?.templateSettings?.fullscreenEnabled)
+
         return {
-            canToggleFullscreen: data.getSettings().templateSettings.fullscreenEnabled && !isMobileLayout() && !utils.device.isIOS() && !utils.device.isSafari(),
+            canToggleFullscreen: fullscreenEnabled && !isMobileLayout() && !utils.device.isIOS() && !utils.device.isSafari(),
             shouldAddFooterOffset: utils.device.isIOS() && utils.device.isChrome()
         }
     }

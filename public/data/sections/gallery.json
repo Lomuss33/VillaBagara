@@ -5,56 +5,140 @@
         "title_short": "Gallery",
         "title_short_nav": "Gallery",
         "title_long_prefix": "Look through the",
-        "title_long": "{{villa moments}}"
+        "title_long": "{{estate moments}}"
+      },
+      "de": {
+        "title_short": "Galerie",
+        "title_short_nav": "Galerie",
+        "title_long_prefix": "Sehen Sie durch die",
+        "title_long": "{{Momente des Anwesens}}"
+      },
+      "hr": {
+        "title_short": "Galerija",
+        "title_short_nav": "Galerija",
+        "title_long_prefix": "Pregledaj",
+        "title_long": "{{trenutke imanja}}"
+      },
+      "tr": {
+        "title_short": "Galeri",
+        "title_short_nav": "Galeri",
+        "title_long_prefix": "",
+        "title_long": "{{Mülkün anlarına}} göz atın"
       }
     }
   },
   "articles": [
     {
       "id": 1,
-      "component": "ArticleThread",
-      "locales": { "en": { "title": "Albums" } },
-      "settings": {
-        "max_rows_collapse_threshold": 6,
-        "order_items_by": "date",
-        "order_items_sort": "desc"
+      "component": "ArticleGalleryWall",
+      "locales": {
+        "en": {
+          "title": "Image wall"
+        },
+        "de": {
+          "title": "Bilderwand"
+        },
+        "hr": {
+          "title": "Zid slika"
+        },
+        "tr": {
+          "title": "Görsel duvar"
+        }
       },
       "items": [
         {
           "id": 1,
-          "date": { "year": 2026, "month": 1 },
+          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
           "preview": {
             "links": [],
-            "screenshots": ["images/villa_bagara/gallery/album_01_villa-exterior.png"],
+            "screenshots": ["images/villa_bagara/hero/hero_01_front-porch.png"],
             "screenshotsAspectRatio": "16:9",
             "youtubeVideo": ""
           },
           "locales": {
             "en": {
-              "title": "Exterior & Arrival",
-              "province": "Villa Bagara",
-              "country": "Gornji Brisnik",
-              "institution": "Album",
-              "text": "Porch, cobblestone driveway, roofline, and the first breath of mountain air."
+              "title": "Arrival mood"
+            },
+            "de": {
+              "title": "Ankunftsstimmung"
+            },
+            "hr": {
+              "title": "Ugođaj dolaska"
+            },
+            "tr": {
+              "title": "Varış atmosferi"
             }
           }
         },
         {
           "id": 2,
-          "date": { "year": 2026, "month": 1 },
+          "img": "images/villa_bagara/hero/Midena.jpg",
           "preview": {
             "links": [],
-            "screenshots": ["images/villa_bagara/gallery/album_02_villa-interior.png"],
+            "screenshots": ["images/villa_bagara/hero/Midena.jpg"],
             "screenshotsAspectRatio": "16:9",
             "youtubeVideo": ""
           },
           "locales": {
             "en": {
-              "title": "Interior & Oldtimer Feeling",
-              "province": "Villa Bagara",
-              "country": "Tomislavgrad",
-              "institution": "Album",
-              "text": "Warm rooms, space to gather, and details that feel like home."
+              "title": "Mountain horizon"
+            },
+            "de": {
+              "title": "Berghorizont"
+            },
+            "hr": {
+              "title": "Planinski horizont"
+            },
+            "tr": {
+              "title": "Dağ ufku"
+            }
+          }
+        },
+        {
+          "id": 3,
+          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/hero/hero_01_front-porch.png"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Stone-and-porch character"
+            },
+            "de": {
+              "title": "Stein- und Verandacharakter"
+            },
+            "hr": {
+              "title": "Karakter kamena i trijema"
+            },
+            "tr": {
+              "title": "Taş ve veranda karakteri"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "img": "images/villa_bagara/hero/Midena.jpg",
+          "preview": {
+            "links": [],
+            "screenshots": ["images/villa_bagara/hero/Midena.jpg"],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Open land and weather"
+            },
+            "de": {
+              "title": "Offenes Land und Wetter"
+            },
+            "hr": {
+              "title": "Otvoreno zemljište i vrijeme"
+            },
+            "tr": {
+              "title": "Açık arazi ve hava"
             }
           }
         }

@@ -1,63 +1,101 @@
 import "./LayoutAnimatedBackground.scss"
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 import Animable from "/src/components/capabilities/Animable.jsx"
 
-const utils = useUtils()
-
 function LayoutAnimatedBackground() {
     const utils = useUtils()
+    const canvasRef = useRef(null)
+    const contextRef = useRef(null)
+    const circlesRef = useRef([])
+    const viewportRef = useRef({
+        width: window.innerWidth,
+        height: window.innerHeight
+    })
 
-    const canvas = document.getElementById(`layout-animated-background-canvas`)
-    const context = canvas?.getContext("2d")
-
-    const [circles, setCircles] = useState([])
     const maxCircles = 24
 
     const visibilityClass = utils.device.isAndroid() && !utils.device.isChromeAndroid() ?
         `d-none` :
         ``
 
-    /** @constructs **/
     useEffect(() => {
-        const circles = Array.from({ length: maxCircles }, () =>
-            new CircleData(window.innerWidth, window.innerHeight)
+        contextRef.current = canvasRef.current?.getContext("2d") || null
+        _resizeCanvas()
+        circlesRef.current = Array.from(
+            { length: maxCircles },
+            () => new CircleData(() => viewportRef.current, utils)
         )
 
-        setCircles(circles)
-    }, [null])
+        const onResize = () => {
+            viewportRef.current = {
+                width: window.innerWidth,
+                height: window.innerHeight
+            }
+            _resizeCanvas()
+        }
+
+        window.addEventListener("resize", onResize)
+        return () => {
+            window.removeEventListener("resize", onResize)
+        }
+    }, [])
+
+    const _resizeCanvas = () => {
+        const canvas = canvasRef.current
+        const context = contextRef.current || canvas?.getContext("2d")
+        if(!canvas || !context)
+            return
+
+        const { width, height } = viewportRef.current
+        const pixelRatio = window.devicePixelRatio || 1
+        const scaledWidth = Math.max(Math.floor(width * pixelRatio), 1)
+        const scaledHeight = Math.max(Math.floor(height * pixelRatio), 1)
+
+        if(canvas.width !== scaledWidth || canvas.height !== scaledHeight) {
+            canvas.width = scaledWidth
+            canvas.height = scaledHeight
+            canvas.style.width = `${width}px`
+            canvas.style.height = `${height}px`
+        }
+
+        context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0)
+        contextRef.current = context
+    }
 
     const _step = (event) => {
+        const circles = circlesRef.current
+        if(!circles.length)
+            return
+
         for(const circle of circles) {
-            circle.update(event.currentTickElapsed/0.017)
+            circle.update(event.currentTickElapsed / 0.017)
         }
 
         _draw(circles)
     }
 
     const _draw = (updatedCircles) => {
+        const canvas = canvasRef.current
+        const context = contextRef.current
         if(!canvas || !context)
             return
 
+        const { width, height } = viewportRef.current
         const backgroundColor = utils.css.getRootSCSSVariable("--theme-background")
         const circleColorLight = utils.css.getRootSCSSVariable("--theme-background-contrast")
         const circleColorDark = utils.css.getRootSCSSVariable("--theme-background-contrast-darken")
 
-        const backgroundColorRgba = utils.css.hexToRgba(backgroundColor, 1)
-
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-        context.clearRect(0, 0, canvas.width, canvas.height)
-
-        context.fillStyle = backgroundColorRgba
-        context.fillRect(0, 0, canvas.width, canvas.height)
+        context.clearRect(0, 0, width, height)
+        context.fillStyle = utils.css.hexToRgba(backgroundColor, 1)
+        context.fillRect(0, 0, width, height)
 
         updatedCircles
             .filter(circle => circle.color === "dark")
             .forEach(circle => {
                 context.beginPath()
                 context.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2)
-                context.fillStyle = utils.css.hexToRgba(circleColorDark, circle.opacity/2)
+                context.fillStyle = utils.css.hexToRgba(circleColorDark, circle.opacity / 2)
                 context.fill()
             })
 
@@ -66,7 +104,7 @@ function LayoutAnimatedBackground() {
             .forEach(circle => {
                 context.beginPath()
                 context.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2)
-                context.fillStyle = utils.css.hexToRgba(circleColorLight, circle.opacity/2)
+                context.fillStyle = utils.css.hexToRgba(circleColorLight, circle.opacity / 2)
                 context.fill()
             })
     }
@@ -75,29 +113,33 @@ function LayoutAnimatedBackground() {
         <Animable className={`layout-animated-background ${visibilityClass}`}
                   animationId={`layout-animated-background`}
                   onEnterFrame={_step}>
-            <canvas id={`layout-animated-background-canvas`}/>
+            <canvas ref={canvasRef}
+                    id={`layout-animated-background-canvas`}/>
         </Animable>
     )
 }
 
 class CircleData {
-    constructor() {
+    constructor(getViewport, utils) {
+        this.getViewport = getViewport
+        this.utils = utils
         this.reset()
         this.didEnter = true
     }
 
     randomizeProps() {
-        const baseSize = Math.max(window.innerWidth, window.innerHeight)
-        this.radius = utils.number.random(baseSize/24, baseSize/8)
-        this.speedX = utils.number.random(3, 10, true)
-        this.speedY = utils.number.random(2, 5, true)
+        const { width, height } = this.getViewport()
+        const baseSize = Math.max(width, height, 1)
+        this.radius = this.utils.number.random(baseSize / 24, baseSize / 8)
+        this.speedX = this.utils.number.random(3, 10, true)
+        this.speedY = this.utils.number.random(2, 5, true)
         this.color = Math.random() > 0.5 ? "dark" : "light"
-        this.opacity = 0.1 + Math.random()*0.9
+        this.opacity = 0.1 + Math.random() * 0.9
     }
 
     update(dt) {
-        this.x += this.speedX/2 * dt
-        this.y += this.speedY/2 * dt
+        this.x += this.speedX / 2 * dt
+        this.y += this.speedY / 2 * dt
 
         const outOfBounds = this.isOutOfBounds()
         if(!this.didEnter) {
@@ -109,38 +151,41 @@ class CircleData {
     }
 
     isOutOfBounds() {
+        const { width, height } = this.getViewport()
         return (
-            this.x + this.radius*2 < 0 ||
-            this.x - this.radius*2 > window.innerWidth ||
-            this.y + this.radius*2 < 0 ||
-            this.y - this.radius*2 > window.innerHeight
+            this.x + this.radius * 2 < 0 ||
+            this.x - this.radius * 2 > width ||
+            this.y + this.radius * 2 < 0 ||
+            this.y - this.radius * 2 > height
         )
     }
 
     reset() {
         this.randomizeProps()
 
-        const direction = utils.number.random(0, 3)
+        const { width, height } = this.getViewport()
+        const direction = this.utils.number.random(0, 3)
+
         switch (direction) {
-            case 0: // Left
-                this.x = -this.radius*2
-                this.y = utils.number.random(0, window.innerHeight)
+            case 0:
+                this.x = -this.radius * 2
+                this.y = this.utils.number.random(0, height)
                 this.speedX = Math.abs(this.speedX)
                 break
-            case 1: // Right
-                this.x = window.innerWidth + this.radius*2
-                this.y = utils.number.random(0, window.innerHeight)
-                this.speedX = -1* Math.abs(this.speedX)
+            case 1:
+                this.x = width + this.radius * 2
+                this.y = this.utils.number.random(0, height)
+                this.speedX = -1 * Math.abs(this.speedX)
                 break
-            case 2: // Top
-                this.x = utils.number.random(0, window.innerWidth)
-                this.y = -this.radius*2
+            case 2:
+                this.x = this.utils.number.random(0, width)
+                this.y = -this.radius * 2
                 this.speedY = Math.abs(this.speedY)
                 break
-            case 3: // Bottom
-                this.x = utils.number.random(0, window.innerWidth)
-                this.y = window.innerHeight + this.radius*2
-                this.speedY = -1*Math.abs(this.speedY)
+            default:
+                this.x = this.utils.number.random(0, width)
+                this.y = height + this.radius * 2
+                this.speedY = -1 * Math.abs(this.speedY)
                 break
         }
 

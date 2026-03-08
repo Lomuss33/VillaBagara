@@ -40,11 +40,46 @@ function NavigationProvider({ children, sections, categories }) {
     const [categoryLinks, setCategoryLinks] = useState([])
 
     const canTransitionToNextSection = nextSection && transitionStatus === NavigationProvider.TransitionStatus.NONE
+    const _resolveSectionAlias = (sectionId) => {
+        const aliases = {
+            book: "contact",
+            explore: "services"
+        }
+
+        return aliases[sectionId] || sectionId
+    }
+
+    const _resolveSection = (sectionCandidate) => {
+        if(!sectionCandidate)
+            return null
+
+        if(typeof sectionCandidate === "string")
+            return sections.find(({ id }) => id === _resolveSectionAlias(sectionCandidate)) || null
+
+        return sections.find(({ id }) => id === sectionCandidate.id) || null
+    }
+
+    const _getSafeInitialSection = () => {
+        return (
+            _resolveSection(location.getActiveSection()) ||
+            _resolveSection(targetSection) ||
+            _resolveSection(previousSection) ||
+            sections[0] ||
+            null
+        )
+    }
 
     /** @constructs **/
     useEffect(() => {
+        const initialSection = _getSafeInitialSection()
         setDidMount(true)
-        _updateLinks(null, null)
+        if(initialSection) {
+            setTargetSection(initialSection)
+            _updateLinks(initialSection, initialSection.category)
+        }
+        else {
+            _updateLinks(null, null)
+        }
         return () => { setDidMount(false) }
     }, [null])
 
@@ -59,7 +94,12 @@ function NavigationProvider({ children, sections, categories }) {
      * @listens viewport.getBreakpoint()
      */
     useEffect(() => {
-        utils.capabilities.scrollTo(0, true)
+        const safeSection = _getSafeInitialSection()
+        _updateLinks(safeSection, safeSection?.category || null)
+
+        if(!targetSection && safeSection) {
+            setTargetSection(safeSection)
+        }
     }, [viewport.getBreakpoint()])
 
     /**
@@ -74,9 +114,22 @@ function NavigationProvider({ children, sections, categories }) {
     }, [canTransitionToNextSection])
 
     const _startTransition = () => {
-        setPreviousSection(targetSection)
-        setTargetSection(nextSection)
-        _updateLinks(nextSection, nextSection.category)
+        const transitionTarget = _resolveSection(nextSection)
+        if(!transitionTarget) {
+            const fallbackSection = _getSafeInitialSection()
+            setNextSection(null)
+            setScheduledNextSection(null)
+
+            if(fallbackSection) {
+                setTargetSection(fallbackSection)
+                _updateLinks(fallbackSection, fallbackSection.category)
+            }
+            return
+        }
+
+        setPreviousSection(_resolveSection(targetSection) || transitionTarget)
+        setTargetSection(transitionTarget)
+        _updateLinks(transitionTarget, transitionTarget.category)
 
         if(!transitionEnabled) {
             setTransitionStatus(NavigationProvider.TransitionStatus.FINISHING)
@@ -91,8 +144,15 @@ function NavigationProvider({ children, sections, categories }) {
     }
 
     const _adjustScrollBeforeTransition = () => {
+        const safeNextSection = _resolveSection(nextSection)
+        if(!safeNextSection) {
+            setNextSection(null)
+            return
+        }
+
         const mobileNavData = layout.getMobileNavData(viewport.scrollY)
-        const didChangeCategory = targetSection?.category.id !== nextSection?.category.id
+        const currentTargetSection = _resolveSection(targetSection)
+        const didChangeCategory = currentTargetSection?.category?.id !== safeNextSection?.category?.id
 
         scheduler.clearAllWithTag("adjust-scroll-top")
 
@@ -103,13 +163,13 @@ function NavigationProvider({ children, sections, categories }) {
             return
         }
 
-        if(nextSection?.category?.sections?.length <= 1) {
+        if(safeNextSection?.category?.sections?.length <= 1) {
             utils.capabilities.scrollTo(0, false)
             _scheduleTransitionStart(0)
             return
         }
 
-        _updateLinks(nextSection, nextSection?.category)
+        _updateLinks(safeNextSection, safeNextSection?.category)
         utils.capabilities.scrollTo(mobileNavData.contentTop, false)
         _scheduleTransitionStart(mobileNavData.contentTop)
     }
@@ -150,8 +210,10 @@ function NavigationProvider({ children, sections, categories }) {
             setNextSection(null)
             setScheduledNextSection(null)
 
-            setIgnoreNextLocationEvent(true)
-            location.goToSection(targetSection)
+            if(targetSection) {
+                setIgnoreNextLocationEvent(true)
+                location.goToSection(targetSection)
+            }
 
             scheduler.clearAllWithTag("set-ignore-next-location-event")
             scheduler.schedule(() => {
@@ -162,7 +224,7 @@ function NavigationProvider({ children, sections, categories }) {
         }
 
         setTransitionStatus(NavigationProvider.TransitionStatus.NONE)
-        setNextSection(scheduledNextSection)
+        setNextSection(_resolveSection(scheduledNextSection))
         setScheduledNextSection(null)
     }
 
@@ -187,8 +249,18 @@ function NavigationProvider({ children, sections, categories }) {
         }
 
         const locationSection = location.getActiveSection()
+        const safeLocationSection = _resolveSection(locationSection)
         setTransitionEnabled(Boolean(targetSection))
-        navigateToSection(locationSection)
+        if(safeLocationSection) {
+            navigateToSection(safeLocationSection)
+            return
+        }
+
+        const fallbackSection = _getSafeInitialSection()
+        if(!targetSection && fallbackSection) {
+            setTargetSection(fallbackSection)
+            _updateLinks(fallbackSection, fallbackSection.category)
+        }
     }, [location.getActiveSection()])
 
     /** @listens !nextSection && scheduledNextSection **/
@@ -200,13 +272,17 @@ function NavigationProvider({ children, sections, categories }) {
     }, [!nextSection && scheduledNextSection && transitionStatus === NavigationProvider.TransitionStatus.NONE])
 
     const navigateToSection = (section) => {
+        const safeSection = _resolveSection(section)
+        if(!safeSection)
+            return
+
         if(!nextSection) {
-            if(targetSection !== section) setNextSection(section)
+            if(targetSection?.id !== safeSection.id) setNextSection(safeSection)
             else forceScrollToTop()
         }
 
-        else if(section !== nextSection) {
-            setScheduledNextSection(section)
+        else if(safeSection.id !== nextSection?.id) {
+            setScheduledNextSection(safeSection)
             if(resettingScrollYTo) {
                 _startTransitionAfterScroll(resettingScrollYTo)
             }
@@ -214,8 +290,7 @@ function NavigationProvider({ children, sections, categories }) {
     }
 
     const navigateToSectionWithId = (sectionId) => {
-        const section = sections.find(({ id }) => id === sectionId)
-        navigateToSection(section)
+        navigateToSection(_resolveSection(sectionId))
     }
 
     const navigateToSectionWithLink = (href) => {
@@ -231,9 +306,8 @@ function NavigationProvider({ children, sections, categories }) {
             navigateToSectionWithId(sectionId)
         }
         else {
-            const sectionId = href.replaceAll("#", "")
-            const section = sections.find(({ id }) => id === sectionId)
-            navigateToSection(section)
+            const sectionId = _resolveSectionAlias(href.replaceAll("#", ""))
+            navigateToSectionWithId(sectionId)
         }
     }
 
@@ -242,13 +316,16 @@ function NavigationProvider({ children, sections, categories }) {
     }
 
     const _updateLinks = (targetSection, targetCategory) => {
+        const safeTargetSection = _resolveSection(targetSection)
+        const safeTargetCategory = safeTargetSection?.category || targetCategory || null
+
         const sectionLinks = sections.map(({ id, categoryId, faIcon, data }) => ({
             id,
             categoryId,
             href: `#${id}`,
             label: language.getTranslation(data?.title?.locales, "title_short_nav"),
             faIcon,
-            active: targetSection?.id === id
+            active: safeTargetSection?.id === id
         }))
 
         const categoryLinks = categories.map(({ id, faIcon, locales }) => ({
@@ -256,7 +333,7 @@ function NavigationProvider({ children, sections, categories }) {
             href: `#cat:${id}`,
             label: language.getTranslation(locales, "title"),
             faIcon,
-            active: targetCategory?.id === id
+            active: safeTargetCategory?.id === id
         }))
 
         setSectionLinks(sectionLinks)

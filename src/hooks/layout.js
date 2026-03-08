@@ -15,7 +15,7 @@ export const useLayout = () => {
         const navToolsEl = document.querySelector("#nav-link-pills-menu")
         const navToolsElHeight = navToolsEl?.getBoundingClientRect().height || 0
 
-        const contentTop = navHeaderElHeight - navToolsElHeight + 5
+        const contentTop = Math.max(navHeaderElHeight - navToolsElHeight + 5, 0)
         const isHeaderHidden = scrollY >= contentTop
 
         return {navHeaderElHeight, navToolsElHeight, contentTop, isHeaderHidden}

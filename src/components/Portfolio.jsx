@@ -15,15 +15,14 @@ function Portfolio() {
     const navigation = useNavigation()
 
     if(!data || !language || !location || !navigation) {
-        window.location.reload()
-        return
+        return null
     }
 
     const profile = data.getProfile()
     const settings = data.getSettings()
     const sections = data.getSections()
 
-    const backgroundStyle = settings.templateSettings.backgroundStyle
+    const backgroundStyle = settings?.templateSettings?.backgroundStyle || "plain"
 
     const currentSection = navigation.targetSection
     const previousSection = navigation.previousSection

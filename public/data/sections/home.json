@@ -2,87 +2,223 @@
   "title": {
     "locales": {
       "en": {
-        "title_short": "🐣🐣🐣🐣🐣🐣🐣",
-        "title_short_nav": "Overview",
-        "title_long_prefix": "Welcome to",
+        "title_short": "Home",
+        "title_short_nav": "Home",
+        "title_long_prefix": "Arrive at",
         "title_long": "{{Villa Bagara}}"
+      },
+      "de": {
+        "title_short": "Start",
+        "title_short_nav": "Start",
+        "title_long_prefix": "Willkommen in",
+        "title_long": "{{Villa Bagara}}"
+      },
+      "hr": {
+        "title_short": "Početna",
+        "title_short_nav": "Početna",
+        "title_long_prefix": "Dobrodošli u",
+        "title_long": "{{Villu Bagara}}"
+      },
+      "tr": {
+        "title_short": "Ana sayfa",
+        "title_short_nav": "Ana sayfa",
+        "title_long_prefix": "",
+        "title_long": "{{Villa Bagara}}'ya hoş geldiniz"
       }
     }
   },
   "articles": [
-        {
-        "id": 1,
-        "component": "ArticleText",
-        "locales": {
-            "en": {"title": ""}
-        },
-        "settings": {
-            "order_items_by": "id",
-            "order_items_sort": "asc"
-        },
-        "items": [
-            {
-                "id": 1,
-                "animation": "hero-animation",
-                "faIcon": "",
-                "faIconColors": {"bg": "", "fill": "", "fillLight": ""},
-                "locales": {
-                    "en": {
-                        "text": "Midena se nalazi između Buškog jezera na zapadu i Duvanjskog polja na sjeveroistoku. Najbliži susjedi Midene su Oštrc na jugoistoku, Štitar na istoku, Lib planina na sjeveroistoku i Zavelim na jugozapadu. Najviši vrh je Sinjal sa 1224 metra nadmorske visine. Na Mideni je izgrađen vjetropark, kao i na monogim planinama u njenom susjedstvu. Srećom, pristup vrhu je moguć jugoistoćne strane, tako da se ne moraju koristiti putevi vjetroparka koji potpuno kvare ugođaj planinarenja."
-                    }
-                }
-            }
-        ]
-    },
     {
-      "id": 2,
-      "component": "ArticleThread",
+      "id": 1,
+      "component": "ArticleText",
       "locales": {
-        "en": { "title": "The {{Feeling}}" }
+        "en": {
+          "title": "A place that feels {{rare}}"
+        },
+        "de": {
+          "title": "Ein Ort, der sich {{selten}} anfühlt"
+        },
+        "hr": {
+          "title": "Mjesto koje djeluje {{rijetko}}"
+        },
+        "tr": {
+          "title": "{{Nadir}} hissettiren bir yer"
+        }
       },
       "settings": {
-        "max_rows_collapse_threshold": 3,
-        "order_items_by": "date",
-        "order_items_sort": "desc"
+        "order_items_by": "id",
+        "order_items_sort": "asc"
       },
       "items": [
         {
           "id": 1,
-          "date": { "year": 2026, "month": 1 },
-          "preview": {
-            "links": [
-              { "href": "#book", "tooltipString": "book_now", "faIcon": "fa-solid fa-calendar-check" }
-            ],
-            "screenshots": ["images/villa_bagara/hero/hero_01_front-porch.png"],
-            "screenshotsAspectRatio": "16:9",
-            "youtubeVideo": ""
-          },
+          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
           "locales": {
             "en": {
-              "title": "Isolation meets connection to earth",
-              "province": "Gornji Brisnik",
-              "country": "Tomislavgrad (BIH)",
-              "institution": "Villa Bagara",
-              "text": "A rustic adventure villa above the village: wide space front & back, oldtimer feeling, stone-hut history nearby, and mountains right behind the garden."
+              "text": "Villa Bagara is positioned as a quiet mountain estate for guests who want privacy, beauty, and enough land around them to feel released from ordinary pace. It is not built around noise. It is built around atmosphere, long mornings, open air, and a sense of arrival."
+            },
+            "de": {
+              "text": "Villa Bagara ist als ruhiges Berganwesen für Gäste gedacht, die Privatsphäre, Schönheit und genug Land um sich herum suchen, um aus dem gewöhnlichen Tempo auszusteigen. Es ist kein Ort für Lärm. Es ist ein Ort für Atmosphäre, lange Morgen, frische Luft und ein echtes Ankommen."
+            },
+            "hr": {
+              "text": "Villa Bagara zamišljena je kao mirno planinsko imanje za goste koji traže privatnost, ljepotu i dovoljno prostora oko sebe da izađu iz običnog ritma. Nije građena oko buke. Građena je oko ugođaja, dugih jutara, svježeg zraka i osjećaja dolaska."
+            },
+            "tr": {
+              "text": "Villa Bagara; mahremiyet, güzellik ve günlük hızdan kopmaya yetecek kadar geniş arazi isteyen misafirler için kurgulanmış sakin bir dağ mülküdür. Gürültü üzerine kurulmamıştır. Atmosfer, uzun sabahlar, açık hava ve gerçekten varmış olma hissi üzerine kuruludur."
             }
           }
         },
         {
           "id": 2,
-          "date": { "year": 2026, "month": 1 },
-          "preview": {
-            "links": [{ "href": "#services", "tooltipString": "see_services", "faIcon": "fa-solid fa-concierge-bell" }],
-            "screenshots": ["images/villa_bagara/hero/hero_03_back-garden-view.png"],
-            "screenshotsAspectRatio": "16:9",
-            "youtubeVideo": ""
+          "img": "images/villa_bagara/hero/Midena.jpg",
+          "locales": {
+            "en": {
+              "text": "The landscape around the estate adds the second half of the experience: high ground, weather, silence, walking routes, and the feeling that the day can open slowly. It suits couples, families, founders, and private groups who want nature without giving up intention."
+            },
+            "de": {
+              "text": "Die Landschaft rund um das Anwesen bildet die zweite Hälfte des Erlebnisses: Höhe, Wetter, Stille, Spazierwege und das Gefühl, dass der Tag langsam aufgehen darf. Es passt zu Paaren, Familien, Gründern und privaten Gruppen, die Natur suchen, ohne auf Anspruch zu verzichten."
+            },
+            "hr": {
+              "text": "Krajolik oko imanja daje drugu polovicu doživljaja: visinu, vrijeme, tišinu, rute za hodanje i osjećaj da se dan može otvoriti polako. Odgovara parovima, obiteljima, poduzetnicima i privatnim grupama koje žele prirodu bez odricanja od promišljenosti."
+            },
+            "tr": {
+              "text": "Mülkün çevresindeki manzara deneyimin ikinci yarısını oluşturur: yüksek plato, hava, sessizlik, yürüyüş rotaları ve günün yavaşça açılabildiği bir his. Doğayı arayan ama özen duygusundan vazgeçmek istemeyen çiftler, aileler, kurucular ve özel gruplar için uygundur."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "component": "ArticleFacts",
+      "locales": {
+        "en": {
+          "title": "Why guests choose {{Villa Bagara}}"
+        },
+        "de": {
+          "title": "Warum Gäste {{Villa Bagara}} wählen"
+        },
+        "hr": {
+          "title": "Zašto gosti biraju {{Villu Bagara}}"
+        },
+        "tr": {
+          "title": "Misafirler neden {{Villa Bagara}}'yı seçiyor"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-mountain-sun",
+          "faIconColors": {
+            "bg": "#20160b",
+            "bgLight": "#f9efe3",
+            "fill": "#d08a2a",
+            "fillLight": "#b36f17"
           },
           "locales": {
             "en": {
-              "title": "Built for groups — up to 30 for parties",
-              "province": "Edge of an old stone village",
-              "country": "Herzegovina mountains",
-              "institution": "Villa Bagara",
-              "text": "From a rich-family retreat to a bachelor party basecamp: space, grill, routes, rentals, and help with logistics."
+              "title": "A private natural setting",
+              "text": "The estate leads with space, calm, and a mountain frame instead of crowd energy."
+            },
+            "de": {
+              "title": "Eine private Naturkulisse",
+              "text": "Das Anwesen überzeugt mit Weite, Ruhe und Bergkulisse statt mit Betriebsamkeit."
+            },
+            "hr": {
+              "title": "Privatan prirodni okvir",
+              "text": "Imanje se oslanja na prostor, mir i planinski okvir, a ne na gužvu."
+            },
+            "tr": {
+              "title": "Özel bir doğal çevre",
+              "text": "Mülkün gücü kalabalıkta değil; alanda, sakinlikte ve dağ çerçevesindedir."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-wifi-slash",
+          "faIconColors": {
+            "bg": "#151b20",
+            "bgLight": "#eaf4fb",
+            "fill": "#5aa3d6",
+            "fillLight": "#3d88be"
+          },
+          "locales": {
+            "en": {
+              "title": "Digital-detox rhythm",
+              "text": "It supports stays built around slower mornings, clearer focus, and time outdoors."
+            },
+            "de": {
+              "title": "Rhythmus für Digital Detox",
+              "text": "Der Ort unterstützt Aufenthalte mit langsameren Morgenstunden, klarerem Fokus und mehr Zeit draußen."
+            },
+            "hr": {
+              "title": "Ritam za digitalni detox",
+              "text": "Mjesto podržava boravke s mirnijim jutrima, jasnijim fokusom i više vremena vani."
+            },
+            "tr": {
+              "title": "Dijital detoks ritmi",
+              "text": "Yavaş sabahlar, daha net odak ve daha çok dış mekân zamanı için uygundur."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-person-hiking",
+          "faIconColors": {
+            "bg": "#102013",
+            "bgLight": "#edf8ef",
+            "fill": "#4fb06c",
+            "fillLight": "#368a51"
+          },
+          "locales": {
+            "en": {
+              "title": "Movement built into the day",
+              "text": "Hiking, walking, cycling, and nearby escapes can all become part of the stay."
+            },
+            "de": {
+              "title": "Bewegung gehört zum Tag",
+              "text": "Wandern, Gehen, Radfahren und Ausflüge in die Nähe können Teil des Aufenthalts werden."
+            },
+            "hr": {
+              "title": "Kretanje je dio dana",
+              "text": "Planinarenje, šetnje, vožnja biciklom i obližnji izleti lako postaju dio boravka."
+            },
+            "tr": {
+              "title": "Hareket günün parçasıdır",
+              "text": "Yürüyüş, trekking, bisiklet ve yakın kaçışlar konaklamanın doğal parçası olabilir."
+            }
+          }
+        },
+        {
+          "id": 4,
+          "faIcon": "fa-solid fa-people-group",
+          "faIconColors": {
+            "bg": "#1f1520",
+            "bgLight": "#f8eef7",
+            "fill": "#bb6bd9",
+            "fillLight": "#9f4fc0"
+          },
+          "locales": {
+            "en": {
+              "title": "Made for intentional groups",
+              "text": "Best for couples, families, friends, or private groups who value atmosphere over noise."
+            },
+            "de": {
+              "title": "Für bewusste Gruppen gemacht",
+              "text": "Ideal für Paare, Familien, Freunde oder private Gruppen, die Atmosphäre höher bewerten als Lautstärke."
+            },
+            "hr": {
+              "title": "Stvoreno za promišljene grupe",
+              "text": "Najbolje za parove, obitelji, prijatelje ili privatne grupe koje cijene ugođaj više od buke."
+            },
+            "tr": {
+              "title": "Özenli gruplar için tasarlandı",
+              "text": "Atmosferi gürültüden daha çok önemseyen çiftler, aileler, arkadaşlar ve özel gruplar için idealdir."
             }
           }
         }
@@ -90,69 +226,133 @@
     },
     {
       "id": 3,
-      "component": "ArticleStack",
-      "locales": {
-        "en": {
-          "category_all": "All",
-          "category_facts": "Quick Facts",
-          "category_distances": "Distances",
-          "category_highlights": "Highlights"
-        }
-      },
+      "component": "ArticleInfoList",
       "settings": {
-        "categorize_by": ["category_facts", "category_distances", "category_highlights"],
         "order_items_by": "id",
         "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "Start your {{journey}}"
+        },
+        "de": {
+          "title": "Beginnen Sie Ihre {{Reise}}"
+        },
+        "hr": {
+          "title": "Započni svoje {{putovanje}}"
+        },
+        "tr": {
+          "title": "{{Yolculuğunuza}} başlayın"
+        }
       },
       "items": [
         {
           "id": 1,
-          "categoryId": "category_facts",
           "faIcon": "fa-solid fa-bed",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#22c55e", "fillLight": "" },
-          "locales": { "en": { "title": "5 beds (group-friendly setup)" } }
+          "faIconColors": {
+            "bg": "#121720",
+            "bgLight": "#eef3fb",
+            "fill": "#7da5ff",
+            "fillLight": "#5c86df"
+          },
+          "link": {
+            "href": "#stay",
+            "tooltipString": "see_more"
+          },
+          "locales": {
+            "en": {
+              "title": "See the estate",
+              "text": "Walk through the house, land, and quiet comfort of the stay.",
+              "label": "Open Stay"
+            },
+            "de": {
+              "title": "Das Anwesen ansehen",
+              "text": "Entdecken Sie Haus, Grundstück und die ruhige Qualität des Aufenthalts.",
+              "label": "Aufenthalt öffnen"
+            },
+            "hr": {
+              "title": "Pogledaj imanje",
+              "text": "Prođi kroz kuću, zemljište i tihi komfor boravka.",
+              "label": "Otvori boravak"
+            },
+            "tr": {
+              "title": "Mülkü görün",
+              "text": "Evi, araziyi ve konaklamanın sakin konforunu keşfedin.",
+              "label": "Konaklamayı aç"
+            }
+          }
         },
         {
           "id": 2,
-          "categoryId": "category_facts",
-          "faIcon": "fa-solid fa-people-group",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#0ea5e9", "fillLight": "" },
-          "locales": { "en": { "title": "Up to 30 people for parties" } }
+          "faIcon": "fa-solid fa-camera",
+          "faIconColors": {
+            "bg": "#1f1a13",
+            "bgLight": "#fbf5ea",
+            "fill": "#d0a45a",
+            "fillLight": "#b78633"
+          },
+          "link": {
+            "href": "#gallery",
+            "tooltipString": "open_gallery"
+          },
+          "locales": {
+            "en": {
+              "title": "Browse the visuals",
+              "text": "Move straight into the image wall and get a feel for the place.",
+              "label": "Open Gallery"
+            },
+            "de": {
+              "title": "Die Bilder ansehen",
+              "text": "Wechseln Sie direkt in die Bildstrecke und spüren Sie den Ort visuell.",
+              "label": "Galerie öffnen"
+            },
+            "hr": {
+              "title": "Pregledaj vizuale",
+              "text": "Prijeđi ravno u galeriju slika i osjeti mjesto kroz vizuale.",
+              "label": "Otvori galeriju"
+            },
+            "tr": {
+              "title": "Görselleri inceleyin",
+              "text": "Doğrudan görsel duvara geçin ve mekânı görüntüler üzerinden hissedin.",
+              "label": "Galeriyi aç"
+            }
+          }
         },
         {
           "id": 3,
-          "categoryId": "category_highlights",
-          "faIcon": "fa-solid fa-fire",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#f97316", "fillLight": "" },
-          "locales": { "en": { "title": "Grill nights + big porch energy" } }
-        },
-        {
-          "id": 4,
-          "categoryId": "category_highlights",
-          "faIcon": "fa-solid fa-tree",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#16a34a", "fillLight": "" },
-          "locales": { "en": { "title": "Grass, fruit trees, trimmed trees around the house" } }
-        },
-        {
-          "id": 5,
-          "categoryId": "category_distances",
-          "faIcon": "fa-solid fa-mountain",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#64748b", "fillLight": "" },
-          "locales": { "en": { "title": "Hikes: mountains reachable in ~30 min" } }
-        },
-        {
-          "id": 6,
-          "categoryId": "category_distances",
-          "faIcon": "fa-solid fa-umbrella-beach",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#38bdf8", "fillLight": "" },
-          "locales": { "en": { "title": "Beach: ~1 hour drive" } }
-        },
-        {
-          "id": 7,
-          "categoryId": "category_distances",
-          "faIcon": "fa-solid fa-city",
-          "faIconColors": { "bg": "", "bgLight": "", "fill": "#a855f7", "fillLight": "" },
-          "locales": { "en": { "title": "3 big cities: within ~2 hours" } }
+          "faIcon": "fa-solid fa-envelope-open-text",
+          "faIconColors": {
+            "bg": "#161717",
+            "bgLight": "#f2f3f3",
+            "fill": "#7c948d",
+            "fillLight": "#5f766f"
+          },
+          "link": {
+            "href": "#contact",
+            "tooltipString": "book_now"
+          },
+          "locales": {
+            "en": {
+              "title": "Plan your stay",
+              "text": "Send a direct inquiry when the place feels right for your dates.",
+              "label": "Contact us"
+            },
+            "de": {
+              "title": "Ihren Aufenthalt planen",
+              "text": "Senden Sie eine direkte Anfrage, sobald der Ort zu Ihren Daten passt.",
+              "label": "Kontakt"
+            },
+            "hr": {
+              "title": "Isplaniraj boravak",
+              "text": "Pošalji izravan upit kad osjetiš da je ovo pravo mjesto za tvoje datume.",
+              "label": "Kontakt"
+            },
+            "tr": {
+              "title": "Konaklamanızı planlayın",
+              "text": "Burası tarihleriniz için doğru hissettirdiğinde doğrudan talep gönderin.",
+              "label": "Bize ulaşın"
+            }
+          }
         }
       ]
     }

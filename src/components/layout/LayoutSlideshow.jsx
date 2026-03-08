@@ -5,6 +5,7 @@ import {useNavigation} from "/src/providers/NavigationProvider.jsx"
 
 function LayoutSlideshow({ sections, currentSection, previousSection }) {
     const navigation = useNavigation()
+    const effectiveCurrentSection = currentSection || previousSection || sections[0] || null
 
     const isTransitioning = navigation.isTransitioning()
     const transitioningClass = isTransitioning ?
@@ -12,7 +13,7 @@ function LayoutSlideshow({ sections, currentSection, previousSection }) {
         ``
 
     const _shouldTransition = (section) => {
-        const isCurrentOrPrevious = section === currentSection || section === previousSection
+        const isCurrentOrPrevious = section === effectiveCurrentSection || section === previousSection
         return isCurrentOrPrevious && isTransitioning
     }
 
@@ -21,7 +22,7 @@ function LayoutSlideshow({ sections, currentSection, previousSection }) {
             {sections.map((section, index) => (
                 <Section key={section.id}
                          section={section}
-                         visible={section === currentSection}
+                         visible={section === effectiveCurrentSection}
                          shouldTransition={_shouldTransition(section)}/>
             ))}
         </div>

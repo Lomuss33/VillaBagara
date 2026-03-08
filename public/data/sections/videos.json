@@ -1,0 +1,134 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Videos",
+        "title_short_nav": "Videos",
+        "title_long_prefix": "Watch the",
+        "title_long": "{{moving atmosphere}}"
+      },
+      "de": {
+        "title_short": "Videos",
+        "title_short_nav": "Videos",
+        "title_long_prefix": "Sehen Sie die",
+        "title_long": "{{bewegte Atmosphäre}}"
+      },
+      "hr": {
+        "title_short": "Video",
+        "title_short_nav": "Video",
+        "title_long_prefix": "Pogledaj",
+        "title_long": "{{pokretnu atmosferu}}"
+      },
+      "tr": {
+        "title_short": "Videolar",
+        "title_short_nav": "Videolar",
+        "title_long_prefix": "",
+        "title_long": "{{Hareketli atmosferi}} izleyin"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticlePortfolio",
+      "locales": {
+        "en": {
+          "title": "Video selection"
+        },
+        "de": {
+          "title": "Videoauswahl"
+        },
+        "hr": {
+          "title": "Odabir videa"
+        },
+        "tr": {
+          "title": "Video seçkisi"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "locales": {
+            "en": {
+              "title": "Arrival film",
+              "tags": ["Coming soon", "Arrival"],
+              "text": "Reserved for a short first-impression video of the estate and its approach."
+            },
+            "de": {
+              "title": "Ankunftsfilm",
+              "tags": ["Kommt bald", "Ankunft"],
+              "text": "Reserviert für ein kurzes erstes Video über das Anwesen und die Anfahrt."
+            },
+            "hr": {
+              "title": "Video dolaska",
+              "tags": ["Uskoro", "Dolazak"],
+              "text": "Rezervirano za kratki prvi video o imanju i pristupu."
+            },
+            "tr": {
+              "title": "Varış filmi",
+              "tags": ["Yakında", "Varış"],
+              "text": "Mülk ve yaklaşımını gösterecek kısa ilk video için ayrıldı."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "img": "images/villa_bagara/hero/Midena.jpg",
+          "locales": {
+            "en": {
+              "title": "Land and horizon",
+              "tags": ["Coming soon", "Landscape"],
+              "text": "Reserved for a slow scenic clip showing the wider land, weather, and silence around the stay."
+            },
+            "de": {
+              "title": "Land und Horizont",
+              "tags": ["Kommt bald", "Landschaft"],
+              "text": "Reserviert für einen ruhigen Landschaftsclip mit Land, Wetter und Stille rund um den Aufenthalt."
+            },
+            "hr": {
+              "title": "Zemljište i horizont",
+              "tags": ["Uskoro", "Krajolik"],
+              "text": "Rezervirano za miran kadar krajolika koji pokazuje zemljište, vrijeme i tišinu oko boravka."
+            },
+            "tr": {
+              "title": "Arazi ve ufuk",
+              "tags": ["Yakında", "Manzara"],
+              "text": "Konaklamanın çevresindeki araziyi, havayı ve sessizliği gösterecek sakin bir manzara klibi için ayrıldı."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "locales": {
+            "en": {
+              "title": "Stay rhythm",
+              "tags": ["Coming soon", "Atmosphere"],
+              "text": "Reserved for a slower edit focused on porch time, outdoor meals, and the emotional tone of the stay."
+            },
+            "de": {
+              "title": "Rhythmus des Aufenthalts",
+              "tags": ["Kommt bald", "Atmosphäre"],
+              "text": "Reserviert für einen ruhigeren Schnitt über Verandazeit, Mahlzeiten im Freien und den emotionalen Ton des Aufenthalts."
+            },
+            "hr": {
+              "title": "Ritam boravka",
+              "tags": ["Uskoro", "Ugođaj"],
+              "text": "Rezervirano za sporiji video fokusiran na vrijeme na trijemu, obroke vani i emocionalni ton boravka."
+            },
+            "tr": {
+              "title": "Konaklama ritmi",
+              "tags": ["Yakında", "Atmosfer"],
+              "text": "Veranda zamanı, açık hava öğünleri ve konaklamanın duygusal tonuna odaklanan daha sakin bir kurgu için ayrıldı."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

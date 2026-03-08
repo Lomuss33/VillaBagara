@@ -24,6 +24,8 @@ function Scrollable({ children, id, pluginEnabled, shouldResetScroll, setShouldR
 
         if(shouldCreatePlugin) _createPlugin()
         else _deactivatePlugin()
+
+        return () => _deactivatePlugin()
     }, [pluginEnabled, viewport.isMobileLayout()])
 
     useEffect(() => {
@@ -32,6 +34,11 @@ function Scrollable({ children, id, pluginEnabled, shouldResetScroll, setShouldR
 
         if(!plugin) {
             const div = document.getElementById(id)
+            if(!div) {
+                setShouldResetScroll(false)
+                return
+            }
+
             setTimeout(() => {
                 div.scrollTop = 0
             }, 50)
@@ -48,6 +55,8 @@ function Scrollable({ children, id, pluginEnabled, shouldResetScroll, setShouldR
             return
 
         const target = document.getElementById(id)
+        if(!target)
+            return
 
         const scrollbar = Scrollbar.init(target, {
             damping: 0.2,
@@ -70,6 +79,11 @@ function Scrollable({ children, id, pluginEnabled, shouldResetScroll, setShouldR
             return
 
         const target = document.getElementById(id)
+        if(!target) {
+            setPlugin(null)
+            return
+        }
+
         Scrollbar.destroy(target)
         setPlugin(null)
     }
