@@ -1,4 +1,4 @@
-{
+﻿{
   "title": {
     "locales": {
       "en": {
@@ -10,19 +10,19 @@
       "de": {
         "title_short": "Software & Code",
         "title_short_nav": "Software",
-        "title_long_prefix": "Erschaffen mit Logik, Kreativität und Iteration",
+        "title_long_prefix": "Erschaffen mit Logik, KreativitÃ¤t und Iteration",
         "title_long": "{{Meine Bits}}"
       },
       "hr": {
         "title_short": "Softver i kod",
         "title_short_nav": "Softver",
-        "title_long_prefix": "Stvorena logikom, kreativnošću i iteracijom",
+        "title_long_prefix": "Stvorena logikom, kreativnoÅ¡Ä‡u i iteracijom",
         "title_long": "{{Moji bitovi}}"
       },
       "tr": {
-        "title_short": "Yazılım ve Kod",
-        "title_short_nav": "Yazılım",
-        "title_long_prefix": "Mantık, yaratıcılık ve yinelemeyle oluşturuldu",
+        "title_short": "YazÄ±lÄ±m ve Kod",
+        "title_short_nav": "YazÄ±lÄ±m",
+        "title_long_prefix": "MantÄ±k, yaratÄ±cÄ±lÄ±k ve yinelemeyle oluÅŸturuldu",
         "title_long": "{{Benim bitler}}"
       }
     }
@@ -35,51 +35,36 @@
         "en": {
           "title": "My {{Software}} Projects",
           "category_all": "All Projects",
-          "category_learning": "Learning & Education",
-          "category_robotics": "Robotics",
-          "category_games": "Games & Entertainment",
-          "category_tools": "Tools & Utilities",
-          "category_web": "Web & Design",
-          "category_personal": "Personal Projects"
+          "category_educational": "Educational",
+          "category_professional": "Professional",
+          "category_personal": "Personal"
         },
         "de": {
           "title": "Meine {{Software}}-Projekte",
           "category_all": "Alle Projekte",
-          "category_learning": "Lernen & Bildung",
-          "category_robotics": "Robotik",
-          "category_games": "Spiele & Unterhaltung",
-          "category_tools": "Werkzeuge & Dienstprogramme",
-          "category_web": "Web & Design",
-          "category_personal": "Persönliche Projekte"
+          "category_educational": "Bildung",
+          "category_professional": "Beruflich",
+          "category_personal": "PersÃ¶nlich"
         },
         "hr": {
           "title": "Moji {{softverski}} projekti",
           "category_all": "Svi projekti",
-          "category_learning": "Učenje & obrazovanje",
-          "category_robotics": "Robotika",
-          "category_games": "Igre & zabava",
-          "category_tools": "Alati & pomagala",
-          "category_web": "Web & dizajn",
-          "category_personal": "Osobni projekti"
+          "category_educational": "Edukativno",
+          "category_professional": "Profesionalno",
+          "category_personal": "Osobno"
         },
         "tr": {
-          "title": "{{Yazılım}} Projelerim",
-          "category_all": "Tüm Projeler",
-          "category_learning": "Öğrenme & Eğitim",
-          "category_robotics": "Robotik",
-          "category_games": "Oyunlar & Eğlence",
-          "category_tools": "Araçlar & Yardımcı Programlar",
-          "category_web": "Web & Tasarım",
-          "category_personal": "Kişisel Projeler"
+          "title": "{{YazÄ±lÄ±m}} Projelerim",
+          "category_all": "TÃ¼m Projeler",
+          "category_educational": "EÄŸitsel",
+          "category_professional": "Profesyonel",
+          "category_personal": "KiÅŸisel"
         }
       },
       "settings": {
         "categorize_by": [
-          "category_learning",
-          "category_robotics",
-          "category_games",
-          "category_tools",
-          "category_web",
+          "category_educational",
+          "category_professional",
           "category_personal"
         ],
         "order_items_by": "id",
@@ -96,7 +81,7 @@
             "fill": "#2962FF",
             "fillLight": "#1E88E5"
           },
-          "categoryId": "category_learning",
+          "categoryId": "category_educational",
           "preview": {
             "links": [
               {
@@ -127,32 +112,32 @@
             },
             "de": {
               "title": "Java-Lernprojekt: Belot",
-              "text": "Universitätsprojekt zum Erlernen der Java-Programmierung durch die Entwicklung eines Belot-Kartenspiels. Implementierung der Spiel-Logik, Benutzerinteraktion und einfacher KI-Gegner.",
+              "text": "UniversitÃ¤tsprojekt zum Erlernen der Java-Programmierung durch die Entwicklung eines Belot-Kartenspiels. Implementierung der Spiel-Logik, Benutzerinteraktion und einfacher KI-Gegner.",
               "tags": [
                 "Java",
                 "Lernen",
                 "Kartenspiel",
-                "Universitätsprojekt"
+                "UniversitÃ¤tsprojekt"
               ]
             },
             "hr": {
-              "title": "Java projekt učenja: Belot",
-              "text": "Sveučilišni projekt usmjeren na učenje Java programiranja kroz razvoj igre Belot. Implementirana osnovna logika igre, interakcija s korisnikom i jednostavni AI protivnici.",
+              "title": "Java projekt uÄenja: Belot",
+              "text": "SveuÄiliÅ¡ni projekt usmjeren na uÄenje Java programiranja kroz razvoj igre Belot. Implementirana osnovna logika igre, interakcija s korisnikom i jednostavni AI protivnici.",
               "tags": [
                 "Java",
-                "Učenje",
-                "Kartaška igra",
-                "Sveučilišni projekt"
+                "UÄenje",
+                "KartaÅ¡ka igra",
+                "SveuÄiliÅ¡ni projekt"
               ]
             },
             "tr": {
-              "title": "Java Öğrenme Projesi: Belot",
-              "text": "Belot kart oyunu geliştirerek Java programlama öğrenmeye odaklanan üniversite projesi. Temel oyun mantığı, kullanıcı etkileşimi ve basit AI rakipleri uygulandı.",
+              "title": "Java Ã–ÄŸrenme Projesi: Belot",
+              "text": "Belot kart oyunu geliÅŸtirerek Java programlama Ã¶ÄŸrenmeye odaklanan Ã¼niversite projesi. Temel oyun mantÄ±ÄŸÄ±, kullanÄ±cÄ± etkileÅŸimi ve basit AI rakipleri uygulandÄ±.",
               "tags": [
                 "Java",
-                "Öğrenme",
+                "Ã–ÄŸrenme",
                 "Kart Oyunu",
-                "Üniversite Projesi"
+                "Ãœniversite Projesi"
               ]
             }
           }
@@ -167,7 +152,7 @@
             "fill": "#1976D2",
             "fillLight": "#1565C0"
           },
-          "categoryId": "category_robotics",
+          "categoryId": "category_educational",
           "preview": {
             "links": [
               {
@@ -199,35 +184,35 @@
             },
             "de": {
               "title": "Pepper & Nao Pokerspiel",
-              "text": "Universitätsprojekt mit Pepper- und Nao-Robotern zur Erstellung eines interaktiven Pokerspiels mit Animationen und Echtzeit-Kartenverteilung auf einem Monitor.",
+              "text": "UniversitÃ¤tsprojekt mit Pepper- und Nao-Robotern zur Erstellung eines interaktiven Pokerspiels mit Animationen und Echtzeit-Kartenverteilung auf einem Monitor.",
               "tags": [
                 "Robotik",
                 "Pepper",
                 "Nao",
                 "Poker",
-                "Universitätsprojekt"
+                "UniversitÃ¤tsprojekt"
               ]
             },
             "hr": {
               "title": "Poker igra s Pepper i Nao robotima",
-              "text": "Sveučilišni projekt korištenjem Pepper i Nao robota za stvaranje interaktivne poker igre s animacijama i dijeljenjem karata u realnom vremenu na monitoru.",
+              "text": "SveuÄiliÅ¡ni projekt koriÅ¡tenjem Pepper i Nao robota za stvaranje interaktivne poker igre s animacijama i dijeljenjem karata u realnom vremenu na monitoru.",
               "tags": [
                 "Robotika",
                 "Pepper",
                 "Nao",
                 "Poker",
-                "Sveučilišni projekt"
+                "SveuÄiliÅ¡ni projekt"
               ]
             },
             "tr": {
               "title": "Pepper & Nao Poker Oyunu",
-              "text": "Pepper ve Nao robotlarını kullanarak, animasyonlu ve gerçek zamanlı kart dağıtımının yapıldığı interaktif bir poker oyunu oluşturan üniversite projesi.",
+              "text": "Pepper ve Nao robotlarÄ±nÄ± kullanarak, animasyonlu ve gerÃ§ek zamanlÄ± kart daÄŸÄ±tÄ±mÄ±nÄ±n yapÄ±ldÄ±ÄŸÄ± interaktif bir poker oyunu oluÅŸturan Ã¼niversite projesi.",
               "tags": [
                 "Robotik",
                 "Pepper",
                 "Nao",
                 "Poker",
-                "Üniversite Projesi"
+                "Ãœniversite Projesi"
               ]
             }
           }
@@ -242,7 +227,7 @@
             "fill": "#7C3AED",
             "fillLight": "#6D28D9"
           },
-          "categoryId": "category_games",
+          "categoryId": "category_educational",
           "preview": {
             "links": [
               {
@@ -273,32 +258,32 @@
             },
             "de": {
               "title": "Simon-Spiel: Mehrspieler & Datenbank",
-              "text": "Universitätsprojekt zur Kombination von theoretischem Wissen für ein Mehrspieler-Simon-Spiel mit physischer und virtueller Server-Datenbank für Highscores und Benutzerverwaltung.",
+              "text": "UniversitÃ¤tsprojekt zur Kombination von theoretischem Wissen fÃ¼r ein Mehrspieler-Simon-Spiel mit physischer und virtueller Server-Datenbank fÃ¼r Highscores und Benutzerverwaltung.",
               "tags": [
                 "Spiel",
                 "Mehrspieler",
                 "Datenbank",
-                "Universitätsprojekt"
+                "UniversitÃ¤tsprojekt"
               ]
             },
             "hr": {
-              "title": "Simon igra: Višeigrač & baza podataka",
-              "text": "Sveučilišni projekt kombiniranjem teorijskog znanja za stvaranje višeigračke Simon igre s fizičkom i virtualnom server bazom podataka za rezultate i upravljanje korisnicima.",
+              "title": "Simon igra: ViÅ¡eigraÄ & baza podataka",
+              "text": "SveuÄiliÅ¡ni projekt kombiniranjem teorijskog znanja za stvaranje viÅ¡eigraÄke Simon igre s fiziÄkom i virtualnom server bazom podataka za rezultate i upravljanje korisnicima.",
               "tags": [
                 "Igra",
-                "Višeigrač",
+                "ViÅ¡eigraÄ",
                 "Baza podataka",
-                "Sveučilišni projekt"
+                "SveuÄiliÅ¡ni projekt"
               ]
             },
             "tr": {
-              "title": "Simon Oyunu: Çoklu Oyuncu & Veritabanı",
-              "text": "Teorik bilgiyi birleştiren, fiziksel ve sanal sunucu veritabanı ile yüksek skorlar ve kullanıcı yönetimi için çoklu oyuncu Simon oyunu oluşturan üniversite projesi.",
+              "title": "Simon Oyunu: Ã‡oklu Oyuncu & VeritabanÄ±",
+              "text": "Teorik bilgiyi birleÅŸtiren, fiziksel ve sanal sunucu veritabanÄ± ile yÃ¼ksek skorlar ve kullanÄ±cÄ± yÃ¶netimi iÃ§in Ã§oklu oyuncu Simon oyunu oluÅŸturan Ã¼niversite projesi.",
               "tags": [
                 "Oyun",
-                "Çoklu Oyuncu",
-                "Veritabanı",
-                "Üniversite Projesi"
+                "Ã‡oklu Oyuncu",
+                "VeritabanÄ±",
+                "Ãœniversite Projesi"
               ]
             }
           }
@@ -313,7 +298,7 @@
             "fill": "#06B6D4",
             "fillLight": "#0891B2"
           },
-          "categoryId": "category_tools",
+          "categoryId": "category_personal",
           "preview": {
             "links": [
               {
@@ -345,35 +330,35 @@
             },
             "de": {
               "title": "Deutsch-Lernwerkzeug",
-              "text": "Persönliches Projekt zum Deutschlernen über Englisch und Kroatisch mit Übersetzungs-Tools, Quizzen und interaktiven Sprachübungen für effektives und unterhaltsames Lernen.",
+              "text": "PersÃ¶nliches Projekt zum Deutschlernen Ã¼ber Englisch und Kroatisch mit Ãœbersetzungs-Tools, Quizzen und interaktiven SprachÃ¼bungen fÃ¼r effektives und unterhaltsames Lernen.",
               "tags": [
                 "Sprachlernen",
                 "Deutsch",
                 "Kroatisch",
                 "Englisch",
-                "Persönliches Projekt"
+                "PersÃ¶nliches Projekt"
               ]
             },
             "hr": {
-              "title": "Alat za učenje njemačkog",
-              "text": "Osobni projekt za učenje njemačkog kroz engleski i hrvatski, s alatima za prijevod, kvizovima i interaktivnim vježbama za učinkovito i zabavno učenje.",
+              "title": "Alat za uÄenje njemaÄkog",
+              "text": "Osobni projekt za uÄenje njemaÄkog kroz engleski i hrvatski, s alatima za prijevod, kvizovima i interaktivnim vjeÅ¾bama za uÄinkovito i zabavno uÄenje.",
               "tags": [
-                "Učenje jezika",
-                "Njemački",
+                "UÄenje jezika",
+                "NjemaÄki",
                 "Hrvatski",
                 "Engleski",
                 "Osobni projekt"
               ]
             },
             "tr": {
-              "title": "Almanca Öğrenme Aracı",
-              "text": "İngilizce ve Hırvatça aracılığıyla Almanca öğrenmeye yönelik kişisel proje. Çeviri araçları, testler ve etkileşimli dil alıştırmaları ile eğlenceli ve etkili öğrenme sunar.",
+              "title": "Almanca Ã–ÄŸrenme AracÄ±",
+              "text": "Ä°ngilizce ve HÄ±rvatÃ§a aracÄ±lÄ±ÄŸÄ±yla Almanca Ã¶ÄŸrenmeye yÃ¶nelik kiÅŸisel proje. Ã‡eviri araÃ§larÄ±, testler ve etkileÅŸimli dil alÄ±ÅŸtÄ±rmalarÄ± ile eÄŸlenceli ve etkili Ã¶ÄŸrenme sunar.",
               "tags": [
-                "Dil Öğrenme",
+                "Dil Ã–ÄŸrenme",
                 "Almanca",
-                "Hırvatça",
-                "İngilizce",
-                "Kişisel Proje"
+                "HÄ±rvatÃ§a",
+                "Ä°ngilizce",
+                "KiÅŸisel Proje"
               ]
             }
           }
@@ -388,7 +373,7 @@
             "fill": "#F59E0B",
             "fillLight": "#D97706"
           },
-          "categoryId": "category_web",
+          "categoryId": "category_professional",
           "preview": {
             "links": [
               {
@@ -419,17 +404,17 @@
             },
             "de": {
               "title": "Villa Bagara: Renovierungsprojekt",
-              "text": "Website für das zukünftige Renovierungsprojekt eines Ahnenhauses, das als Bergsport- und Rückzugsort vermietet werden soll. Derzeit in der Planungs- und Bauphase.",
+              "text": "Website fÃ¼r das zukÃ¼nftige Renovierungsprojekt eines Ahnenhauses, das als Bergsport- und RÃ¼ckzugsort vermietet werden soll. Derzeit in der Planungs- und Bauphase.",
               "tags": [
                 "Webdesign",
                 "Renovierung",
-                "Berghütte",
-                "Persönliches Projekt"
+                "BerghÃ¼tte",
+                "PersÃ¶nliches Projekt"
               ]
             },
             "hr": {
               "title": "Villa Bagara: Projekt obnove",
-              "text": "Web stranica za budući projekt obnove obiteljske kuće, namijenjena kao planinski sportski i odmarališni prostor. Trenutno u fazi planiranja i izgradnje.",
+              "text": "Web stranica za buduÄ‡i projekt obnove obiteljske kuÄ‡e, namijenjena kao planinski sportski i odmaraliÅ¡ni prostor. Trenutno u fazi planiranja i izgradnje.",
               "tags": [
                 "Web dizajn",
                 "Obnova",
@@ -439,12 +424,12 @@
             },
             "tr": {
               "title": "Villa Bagara: Yenileme Projesi",
-              "text": "Atalarından kalan bir evin gelecekteki yenileme projesi için web sitesi. Dağ sporları ve dinlenme tesisi olarak tasarlandı. Şu anda planlama ve inşa aşamasında.",
+              "text": "AtalarÄ±ndan kalan bir evin gelecekteki yenileme projesi iÃ§in web sitesi. DaÄŸ sporlarÄ± ve dinlenme tesisi olarak tasarlandÄ±. Åžu anda planlama ve inÅŸa aÅŸamasÄ±nda.",
               "tags": [
-                "Web Tasarım",
+                "Web TasarÄ±m",
                 "Yenileme",
-                "Dağ Evi",
-                "Kişisel Proje"
+                "DaÄŸ Evi",
+                "KiÅŸisel Proje"
               ]
             }
           }
@@ -489,29 +474,29 @@
             },
             "de": {
               "title": "LaTeX-Lebenslauf",
-              "text": "Persönlicher Lebenslauf in LaTeX, mit einem schönen, detailreichen, aber prägnanten Format, das die 15-Sekunden-Regel für schnelle Lesbarkeit einhält.",
+              "text": "PersÃ¶nlicher Lebenslauf in LaTeX, mit einem schÃ¶nen, detailreichen, aber prÃ¤gnanten Format, das die 15-Sekunden-Regel fÃ¼r schnelle Lesbarkeit einhÃ¤lt.",
               "tags": [
                 "LaTeX",
                 "Lebenslauf",
-                "Persönliches Projekt"
+                "PersÃ¶nliches Projekt"
               ]
             },
             "hr": {
-              "title": "LaTeX životopis",
-              "text": "Osobni životopis dizajniran u LaTeX-u, s lijepim, detaljnim, ali sažetim formatom koji poštuje 15-sekundno pravilo za brzo čitanje.",
+              "title": "LaTeX Å¾ivotopis",
+              "text": "Osobni Å¾ivotopis dizajniran u LaTeX-u, s lijepim, detaljnim, ali saÅ¾etim formatom koji poÅ¡tuje 15-sekundno pravilo za brzo Äitanje.",
               "tags": [
                 "LaTeX",
-                "Životopis",
+                "Å½ivotopis",
                 "Osobni projekt"
               ]
             },
             "tr": {
-              "title": "LaTeX Özgeçmiş",
-              "text": "LaTeX ile tasarlanmış kişisel özgeçmiş. Güzel, detaylı ancak özlü bir formatta, hızlı okunabilirlik için 15 saniye kuralına uygun.",
+              "title": "LaTeX Ã–zgeÃ§miÅŸ",
+              "text": "LaTeX ile tasarlanmÄ±ÅŸ kiÅŸisel Ã¶zgeÃ§miÅŸ. GÃ¼zel, detaylÄ± ancak Ã¶zlÃ¼ bir formatta, hÄ±zlÄ± okunabilirlik iÃ§in 15 saniye kuralÄ±na uygun.",
               "tags": [
                 "LaTeX",
-                "Özgeçmiş",
-                "Kişisel Proje"
+                "Ã–zgeÃ§miÅŸ",
+                "KiÅŸisel Proje"
               ]
             }
           }
@@ -526,7 +511,7 @@
             "fill": "#0891B2",
             "fillLight": "#0284C7"
           },
-          "categoryId": "category_web",
+          "categoryId": "category_personal",
           "preview": {
             "links": [
               {
@@ -557,17 +542,17 @@
             },
             "de": {
               "title": "HTML-Stammbaum",
-              "text": "Informative und kompakte Familiengeschichte, erstellt mit reinem HTML, visuell klar und einfach zu navigieren für die Erforschung der Familiengeschichte.",
+              "text": "Informative und kompakte Familiengeschichte, erstellt mit reinem HTML, visuell klar und einfach zu navigieren fÃ¼r die Erforschung der Familiengeschichte.",
               "tags": [
                 "HTML",
                 "Stammbaum",
                 "Webdesign",
-                "Persönliches Projekt"
+                "PersÃ¶nliches Projekt"
               ]
             },
             "hr": {
               "title": "HTML obiteljsko stablo",
-              "text": "Informativno i kompaktno obiteljsko stablo izgrađeno čistim HTML-om, dizajnirano da bude vizualno jasno i lako za navigaciju za istraživanje obiteljske povijesti.",
+              "text": "Informativno i kompaktno obiteljsko stablo izgraÄ‘eno Äistim HTML-om, dizajnirano da bude vizualno jasno i lako za navigaciju za istraÅ¾ivanje obiteljske povijesti.",
               "tags": [
                 "HTML",
                 "Obiteljsko stablo",
@@ -576,13 +561,13 @@
               ]
             },
             "tr": {
-              "title": "HTML Aile Ağacı",
-              "text": "Saf HTML ile oluşturulmuş, görsel olarak net ve gezinti kolaylığı sağlayan, aile tarihini keşfetmek için tasarlanmış bilgilendirici ve kompakt aile ağacı.",
+              "title": "HTML Aile AÄŸacÄ±",
+              "text": "Saf HTML ile oluÅŸturulmuÅŸ, gÃ¶rsel olarak net ve gezinti kolaylÄ±ÄŸÄ± saÄŸlayan, aile tarihini keÅŸfetmek iÃ§in tasarlanmÄ±ÅŸ bilgilendirici ve kompakt aile aÄŸacÄ±.",
               "tags": [
                 "HTML",
-                "Aile Ağacı",
-                "Web Tasarım",
-                "Kişisel Proje"
+                "Aile AÄŸacÄ±",
+                "Web TasarÄ±m",
+                "KiÅŸisel Proje"
               ]
             }
           }
@@ -603,7 +588,7 @@
           "title": "Moje preporuke za {{online alate}}"
         },
         "tr": {
-          "title": "{{Çevrim İçi Araç}} Önerilerim"
+          "title": "{{Ã‡evrim Ä°Ã§i AraÃ§}} Ã–nerilerim"
         }
       },
       "settings": {
@@ -629,19 +614,19 @@
           "locales": {
             "en": {
               "title": "Browser Homepage Organization",
-              "text": "Group Speed Dial turns the chaotic browser start page into a [[control center]]. Instead of drowning in bookmarks, everything becomes visual, grouped, and instantly accessible. It’s simple in theory but surprisingly powerful in practice."
+              "text": "Group Speed Dial turns the chaotic browser start page into a [[control center]]. Instead of drowning in bookmarks, everything becomes visual, grouped, and instantly accessible. Itâ€™s simple in theory but surprisingly powerful in practice."
             },
             "de": {
               "title": "Browser-Startseiten Organisation",
               "text": "Group Speed Dial verwandelt die chaotische Browser-Startseite in ein [[Kontrollzentrum]]. Statt in Lesezeichen zu ertrinken, wird alles visuell organisiert und schnell erreichbar."
             },
             "hr": {
-              "title": "Organizacija početne stranice preglednika",
-              "text": "Group Speed Dial pretvara kaotičnu početnu stranicu preglednika u [[kontrolni centar]]. Sve je vizualno organizirano i brzo dostupno."
+              "title": "Organizacija poÄetne stranice preglednika",
+              "text": "Group Speed Dial pretvara kaotiÄnu poÄetnu stranicu preglednika u [[kontrolni centar]]. Sve je vizualno organizirano i brzo dostupno."
             },
             "tr": {
-              "title": "Tarayıcı Ana Sayfa Organizasyonu",
-              "text": "Group Speed Dial, tarayıcı ana sayfanızı bir [[kontrol merkezine]] dönüştürüyor. Yer imleri karmaşası yerine her şey görsel ve düzenli."
+              "title": "TarayÄ±cÄ± Ana Sayfa Organizasyonu",
+              "text": "Group Speed Dial, tarayÄ±cÄ± ana sayfanÄ±zÄ± bir [[kontrol merkezine]] dÃ¶nÃ¼ÅŸtÃ¼rÃ¼yor. Yer imleri karmaÅŸasÄ± yerine her ÅŸey gÃ¶rsel ve dÃ¼zenli."
             }
           }
         },
@@ -667,15 +652,15 @@
             },
             "de": {
               "title": "Amazon Preis-Tracker",
-              "text": "Keepa verleiht Käufern [[Daten-Superkräfte]]. Preisdiagramme zeigen sofort, ob ein Angebot wirklich ein Schnäppchen ist."
+              "text": "Keepa verleiht KÃ¤ufern [[Daten-SuperkrÃ¤fte]]. Preisdiagramme zeigen sofort, ob ein Angebot wirklich ein SchnÃ¤ppchen ist."
             },
             "hr": {
-              "title": "Praćenje cijena na Amazonu",
-              "text": "Keepa kupcima daje [[supermoći podataka]]. Povijest cijena otkriva jesu li popusti stvarni."
+              "title": "PraÄ‡enje cijena na Amazonu",
+              "text": "Keepa kupcima daje [[supermoÄ‡i podataka]]. Povijest cijena otkriva jesu li popusti stvarni."
             },
             "tr": {
               "title": "Amazon Fiyat Takibi",
-              "text": "Keepa alışverişçilere [[veri süper güçleri]] verir. Fiyat geçmişi gerçek indirimleri ortaya çıkarır."
+              "text": "Keepa alÄ±ÅŸveriÅŸÃ§ilere [[veri sÃ¼per gÃ¼Ã§leri]] verir. Fiyat geÃ§miÅŸi gerÃ§ek indirimleri ortaya Ã§Ä±karÄ±r."
             }
           }
         },
@@ -697,19 +682,19 @@
           "locales": {
             "en": {
               "title": "Self-Hosted Cloud",
-              "text": "Nextcloud is what happens when you decide the cloud should belong to [[you]]. File sync, collaboration, and apps—all running on your own infrastructure."
+              "text": "Nextcloud is what happens when you decide the cloud should belong to [[you]]. File sync, collaboration, and appsâ€”all running on your own infrastructure."
             },
             "de": {
               "title": "Selbstgehostete Cloud",
-              "text": "Nextcloud ist die Cloud, die wirklich [[Ihnen gehört]]. Dateien, Zusammenarbeit und Apps auf eigener Infrastruktur."
+              "text": "Nextcloud ist die Cloud, die wirklich [[Ihnen gehÃ¶rt]]. Dateien, Zusammenarbeit und Apps auf eigener Infrastruktur."
             },
             "hr": {
               "title": "Samostalno hostana cloud platforma",
               "text": "Nextcloud je cloud koji stvarno [[posjedujete]]. Sinkronizacija datoteka i suradnja na vlastitom serveru."
             },
             "tr": {
-              "title": "Kendi Barındırılan Bulut",
-              "text": "Nextcloud, bulutun gerçekten [[size ait]] olduğu bir platformdur."
+              "title": "Kendi BarÄ±ndÄ±rÄ±lan Bulut",
+              "text": "Nextcloud, bulutun gerÃ§ekten [[size ait]] olduÄŸu bir platformdur."
             }
           }
         },
@@ -731,19 +716,19 @@
           "locales": {
             "en": {
               "title": "Free Knowledge Encyclopedia",
-              "text": "Wikipedia remains one of humanity’s most astonishing projects: millions of people building a [[shared knowledge archive]] together."
+              "text": "Wikipedia remains one of humanityâ€™s most astonishing projects: millions of people building a [[shared knowledge archive]] together."
             },
             "de": {
-              "title": "Freie Wissens-Enzyklopädie",
+              "title": "Freie Wissens-EnzyklopÃ¤die",
               "text": "Wikipedia ist eines der erstaunlichsten Projekte der Menschheit: ein [[gemeinsames Wissensarchiv]]."
             },
             "hr": {
               "title": "Besplatna enciklopedija",
-              "text": "Wikipedia je [[zajednička baza znanja]] koju gradi cijeli svijet."
+              "text": "Wikipedia je [[zajedniÄka baza znanja]] koju gradi cijeli svijet."
             },
             "tr": {
-              "title": "Ücretsiz Bilgi Ansiklopedisi",
-              "text": "Wikipedia, insanlığın birlikte oluşturduğu [[bilgi arşivi]]."
+              "title": "Ãœcretsiz Bilgi Ansiklopedisi",
+              "text": "Wikipedia, insanlÄ±ÄŸÄ±n birlikte oluÅŸturduÄŸu [[bilgi arÅŸivi]]."
             }
           }
         },
@@ -768,16 +753,16 @@
               "text": "Mistral represents a fascinating direction for AI: powerful models built with [[European openness and research culture]]."
             },
             "de": {
-              "title": "Europäische KI",
-              "text": "Mistral zeigt eine spannende Richtung für KI: leistungsstarke Modelle mit [[europäischen Werten]]."
+              "title": "EuropÃ¤ische KI",
+              "text": "Mistral zeigt eine spannende Richtung fÃ¼r KI: leistungsstarke Modelle mit [[europÃ¤ischen Werten]]."
             },
             "hr": {
               "title": "Europska umjetna inteligencija",
               "text": "Mistral predstavlja novu generaciju [[europske umjetne inteligencije]]."
             },
             "tr": {
-              "title": "Avrupa Yapay Zekası",
-              "text": "Mistral, [[Avrupa merkezli]] güçlü yapay zeka modellerini temsil ediyor."
+              "title": "Avrupa Yapay ZekasÄ±",
+              "text": "Mistral, [[Avrupa merkezli]] gÃ¼Ã§lÃ¼ yapay zeka modellerini temsil ediyor."
             }
           }
         },
@@ -803,15 +788,15 @@
             },
             "de": {
               "title": "Diagramm-Tool",
-              "text": "draw.io ist ein Held für [[visuelles Denken]]. Komplexe Systeme werden plötzlich verständlich."
+              "text": "draw.io ist ein Held fÃ¼r [[visuelles Denken]]. Komplexe Systeme werden plÃ¶tzlich verstÃ¤ndlich."
             },
             "hr": {
               "title": "Alat za dijagrame",
-              "text": "draw.io pomaže pretvoriti složene ideje u [[jasne dijagrame]]."
+              "text": "draw.io pomaÅ¾e pretvoriti sloÅ¾ene ideje u [[jasne dijagrame]]."
             },
             "tr": {
-              "title": "Diyagram Aracı",
-              "text": "draw.io, karmaşık fikirleri [[görsel olarak]] açıklamak için mükemmeldir."
+              "title": "Diyagram AracÄ±",
+              "text": "draw.io, karmaÅŸÄ±k fikirleri [[gÃ¶rsel olarak]] aÃ§Ä±klamak iÃ§in mÃ¼kemmeldir."
             }
           }
         },
@@ -833,7 +818,7 @@
           "locales": {
             "en": {
               "title": "Virtualization Platform",
-              "text": "Proxmox turns a humble server into a [[mini data center]]. Virtual machines, containers, backups—an incredible playground for anyone exploring infrastructure."
+              "text": "Proxmox turns a humble server into a [[mini data center]]. Virtual machines, containers, backupsâ€”an incredible playground for anyone exploring infrastructure."
             },
             "de": {
               "title": "Virtualisierungsplattform",
@@ -844,8 +829,8 @@
               "text": "Proxmox pretvara server u [[mini data centar]]."
             },
             "tr": {
-              "title": "Sanallaştırma Platformu",
-              "text": "Proxmox, bir sunucuyu [[mini veri merkezine]] dönüştürür."
+              "title": "SanallaÅŸtÄ±rma Platformu",
+              "text": "Proxmox, bir sunucuyu [[mini veri merkezine]] dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r."
             }
           }
         },
@@ -871,15 +856,15 @@
             },
             "de": {
               "title": "Privates Netzwerk",
-              "text": "Tailscale fühlt sich an wie [[Netzwerke aus der Zukunft]]."
+              "text": "Tailscale fÃ¼hlt sich an wie [[Netzwerke aus der Zukunft]]."
             },
             "hr": {
-              "title": "Privatna mreža",
-              "text": "Tailscale omogućuje [[sigurno povezivanje uređaja]]."
+              "title": "Privatna mreÅ¾a",
+              "text": "Tailscale omoguÄ‡uje [[sigurno povezivanje ureÄ‘aja]]."
             },
             "tr": {
-              "title": "Özel Ağ",
-              "text": "Tailscale, cihazları [[güvenli şekilde]] birbirine bağlar."
+              "title": "Ã–zel AÄŸ",
+              "text": "Tailscale, cihazlarÄ± [[gÃ¼venli ÅŸekilde]] birbirine baÄŸlar."
             }
           }
         },
@@ -901,19 +886,19 @@
           "locales": {
             "en": {
               "title": "Market Analysis Platform",
-              "text": "TradingView blends charts, social insights, and analysis into one elegant interface—making financial markets surprisingly [[intuitive to explore]]."
+              "text": "TradingView blends charts, social insights, and analysis into one elegant interfaceâ€”making financial markets surprisingly [[intuitive to explore]]."
             },
             "de": {
               "title": "Marktanalyse Plattform",
               "text": "TradingView kombiniert Charts und Analysen zu einer [[intuitiven Plattform]]."
             },
             "hr": {
-              "title": "Analiza tržišta",
+              "title": "Analiza trÅ¾iÅ¡ta",
               "text": "TradingView spaja grafikone i analize u [[jednostavnu platformu]]."
             },
             "tr": {
               "title": "Piyasa Analizi",
-              "text": "TradingView, grafikler ve analizleri [[tek bir platformda]] birleştirir."
+              "text": "TradingView, grafikler ve analizleri [[tek bir platformda]] birleÅŸtirir."
             }
           }
         }
@@ -933,7 +918,7 @@
           "title": "Moje preporuke za {{desktop programe}}"
         },
         "tr": {
-          "title": "{{Masaüstü Yazılım}} Önerilerim"
+          "title": "{{MasaÃ¼stÃ¼ YazÄ±lÄ±m}} Ã–nerilerim"
         }
       },
       "settings": {
@@ -963,15 +948,15 @@
             },
             "de": {
               "title": "Notizen & Wissensverwaltung",
-              "text": "Joplin ist ein [[ernsthaftes Werkzeug]] für Menschen, die in Notizen denken. Markdown, Verschlüsselung und flexible Synchronisation machen es zu einem persönlichen Wissenssystem."
+              "text": "Joplin ist ein [[ernsthaftes Werkzeug]] fÃ¼r Menschen, die in Notizen denken. Markdown, VerschlÃ¼sselung und flexible Synchronisation machen es zu einem persÃ¶nlichen Wissenssystem."
             },
             "hr": {
-              "title": "Bilješke i organizacija znanja",
-              "text": "Joplin je [[moćan alat]] za bilješke. Markdown, enkripcija i sinkronizacija čine ga pravim sustavom za znanje."
+              "title": "BiljeÅ¡ke i organizacija znanja",
+              "text": "Joplin je [[moÄ‡an alat]] za biljeÅ¡ke. Markdown, enkripcija i sinkronizacija Äine ga pravim sustavom za znanje."
             },
             "tr": {
               "title": "Not Alma Sistemi",
-              "text": "Joplin sadece bir not uygulaması değil, [[kişisel bilgi sistemi]] gibi çalışır."
+              "text": "Joplin sadece bir not uygulamasÄ± deÄŸil, [[kiÅŸisel bilgi sistemi]] gibi Ã§alÄ±ÅŸÄ±r."
             }
           }
         },
@@ -997,15 +982,15 @@
             },
             "de": {
               "title": "Multi-Monitor Steuerung",
-              "text": "DisplayFusion verwandelt ein chaotisches Multi-Monitor-Setup in einen [[präzisen Arbeitsplatz]]."
+              "text": "DisplayFusion verwandelt ein chaotisches Multi-Monitor-Setup in einen [[prÃ¤zisen Arbeitsplatz]]."
             },
             "hr": {
-              "title": "Upravljanje više monitora",
-              "text": "DisplayFusion pretvara više monitora u [[organizirani radni prostor]]."
+              "title": "Upravljanje viÅ¡e monitora",
+              "text": "DisplayFusion pretvara viÅ¡e monitora u [[organizirani radni prostor]]."
             },
             "tr": {
-              "title": "Çoklu Monitör Yönetimi",
-              "text": "DisplayFusion çoklu monitör kurulumunu [[verimli bir çalışma alanına]] dönüştürür."
+              "title": "Ã‡oklu MonitÃ¶r YÃ¶netimi",
+              "text": "DisplayFusion Ã§oklu monitÃ¶r kurulumunu [[verimli bir Ã§alÄ±ÅŸma alanÄ±na]] dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r."
             }
           }
         },
@@ -1034,12 +1019,12 @@
               "text": "Foxit zeigt, dass ein PDF-Editor [[leistungsstark und schnell]] sein kann."
             },
             "hr": {
-              "title": "Uređivanje PDF-a",
-              "text": "Foxit je [[brz i moćan]] alat za rad s PDF dokumentima."
+              "title": "UreÄ‘ivanje PDF-a",
+              "text": "Foxit je [[brz i moÄ‡an]] alat za rad s PDF dokumentima."
             },
             "tr": {
-              "title": "PDF Düzenleme",
-              "text": "Foxit, PDF düzenlemeyi [[hızlı ve güçlü]] hale getirir."
+              "title": "PDF DÃ¼zenleme",
+              "text": "Foxit, PDF dÃ¼zenlemeyi [[hÄ±zlÄ± ve gÃ¼Ã§lÃ¼]] hale getirir."
             }
           }
         },
@@ -1065,15 +1050,15 @@
             },
             "de": {
               "title": "Audio-Verbesserung",
-              "text": "FxSound holt [[erstaunliche Klangqualität]] aus normalen Lautsprechern."
+              "text": "FxSound holt [[erstaunliche KlangqualitÃ¤t]] aus normalen Lautsprechern."
             },
             "hr": {
-              "title": "Poboljšanje zvuka",
-              "text": "FxSound daje [[jasniji zvuk]] čak i običnim zvučnicima."
+              "title": "PoboljÅ¡anje zvuka",
+              "text": "FxSound daje [[jasniji zvuk]] Äak i obiÄnim zvuÄnicima."
             },
             "tr": {
-              "title": "Ses Geliştirme",
-              "text": "FxSound sıradan hoparlörlerden [[daha iyi ses]] elde etmenizi sağlar."
+              "title": "Ses GeliÅŸtirme",
+              "text": "FxSound sÄ±radan hoparlÃ¶rlerden [[daha iyi ses]] elde etmenizi saÄŸlar."
             }
           }
         },
@@ -1102,12 +1087,12 @@
               "text": "VS Code ist das [[Schweizer Taschenmesser]] der Entwicklungsumgebungen."
             },
             "hr": {
-              "title": "Uređivač koda",
-              "text": "VS Code je [[švicarski nož]] među editorima koda."
+              "title": "UreÄ‘ivaÄ koda",
+              "text": "VS Code je [[Å¡vicarski noÅ¾]] meÄ‘u editorima koda."
             },
             "tr": {
-              "title": "Kod Editörü",
-              "text": "VS Code geliştiriciler için [[çok yönlü]] bir editördür."
+              "title": "Kod EditÃ¶rÃ¼",
+              "text": "VS Code geliÅŸtiriciler iÃ§in [[Ã§ok yÃ¶nlÃ¼]] bir editÃ¶rdÃ¼r."
             }
           }
         },
@@ -1133,15 +1118,15 @@
             },
             "de": {
               "title": "Git-Client",
-              "text": "GitHub Desktop macht Versionskontrolle [[visuell und zugänglich]]."
+              "text": "GitHub Desktop macht Versionskontrolle [[visuell und zugÃ¤nglich]]."
             },
             "hr": {
               "title": "Git klijent",
-              "text": "GitHub Desktop čini Git [[lakšim za razumjeti]]."
+              "text": "GitHub Desktop Äini Git [[lakÅ¡im za razumjeti]]."
             },
             "tr": {
-              "title": "Git İstemcisi",
-              "text": "GitHub Desktop, Git işlemlerini [[görsel ve kolay]] hale getirir."
+              "title": "Git Ä°stemcisi",
+              "text": "GitHub Desktop, Git iÅŸlemlerini [[gÃ¶rsel ve kolay]] hale getirir."
             }
           }
         },
@@ -1171,11 +1156,11 @@
             },
             "hr": {
               "title": "Email klijent",
-              "text": "Thunderbird je [[moćan open-source]] email klijent."
+              "text": "Thunderbird je [[moÄ‡an open-source]] email klijent."
             },
             "tr": {
-              "title": "E-posta İstemcisi",
-              "text": "Thunderbird, kullanıcıya [[kontrol veren]] açık kaynaklı bir e-posta istemcisidir."
+              "title": "E-posta Ä°stemcisi",
+              "text": "Thunderbird, kullanÄ±cÄ±ya [[kontrol veren]] aÃ§Ä±k kaynaklÄ± bir e-posta istemcisidir."
             }
           }
         },
@@ -1201,15 +1186,15 @@
             },
             "de": {
               "title": "Netzwerkanalyse",
-              "text": "Wireshark lässt Sie das Internet [[Paket für Paket]] sehen."
+              "text": "Wireshark lÃ¤sst Sie das Internet [[Paket fÃ¼r Paket]] sehen."
             },
             "hr": {
-              "title": "Analiza mreže",
-              "text": "Wireshark omogućuje da [[vidite mrežni promet]]."
+              "title": "Analiza mreÅ¾e",
+              "text": "Wireshark omoguÄ‡uje da [[vidite mreÅ¾ni promet]]."
             },
             "tr": {
-              "title": "Ağ Analizi",
-              "text": "Wireshark, ağ trafiğini [[paket paket]] analiz etmenizi sağlar."
+              "title": "AÄŸ Analizi",
+              "text": "Wireshark, aÄŸ trafiÄŸini [[paket paket]] analiz etmenizi saÄŸlar."
             }
           }
         },
@@ -1231,19 +1216,19 @@
           "locales": {
             "en": {
               "title": "Password Manager",
-              "text": "Bitwarden solves one of the most common security problems: humans and passwords. Open-source and transparent, it’s a [[solid foundation]] for personal security."
+              "text": "Bitwarden solves one of the most common security problems: humans and passwords. Open-source and transparent, itâ€™s a [[solid foundation]] for personal security."
             },
             "de": {
               "title": "Passwort-Manager",
-              "text": "Bitwarden löst eines der größten Sicherheitsprobleme: [[Passwörter]]."
+              "text": "Bitwarden lÃ¶st eines der grÃ¶ÃŸten Sicherheitsprobleme: [[PasswÃ¶rter]]."
             },
             "hr": {
               "title": "Upravitelj lozinki",
-              "text": "Bitwarden je [[sigurno rješenje]] za upravljanje lozinkama."
+              "text": "Bitwarden je [[sigurno rjeÅ¡enje]] za upravljanje lozinkama."
             },
             "tr": {
-              "title": "Şifre Yöneticisi",
-              "text": "Bitwarden, [[güvenli şifre yönetimi]] için sağlam bir çözümdür."
+              "title": "Åžifre YÃ¶neticisi",
+              "text": "Bitwarden, [[gÃ¼venli ÅŸifre yÃ¶netimi]] iÃ§in saÄŸlam bir Ã§Ã¶zÃ¼mdÃ¼r."
             }
           }
         }
@@ -1263,7 +1248,7 @@
           "title": "Moje preporuke za {{mobilne aplikacije}}"
         },
         "tr": {
-          "title": "{{Mobil Uygulama}} Önerilerim"
+          "title": "{{Mobil Uygulama}} Ã–nerilerim"
         }
       },
       "settings": {
@@ -1289,19 +1274,19 @@
           "locales": {
             "en": {
               "title": "Decentralized Messaging",
-              "text": "bitchat explores an intriguing idea: communication without centralized control. It’s a small but fascinating example of [[decentralized technology]] challenging the traditional messaging model."
+              "text": "bitchat explores an intriguing idea: communication without centralized control. Itâ€™s a small but fascinating example of [[decentralized technology]] challenging the traditional messaging model."
             },
             "de": {
               "title": "Dezentrale Kommunikation",
-              "text": "bitchat zeigt eine spannende Idee: Kommunikation ohne zentrale Kontrolle – ein Beispiel für [[dezentrale Technologie]]."
+              "text": "bitchat zeigt eine spannende Idee: Kommunikation ohne zentrale Kontrolle â€“ ein Beispiel fÃ¼r [[dezentrale Technologie]]."
             },
             "hr": {
               "title": "Decentralizirana komunikacija",
-              "text": "bitchat istražuje ideju komunikacije bez centralne kontrole – zanimljiv primjer [[decentralizirane tehnologije]]."
+              "text": "bitchat istraÅ¾uje ideju komunikacije bez centralne kontrole â€“ zanimljiv primjer [[decentralizirane tehnologije]]."
             },
             "tr": {
-              "title": "Merkezi Olmayan Mesajlaşma",
-              "text": "bitchat, merkezi kontrol olmadan iletişim fikrini araştıran ilginç bir [[merkeziyetsiz teknoloji]] örneğidir."
+              "title": "Merkezi Olmayan MesajlaÅŸma",
+              "text": "bitchat, merkezi kontrol olmadan iletiÅŸim fikrini araÅŸtÄ±ran ilginÃ§ bir [[merkeziyetsiz teknoloji]] Ã¶rneÄŸidir."
             }
           }
         },
@@ -1323,19 +1308,19 @@
           "locales": {
             "en": {
               "title": "Weather Forecast",
-              "text": "yr delivers weather forecasts with impressive accuracy and scientific transparency. It’s one of the rare weather apps where the data feels genuinely [[meteorology-driven]] rather than ad-driven."
+              "text": "yr delivers weather forecasts with impressive accuracy and scientific transparency. Itâ€™s one of the rare weather apps where the data feels genuinely [[meteorology-driven]] rather than ad-driven."
             },
             "de": {
               "title": "Wettervorhersage",
-              "text": "yr liefert erstaunlich präzise Vorhersagen und wirkt stark [[wissenschaftlich fundiert]]."
+              "text": "yr liefert erstaunlich prÃ¤zise Vorhersagen und wirkt stark [[wissenschaftlich fundiert]]."
             },
             "hr": {
               "title": "Vremenska prognoza",
-              "text": "yr pruža vrlo precizne prognoze temeljene na [[meteorološkim podacima]]."
+              "text": "yr pruÅ¾a vrlo precizne prognoze temeljene na [[meteoroloÅ¡kim podacima]]."
             },
             "tr": {
               "title": "Hava Durumu",
-              "text": "yr, gerçekten [[meteoroloji temelli]] hava tahminleri sunan güvenilir bir uygulamadır."
+              "text": "yr, gerÃ§ekten [[meteoroloji temelli]] hava tahminleri sunan gÃ¼venilir bir uygulamadÄ±r."
             }
           }
         },
@@ -1357,7 +1342,7 @@
           "locales": {
             "en": {
               "title": "Food Transparency",
-              "text": "Yuka transforms grocery shopping into a small investigation. Scan a product and suddenly you see ingredients, additives, and health ratings—giving consumers [[real informational leverage]]."
+              "text": "Yuka transforms grocery shopping into a small investigation. Scan a product and suddenly you see ingredients, additives, and health ratingsâ€”giving consumers [[real informational leverage]]."
             },
             "de": {
               "title": "Lebensmittel-Transparenz",
@@ -1365,11 +1350,11 @@
             },
             "hr": {
               "title": "Transparentnost hrane",
-              "text": "Yuka pretvara kupovinu hrane u malu analizu – daje potrošačima [[informacijsku prednost]]."
+              "text": "Yuka pretvara kupovinu hrane u malu analizu â€“ daje potroÅ¡aÄima [[informacijsku prednost]]."
             },
             "tr": {
-              "title": "Gıda Şeffaflığı",
-              "text": "Yuka, ürünleri tarayarak içerikleri ve katkı maddelerini gösterir ve kullanıcılara [[bilgi gücü]] verir."
+              "title": "GÄ±da ÅžeffaflÄ±ÄŸÄ±",
+              "text": "Yuka, Ã¼rÃ¼nleri tarayarak iÃ§erikleri ve katkÄ± maddelerini gÃ¶sterir ve kullanÄ±cÄ±lara [[bilgi gÃ¼cÃ¼]] verir."
             }
           }
         },
@@ -1391,19 +1376,19 @@
           "locales": {
             "en": {
               "title": "AI Bible Study",
-              "text": "BibleAI mixes ancient texts with modern machine intelligence. It allows quick exploration of passages, themes, and interpretations—turning scripture study into a surprisingly [[interactive experience]]."
+              "text": "BibleAI mixes ancient texts with modern machine intelligence. It allows quick exploration of passages, themes, and interpretationsâ€”turning scripture study into a surprisingly [[interactive experience]]."
             },
             "de": {
               "title": "KI Bibelstudium",
               "text": "BibleAI verbindet alte Texte mit moderner KI und macht das Studium der Bibel [[interaktiv]]."
             },
             "hr": {
-              "title": "AI proučavanje Biblije",
-              "text": "BibleAI kombinira drevne tekstove s umjetnom inteligencijom za [[interaktivno proučavanje]]."
+              "title": "AI prouÄavanje Biblije",
+              "text": "BibleAI kombinira drevne tekstove s umjetnom inteligencijom za [[interaktivno prouÄavanje]]."
             },
             "tr": {
-              "title": "Yapay Zeka ile İncil",
-              "text": "BibleAI, kutsal metinleri yapay zekâ ile analiz ederek [[etkileşimli bir çalışma]] sunar."
+              "title": "Yapay Zeka ile Ä°ncil",
+              "text": "BibleAI, kutsal metinleri yapay zekÃ¢ ile analiz ederek [[etkileÅŸimli bir Ã§alÄ±ÅŸma]] sunar."
             }
           }
         },
@@ -1429,15 +1414,15 @@
             },
             "de": {
               "title": "Raumplanung",
-              "text": "Floor Plan Creator verwandelt das Smartphone in ein [[Werkzeug für Raumplanung]]."
+              "text": "Floor Plan Creator verwandelt das Smartphone in ein [[Werkzeug fÃ¼r Raumplanung]]."
             },
             "hr": {
               "title": "Planiranje prostora",
-              "text": "Floor Plan Creator omogućuje jednostavno [[dizajniranje prostora]]."
+              "text": "Floor Plan Creator omoguÄ‡uje jednostavno [[dizajniranje prostora]]."
             },
             "tr": {
-              "title": "Kat Planı Tasarımı",
-              "text": "Floor Plan Creator, telefonunuzu bir [[mimari tasarım aracı]] haline getirir."
+              "title": "Kat PlanÄ± TasarÄ±mÄ±",
+              "text": "Floor Plan Creator, telefonunuzu bir [[mimari tasarÄ±m aracÄ±]] haline getirir."
             }
           }
         },
@@ -1463,15 +1448,15 @@
             },
             "de": {
               "title": "Spaced-Repetition Lernen",
-              "text": "AnkiDroid nutzt [[Spaced Repetition]] – eine der effektivsten Lernmethoden."
+              "text": "AnkiDroid nutzt [[Spaced Repetition]] â€“ eine der effektivsten Lernmethoden."
             },
             "hr": {
-              "title": "Učenje ponavljanjem",
-              "text": "AnkiDroid koristi [[spaced repetition]] za dugoročno pamćenje."
+              "title": "UÄenje ponavljanjem",
+              "text": "AnkiDroid koristi [[spaced repetition]] za dugoroÄno pamÄ‡enje."
             },
             "tr": {
-              "title": "Aralıklı Tekrar Öğrenme",
-              "text": "AnkiDroid, [[spaced repetition]] yöntemiyle öğrenmeyi güçlendirir."
+              "title": "AralÄ±klÄ± Tekrar Ã–ÄŸrenme",
+              "text": "AnkiDroid, [[spaced repetition]] yÃ¶ntemiyle Ã¶ÄŸrenmeyi gÃ¼Ã§lendirir."
             }
           }
         },
@@ -1500,12 +1485,12 @@
               "text": "Picsart verwandelt das Smartphone in ein [[kreatives Studio]]."
             },
             "hr": {
-              "title": "Uređivanje slika",
+              "title": "UreÄ‘ivanje slika",
               "text": "Picsart pretvara telefon u [[kreativni studio]]."
             },
             "tr": {
-              "title": "Görsel Düzenleme",
-              "text": "Picsart, telefonu [[yaratıcı bir stüdyoya]] dönüştürür."
+              "title": "GÃ¶rsel DÃ¼zenleme",
+              "text": "Picsart, telefonu [[yaratÄ±cÄ± bir stÃ¼dyoya]] dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r."
             }
           }
         },
@@ -1527,19 +1512,19 @@
           "locales": {
             "en": {
               "title": "Navigation & Exploration",
-              "text": "Google Maps quietly became one of humanity’s most powerful navigation tools. Entire cities unfold on your screen, turning exploration into a [[data-guided adventure]]."
+              "text": "Google Maps quietly became one of humanityâ€™s most powerful navigation tools. Entire cities unfold on your screen, turning exploration into a [[data-guided adventure]]."
             },
             "de": {
               "title": "Navigation & Erkundung",
-              "text": "Google Maps macht Städte zu einer [[datenbasierten Entdeckungsreise]]."
+              "text": "Google Maps macht StÃ¤dte zu einer [[datenbasierten Entdeckungsreise]]."
             },
             "hr": {
-              "title": "Navigacija i istraživanje",
-              "text": "Google Maps pretvara gradove u [[digitalnu kartu istraživanja]]."
+              "title": "Navigacija i istraÅ¾ivanje",
+              "text": "Google Maps pretvara gradove u [[digitalnu kartu istraÅ¾ivanja]]."
             },
             "tr": {
-              "title": "Navigasyon & Keşif",
-              "text": "Google Maps, şehirleri [[veri destekli keşiflere]] dönüştürür."
+              "title": "Navigasyon & KeÅŸif",
+              "text": "Google Maps, ÅŸehirleri [[veri destekli keÅŸiflere]] dÃ¶nÃ¼ÅŸtÃ¼rÃ¼r."
             }
           }
         }
@@ -1573,11 +1558,11 @@
           "category_pc": "PC",
           "category_cloud": "Cloud",
           "category_igre": "Igre",
-          "category_life": "Život",
+          "category_life": "Å½ivot",
           "category_career": "Karijera"
         },
         "tr": {
-          "category_all": "Tümü",
+          "category_all": "TÃ¼mÃ¼",
           "category_phone": "Telefon",
           "category_pc": "PC",
           "category_cloud": "Bulut",
@@ -6210,10 +6195,10 @@
           },
           "locales": {
             "en": {
-              "title": "Pokémon TCG Pocket"
+              "title": "PokÃ©mon TCG Pocket"
             },
             "hr": {
-              "title": "Pokémon TCG Pocket"
+              "title": "PokÃ©mon TCG Pocket"
             }
           }
         },
