@@ -126,7 +126,9 @@ function ViewportProvider({ children }) {
             window.lastCopiedToClipboardText = text
             setClipboardText(text)
         }
-        catch (error) {}
+        catch (error) {
+            // Ignore fallback clipboard failures and leave the state unchanged.
+        }
         finally {
             textArea.remove()
         }

@@ -57,11 +57,12 @@ function NavToolSettings({ options }) {
                 feedbacks.toggleAnimatedCursorActive(true)
                 break
 
-            case NavToolSettings.Options.DOWNLOAD_RESUME:
+            case NavToolSettings.Options.DOWNLOAD_RESUME: {
                 const profile = data.getProfile()
                 const resumeUrl = profile.resumePdfUrl
                 utils.file.download(resumeUrl)
                 break
+            }
         }
     }
 

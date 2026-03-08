@@ -20,7 +20,7 @@ export default class ArticleItemDataWrapper {
         this._articleDataWrapper = articleDataWrapper
 
         this.id = id
-        this.categoryId = rawData.categoryId
+        this.categoryId = rawData.categoryId || rawData.category
         this.category = undefined
 
         const date = this._parseDate(rawData.date)

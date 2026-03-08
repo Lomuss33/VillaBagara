@@ -147,7 +147,7 @@ function Preloader({ children, preloaderSettings }) {
             )}
 
             {shouldShowContent && (
-                <PreloaderContent children={children}/>
+                <PreloaderContent>{children}</PreloaderContent>
             )}
         </div>
     )
@@ -183,7 +183,7 @@ function PreloaderWindow({ title, subtitle, logoOffset, setDidLoadAllImages, sho
     return (
         <div className={`preloader-window ${hiddenClass}`}>
             <div className={`preloader-window-content`}>
-                <PreloaderWindowInfo title={title}/>Lovro Musić
+                <PreloaderWindowInfo title={title}/>
                 <PacMan variant={PacMan.ColorVariants.LOADER}
                         hidden={isPacManHidden}/>
 

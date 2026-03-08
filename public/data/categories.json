@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "categories": [
     { "id": "home", "locales": { "en": { "title": "Overview" } } },
     { "id": "story", "locales": { "en": { "title": "Story" } } },
@@ -8,4 +9,80 @@
     { "id": "gallery", "locales": { "en": { "title": "Gallery" } } },
     { "id": "book", "locales": { "en": { "title": "Book" } } }
   ]
+=======
+    "categories": [
+        {
+            "id": "home",
+            "faIcon": "fa-solid fa-person-falling",
+            "locales": {
+                "en": {
+                    "title": "Home"
+                },
+                "de": {
+                    "title": "Startseite"
+                },
+                "hr": {
+                    "title": "Početna"
+                },
+                "tr": {
+                    "title": "Ana Sayfa"
+                }
+            }
+        },
+        {
+            "id": "history",
+            "faIcon": "fa-solid fa-business-time",
+            "locales": {
+                "en": {
+                    "title": "History"
+                },
+                "de": {
+                    "title": "Geschichte"
+                },
+                "hr": {
+                    "title": "Povijest"
+                },
+                "tr": {
+                    "title": "Geçmiş"
+                }
+            }
+        },
+        {
+            "id": "hobbys",
+            "faIcon": "fa-solid fa-icons",
+            "locales": {
+                "en": {
+                    "title": "Hobbys"
+                },
+                "de": {
+                    "title": "Hobbys"
+                },
+                "hr": {
+                    "title": "Hobiji"
+                },
+                "tr": {
+                    "title": "Hobiler"
+                }
+            }
+        },
+        {
+            "id": "contact",
+            "faIcon": "fa-solid fa-paper-plane",
+            "locales": {
+                "en": {
+                    "title": "Contact"
+                },
+                "de": {
+                    "title": "Kontakt"
+                },
+                "hr": {
+                    "title": "Kontakt"
+                },
+                "tr": {
+                    "title": "İletişim"
+                }
+            }
+        }
+    ]
+>>>>>>> 63e4b76cc6708800fbb3651625ec1ad189e22c33
 }

@@ -52,14 +52,15 @@ function Transitionable({ children, id, refreshFlag, delayBetweenItems = 100, cl
         <div className={`transitionable-wrapper`}>
             <div className={`transitionable ${className}`}>
                 {renderingChildren.map((child, key) => (
-                    <TransitionableItem children={child}
-                                        id={id + "-" + key}
+                    <TransitionableItem id={id + "-" + key}
                                         index={key}
                                         key={key}
                                         animation={animation}
                                         transitionsEnabled={transitionsEnabled}
                                         refreshCount={refreshCount}
-                                        delayBetweenItems={delayBetweenItems}/>
+                                        delayBetweenItems={delayBetweenItems}>
+                        {child}
+                    </TransitionableItem>
                 ))}
             </div>
         </div>

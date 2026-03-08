@@ -97,10 +97,9 @@ export default class ArticleDataWrapper {
      * @private
      */
     _parseCategories(rawData, language) {
-        const settings = rawData.settings || {}
-        const categorizeBy = settings["categorize_by"]
+        const categoryIds = this._resolveCategoryIds(rawData)
 
-        if(!categorizeBy || !Array.isArray(categorizeBy) || categorizeBy.length === 0)
+        if(categoryIds.length === 0)
             return []
 
         const categories = [{
@@ -111,7 +110,7 @@ export default class ArticleDataWrapper {
             count: this.orderedItems.length
         }]
 
-        categorizeBy.forEach(categoryId => {
+        categoryIds.forEach(categoryId => {
             categories.push({
                 id: categoryId,
                 key: categories.length,
@@ -126,6 +125,28 @@ export default class ArticleDataWrapper {
         })
 
         return categories
+    }
+
+    _resolveCategoryIds(rawData) {
+        const settings = rawData.settings || {}
+        const categorizeBy = settings["categorize_by"]
+
+        if(Array.isArray(categorizeBy)) {
+            return categorizeBy.filter(categoryId => typeof categoryId === "string" && categoryId.length > 0)
+        }
+
+        if(typeof categorizeBy !== "string" || categorizeBy.length === 0) {
+            return []
+        }
+
+        // Support legacy data that stored category ids on a named item field
+        // such as "category" instead of the canonical "categoryId".
+        const rawItems = rawData.items || []
+        const categoryIds = rawItems.map(item => {
+            return item?.[`${categorizeBy}Id`] || item?.[categorizeBy]
+        })
+
+        return [...new Set(categoryIds.filter(categoryId => typeof categoryId === "string" && categoryId.length > 0))]
     }
 
     get uniqueId() {
