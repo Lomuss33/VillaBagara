@@ -4,7 +4,6 @@
  */
 @import "theme-variables-builder";
 
-<<<<<<< HEAD
 /* Brand / accents */
 $primary: #b45309;                   // warm terracotta/amber (CTA, selected states)
 $secondary: #475569;                 // slate (neutral accents)
@@ -37,33 +36,6 @@ $borders-nav-mobile-accent: rgba($texts, 0.18);
 /* Scrollbar */
 $scrollbar-track: #e9ddc7;
 $scrollbar-thumb: #9a8f5a;
-=======
-$primary: #ff9d00;
-$secondary: #0088ba;
-$dark: #ffdfba;
-$danger: #932626;
-$muted: #b3b2a9;
-
-$base-bg: #ff9d00;
-$base-bg-light: #f2ff00;
-$base-bg-dark: #ffffff;
-
-$texts: #000000;
-$texts-inverted: #0088ba;
-
-$base-container-bg: #ffeeb7;
-$base-container-bg-accent: #d8d8d8;
-$base-popover-bg: #ffffff;
-$base-boards: #ffffff;
-$base-info-badges: #f7eed5;
-$empty: #ffffff;
-
-$borders: #000000;
-$borders-nav-mobile: #000000;
-$borders-nav-mobile-accent: #000000;
-$scrollbar-track: #000000;
-$scrollbar-thumb: #ffffff;
->>>>>>> 63e4b76cc6708800fbb3651625ec1ad189e22c33
 
 [data-theme="light"] {
   @include build-theme(

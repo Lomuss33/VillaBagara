@@ -4,7 +4,6 @@
  */
 @import "theme-variables-builder";
 
-<<<<<<< HEAD
 /* Brand / accents */
 $primary: #d08a2a;     // ember / warm lantern (CTA, highlights)
 $secondary: #6b7d6a;   // mossy neutral
@@ -31,33 +30,6 @@ $empty-accent: #1a140e;                         // inactive mobile nav bg
 
 /* Lines / chrome */
 $borders: rgba(#ede7dd, 0.10);
-=======
-$primary: #f0c020;
-$secondary: #0088ba;
-$dark: #000000;
-$danger: #fdd2d2;
-$muted: #6c757d;
-
-$base-bg: #ffc800;
-$base-bg-light: #f2ff00;
-$base-bg-dark: #0088ba;
-
-$texts: #EEEEEE;
-$texts-inverted: #0088ba;
-
-$base-container-bg: #060606;
-$base-popover-bg: #323232;
-$base-boards: #161616;
-$base-info-badges: #393939;
-$empty: #000000;
-$empty-accent: #0a2335;
-
-$borders: #9d9d9d;
-$borders-nav-mobile: rgba(white, 0.15);
-$borders-nav-mobile-accent: rgba(white, 0.2);
-$scrollbar-track: #101010;
-$scrollbar-thumb: #32343a;
->>>>>>> 63e4b76cc6708800fbb3651625ec1ad189e22c33
 
 /* Scrollbar */
 $scrollbar-track: #0b0705;
