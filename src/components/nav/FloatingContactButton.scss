@@ -1,0 +1,72 @@
+@import "/src/styles/extend.scss";
+
+a.floating-contact-button {
+    position: fixed;
+    right: calc(var(--default-card-spacing) + 0.4rem);
+    bottom: calc(#{$nav-tabs-height} + var(--default-card-spacing) + 0.65rem);
+    z-index: calc(#{$z-index-nav-tabs} + 1);
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 46px;
+    padding: 0.8rem 1.05rem;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--theme-primary) 55%, transparent);
+    background:
+        linear-gradient(135deg,
+            color-mix(in srgb, var(--theme-primary) 88%, white 12%),
+            color-mix(in srgb, var(--theme-primary) 72%, black 28%));
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+    color: var(--theme-texts-inv);
+    text-decoration: none;
+
+    i,
+    span {
+        color: inherit;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    i {
+        font-size: 0.95rem;
+        opacity: 0.95;
+    }
+
+    span {
+        font-size: 0.82rem;
+        line-height: 1;
+        white-space: nowrap;
+        opacity: 0.98;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        color: var(--theme-texts-inv);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.26);
+    }
+}
+
+a.floating-contact-button-active {
+    background:
+        linear-gradient(135deg,
+            color-mix(in srgb, var(--theme-primary) 100%, white 0%),
+            color-mix(in srgb, var(--theme-primary) 78%, black 22%));
+}
+
+a.floating-contact-button-with-offset {
+    bottom: calc(#{$nav-tabs-height-with-offset} + var(--default-card-spacing) + 0.65rem);
+}
+
+@include media-breakpoint-up($max-breakpoint-for-tabbed-interface) {
+    a.floating-contact-button {
+        right: 1.25rem;
+        bottom: 1.25rem;
+        min-height: 50px;
+        padding: 0.9rem 1.2rem;
+
+        span {
+            font-size: 0.88rem;
+        }
+    }
+}

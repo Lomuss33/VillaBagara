@@ -40,7 +40,8 @@ function NavSidebar({ profile, links }) {
                 )}
 
                 <NavProfileCard profile={profile}
-                                expanded={expanded}/>
+                                expanded={expanded}
+                                stackName={true}/>
 
                 <NavLinkList links={links}
                              expanded={expanded}/>

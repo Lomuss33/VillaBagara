@@ -52,7 +52,7 @@
       "items": [
         {
           "id": 1,
-          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "img": "images/villa_bagara/estate/front-porch.png",
           "locales": {
             "en": {
               "title": "Arrival film",
@@ -78,7 +78,7 @@
         },
         {
           "id": 2,
-          "img": "images/villa_bagara/hero/Midena.jpg",
+          "img": "images/villa_bagara/landscape/midena.jpg",
           "locales": {
             "en": {
               "title": "Land and horizon",
@@ -104,7 +104,7 @@
         },
         {
           "id": 3,
-          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "img": "images/villa_bagara/estate/front-porch.png",
           "locales": {
             "en": {
               "title": "Stay rhythm",
@@ -132,3 +132,4 @@
     }
   ]
 }
+

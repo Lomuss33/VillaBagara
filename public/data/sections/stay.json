@@ -52,7 +52,7 @@
       "items": [
         {
           "id": 1,
-          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "img": "images/villa_bagara/estate/front-porch.png",
           "locales": {
             "en": {
               "text": "The house is meant to feel anchored: a main porch for arrival, open-air time, and long conversation; a calm indoor base for sleeping, gathering, and retreating from weather; and enough character to avoid the feeling of a generic rental."
@@ -70,7 +70,7 @@
         },
         {
           "id": 2,
-          "img": "images/villa_bagara/hero/Midena.jpg",
+          "img": "images/villa_bagara/landscape/midena.jpg",
           "locales": {
             "en": {
               "text": "The second half of the stay is outside: the land around the house, the horizon line, the weather across the plateau, and the breathing space between the estate and the next demand on your attention. That sense of distance is part of the value."
@@ -334,3 +334,4 @@
     }
   ]
 }
+

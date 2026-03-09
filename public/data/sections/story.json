@@ -52,7 +52,7 @@
       "items": [
         {
           "id": 1,
-          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "img": "images/villa_bagara/estate/front-porch.png",
           "locales": {
             "en": {
               "text": "Villa Bagara should be sold as a place with continuity. The house, porch, stone context, and mountain frame all support the sense that this stay belongs to a longer story than a short rental listing. That difference matters to the guest who wants more than convenience."
@@ -70,7 +70,7 @@
         },
         {
           "id": 2,
-          "img": "images/villa_bagara/hero/Midena.jpg",
+          "img": "images/villa_bagara/landscape/midena.jpg",
           "locales": {
             "en": {
               "text": "The land around the estate gives the story its emotional depth: wind, distance, weather, stone, and a pace that feels older than the feed-based world guests leave behind. The result should feel thoughtful, rooted, and worth remembering."
@@ -198,3 +198,4 @@
     }
   ]
 }
+

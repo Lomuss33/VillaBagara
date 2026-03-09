@@ -48,7 +48,7 @@
           "date": { "year": 2026, "month": 1 },
           "preview": {
             "links": [],
-            "screenshots": ["images/villa_bagara/explore/explore_02_viewpoint-30min-hike.png"],
+            "screenshots": ["images/villa_bagara/landscape/midena.jpg"],
             "screenshotsAspectRatio": "16:9",
             "youtubeVideo": ""
           },
@@ -88,7 +88,7 @@
           "date": { "year": 2026, "month": 1 },
           "preview": {
             "links": [],
-            "screenshots": ["images/villa_bagara/explore/explore_04_beach-daytrip.png"],
+            "screenshots": ["images/villa_bagara/landscape/midena.jpg"],
             "screenshotsAspectRatio": "16:9",
             "youtubeVideo": ""
           },
@@ -127,3 +127,4 @@
     }
   ]
 }
+

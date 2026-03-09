@@ -3,25 +3,25 @@
     "locales": {
       "en": {
         "title_short": "Home",
-        "title_short_nav": "Home",
+        "title_short_nav": "Your home tomorrow",
         "title_long_prefix": "Arrive at",
         "title_long": "{{Villa Bagara}}"
       },
       "de": {
-        "title_short": "Start",
-        "title_short_nav": "Start",
+        "title_short": "Home",
+        "title_short_nav": "Ihr Zuhause morgen",
         "title_long_prefix": "Willkommen in",
         "title_long": "{{Villa Bagara}}"
       },
       "hr": {
         "title_short": "Početna",
-        "title_short_nav": "Početna",
+        "title_short_nav": "Vaš dom sutra",
         "title_long_prefix": "Dobrodošli u",
         "title_long": "{{Villu Bagara}}"
       },
       "tr": {
         "title_short": "Ana sayfa",
-        "title_short_nav": "Ana sayfa",
+        "title_short_nav": "Yarınki eviniz",
         "title_long_prefix": "",
         "title_long": "{{Villa Bagara}}'ya hoş geldiniz"
       }
@@ -52,7 +52,7 @@
       "items": [
         {
           "id": 1,
-          "img": "images/villa_bagara/hero/hero_01_front-porch.png",
+          "img": "images/villa_bagara/estate/front-porch.png",
           "locales": {
             "en": {
               "text": "Villa Bagara is positioned as a quiet mountain estate for guests who want privacy, beauty, and enough land around them to feel released from ordinary pace. It is not built around noise. It is built around atmosphere, long mornings, open air, and a sense of arrival."
@@ -70,7 +70,7 @@
         },
         {
           "id": 2,
-          "img": "images/villa_bagara/hero/Midena.jpg",
+          "img": "images/villa_bagara/landscape/midena.jpg",
           "locales": {
             "en": {
               "text": "The landscape around the estate adds the second half of the experience: high ground, weather, silence, walking routes, and the feeling that the day can open slowly. It suits couples, families, founders, and private groups who want nature without giving up intention."
@@ -358,3 +358,4 @@
     }
   ]
 }
+

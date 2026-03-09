@@ -1,6 +1,6 @@
 {
   "name": "Villa Bagara",
-  "profilePictureUrl": "images/villa_bagara/hero/hero_01_front-porch.png",
+  "profilePictureUrl": "images/villa_bagara/estate/front-porch.png",
   "resumePdfUrl": "",
   "statusCircleVisible": true,
   "statusCircleVariant": "available",
@@ -11,10 +11,14 @@
       "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
       "status_message_available_for_booking": "Open for stay inquiries",
       "roles": [
-        "Private mountain estate",
-        "Nature reset for small groups",
-        "Land, silence, and curated experiences",
-        "Available for thoughtful stays"
+        "Pool days",
+        "Family travel",
+        "Sunset dinners",
+        "Road trips",
+        "Hiking trails",
+        "Open-field walks",
+        "Outdoor grilling",
+        "Wildlife watching"
       ],
       "name_pronunciation_ipa": "",
       "name_pronunciation_audio_url": ""
@@ -24,10 +28,14 @@
       "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
       "status_message_available_for_booking": "Offen für Aufenthaltsanfragen",
       "roles": [
-        "Privates Berganwesen",
-        "Natur-Reset für kleine Gruppen",
-        "Land, Ruhe und kuratierte Erlebnisse",
-        "Verfügbar für bewusste Aufenthalte"
+        "Pooltage",
+        "Familienreisen",
+        "Abendessen bei Sonnenuntergang",
+        "Roadtrips",
+        "Wanderwege",
+        "Spaziergänge über offene Felder",
+        "Grillen im Freien",
+        "Wildtierbeobachtung"
       ],
       "name_pronunciation_ipa": "",
       "name_pronunciation_audio_url": ""
@@ -37,10 +45,14 @@
       "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
       "status_message_available_for_booking": "Otvoreno za upite o boravku",
       "roles": [
-        "Privatno planinsko imanje",
-        "Prirodni reset za male grupe",
-        "Zemlja, tišina i pažljivo osmišljeni doživljaji",
-        "Dostupno za promišljene boravke"
+        "Dani uz bazen",
+        "Obiteljska putovanja",
+        "Večere uz zalazak sunca",
+        "Izleti autom",
+        "Planinarske staze",
+        "Šetnje otvorenim poljima",
+        "Roštilj na otvorenom",
+        "Promatranje divljih životinja"
       ],
       "name_pronunciation_ipa": "",
       "name_pronunciation_audio_url": ""
@@ -50,10 +62,14 @@
       "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
       "status_message_available_for_booking": "Konaklama taleplerine açık",
       "roles": [
-        "Özel dağ mülkü",
-        "Küçük gruplar için doğa molası",
-        "Arazi, sessizlik ve özenle kurgulanmış deneyimler",
-        "Düşünülmüş konaklamalar için hazır"
+        "Havuz günleri",
+        "Aile seyahatleri",
+        "Gün batımı akşam yemekleri",
+        "Yol gezileri",
+        "Yürüyüş parkurları",
+        "Açık arazi yürüyüşleri",
+        "Açık havada mangal",
+        "Yaban hayatı gözlemi"
       ],
       "name_pronunciation_ipa": "",
       "name_pronunciation_audio_url": ""

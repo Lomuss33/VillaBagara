@@ -11,7 +11,8 @@ function NavHeaderMobile({ profile, links }) {
         <nav className={`nav-header-mobile`}>
             <Card className={`nav-header-mobile-card-wrapper`}>
                 <NavProfileCard profile={profile}
-                                expanded={true}/>
+                                expanded={true}
+                                stackName={false}/>
 
                 <div className={`left-tool-container`}>
                     <NavToolLanguagePicker/>

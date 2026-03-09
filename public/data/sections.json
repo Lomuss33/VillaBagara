@@ -4,7 +4,7 @@
       "id": "home",
       "categoryId": "home",
       "jsonPath": "/data/sections/home.json",
-      "faIcon": "fa-solid fa-house"
+      "faIcon": "fa-solid fa-umbrella-beach"
     },
     {
       "id": "stay",
@@ -26,13 +26,13 @@
     },
     {
       "id": "gallery",
-      "categoryId": "experience",
+      "categoryId": "home",
       "jsonPath": "/data/sections/gallery.json",
       "faIcon": "fa-solid fa-images"
     },
     {
       "id": "videos",
-      "categoryId": "experience",
+      "categoryId": "home",
       "jsonPath": "/data/sections/videos.json",
       "faIcon": "fa-solid fa-circle-play"
     },
@@ -44,3 +44,4 @@
     }
   ]
 }
+
