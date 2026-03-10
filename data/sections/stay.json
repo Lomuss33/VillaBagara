@@ -1,0 +1,337 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Stay",
+        "title_short_nav": "Stay",
+        "title_long_prefix": "House, land, and",
+        "title_long": "{{quiet comfort}}"
+      },
+      "de": {
+        "title_short": "Aufenthalt",
+        "title_short_nav": "Aufenthalt",
+        "title_long_prefix": "Haus, Land und",
+        "title_long": "{{ruhiger Komfort}}"
+      },
+      "hr": {
+        "title_short": "Boravak",
+        "title_short_nav": "Boravak",
+        "title_long_prefix": "Kuća, zemljište i",
+        "title_long": "{{tihi komfor}}"
+      },
+      "tr": {
+        "title_short": "Konaklama",
+        "title_short_nav": "Konaklama",
+        "title_long_prefix": "Ev, arazi ve",
+        "title_long": "{{sakin konfor}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleText",
+      "locales": {
+        "en": {
+          "title": "What you are {{renting}}"
+        },
+        "de": {
+          "title": "Was Sie {{mieten}}"
+        },
+        "hr": {
+          "title": "Što zapravo {{unajmljuješ}}"
+        },
+        "tr": {
+          "title": "Aslında neyi {{kiralıyorsunuz}}"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "img": "images/villa_bagara/estate/front-porch.png",
+          "locales": {
+            "en": {
+              "text": "The house is meant to feel anchored: a main porch for arrival, open-air time, and long conversation; a calm indoor base for sleeping, gathering, and retreating from weather; and enough character to avoid the feeling of a generic rental."
+            },
+            "de": {
+              "text": "Das Haus soll geerdet wirken: eine Hauptveranda für Ankunft, Zeit im Freien und lange Gespräche; ein ruhiger Innenraum zum Schlafen, Zusammensein und Zurückziehen bei Wetterwechsel; und genug Charakter, um nicht wie eine beliebige Ferienunterkunft zu wirken."
+            },
+            "hr": {
+              "text": "Kuća je zamišljena da djeluje ukorijenjeno: glavni trijem za dolazak, boravak na zraku i duge razgovore; mirna unutrašnja baza za spavanje, okupljanje i povlačenje kad se vrijeme promijeni; te dovoljno karaktera da ne djeluje kao generičan najam."
+            },
+            "tr": {
+              "text": "Ev; geliş, açık havada geçirilen zaman ve uzun sohbetler için ana veranda; uyku, buluşma ve hava değiştiğinde geri çekilme için sakin bir iç mekân; ve sıradan bir kiralık hissinden kaçınacak kadar karakter sunacak şekilde düşünülmüştür."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "img": "images/villa_bagara/landscape/midena.jpg",
+          "locales": {
+            "en": {
+              "text": "The second half of the stay is outside: the land around the house, the horizon line, the weather across the plateau, and the breathing space between the estate and the next demand on your attention. That sense of distance is part of the value."
+            },
+            "de": {
+              "text": "Die zweite Hälfte des Aufenthalts liegt draußen: das Land rund um das Haus, die Horizontlinie, das Wetter über dem Plateau und der Freiraum zwischen dem Anwesen und der nächsten Forderung an Ihre Aufmerksamkeit. Genau diese Distanz gehört zum Wert des Ortes."
+            },
+            "hr": {
+              "text": "Druga polovica boravka nalazi se vani: zemljište oko kuće, linija horizonta, vrijeme preko visoravni i prostor između imanja i sljedeće obaveze koja traži pažnju. Taj osjećaj distance dio je vrijednosti mjesta."
+            },
+            "tr": {
+              "text": "Konaklamanın ikinci yarısı dışarıdadır: evin çevresindeki arazi, ufuk çizgisi, plato üzerindeki hava ve mülk ile dikkatinizi isteyen bir sonraki şey arasındaki nefes alanı. Bu mesafe hissi değerin bir parçasıdır."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "component": "ArticleFacts",
+      "locales": {
+        "en": {
+          "title": "Estate {{essentials}}"
+        },
+        "de": {
+          "title": "Die {{Essenz}} des Anwesens"
+        },
+        "hr": {
+          "title": "{{Bitno}} o imanju"
+        },
+        "tr": {
+          "title": "Mülkün {{özeti}}"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-house",
+          "faIconColors": {
+            "bg": "#1c1712",
+            "bgLight": "#f7f0e8",
+            "fill": "#c7924d",
+            "fillLight": "#a46f2f"
+          },
+          "locales": {
+            "en": {
+              "title": "Character over standardization",
+              "text": "The stay is built around atmosphere and memory rather than anonymous hotel logic."
+            },
+            "de": {
+              "title": "Charakter statt Standardisierung",
+              "text": "Der Aufenthalt folgt Atmosphäre und Erinnerung statt anonymer Hotellogik."
+            },
+            "hr": {
+              "title": "Karakter ispred standardizacije",
+              "text": "Boravak je vođen ugođajem i memorijom mjesta, a ne anonimnom hotelskom logikom."
+            },
+            "tr": {
+              "title": "Standarttan çok karakter",
+              "text": "Konaklama anonim otel mantığından çok atmosfer ve hafıza üzerine kuruludur."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-couch",
+          "faIconColors": {
+            "bg": "#13171d",
+            "bgLight": "#edf2f8",
+            "fill": "#7f9ec4",
+            "fillLight": "#5c7ca5"
+          },
+          "locales": {
+            "en": {
+              "title": "Shared spaces that feel usable",
+              "text": "The house works best when guests can gather, read, eat, and slow down without friction."
+            },
+            "de": {
+              "title": "Gemeinsame Räume, die wirklich nutzbar sind",
+              "text": "Das Haus funktioniert am besten, wenn Gäste ohne Reibung zusammenkommen, lesen, essen und langsamer werden können."
+            },
+            "hr": {
+              "title": "Zajednički prostori koji se stvarno koriste",
+              "text": "Kuća najbolje funkcionira kad gosti mogu bez napora biti zajedno, čitati, jesti i usporiti."
+            },
+            "tr": {
+              "title": "Gerçekten kullanılan ortak alanlar",
+              "text": "Ev; misafirlerin zahmetsizce bir araya gelebildiği, okuyabildiği, yemek yiyebildiği ve yavaşlayabildiği zaman en iyi halindedir."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-tree-city",
+          "faIconColors": {
+            "bg": "#122016",
+            "bgLight": "#eef8f1",
+            "fill": "#58ab72",
+            "fillLight": "#3f8757"
+          },
+          "locales": {
+            "en": {
+              "title": "Outdoor life is part of the layout",
+              "text": "Porch time, outdoor dining, and transition into the surrounding land all matter here."
+            },
+            "de": {
+              "title": "Das Leben draußen gehört zum Aufbau",
+              "text": "Zeit auf der Veranda, Essen im Freien und der Übergang ins umliegende Land sind hier zentral."
+            },
+            "hr": {
+              "title": "Vanjski život dio je rasporeda",
+              "text": "Vrijeme na trijemu, objedovanje vani i prelazak u okolno zemljište ovdje su važni."
+            },
+            "tr": {
+              "title": "Dış mekân yaşamı yerleşimin parçasıdır",
+              "text": "Veranda zamanı, açık havada yemek ve çevredeki araziye geçiş burada önemlidir."
+            }
+          }
+        },
+        {
+          "id": 4,
+          "faIcon": "fa-solid fa-square-parking",
+          "faIconColors": {
+            "bg": "#181818",
+            "bgLight": "#f2f2f2",
+            "fill": "#8f9496",
+            "fillLight": "#697071"
+          },
+          "locales": {
+            "en": {
+              "title": "Simple arrival and parking",
+              "text": "Guests should be able to arrive, settle, and begin the stay without noise or complication."
+            },
+            "de": {
+              "title": "Einfache Anreise und Parken",
+              "text": "Gäste sollen ankommen, sich einrichten und den Aufenthalt ohne Lärm oder Komplikation beginnen können."
+            },
+            "hr": {
+              "title": "Jednostavan dolazak i parking",
+              "text": "Gosti trebaju moći doći, smjestiti se i započeti boravak bez buke i komplikacija."
+            },
+            "tr": {
+              "title": "Kolay varış ve park",
+              "text": "Misafirler gürültü ve karmaşa olmadan varabilmeli, yerleşebilmeli ve konaklamaya başlayabilmelidir."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "component": "ArticleInfoList",
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "How the place is {{structured}}"
+        },
+        "de": {
+          "title": "Wie der Ort {{strukturiert}} ist"
+        },
+        "hr": {
+          "title": "Kako je mjesto {{organizirano}}"
+        },
+        "tr": {
+          "title": "Mekân nasıl {{kurgulanmış}}"
+        }
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-door-open",
+          "faIconColors": {
+            "bg": "#211813",
+            "bgLight": "#faefe8",
+            "fill": "#cd835c",
+            "fillLight": "#b0623b"
+          },
+          "locales": {
+            "en": {
+              "title": "House and shared spaces",
+              "text": "The house should work as a comfortable base for sleeping, conversation, and retreat after active days."
+            },
+            "de": {
+              "title": "Haus und gemeinsame Räume",
+              "text": "Das Haus soll als bequeme Basis zum Schlafen, Sprechen und Zurückziehen nach aktiven Tagen funktionieren."
+            },
+            "hr": {
+              "title": "Kuća i zajednički prostori",
+              "text": "Kuća treba funkcionirati kao udobna baza za spavanje, razgovor i povlačenje nakon aktivnih dana."
+            },
+            "tr": {
+              "title": "Ev ve ortak alanlar",
+              "text": "Ev; uyku, sohbet ve aktif günlerin ardından geri çekilme için rahat bir üs gibi çalışmalıdır."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-sun-plant-wilt",
+          "faIconColors": {
+            "bg": "#132014",
+            "bgLight": "#eef8ef",
+            "fill": "#65aa64",
+            "fillLight": "#4d874c"
+          },
+          "locales": {
+            "en": {
+              "title": "Outdoor rhythm",
+              "text": "Mornings on the porch, open-air meals, and time on the land are part of the intended stay experience."
+            },
+            "de": {
+              "title": "Rhythmus im Freien",
+              "text": "Morgenstunden auf der Veranda, Mahlzeiten draußen und Zeit auf dem Land gehören zum geplanten Aufenthaltserlebnis."
+            },
+            "hr": {
+              "title": "Vanjski ritam",
+              "text": "Jutra na trijemu, obroci na zraku i vrijeme na zemljištu dio su zamišljenog iskustva boravka."
+            },
+            "tr": {
+              "title": "Dış mekân ritmi",
+              "text": "Verandada sabahlar, açık havada öğünler ve arazide geçirilen zaman konaklama deneyiminin parçasıdır."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-heart-circle-check",
+          "faIconColors": {
+            "bg": "#1f1420",
+            "bgLight": "#f8eef8",
+            "fill": "#c475cf",
+            "fillLight": "#a554b1"
+          },
+          "locales": {
+            "en": {
+              "title": "Best fit",
+              "text": "The estate is strongest for guests who want beauty, calm, and shared time rather than a loud event base."
+            },
+            "de": {
+              "title": "Beste Passform",
+              "text": "Das Anwesen ist am stärksten für Gäste, die Schönheit, Ruhe und gemeinsame Zeit statt einer lauten Event-Basis suchen."
+            },
+            "hr": {
+              "title": "Najbolje odgovara",
+              "text": "Imanje je najjače za goste koji žele ljepotu, mir i zajedničko vrijeme, a ne glasnu bazu za događaje."
+            },
+            "tr": {
+              "title": "En iyi uyum",
+              "text": "Mülk; gürültülü etkinlik üssü yerine güzellik, sakinlik ve birlikte geçirilen zaman isteyen misafirler için en uygunudur."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+

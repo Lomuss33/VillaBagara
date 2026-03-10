@@ -1,0 +1,78 @@
+{
+  "name": "Villa Bagara",
+  "profilePictureUrl": "images/villa_bagara/estate/front-porch.png",
+  "resumePdfUrl": "",
+  "statusCircleVisible": true,
+  "statusCircleVariant": "available",
+  "statusCircleHoverMessage": "status_message_available_for_booking",
+  "locales": {
+    "en": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Open for stay inquiries",
+      "roles": [
+        "Pool days",
+        "Family travel",
+        "Sunset dinners",
+        "Road trips",
+        "Hiking trails",
+        "Open-field walks",
+        "Outdoor grilling",
+        "Wildlife watching"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    },
+    "de": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Offen für Aufenthaltsanfragen",
+      "roles": [
+        "Pooltage",
+        "Familienreisen",
+        "Abendessen bei Sonnenuntergang",
+        "Roadtrips",
+        "Wanderwege",
+        "Spaziergänge über offene Felder",
+        "Grillen im Freien",
+        "Wildtierbeobachtung"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    },
+    "hr": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Otvoreno za upite o boravku",
+      "roles": [
+        "Dani uz bazen",
+        "Obiteljska putovanja",
+        "Večere uz zalazak sunca",
+        "Izleti autom",
+        "Planinarske staze",
+        "Šetnje otvorenim poljima",
+        "Roštilj na otvorenom",
+        "Promatranje divljih životinja"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    },
+    "tr": {
+      "localized_name": "Villa Bagara",
+      "localized_name_stylized": "<strong>Villa {{Bagara}}</strong>",
+      "status_message_available_for_booking": "Konaklama taleplerine açık",
+      "roles": [
+        "Havuz günleri",
+        "Aile seyahatleri",
+        "Gün batımı akşam yemekleri",
+        "Yol gezileri",
+        "Yürüyüş parkurları",
+        "Açık arazi yürüyüşleri",
+        "Açık havada mangal",
+        "Yaban hayatı gözlemi"
+      ],
+      "name_pronunciation_ipa": "",
+      "name_pronunciation_audio_url": ""
+    }
+  }
+}

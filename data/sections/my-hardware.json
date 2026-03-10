@@ -1,0 +1,627 @@
+{
+    "title":  {
+                  "locales":  {
+                                  "en":  {
+                                             "title_short":  "Hardware \u0026 Making",
+                                             "title_short_nav":  "Hardware",
+                                             "title_long_prefix":  "Built with tools, patience and precision",
+                                             "title_long":  "Here are {{my silicons}}"
+                                         },
+                                  "de":  {
+                                             "title_short":  "Hardware \u0026 Basteln",
+                                             "title_short_nav":  "Hardware",
+                                             "title_long_prefix":  "Gebaut mit Werkzeugen, Geduld und Präzision",
+                                             "title_long":  "Hier sind {{meine Siliziume}}"
+                                         },
+                                  "hr":  {
+                                             "title_short":  "Hardver i izrada",
+                                             "title_short_nav":  "Hardver",
+                                             "title_long_prefix":  "Izrađena s alatom, strpljenjem i preciznošću",
+                                             "title_long":  "Evo {{mojih silicija}}"
+                                         },
+                                  "tr":  {
+                                             "title_short":  "Donanım ve Yapım",
+                                             "title_short_nav":  "Donanım",
+                                             "title_long_prefix":  "Alet, sabır ve hassasiyetle inşa edildi",
+                                             "title_long":  "İşte {{benim silisyumlarım}}"
+                                         }
+                              }
+              },
+    "articles":  [
+                     {
+                         "id":  1,
+                         "component":  "ArticlePortfolio",
+                         "locales":  {
+                                         "en":  {
+                                                    "title":  "My {{Hardware}} Projects",
+                                                    "category_all":  "All Projects",
+                                                    "category_educational":  "Educational",
+                                                    "category_professional":  "Professional",
+                                                    "category_personal":  "Personal"
+                                                },
+                                         "de":  {
+                                                    "title":  "Meine {{Hardware}}-Projekte",
+                                                    "category_all":  "Alle Projekte",
+                                                    "category_educational":  "Bildung",
+                                                    "category_professional":  "Beruflich",
+                                                    "category_personal":  "Pers�nlich"
+                                                },
+                                         "hr":  {
+                                                    "title":  "Moji {{hardverski}} projekti",
+                                                    "category_all":  "Svi projekti",
+                                                    "category_educational":  "Edukativno",
+                                                    "category_professional":  "Profesionalno",
+                                                    "category_personal":  "Osobno"
+                                                },
+                                         "tr":  {
+                                                    "title":  "{{Donanım}} Projelerim",
+                                                    "category_all":  "Tüm Projeler",
+                                                    "category_educational":  "Egitsel",
+                                                    "category_professional":  "Profesyonel",
+                                                    "category_personal":  "Kisisel"
+                                                }
+                                     },
+                         "settings":  {
+                                          "categorize_by":  [
+                                                                "category_educational",
+                                                                "category_professional",
+                                                                "category_personal"
+                                                            ],
+                                          "order_items_by":  "id",
+                                          "order_items_sort":  "asc"
+                                      },
+                         "items":  [
+                                       {
+                                           "id":  1,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-server",
+                                           "faIconColors":  {
+                                                                "bg":  "#0D1117",
+                                                                "bgLight":  "#EDF2F7",
+                                                                "fill":  "#2962FF",
+                                                                "fillLight":  "#1E88E5"
+                                                            },
+                                           "categoryId":  "category_personal",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "architecture",
+                                                                             "faIcon":  "fa-solid fa-diagram-project"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Self-Built Proxmox Homelab Platform",
+                                                                      "text":  "Enterprise-style homelab built on Proxmox VE, hosting virtualized services for monitoring, tunneling, backups, and internal infrastructure. Includes containerized services, secure remote access, metrics collection, alerting, and network segmentation — designed as a personal R\u0026D playground for infrastructure engineering.",
+                                                                      "tags":  [
+                                                                                   "Proxmox",
+                                                                                   "Homelab",
+                                                                                   "Virtualization",
+                                                                                   "Monitoring",
+                                                                                   "Tunneling",
+                                                                                   "Containers"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Selbstgebaute Proxmox-Homelab-Plattform",
+                                                                      "text":  "Enterprise-ähnliches Homelab auf Basis von Proxmox VE mit virtualisierten Diensten für Monitoring, Tunneling, Backups und interne Infrastruktur. Containerisierte Services, sicherer Fernzugriff, Metrik-Erfassung, Alarmierung und Netzwerksegmentierung als persönliches Infrastruktur-Labor.",
+                                                                      "tags":  [
+                                                                                   "Proxmox",
+                                                                                   "Homelab",
+                                                                                   "Virtualisierung",
+                                                                                   "Monitoring",
+                                                                                   "Tunneling",
+                                                                                   "Container"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Samostalno izgrađena Proxmox homelab platforma",
+                                                                      "text":  "Napredno homelab okruženje temeljeno na Proxmox VE s virtualiziranim servisima za nadzor, tunneling, sigurnosne kopije i internu infrastrukturu. Sustav služi kao osobni R\u0026D laboratorij za infrastrukturu i sustave.",
+                                                                      "tags":  [
+                                                                                   "Proxmox",
+                                                                                   "Homelab",
+                                                                                   "Virtualizacija",
+                                                                                   "Monitoring",
+                                                                                   "Infrastruktura"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Kendi Yaptığım Proxmox Homelab Platformu",
+                                                                      "text":  "Proxmox VE tabanlı, izleme, tünelleme, yedekleme ve dahili servisler için sanallaştırılmış hizmetler barındıran kurumsal tarzda bir homelab. Altyapı mühendisliği için kişisel AR-GE ortamı olarak tasarlandı.",
+                                                                      "tags":  [
+                                                                                   "Proxmox",
+                                                                                   "Homelab",
+                                                                                   "Sanallaştırma",
+                                                                                   "İzleme",
+                                                                                   "Altyapı"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  4,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-bridge",
+                                           "faIconColors":  {
+                                                                "bg":  "#101A29",
+                                                                "bgLight":  "#ECF0F6",
+                                                                "fill":  "#1976D2",
+                                                                "fillLight":  "#1565C0"
+                                                            },
+                                           "categoryId":  "category_professional",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "technical_details",
+                                                                             "faIcon":  "fa-solid fa-file-code"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "VPS Advanced Material Sorting System",
+                                                                      "text":  "Industrial conveyor belt automation project using Verbindungsprogrammierte Steuerung (VPS) for precise sorting of materials with optical recognition and mechanical separation.",
+                                                                      "tags":  [
+                                                                                   "Industrial Automation",
+                                                                                   "VPS",
+                                                                                   "Material Sorting",
+                                                                                   "Conveyor Belt"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "VPS Fortgeschrittenes Materialsortierungssystem",
+                                                                      "text":  "Industrielles Förderbandautomatisierungsprojekt mit Verbindungsprogrammierter Steuerung (VPS) für präzise Materialsortierung mit optischer Erkennung und mechanischer Trennung.",
+                                                                      "tags":  [
+                                                                                   "Industrieautomatisierung",
+                                                                                   "VPS",
+                                                                                   "Materialsortierung",
+                                                                                   "Förderband"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "VPS napredni sustav za sortiranje materijala",
+                                                                      "text":  "Projekt automatizacije industrijske transportne trake pomoću Verbindungsprogrammierte Steuerung (VPS) za precizno sortiranje materijala s optičkim prepoznavanjem i mehaničkim odvajanjem.",
+                                                                      "tags":  [
+                                                                                   "Industrijska automatizacija",
+                                                                                   "VPS",
+                                                                                   "Sortiranje materijala",
+                                                                                   "Transportna traka"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "VPS Gelişmiş Malzeme Ayırma Sistemi",
+                                                                      "text":  "Optik tanıma ve mekanik ayırma ile malzemelerin hassas şekilde sınıflandırılması için Verbindungsprogrammierte Steuerung (VPS) kullanan endüstriyel konveyör bandı otomasyon projesi.",
+                                                                      "tags":  [
+                                                                                   "Endüstriyel Otomasyon",
+                                                                                   "VPS",
+                                                                                   "Malzeme Ayırma",
+                                                                                   "Konveyör Bant"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  4,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-industry",
+                                           "faIconColors":  {
+                                                                "bg":  "#101A29",
+                                                                "bgLight":  "#ECF0F6",
+                                                                "fill":  "#1976D2",
+                                                                "fillLight":  "#1565C0"
+                                                            },
+                                           "categoryId":  "category_professional",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "technical_details",
+                                                                             "faIcon":  "fa-solid fa-file-code"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Industrial PLC Automation Systems (Siemens S7)",
+                                                                      "text":  "Industrial automation projects based on Siemens S7 PLCs, including a multi-zone commercial pizza oven with precise temperature regulation and a high-end automated car wash system. Both systems feature structured control logic, sensor-driven workflows, water and energy optimization, and industrial-grade reliability.",
+                                                                      "tags":  [
+                                                                                   "Siemens S7",
+                                                                                   "PLC",
+                                                                                   "Industrial Automation",
+                                                                                   "Process Control"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Industrielle SPS-Automatisierungssysteme (Siemens S7)",
+                                                                      "text":  "Industrieautomatisierungsprojekte auf Basis von Siemens S7 SPS, darunter ein kommerzieller Pizzaofen mit Mehrzonen-Temperaturregelung sowie eine vollautomatische Autowaschanlage. Fokus auf Prozesssteuerung, Sensorik und industrielle Zuverlässigkeit.",
+                                                                      "tags":  [
+                                                                                   "Siemens S7",
+                                                                                   "SPS",
+                                                                                   "Industrieautomatisierung",
+                                                                                   "Prozesssteuerung"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Industrijski PLC automatizacijski sustavi (Siemens S7)",
+                                                                      "text":  "Industrijski automatizacijski sustavi temeljeni na Siemens S7 PLC-u, uključujući komercijalnu pizza pećnicu i automatiziranu autopraonicu s više faza rada.",
+                                                                      "tags":  [
+                                                                                   "Siemens S7",
+                                                                                   "PLC",
+                                                                                   "Industrijska automatizacija"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Endüstriyel PLC Otomasyon Sistemleri (Siemens S7)",
+                                                                      "text":  "Siemens S7 PLC tabanlı endüstriyel otomasyon projeleri; çok bölgeli ticari pizza fırını ve gelişmiş otomatik araç yıkama sistemi dahil.",
+                                                                      "tags":  [
+                                                                                   "Siemens S7",
+                                                                                   "PLC",
+                                                                                   "Endüstriyel Otomasyon"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  7,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-flag",
+                                           "faIconColors":  {
+                                                                "bg":  "#101A0A",
+                                                                "bgLight":  "#E8F0E8",
+                                                                "fill":  "#43A047",
+                                                                "fillLight":  "#388E3C"
+                                                            },
+                                           "categoryId":  "category_educational",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "demo",
+                                                                             "faIcon":  "fa-solid fa-play"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Arduino Interactive Flag Frame",
+                                                                      "text":  "Custom-built interactive flag display using Arduino, featuring backlit LED effects behind a glass pane and a mechanically animated flag in front. A single-button trigger starts a synchronized light-and-music show, while dual motors move the flag in a smooth circular swinging motion. Housed in an oversized enclosure to accommodate control electronics and power components.",
+                                                                      "tags":  [
+                                                                                   "Arduino",
+                                                                                   "Electromechanics",
+                                                                                   "LED",
+                                                                                   "Motors",
+                                                                                   "Interactive Art"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Interaktiver Arduino-Flaggenrahmen",
+                                                                      "text":  "Interaktive Flaggeninstallation mit Arduino, LED-Hintergrundbeleuchtung, Glasfront und motorisierter Flaggenbewegung. Ein Knopfdruck startet eine synchronisierte Licht- und Musikshow.",
+                                                                      "tags":  [
+                                                                                   "Arduino",
+                                                                                   "Elektromechanik",
+                                                                                   "LED",
+                                                                                   "Motoren"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Interaktivni Arduino okvir sa zastavom",
+                                                                      "text":  "Interaktivni sustav sa svjetlosnim efektima i pokretnom zastavom upravljanom Arduino mikrokontrolerom.",
+                                                                      "tags":  [
+                                                                                   "Arduino",
+                                                                                   "Motori",
+                                                                                   "LED",
+                                                                                   "Interaktivno"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Arduino Etkileşimli Bayrak Çerçevesi",
+                                                                      "text":  "Arduino kontrollü, LED arka aydınlatmalı ve motorlu bayrak hareketine sahip etkileşimli sergi sistemi.",
+                                                                      "tags":  [
+                                                                                   "Arduino",
+                                                                                   "Motorlar",
+                                                                                   "LED",
+                                                                                   "Etkileşimli Sistem"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  8,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-house-user",
+                                           "faIconColors":  {
+                                                                "bg":  "#2B170A",
+                                                                "bgLight":  "#F6EDE7",
+                                                                "fill":  "#FF9800",
+                                                                "fillLight":  "#F57C00"
+                                                            },
+                                           "categoryId":  "category_educational",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "code",
+                                                                             "faIcon":  "fa-solid fa-code"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Automated Curtains System",
+                                                                      "text":  "Arduino-powered motorized curtain controllers with light sensors, timer functionality, and integration with home assistant for voice and app control.",
+                                                                      "tags":  [
+                                                                                   "Home Automation",
+                                                                                   "Arduino",
+                                                                                   "Motorized Curtains",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Automatisiertes Vorhangsystem",
+                                                                      "text":  "Arduino-betriebene motorisierte Vorhangsteuerungen mit Lichtsensoren, Timer-Funktionalität und Integration mit Home Assistant für Sprach- und App-Steuerung.",
+                                                                      "tags":  [
+                                                                                   "Hausautomatisierung",
+                                                                                   "Arduino",
+                                                                                   "Motorisierte Vorhänge",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Sustav automatiziranih zavjesa",
+                                                                      "text":  "Arduino motorizirani upravljači zavjesa sa svjetlosnim senzorima, funkcionalnost brojača vremena i integracija s kućnim asistentom za glasovnu kontrolu i upravljanje aplikacijom.",
+                                                                      "tags":  [
+                                                                                   "Kućna automatizacija",
+                                                                                   "Arduino",
+                                                                                   "Motorizirane zavjese",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Otomatik Perde Sistemi",
+                                                                      "text":  "Işık sensörleri, zamanlayıcı işlevselliği ve sesli ve uygulama kontrolü için ev asistanı ile entegrasyon ile Arduino destekli motorlu perde kontrol cihazları.",
+                                                                      "tags":  [
+                                                                                   "Ev Otomasyonu",
+                                                                                   "Arduino",
+                                                                                   "Motorlu Perdeler",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  10,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-house-signal",
+                                           "faIconColors":  {
+                                                                "bg":  "#0A1A3D",
+                                                                "bgLight":  "#E7EDF8",
+                                                                "fill":  "#3F51B5",
+                                                                "fillLight":  "#303F9F"
+                                                            },
+                                           "categoryId":  "category_personal",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "architecture",
+                                                                             "faIcon":  "fa-solid fa-network-wired"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Tri-Location Smart Home System",
+                                                                      "text":  "Integrated smart home ecosystem spanning three locations (Tomislavgrad, Kelkheim, Giessen) with synchronized controls, remote monitoring, and automated routines.",
+                                                                      "tags":  [
+                                                                                   "Smart Home",
+                                                                                   "Multi-Location",
+                                                                                   "Home Assistant",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Tri-Standort Smart-Home-System",
+                                                                      "text":  "Integriertes Smart-Home-Ökosystem an drei Standorten (Tomislavgrad, Kelkheim, Giessen) mit synchronisierten Steuerungen, Fernüberwachung und automatisierten Routinen.",
+                                                                      "tags":  [
+                                                                                   "Smart Home",
+                                                                                   "Multi-Standort",
+                                                                                   "Home Assistant",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Pametni sustav za tri lokacije",
+                                                                      "text":  "Integrirani ekosustav pametnog doma na tri lokacije (Tomislavgrad, Kelkheim, Giessen) sa sinkroniziranim kontrolama, daljinskim nadzorom i automatiziranim rutinama.",
+                                                                      "tags":  [
+                                                                                   "Pametni dom",
+                                                                                   "Više lokacija",
+                                                                                   "Home Assistant",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Üç Konumlu Akıllı Ev Sistemi",
+                                                                      "text":  "Senkronize kontroller, uzaktan izleme ve otomatikleştirilmiş rutinlerle üç konumu (Tomislavgrad, Kelkheim, Giessen) kapsayan entegre akıllı ev ekosistemi.",
+                                                                      "tags":  [
+                                                                                   "Akıllı Ev",
+                                                                                   "Çoklu Konum",
+                                                                                   "Ev Asistanı",
+                                                                                   "IoT"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  22,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-gamepad",
+                                           "faIconColors":  {
+                                                                "bg":  "#240930",
+                                                                "bgLight":  "#F3E7F7",
+                                                                "fill":  "#9C27B0",
+                                                                "fillLight":  "#7B1FA2"
+                                                            },
+                                           "categoryId":  "category_personal",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "specs",
+                                                                             "faIcon":  "fa-solid fa-microchip"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Custom Gaming PC",
+                                                                      "text":  "High-performance gaming rig with industrial cooling, RGB lighting, and carefully selected components for maximum gaming performance and reliability.",
+                                                                      "tags":  [
+                                                                                   "Gaming",
+                                                                                   "Custom PC",
+                                                                                   "High-Performance",
+                                                                                   "Adwanced Cooling"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Custom Gaming-PC",
+                                                                      "text":  "Hochleistungs-Gaming-Rechner mit Industriekühlung, RGB-Beleuchtung und sorgfältig ausgewählten Komponenten für maximale Gaming-Leistung und Zuverlässigkeit.",
+                                                                      "tags":  [
+                                                                                   "Gaming",
+                                                                                   "Individueller PC",
+                                                                                   "Hochleistung",
+                                                                                   "Industriekühlung"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Prilagođeno gaming računalo",
+                                                                      "text":  "Visoko performansno gaming računalo s industrijskim hlađenjem, RGB osvjetljenjem i pažljivo odabranim komponentama za maksimalne gaming performanse i pouzdanost.",
+                                                                      "tags":  [
+                                                                                   "Gaming",
+                                                                                   "Prilagođeno računalo",
+                                                                                   "Visoke performanse",
+                                                                                   "Industrijskim hlađenje"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Özel Oyun Bilgisayarı",
+                                                                      "text":  "Sıvı soğutma, RGB aydınlatma ve maksimum oyun performansı ve güvenilirlik için özenle seçilmiş bileşenlere sahip yüksek performanslı oyun sistemi.",
+                                                                      "tags":  [
+                                                                                   "Oyun",
+                                                                                   "Özel PC",
+                                                                                   "Yüksek Performans",
+                                                                                   "Sıvı Soğutma"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       },
+                                       {
+                                           "id":  11,
+                                           "img":  "",
+                                           "faIcon":  "fa-solid fa-bicycle",
+                                           "faIconColors":  {
+                                                                "bg":  "#0A2E2B",
+                                                                "bgLight":  "#E7F3F2",
+                                                                "fill":  "#00BCD4",
+                                                                "fillLight":  "#00ACC1"
+                                                            },
+                                           "categoryId":  "category_personal",
+                                           "preview":  {
+                                                           "links":  [
+                                                                         {
+                                                                             "href":  "",
+                                                                             "tooltipString":  "modifications",
+                                                                             "faIcon":  "fa-solid fa-wrench"
+                                                                         }
+                                                                     ],
+                                                           "screenshots":  [
+
+                                                                           ],
+                                                           "screenshotsAspectRatio":  "16:9",
+                                                           "youtubeVideo":  ""
+                                                       },
+                                           "locales":  {
+                                                           "en":  {
+                                                                      "title":  "Custom Electric Bicycle",
+                                                                      "text":  "Budget-focused electric bicycle built as a sustainable mobility solution for daily life in Giessen, combining an affordable frame with high-quality components such as Shimano for reliability and efficiency.",
+                                                                      "tags":  [
+                                                                                   "E-Bike",
+                                                                                   "Sustainable Transport",
+                                                                                   "DIY",
+                                                                                   "Shimano"
+                                                                               ]
+                                                                  },
+                                                           "de":  {
+                                                                      "title":  "Custom-Elektrofahrrad",
+                                                                      "text":  "Budgetorientiertes Elektrofahrrad als nachhaltige Mobilitätslösung für den Alltag in Gießen, kombiniert einen günstigen Rahmen mit hochwertigen Komponenten wie Shimano für Zuverlässigkeit und Effizienz.",
+                                                                      "tags":  [
+                                                                                   "E-Bike",
+                                                                                   "Nachhaltige Mobilität",
+                                                                                   "DIY",
+                                                                                   "Shimano"
+                                                                               ]
+                                                                  },
+                                                           "hr":  {
+                                                                      "title":  "Prilagođeni električni bicikl",
+                                                                      "text":  "Budžetski električni bicikl izrađen kao održivo prijevozno rješenje za svakodnevni život u Giessenu, kombinira pristupačan okvir s kvalitetnim komponentama poput Shimano dijelova.",
+                                                                      "tags":  [
+                                                                                   "E-bicikl",
+                                                                                   "Održiva mobilnost",
+                                                                                   "DIY",
+                                                                                   "Shimano"
+                                                                               ]
+                                                                  },
+                                                           "tr":  {
+                                                                      "title":  "Özel Elektrikli Bisiklet",
+                                                                      "text":  "Giessen’de günlük yaşam için sürdürülebilir bir ulaşım çözümü olarak tasarlanmış, uygun fiyatlı bir kadro ile Shimano gibi kaliteli bileşenleri birleştiren elektrikli bisiklet.",
+                                                                      "tags":  [
+                                                                                   "E-Bisiklet",
+                                                                                   "Sürdürülebilir Ulaşım",
+                                                                                   "DIY",
+                                                                                   "Shimano"
+                                                                               ]
+                                                                  }
+                                                       }
+                                       }
+                                   ]
+                     }
+                 ]
+}
+

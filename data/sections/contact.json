@@ -1,0 +1,166 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Contact us",
+        "title_short_nav": "Contact us",
+        "title_long_prefix": "Plan your",
+        "title_long": "{{stay with Villa Bagara}}"
+      },
+      "de": {
+        "title_short": "Kontakt",
+        "title_short_nav": "Kontakt",
+        "title_long_prefix": "Planen Sie Ihren",
+        "title_long": "{{Aufenthalt in Villa Bagara}}"
+      },
+      "hr": {
+        "title_short": "Kontakt",
+        "title_short_nav": "Kontakt",
+        "title_long_prefix": "Isplaniraj svoj",
+        "title_long": "{{boravak u Villi Bagara}}"
+      },
+      "tr": {
+        "title_short": "Bize ulaşın",
+        "title_short_nav": "Bize ulaşın",
+        "title_long_prefix": "",
+        "title_long": "{{Villa Bagara'daki konaklamanızı}} planlayın"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleInfoList",
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "Choose the easiest way to {{reach us}}"
+        },
+        "de": {
+          "title": "Wählen Sie den einfachsten Weg, uns {{zu erreichen}}"
+        },
+        "hr": {
+          "title": "Odaberi najlakši način da nas {{kontaktiraš}}"
+        },
+        "tr": {
+          "title": "Bize ulaşmanın en kolay yolunu {{seçin}}"
+        }
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-brands fa-whatsapp",
+          "faIconColors": {
+            "bg": "#0B2416",
+            "bgLight": "#EAFBF2",
+            "fill": "#25D366",
+            "fillLight": "#1FA955"
+          },
+          "link": {
+            "href": "https://wa.me/4917662236934",
+            "tooltipString": "open_website"
+          },
+          "locales": {
+            "en": {
+              "title": "WhatsApp",
+              "text": "Best for fast availability checks, date ideas, and a direct first conversation.",
+              "label": "Start on WhatsApp"
+            },
+            "de": {
+              "title": "WhatsApp",
+              "text": "Am besten für schnelle Verfügbarkeitsfragen, Datumsabstimmung und ein direktes Erstgespräch.",
+              "label": "Per WhatsApp starten"
+            },
+            "hr": {
+              "title": "WhatsApp",
+              "text": "Najbolje za brzu provjeru dostupnosti, dogovor oko datuma i prvi izravni razgovor.",
+              "label": "Započni na WhatsAppu"
+            },
+            "tr": {
+              "title": "WhatsApp",
+              "text": "Hızlı müsaitlik kontrolü, tarih fikri ve doğrudan ilk görüşme için en uygunudur.",
+              "label": "WhatsApp ile başlayın"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-envelope",
+          "faIconColors": {
+            "bg": "#0E1826",
+            "bgLight": "#EAF2FD",
+            "fill": "#4D8AE6",
+            "fillLight": "#356BC2"
+          },
+          "link": {
+            "href": "mailto:contact@lovro-music.de",
+            "tooltipString": "email"
+          },
+          "copyToClipboardButton": true,
+          "locales": {
+            "en": {
+              "title": "E-mail",
+              "text": "Best for detailed planning, preferred dates, group size, and special requests.",
+              "label": "contact@lovro-music.de"
+            },
+            "de": {
+              "title": "E-Mail",
+              "text": "Am besten für detaillierte Planung, Wunschdaten, Gruppengröße und besondere Wünsche.",
+              "label": "contact@lovro-music.de"
+            },
+            "hr": {
+              "title": "E-pošta",
+              "text": "Najbolje za detaljno planiranje, željene datume, veličinu grupe i posebne zahtjeve.",
+              "label": "contact@lovro-music.de"
+            },
+            "tr": {
+              "title": "E-posta",
+              "text": "Detaylı planlama, tercih edilen tarihler, grup büyüklüğü ve özel talepler için en uygunudur.",
+              "label": "contact@lovro-music.de"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "component": "ArticleContactForm",
+      "settings": {
+        "email_js_public_key": "j1Kq3rfeTdVXEZYWh",
+        "email_js_service_id": "myWebsite",
+        "email_js_template_id": "template_puj7mco"
+      },
+      "locales": {
+        "en": {
+          "contact_thank_you_title": "{{Thank you}} for your inquiry",
+          "contact_thank_you_body": "Your stay inquiry has been received. We will come back to you soon with the next steps and any details needed for your dates.",
+          "contact_thank_you_footer": "The reply will be sent to your e-mail address: {{$email}}",
+          "title": "Send a stay {{inquiry}}"
+        },
+        "de": {
+          "contact_thank_you_title": "{{Danke}} für Ihre Anfrage",
+          "contact_thank_you_body": "Ihre Aufenthaltsanfrage ist eingegangen. Wir melden uns in Kürze mit den nächsten Schritten und allen nötigen Details zu Ihren Daten.",
+          "contact_thank_you_footer": "Die Antwort wird an Ihre E-Mail-Adresse gesendet: {{$email}}",
+          "title": "Senden Sie eine {{Anfrage}}"
+        },
+        "hr": {
+          "contact_thank_you_title": "{{Hvala}} na upitu",
+          "contact_thank_you_body": "Tvoj upit za boravak je zaprimljen. Uskoro ćemo ti se javiti sa sljedećim koracima i svim detaljima za tvoje datume.",
+          "contact_thank_you_footer": "Odgovor će biti poslan na tvoju e-mail adresu: {{$email}}",
+          "title": "Pošalji {{upit za boravak}}"
+        },
+        "tr": {
+          "contact_thank_you_title": "Talebiniz için {{teşekkür ederiz}}",
+          "contact_thank_you_body": "Konaklama talebiniz alındı. Tarihleriniz ve gerekli sonraki adımlar için size kısa süre içinde dönüş yapacağız.",
+          "contact_thank_you_footer": "Yanıt şu e-posta adresine gönderilecektir: {{$email}}",
+          "title": "Bir konaklama {{talebi}} gönderin"
+        }
+      },
+      "items": null
+    }
+  ]
+}
+

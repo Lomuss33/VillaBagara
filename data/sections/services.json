@@ -1,0 +1,413 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Services",
+        "title_short_nav": "Services",
+        "title_long_prefix": "Included touches and",
+        "title_long": "{{curated experiences}}"
+      },
+      "de": {
+        "title_short": "Services",
+        "title_short_nav": "Services",
+        "title_long_prefix": "Inklusive Details und",
+        "title_long": "{{kuratierte Erlebnisse}}"
+      },
+      "hr": {
+        "title_short": "Usluge",
+        "title_short_nav": "Usluge",
+        "title_long_prefix": "Uključeni detalji i",
+        "title_long": "{{osmišljeni doživljaji}}"
+      },
+      "tr": {
+        "title_short": "Hizmetler",
+        "title_short_nav": "Hizmetler",
+        "title_long_prefix": "",
+        "title_long": "{{Özenle kurgulanmış deneyimler}} ve dahil dokunuşlar"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticleFacts",
+      "locales": {
+        "en": {
+          "title": "Experiences at the {{estate}}"
+        },
+        "de": {
+          "title": "Erlebnisse auf dem {{Anwesen}}"
+        },
+        "hr": {
+          "title": "Doživljaji na {{imanju}}"
+        },
+        "tr": {
+          "title": "{{Mülkteki}} deneyimler"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-person-running",
+          "faIconColors": {
+            "bg": "#111d14",
+            "bgLight": "#edf8ef",
+            "fill": "#50b36e",
+            "fillLight": "#388a52"
+          },
+          "locales": {
+            "en": {
+              "title": "Movement in nature",
+              "text": "Morning walks, hiking starts, cycling rhythm, and active days can all begin from the estate."
+            },
+            "de": {
+              "title": "Bewegung in der Natur",
+              "text": "Morgendliche Spaziergänge, Wanderstarts, Fahrradrhythmus und aktive Tage können direkt am Anwesen beginnen."
+            },
+            "hr": {
+              "title": "Kretanje u prirodi",
+              "text": "Jutarnje šetnje, početci planinarenja, ritam vožnje biciklom i aktivni dani mogu krenuti s imanja."
+            },
+            "tr": {
+              "title": "Doğada hareket",
+              "text": "Sabah yürüyüşleri, trekking başlangıçları, bisiklet ritmi ve aktif günler doğrudan mülkten başlayabilir."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-wine-glass",
+          "faIconColors": {
+            "bg": "#201315",
+            "bgLight": "#faedf0",
+            "fill": "#d97989",
+            "fillLight": "#bc5c6d"
+          },
+          "locales": {
+            "en": {
+              "title": "Slow evenings",
+              "text": "The stay is suited to meals outdoors, fireside conversation, and the kind of evening that does not need entertainment layers."
+            },
+            "de": {
+              "title": "Langsame Abende",
+              "text": "Der Aufenthalt eignet sich für Mahlzeiten im Freien, Gespräche am Feuer und Abende, die keine künstliche Unterhaltung brauchen."
+            },
+            "hr": {
+              "title": "Spore večeri",
+              "text": "Boravak odgovara večerama na zraku, razgovorima uz vatru i večerima kojima ne treba dodatna distrakcija."
+            },
+            "tr": {
+              "title": "Yavaş akşamlar",
+              "text": "Konaklama; açık havada yemek, ateş başı sohbeti ve ekstra eğlence katmanlarına ihtiyaç duymayan akşamlar için uygundur."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-brain",
+          "faIconColors": {
+            "bg": "#141925",
+            "bgLight": "#eef2fb",
+            "fill": "#7b8fe0",
+            "fillLight": "#5b72c2"
+          },
+          "locales": {
+            "en": {
+              "title": "Digital-detox focus",
+              "text": "It works well for guests who want attention back on thought, movement, and real conversation."
+            },
+            "de": {
+              "title": "Fokus für Digital Detox",
+              "text": "Der Ort funktioniert gut für Gäste, die ihre Aufmerksamkeit wieder auf Denken, Bewegung und echte Gespräche richten möchten."
+            },
+            "hr": {
+              "title": "Fokus za digitalni detox",
+              "text": "Mjesto dobro odgovara gostima koji žele vratiti pažnju na misao, kretanje i stvarni razgovor."
+            },
+            "tr": {
+              "title": "Dijital detoks odağı",
+              "text": "Düşünceye, harekete ve gerçek sohbetlere yeniden alan açmak isteyen misafirler için iyi çalışır."
+            }
+          }
+        },
+        {
+          "id": 4,
+          "faIcon": "fa-solid fa-user-group",
+          "faIconColors": {
+            "bg": "#1d1712",
+            "bgLight": "#f8f1ea",
+            "fill": "#c99861",
+            "fillLight": "#ab7740"
+          },
+          "locales": {
+            "en": {
+              "title": "Private-group pacing",
+              "text": "The estate is strongest when a group wants to stay together without sharing its atmosphere with strangers."
+            },
+            "de": {
+              "title": "Rhythmus für private Gruppen",
+              "text": "Das Anwesen ist am stärksten, wenn eine Gruppe zusammenbleiben möchte, ohne ihre Atmosphäre mit Fremden zu teilen."
+            },
+            "hr": {
+              "title": "Ritam za privatne grupe",
+              "text": "Imanje je najjače kada grupa želi ostati zajedno bez dijeljenja atmosfere s nepoznatima."
+            },
+            "tr": {
+              "title": "Özel grup ritmi",
+              "text": "Mülk en iyi, bir grubun atmosferini yabancılarla paylaşmadan birlikte kalmak istediği zamanlarda çalışır."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "component": "ArticleInfoList",
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "Included comforts and {{bonuses}}"
+        },
+        "de": {
+          "title": "Inklusive Annehmlichkeiten und {{Extras}}"
+        },
+        "hr": {
+          "title": "Uključeni komfor i {{dodatne vrijednosti}}"
+        },
+        "tr": {
+          "title": "Dahil konforlar ve {{artılar}}"
+        }
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-key",
+          "faIconColors": {
+            "bg": "#181818",
+            "bgLight": "#f3f3f3",
+            "fill": "#9ca3af",
+            "fillLight": "#737b87"
+          },
+          "locales": {
+            "en": {
+              "title": "Clear arrival guidance",
+              "text": "Guests should feel expected, not confused, from the first message to arrival."
+            },
+            "de": {
+              "title": "Klare Anreisebegleitung",
+              "text": "Gäste sollen sich vom ersten Kontakt bis zur Ankunft erwartet und nicht verloren fühlen."
+            },
+            "hr": {
+              "title": "Jasne upute za dolazak",
+              "text": "Gosti se trebaju osjećati očekivano, a ne izgubljeno, od prve poruke do dolaska."
+            },
+            "tr": {
+              "title": "Net varış yönlendirmesi",
+              "text": "Misafirler ilk mesajdan varışa kadar kendilerini beklenen hissetmelidir; şaşkın değil."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-leaf",
+          "faIconColors": {
+            "bg": "#122012",
+            "bgLight": "#eef8ee",
+            "fill": "#61a75e",
+            "fillLight": "#488646"
+          },
+          "locales": {
+            "en": {
+              "title": "Simple, thoughtful stay rhythm",
+              "text": "The place works best when logistics stay light and the natural setting does the heavy lifting."
+            },
+            "de": {
+              "title": "Einfacher, durchdachter Aufenthaltsrhythmus",
+              "text": "Der Ort funktioniert am besten, wenn die Logistik leicht bleibt und die Umgebung die eigentliche Wirkung übernimmt."
+            },
+            "hr": {
+              "title": "Jednostavan i promišljen ritam boravka",
+              "text": "Mjesto najbolje radi kada logistika ostane lagana, a prirodni ambijent nosi glavni doživljaj."
+            },
+            "tr": {
+              "title": "Basit ve düşünülmüş konaklama ritmi",
+              "text": "Mekân, lojistik hafif kaldığında ve doğal çevre asıl işi üstlendiğinde en iyi çalışır."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-compass-drafting",
+          "faIconColors": {
+            "bg": "#181520",
+            "bgLight": "#f4eef9",
+            "fill": "#a77ad7",
+            "fillLight": "#885db7"
+          },
+          "locales": {
+            "en": {
+              "title": "Local recommendations with restraint",
+              "text": "Nearby suggestions should enrich the stay, not turn it into a checklist."
+            },
+            "de": {
+              "title": "Lokale Empfehlungen mit Zurückhaltung",
+              "text": "Empfehlungen in der Nähe sollen den Aufenthalt vertiefen, nicht in eine Checkliste verwandeln."
+            },
+            "hr": {
+              "title": "Lokalne preporuke s mjerom",
+              "text": "Prijedlozi u blizini trebaju obogatiti boravak, a ne pretvoriti ga u popis zadataka."
+            },
+            "tr": {
+              "title": "Ölçülü yerel öneriler",
+              "text": "Yakındaki öneriler konaklamayı zenginleştirmeli, bir yapılacaklar listesine çevirmemelidir."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "component": "ArticleInfoList",
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "Location and nearby {{escapes}}"
+        },
+        "de": {
+          "title": "Lage und nahe {{Ausflüge}}"
+        },
+        "hr": {
+          "title": "Lokacija i obližnji {{bijegovi}}"
+        },
+        "tr": {
+          "title": "Konum ve yakın {{kaçışlar}}"
+        }
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-mountain",
+          "faIconColors": {
+            "bg": "#141a1d",
+            "bgLight": "#edf3f7",
+            "fill": "#7da2b3",
+            "fillLight": "#5d8294"
+          },
+          "locales": {
+            "en": {
+              "title": "Short mountain routes",
+              "text": "Viewpoints, simple trail starts, and fresh-air walks can begin close to the estate."
+            },
+            "de": {
+              "title": "Kurze Bergrouten",
+              "text": "Aussichtspunkte, einfache Trailstarts und Spaziergänge in frischer Luft beginnen nahe am Anwesen."
+            },
+            "hr": {
+              "title": "Kratke planinske rute",
+              "text": "Vidikovci, jednostavni početci staza i šetnje na svježem zraku mogu krenuti blizu imanja."
+            },
+            "tr": {
+              "title": "Kısa dağ rotaları",
+              "text": "Seyir noktaları, kolay patika başlangıçları ve temiz hava yürüyüşleri mülke yakın başlar."
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-road",
+          "faIconColors": {
+            "bg": "#1a1815",
+            "bgLight": "#f6f3ef",
+            "fill": "#c29a62",
+            "fillLight": "#a77d46"
+          },
+          "locales": {
+            "en": {
+              "title": "Scenic drives and wider region",
+              "text": "The estate can also work as a calm base for discovering the plateau and the wider Herzegovina region."
+            },
+            "de": {
+              "title": "Landschaftsfahrten und weitere Region",
+              "text": "Das Anwesen funktioniert auch als ruhige Basis, um das Plateau und die weitere Region Herzegowina zu entdecken."
+            },
+            "hr": {
+              "title": "Scenske vožnje i šira regija",
+              "text": "Imanje može služiti i kao mirna baza za otkrivanje visoravni i šire regije Hercegovine."
+            },
+            "tr": {
+              "title": "Manzaralı sürüşler ve daha geniş bölge",
+              "text": "Mülk, platoyu ve daha geniş Hersek bölgesini keşfetmek için sakin bir üs olarak da çalışabilir."
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-location-dot",
+          "faIconColors": {
+            "bg": "#1f1316",
+            "bgLight": "#faedf0",
+            "fill": "#d57f8f",
+            "fillLight": "#bb5f72"
+          },
+          "locales": {
+            "en": {
+              "title": "Tomislavgrad and local essentials",
+              "text": "Useful services, local food stops, and practical errands remain close enough to keep the stay easy."
+            },
+            "de": {
+              "title": "Tomislavgrad und lokale Grundlagen",
+              "text": "Wichtige Dienste, lokale Stopps für Essen und praktische Besorgungen bleiben nah genug, um den Aufenthalt unkompliziert zu halten."
+            },
+            "hr": {
+              "title": "Tomislavgrad i lokalne osnove",
+              "text": "Korisne usluge, lokalna mjesta za hranu i praktične obaveze ostaju dovoljno blizu da boravak bude jednostavan."
+            },
+            "tr": {
+              "title": "Tomislavgrad ve yerel ihtiyaçlar",
+              "text": "Gerekli hizmetler, yerel yemek durakları ve pratik ihtiyaçlar konaklamayı kolay tutacak kadar yakındır."
+            }
+          }
+        },
+        {
+          "id": 4,
+          "faIcon": "fa-solid fa-umbrella-beach",
+          "faIconColors": {
+            "bg": "#121c22",
+            "bgLight": "#eaf7fb",
+            "fill": "#60b5d1",
+            "fillLight": "#4296b2"
+          },
+          "locales": {
+            "en": {
+              "title": "Day-trip range",
+              "text": "When guests want contrast, the wider region supports longer scenic days without losing the calm base."
+            },
+            "de": {
+              "title": "Radius für Tagesausflüge",
+              "text": "Wenn Gäste Kontrast möchten, erlaubt die weitere Region längere, schöne Tage, ohne die ruhige Basis zu verlieren."
+            },
+            "hr": {
+              "title": "Doseg za jednodnevne izlete",
+              "text": "Kad gosti žele kontrast, šira regija omogućuje duže lijepe dane bez gubitka mirne baze."
+            },
+            "tr": {
+              "title": "Günübirlik gezi menzili",
+              "text": "Misafirler farklılık istediğinde, daha geniş bölge sakin ana üssü kaybetmeden uzun manzaralı günler sunar."
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+

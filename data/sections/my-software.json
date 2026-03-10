@@ -1,0 +1,7212 @@
+{
+  "title": {
+    "locales": {
+      "en": {
+        "title_short": "Software & Code",
+        "title_short_nav": "Software",
+        "title_long_prefix": "Crafted with logic, creativity and iteration",
+        "title_long": "{{My bits}}"
+      },
+      "de": {
+        "title_short": "Software & Code",
+        "title_short_nav": "Software",
+        "title_long_prefix": "Erschaffen mit Logik, Kreativität und Iteration",
+        "title_long": "{{Meine Bits}}"
+      },
+      "hr": {
+        "title_short": "Softver i kod",
+        "title_short_nav": "Softver",
+        "title_long_prefix": "Stvorena logikom, kreativnošću i iteracijom",
+        "title_long": "{{Moji bitovi}}"
+      },
+      "tr": {
+        "title_short": "Yazılım ve Kod",
+        "title_short_nav": "Yazılım",
+        "title_long_prefix": "Mantık, yaratıcılık ve yinelemeyle oluşturuldu",
+        "title_long": "{{Benim bitler}}"
+      }
+    }
+  },
+  "articles": [
+    {
+      "id": 1,
+      "component": "ArticlePortfolio",
+      "locales": {
+        "en": {
+          "title": "My {{Software}} Projects",
+          "category_all": "All Projects",
+          "category_educational": "Educational",
+          "category_professional": "Professional",
+          "category_personal": "Personal"
+        },
+        "de": {
+          "title": "Meine {{Software}}-Projekte",
+          "category_all": "Alle Projekte",
+          "category_educational": "Bildung",
+          "category_professional": "Beruflich",
+          "category_personal": "Persönlich"
+        },
+        "hr": {
+          "title": "Moji {{softverski}} projekti",
+          "category_all": "Svi projekti",
+          "category_educational": "Edukativno",
+          "category_professional": "Profesionalno",
+          "category_personal": "Osobno"
+        },
+        "tr": {
+          "title": "{{Yazılım}} Projelerim",
+          "category_all": "Tüm Projeler",
+          "category_educational": "Eğitsel",
+          "category_professional": "Profesyonel",
+          "category_personal": "Kişisel"
+        }
+      },
+      "settings": {
+        "categorize_by": [
+          "category_educational",
+          "category_professional",
+          "category_personal"
+        ],
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "img": "",
+          "faIcon": "fa-solid fa-graduation-cap",
+          "faIconColors": {
+            "bg": "#0D1117",
+            "bgLight": "#EDF2F7",
+            "fill": "#2962FF",
+            "fillLight": "#1E88E5"
+          },
+          "categoryId": "category_educational",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/Projekt_Belot",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_1/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Java Learning Project: Belot",
+              "text": "University project focused on learning Java programming by developing a Belot card game. Implemented core game logic, user interaction, and basic AI opponents.",
+              "tags": [
+                "Java",
+                "Learning",
+                "Card Game",
+                "University Project"
+              ]
+            },
+            "de": {
+              "title": "Java-Lernprojekt: Belot",
+              "text": "Universitätsprojekt zum Erlernen der Java-Programmierung durch die Entwicklung eines Belot-Kartenspiels. Implementierung der Spiel-Logik, Benutzerinteraktion und einfacher KI-Gegner.",
+              "tags": [
+                "Java",
+                "Lernen",
+                "Kartenspiel",
+                "Universitätsprojekt"
+              ]
+            },
+            "hr": {
+              "title": "Java projekt učenja: Belot",
+              "text": "Sveučilišni projekt usmjeren na učenje Java programiranja kroz razvoj igre Belot. Implementirana osnovna logika igre, interakcija s korisnikom i jednostavni AI protivnici.",
+              "tags": [
+                "Java",
+                "Učenje",
+                "Kartaška igra",
+                "Sveučilišni projekt"
+              ]
+            },
+            "tr": {
+              "title": "Java Öğrenme Projesi: Belot",
+              "text": "Belot kart oyunu geliştirerek Java programlama öğrenmeye odaklanan üniversite projesi. Temel oyun mantığı, kullanıcı etkileşimi ve basit AI rakipleri uygulandı.",
+              "tags": [
+                "Java",
+                "Öğrenme",
+                "Kart Oyunu",
+                "Üniversite Projesi"
+              ]
+            }
+          }
+        },
+        {
+          "id": 2,
+          "img": "",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "bg": "#101A29",
+            "bgLight": "#ECF0F6",
+            "fill": "#1976D2",
+            "fillLight": "#1565C0"
+          },
+          "categoryId": "category_educational",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/Pepper-Poker",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_2/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Pepper & Nao Poker Game",
+              "text": "University project using Pepper and Nao robots to create an interactive poker game with animations and real-time card dealing on a monitor.",
+              "tags": [
+                "Robotics",
+                "Pepper",
+                "Nao",
+                "Poker",
+                "University Project"
+              ]
+            },
+            "de": {
+              "title": "Pepper & Nao Pokerspiel",
+              "text": "Universitätsprojekt mit Pepper- und Nao-Robotern zur Erstellung eines interaktiven Pokerspiels mit Animationen und Echtzeit-Kartenverteilung auf einem Monitor.",
+              "tags": [
+                "Robotik",
+                "Pepper",
+                "Nao",
+                "Poker",
+                "Universitätsprojekt"
+              ]
+            },
+            "hr": {
+              "title": "Poker igra s Pepper i Nao robotima",
+              "text": "Sveučilišni projekt korištenjem Pepper i Nao robota za stvaranje interaktivne poker igre s animacijama i dijeljenjem karata u realnom vremenu na monitoru.",
+              "tags": [
+                "Robotika",
+                "Pepper",
+                "Nao",
+                "Poker",
+                "Sveučilišni projekt"
+              ]
+            },
+            "tr": {
+              "title": "Pepper & Nao Poker Oyunu",
+              "text": "Pepper ve Nao robotlarını kullanarak, animasyonlu ve gerçek zamanlı kart dağıtımının yapıldığı interaktif bir poker oyunu oluşturan üniversite projesi.",
+              "tags": [
+                "Robotik",
+                "Pepper",
+                "Nao",
+                "Poker",
+                "Üniversite Projesi"
+              ]
+            }
+          }
+        },
+        {
+          "id": 3,
+          "img": "",
+          "faIcon": "fa-solid fa-gamepad",
+          "faIconColors": {
+            "bg": "#1A1B2E",
+            "bgLight": "#E8E8F0",
+            "fill": "#7C3AED",
+            "fillLight": "#6D28D9"
+          },
+          "categoryId": "category_educational",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/Projekt_SimonGame",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_3/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Simon Game: Multiplayer & Database",
+              "text": "University project combining theoretical knowledge to create a multiplayer Simon Game with a physical and virtual server database for high scores and user management.",
+              "tags": [
+                "Game",
+                "Multiplayer",
+                "Database",
+                "University Project"
+              ]
+            },
+            "de": {
+              "title": "Simon-Spiel: Mehrspieler & Datenbank",
+              "text": "Universitätsprojekt zur Kombination von theoretischem Wissen für ein Mehrspieler-Simon-Spiel mit physischer und virtueller Server-Datenbank für Highscores und Benutzerverwaltung.",
+              "tags": [
+                "Spiel",
+                "Mehrspieler",
+                "Datenbank",
+                "Universitätsprojekt"
+              ]
+            },
+            "hr": {
+              "title": "Simon igra: Višeigrač & baza podataka",
+              "text": "Sveučilišni projekt kombiniranjem teorijskog znanja za stvaranje višeigračke Simon igre s fizičkom i virtualnom server bazom podataka za rezultate i upravljanje korisnicima.",
+              "tags": [
+                "Igra",
+                "Višeigrač",
+                "Baza podataka",
+                "Sveučilišni projekt"
+              ]
+            },
+            "tr": {
+              "title": "Simon Oyunu: Çoklu Oyuncu & Veritabanı",
+              "text": "Teorik bilgiyi birleştiren, fiziksel ve sanal sunucu veritabanı ile yüksek skorlar ve kullanıcı yönetimi için çoklu oyuncu Simon oyunu oluşturan üniversite projesi.",
+              "tags": [
+                "Oyun",
+                "Çoklu Oyuncu",
+                "Veritabanı",
+                "Üniversite Projesi"
+              ]
+            }
+          }
+        },
+        {
+          "id": 4,
+          "img": "",
+          "faIcon": "fa-solid fa-language",
+          "faIconColors": {
+            "bg": "#1F2937",
+            "bgLight": "#F3F4F6",
+            "fill": "#06B6D4",
+            "fillLight": "#0891B2"
+          },
+          "categoryId": "category_personal",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/GermanCro",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_4/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "German Learning Tool",
+              "text": "Personal project for learning German through English and Croatian, featuring translation tools, quizzes, and interactive language exercises for effective and fun learning.",
+              "tags": [
+                "Language Learning",
+                "German",
+                "Croatian",
+                "English",
+                "Personal Project"
+              ]
+            },
+            "de": {
+              "title": "Deutsch-Lernwerkzeug",
+              "text": "Persönliches Projekt zum Deutschlernen über Englisch und Kroatisch mit Übersetzungs-Tools, Quizzen und interaktiven Sprachübungen für effektives und unterhaltsames Lernen.",
+              "tags": [
+                "Sprachlernen",
+                "Deutsch",
+                "Kroatisch",
+                "Englisch",
+                "Persönliches Projekt"
+              ]
+            },
+            "hr": {
+              "title": "Alat za učenje njemačkog",
+              "text": "Osobni projekt za učenje njemačkog kroz engleski i hrvatski, s alatima za prijevod, kvizovima i interaktivnim vježbama za učinkovito i zabavno učenje.",
+              "tags": [
+                "Učenje jezika",
+                "Njemački",
+                "Hrvatski",
+                "Engleski",
+                "Osobni projekt"
+              ]
+            },
+            "tr": {
+              "title": "Almanca Öğrenme Aracı",
+              "text": "İngilizce ve Hırvatça aracılığıyla Almanca öğrenmeye yönelik kişisel proje. Çeviri araçları, testler ve etkileşimli dil alıştırmaları ile eğlenceli ve etkili öğrenme sunar.",
+              "tags": [
+                "Dil Öğrenme",
+                "Almanca",
+                "Hırvatça",
+                "İngilizce",
+                "Kişisel Proje"
+              ]
+            }
+          }
+        },
+        {
+          "id": 5,
+          "img": "",
+          "faIcon": "fa-solid fa-home",
+          "faIconColors": {
+            "bg": "#111827",
+            "bgLight": "#F9FAFB",
+            "fill": "#F59E0B",
+            "fillLight": "#D97706"
+          },
+          "categoryId": "category_professional",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/VillaBagara",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_5/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "Villa Bagara: Renovation Project",
+              "text": "Website for the future renovation project of an ancestral home, designed as a mountain sports and retreat rental. Currently in the planning and building phase.",
+              "tags": [
+                "Web Design",
+                "Renovation",
+                "Mountain Retreat",
+                "Personal Project"
+              ]
+            },
+            "de": {
+              "title": "Villa Bagara: Renovierungsprojekt",
+              "text": "Website für das zukünftige Renovierungsprojekt eines Ahnenhauses, das als Bergsport- und Rückzugsort vermietet werden soll. Derzeit in der Planungs- und Bauphase.",
+              "tags": [
+                "Webdesign",
+                "Renovierung",
+                "Berghütte",
+                "Persönliches Projekt"
+              ]
+            },
+            "hr": {
+              "title": "Villa Bagara: Projekt obnove",
+              "text": "Web stranica za budući projekt obnove obiteljske kuće, namijenjena kao planinski sportski i odmarališni prostor. Trenutno u fazi planiranja i izgradnje.",
+              "tags": [
+                "Web dizajn",
+                "Obnova",
+                "Planinski odmor",
+                "Osobni projekt"
+              ]
+            },
+            "tr": {
+              "title": "Villa Bagara: Yenileme Projesi",
+              "text": "Atalarından kalan bir evin gelecekteki yenileme projesi için web sitesi. Dağ sporları ve dinlenme tesisi olarak tasarlandı. Şu anda planlama ve inşa aşamasında.",
+              "tags": [
+                "Web Tasarım",
+                "Yenileme",
+                "Dağ Evi",
+                "Kişisel Proje"
+              ]
+            }
+          }
+        },
+        {
+          "id": 6,
+          "img": "",
+          "faIcon": "fa-solid fa-file-pdf",
+          "faIconColors": {
+            "bg": "#0F172A",
+            "bgLight": "#F8FAFC",
+            "fill": "#EF4444",
+            "fillLight": "#DC2626"
+          },
+          "categoryId": "category_personal",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/latex-lebenslauf",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_6/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "LaTeX CV",
+              "text": "Personal CV designed in LaTeX, featuring a beautiful, detail-packed yet concise format that respects the 15-second rule for quick readability.",
+              "tags": [
+                "LaTeX",
+                "CV",
+                "Personal Project"
+              ]
+            },
+            "de": {
+              "title": "LaTeX-Lebenslauf",
+              "text": "Persönlicher Lebenslauf in LaTeX, mit einem schönen, detailreichen, aber prägnanten Format, das die 15-Sekunden-Regel für schnelle Lesbarkeit einhält.",
+              "tags": [
+                "LaTeX",
+                "Lebenslauf",
+                "Persönliches Projekt"
+              ]
+            },
+            "hr": {
+              "title": "LaTeX životopis",
+              "text": "Osobni životopis dizajniran u LaTeX-u, s lijepim, detaljnim, ali sažetim formatom koji poštuje 15-sekundno pravilo za brzo čitanje.",
+              "tags": [
+                "LaTeX",
+                "Životopis",
+                "Osobni projekt"
+              ]
+            },
+            "tr": {
+              "title": "LaTeX Özgeçmiş",
+              "text": "LaTeX ile tasarlanmış kişisel özgeçmiş. Güzel, detaylı ancak özlü bir formatta, hızlı okunabilirlik için 15 saniye kuralına uygun.",
+              "tags": [
+                "LaTeX",
+                "Özgeçmiş",
+                "Kişisel Proje"
+              ]
+            }
+          }
+        },
+        {
+          "id": 7,
+          "img": "",
+          "faIcon": "fa-solid fa-project-diagram",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#0891B2",
+            "fillLight": "#0284C7"
+          },
+          "categoryId": "category_personal",
+          "preview": {
+            "links": [
+              {
+                "href": "https://github.com/Lomuss33/HTML-FamilyTree",
+                "tooltipString": "GitHub",
+                "faIcon": "fa-brands fa-github"
+              },
+              {
+                "href": "https://docs.google.com/document/d/REPLACE_WITH_GOOGLE_DOC_LINK_7/edit",
+                "tooltipString": "open_website",
+                "faIcon": "fa-solid fa-file-lines"
+              }
+            ],
+            "screenshots": [],
+            "screenshotsAspectRatio": "16:9",
+            "youtubeVideo": ""
+          },
+          "locales": {
+            "en": {
+              "title": "HTML Family Tree",
+              "text": "Informative and compact family tree built with pure HTML, designed to be visually clear and easy to navigate for family history exploration.",
+              "tags": [
+                "HTML",
+                "Family Tree",
+                "Web Design",
+                "Personal Project"
+              ]
+            },
+            "de": {
+              "title": "HTML-Stammbaum",
+              "text": "Informative und kompakte Familiengeschichte, erstellt mit reinem HTML, visuell klar und einfach zu navigieren für die Erforschung der Familiengeschichte.",
+              "tags": [
+                "HTML",
+                "Stammbaum",
+                "Webdesign",
+                "Persönliches Projekt"
+              ]
+            },
+            "hr": {
+              "title": "HTML obiteljsko stablo",
+              "text": "Informativno i kompaktno obiteljsko stablo izgrađeno čistim HTML-om, dizajnirano da bude vizualno jasno i lako za navigaciju za istraživanje obiteljske povijesti.",
+              "tags": [
+                "HTML",
+                "Obiteljsko stablo",
+                "Web dizajn",
+                "Osobni projekt"
+              ]
+            },
+            "tr": {
+              "title": "HTML Aile Ağacı",
+              "text": "Saf HTML ile oluşturulmuş, görsel olarak net ve gezinti kolaylığı sağlayan, aile tarihini keşfetmek için tasarlanmış bilgilendirici ve kompakt aile ağacı.",
+              "tags": [
+                "HTML",
+                "Aile Ağacı",
+                "Web Tasarım",
+                "Kişisel Proje"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "component": "ArticleTestimonials",
+      "locales": {
+        "en": {
+          "title": "My {{Online Tool}} Recommendations"
+        },
+        "de": {
+          "title": "Meine {{Online-Tool}}-Empfehlungen"
+        },
+        "hr": {
+          "title": "Moje preporuke za {{online alate}}"
+        },
+        "tr": {
+          "title": "{{Çevrim İçi Araç}} Önerilerim"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 21,
+          "label": "Group Speed Dial",
+          "link": {
+            "href": "https://github.com/fastaddons/GroupSpeedDial/wiki",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/groupspeedial.webp",
+          "faIcon": "fa-solid fa-th",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#0891B2",
+            "fillLight": "#0284C7"
+          },
+          "locales": {
+            "en": {
+              "title": "Browser Homepage Organization",
+              "text": "Group Speed Dial turns the chaotic browser start page into a [[control center]]. Instead of drowning in bookmarks, everything becomes visual, grouped, and instantly accessible. It’s simple in theory but surprisingly powerful in practice."
+            },
+            "de": {
+              "title": "Browser-Startseiten Organisation",
+              "text": "Group Speed Dial verwandelt die chaotische Browser-Startseite in ein [[Kontrollzentrum]]. Statt in Lesezeichen zu ertrinken, wird alles visuell organisiert und schnell erreichbar."
+            },
+            "hr": {
+              "title": "Organizacija početne stranice preglednika",
+              "text": "Group Speed Dial pretvara kaotičnu početnu stranicu preglednika u [[kontrolni centar]]. Sve je vizualno organizirano i brzo dostupno."
+            },
+            "tr": {
+              "title": "Tarayıcı Ana Sayfa Organizasyonu",
+              "text": "Group Speed Dial, tarayıcı ana sayfanızı bir [[kontrol merkezine]] dönüştürüyor. Yer imleri karmaşası yerine her şey görsel ve düzenli."
+            }
+          }
+        },
+        {
+          "id": 22,
+          "label": "Keepa",
+          "link": {
+            "href": "https://keepa.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/keepa.webp",
+          "faIcon": "fa-solid fa-chart-line",
+          "faIconColors": {
+            "bg": "#1F2937",
+            "bgLight": "#F3F4F6",
+            "fill": "#F59E0B",
+            "fillLight": "#D97706"
+          },
+          "locales": {
+            "en": {
+              "title": "Amazon Price Tracker",
+              "text": "Keepa quietly gives shoppers [[data superpowers]]. The price history graphs reveal when deals are real and when they're just marketing theater."
+            },
+            "de": {
+              "title": "Amazon Preis-Tracker",
+              "text": "Keepa verleiht Käufern [[Daten-Superkräfte]]. Preisdiagramme zeigen sofort, ob ein Angebot wirklich ein Schnäppchen ist."
+            },
+            "hr": {
+              "title": "Praćenje cijena na Amazonu",
+              "text": "Keepa kupcima daje [[supermoći podataka]]. Povijest cijena otkriva jesu li popusti stvarni."
+            },
+            "tr": {
+              "title": "Amazon Fiyat Takibi",
+              "text": "Keepa alışverişçilere [[veri süper güçleri]] verir. Fiyat geçmişi gerçek indirimleri ortaya çıkarır."
+            }
+          }
+        },
+        {
+          "id": 23,
+          "label": "Nextcloud",
+          "link": {
+            "href": "https://nextcloud.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/nextcloud.webp",
+          "faIcon": "fa-solid fa-cloud",
+          "faIconColors": {
+            "bg": "#06B6D4",
+            "bgLight": "#ECFEFF",
+            "fill": "#0891B2",
+            "fillLight": "#0E7490"
+          },
+          "locales": {
+            "en": {
+              "title": "Self-Hosted Cloud",
+              "text": "Nextcloud is what happens when you decide the cloud should belong to [[you]]. File sync, collaboration, and apps—all running on your own infrastructure."
+            },
+            "de": {
+              "title": "Selbstgehostete Cloud",
+              "text": "Nextcloud ist die Cloud, die wirklich [[Ihnen gehört]]. Dateien, Zusammenarbeit und Apps auf eigener Infrastruktur."
+            },
+            "hr": {
+              "title": "Samostalno hostana cloud platforma",
+              "text": "Nextcloud je cloud koji stvarno [[posjedujete]]. Sinkronizacija datoteka i suradnja na vlastitom serveru."
+            },
+            "tr": {
+              "title": "Kendi Barındırılan Bulut",
+              "text": "Nextcloud, bulutun gerçekten [[size ait]] olduğu bir platformdur."
+            }
+          }
+        },
+        {
+          "id": 24,
+          "label": "Wikipedia",
+          "link": {
+            "href": "https://www.wikipedia.org/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/wikipedia.webp",
+          "faIcon": "fa-solid fa-globe",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#000000",
+            "fillLight": "#374151"
+          },
+          "locales": {
+            "en": {
+              "title": "Free Knowledge Encyclopedia",
+              "text": "Wikipedia remains one of humanity’s most astonishing projects: millions of people building a [[shared knowledge archive]] together."
+            },
+            "de": {
+              "title": "Freie Wissens-Enzyklopädie",
+              "text": "Wikipedia ist eines der erstaunlichsten Projekte der Menschheit: ein [[gemeinsames Wissensarchiv]]."
+            },
+            "hr": {
+              "title": "Besplatna enciklopedija",
+              "text": "Wikipedia je [[zajednička baza znanja]] koju gradi cijeli svijet."
+            },
+            "tr": {
+              "title": "Ücretsiz Bilgi Ansiklopedisi",
+              "text": "Wikipedia, insanlığın birlikte oluşturduğu [[bilgi arşivi]]."
+            }
+          }
+        },
+        {
+          "id": 25,
+          "label": "Mistral",
+          "link": {
+            "href": "https://mistral.ai/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/mistral.webp",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "bg": "#101A29",
+            "bgLight": "#ECF0F6",
+            "fill": "#1976D2",
+            "fillLight": "#1565C0"
+          },
+          "locales": {
+            "en": {
+              "title": "European AI Platform",
+              "text": "Mistral represents a fascinating direction for AI: powerful models built with [[European openness and research culture]]."
+            },
+            "de": {
+              "title": "Europäische KI",
+              "text": "Mistral zeigt eine spannende Richtung für KI: leistungsstarke Modelle mit [[europäischen Werten]]."
+            },
+            "hr": {
+              "title": "Europska umjetna inteligencija",
+              "text": "Mistral predstavlja novu generaciju [[europske umjetne inteligencije]]."
+            },
+            "tr": {
+              "title": "Avrupa Yapay Zekası",
+              "text": "Mistral, [[Avrupa merkezli]] güçlü yapay zeka modellerini temsil ediyor."
+            }
+          }
+        },
+        {
+          "id": 26,
+          "label": "draw.io",
+          "link": {
+            "href": "https://app.diagrams.net/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/drawio.webp",
+          "faIcon": "fa-solid fa-diagram-project",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#0891B2",
+            "fillLight": "#0284C7"
+          },
+          "locales": {
+            "en": {
+              "title": "Diagram Tool",
+              "text": "draw.io is the unsung hero of [[visual thinking]]. When systems get complex, diagrams turn confusion into clarity."
+            },
+            "de": {
+              "title": "Diagramm-Tool",
+              "text": "draw.io ist ein Held für [[visuelles Denken]]. Komplexe Systeme werden plötzlich verständlich."
+            },
+            "hr": {
+              "title": "Alat za dijagrame",
+              "text": "draw.io pomaže pretvoriti složene ideje u [[jasne dijagrame]]."
+            },
+            "tr": {
+              "title": "Diyagram Aracı",
+              "text": "draw.io, karmaşık fikirleri [[görsel olarak]] açıklamak için mükemmeldir."
+            }
+          }
+        },
+        {
+          "id": 27,
+          "label": "Proxmox",
+          "link": {
+            "href": "https://www.proxmox.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/proxmox.webp",
+          "faIcon": "fa-solid fa-server",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#0891B2",
+            "fillLight": "#0284C7"
+          },
+          "locales": {
+            "en": {
+              "title": "Virtualization Platform",
+              "text": "Proxmox turns a humble server into a [[mini data center]]. Virtual machines, containers, backups—an incredible playground for anyone exploring infrastructure."
+            },
+            "de": {
+              "title": "Virtualisierungsplattform",
+              "text": "Proxmox verwandelt einen Server in ein [[Mini-Rechenzentrum]]."
+            },
+            "hr": {
+              "title": "Virtualizacijska platforma",
+              "text": "Proxmox pretvara server u [[mini data centar]]."
+            },
+            "tr": {
+              "title": "Sanallaştırma Platformu",
+              "text": "Proxmox, bir sunucuyu [[mini veri merkezine]] dönüştürür."
+            }
+          }
+        },
+        {
+          "id": 28,
+          "label": "Tailscale",
+          "link": {
+            "href": "https://tailscale.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/tailscale.webp",
+          "faIcon": "fa-solid fa-network-wired",
+          "faIconColors": {
+            "bg": "#06B6D4",
+            "bgLight": "#ECFEFF",
+            "fill": "#0891B2",
+            "fillLight": "#0E7490"
+          },
+          "locales": {
+            "en": {
+              "title": "Private Networking",
+              "text": "Tailscale feels like [[networking from the future]]. Devices simply see each other securely without the usual VPN headaches."
+            },
+            "de": {
+              "title": "Privates Netzwerk",
+              "text": "Tailscale fühlt sich an wie [[Netzwerke aus der Zukunft]]."
+            },
+            "hr": {
+              "title": "Privatna mreža",
+              "text": "Tailscale omogućuje [[sigurno povezivanje uređaja]]."
+            },
+            "tr": {
+              "title": "Özel Ağ",
+              "text": "Tailscale, cihazları [[güvenli şekilde]] birbirine bağlar."
+            }
+          }
+        },
+        {
+          "id": 29,
+          "label": "TradingView",
+          "link": {
+            "href": "https://www.tradingview.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/tradingview.webp",
+          "faIcon": "fa-solid fa-chart-line",
+          "faIconColors": {
+            "bg": "#1E3A8A",
+            "bgLight": "#DBEAFE",
+            "fill": "#3B82F6",
+            "fillLight": "#2563EB"
+          },
+          "locales": {
+            "en": {
+              "title": "Market Analysis Platform",
+              "text": "TradingView blends charts, social insights, and analysis into one elegant interface—making financial markets surprisingly [[intuitive to explore]]."
+            },
+            "de": {
+              "title": "Marktanalyse Plattform",
+              "text": "TradingView kombiniert Charts und Analysen zu einer [[intuitiven Plattform]]."
+            },
+            "hr": {
+              "title": "Analiza tržišta",
+              "text": "TradingView spaja grafikone i analize u [[jednostavnu platformu]]."
+            },
+            "tr": {
+              "title": "Piyasa Analizi",
+              "text": "TradingView, grafikler ve analizleri [[tek bir platformda]] birleştirir."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "component": "ArticleTestimonials",
+      "locales": {
+        "en": {
+          "title": "My {{Desktop Software}} Recommendations"
+        },
+        "de": {
+          "title": "Meine {{Desktop-Programm}}-Empfehlungen"
+        },
+        "hr": {
+          "title": "Moje preporuke za {{desktop programe}}"
+        },
+        "tr": {
+          "title": "{{Masaüstü Yazılım}} Önerilerim"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 31,
+          "label": "Joplin",
+          "link": {
+            "href": "https://joplinapp.org/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/joplin.webp",
+          "faIcon": "fa-solid fa-note-sticky",
+          "faIconColors": {
+            "bg": "#0D1117",
+            "bgLight": "#EDF2F7",
+            "fill": "#2962FF",
+            "fillLight": "#1E88E5"
+          },
+          "locales": {
+            "en": {
+              "title": "Note Taking & Knowledge Base",
+              "text": "Joplin is a [[serious tool]] for people who think in notes. Markdown support, encryption, and flexible syncing make it feel more like a personal knowledge system than just another notebook."
+            },
+            "de": {
+              "title": "Notizen & Wissensverwaltung",
+              "text": "Joplin ist ein [[ernsthaftes Werkzeug]] für Menschen, die in Notizen denken. Markdown, Verschlüsselung und flexible Synchronisation machen es zu einem persönlichen Wissenssystem."
+            },
+            "hr": {
+              "title": "Bilješke i organizacija znanja",
+              "text": "Joplin je [[moćan alat]] za bilješke. Markdown, enkripcija i sinkronizacija čine ga pravim sustavom za znanje."
+            },
+            "tr": {
+              "title": "Not Alma Sistemi",
+              "text": "Joplin sadece bir not uygulaması değil, [[kişisel bilgi sistemi]] gibi çalışır."
+            }
+          }
+        },
+        {
+          "id": 32,
+          "label": "DisplayFusion",
+          "link": {
+            "href": "https://www.displayfusion.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/displayfusion.webp",
+          "faIcon": "fa-solid fa-desktop",
+          "faIconColors": {
+            "bg": "#1A1B2E",
+            "bgLight": "#E8E8F0",
+            "fill": "#7C3AED",
+            "fillLight": "#6D28D9"
+          },
+          "locales": {
+            "en": {
+              "title": "Multi-Monitor Control",
+              "text": "DisplayFusion turns a chaotic multi-monitor setup into a [[precision workspace]]. Once you experience proper window management and automation, going back feels primitive."
+            },
+            "de": {
+              "title": "Multi-Monitor Steuerung",
+              "text": "DisplayFusion verwandelt ein chaotisches Multi-Monitor-Setup in einen [[präzisen Arbeitsplatz]]."
+            },
+            "hr": {
+              "title": "Upravljanje više monitora",
+              "text": "DisplayFusion pretvara više monitora u [[organizirani radni prostor]]."
+            },
+            "tr": {
+              "title": "Çoklu Monitör Yönetimi",
+              "text": "DisplayFusion çoklu monitör kurulumunu [[verimli bir çalışma alanına]] dönüştürür."
+            }
+          }
+        },
+        {
+          "id": 33,
+          "label": "Foxit PDF Editor",
+          "link": {
+            "href": "https://www.foxit.com/pdf-editor/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/foxit.webp",
+          "faIcon": "fa-solid fa-file-pdf",
+          "faIconColors": {
+            "bg": "#1F2937",
+            "bgLight": "#F3F4F6",
+            "fill": "#06B6D4",
+            "fillLight": "#0891B2"
+          },
+          "locales": {
+            "en": {
+              "title": "PDF Editing",
+              "text": "Foxit proves that a PDF editor can be both [[powerful and fast]]. Compared to heavier alternatives, it feels agile while still handling serious document work."
+            },
+            "de": {
+              "title": "PDF-Bearbeitung",
+              "text": "Foxit zeigt, dass ein PDF-Editor [[leistungsstark und schnell]] sein kann."
+            },
+            "hr": {
+              "title": "Uređivanje PDF-a",
+              "text": "Foxit je [[brz i moćan]] alat za rad s PDF dokumentima."
+            },
+            "tr": {
+              "title": "PDF Düzenleme",
+              "text": "Foxit, PDF düzenlemeyi [[hızlı ve güçlü]] hale getirir."
+            }
+          }
+        },
+        {
+          "id": 34,
+          "label": "FxSound",
+          "link": {
+            "href": "https://www.fxsound.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/fxsound.webp",
+          "faIcon": "fa-solid fa-volume-high",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#0891B2",
+            "fillLight": "#0284C7"
+          },
+          "locales": {
+            "en": {
+              "title": "Audio Enhancement",
+              "text": "FxSound is a small but fascinating tool that squeezes [[surprising clarity]] out of ordinary speakers. Sometimes simple signal processing can make a big difference."
+            },
+            "de": {
+              "title": "Audio-Verbesserung",
+              "text": "FxSound holt [[erstaunliche Klangqualität]] aus normalen Lautsprechern."
+            },
+            "hr": {
+              "title": "Poboljšanje zvuka",
+              "text": "FxSound daje [[jasniji zvuk]] čak i običnim zvučnicima."
+            },
+            "tr": {
+              "title": "Ses Geliştirme",
+              "text": "FxSound sıradan hoparlörlerden [[daha iyi ses]] elde etmenizi sağlar."
+            }
+          }
+        },
+        {
+          "id": 35,
+          "label": "Visual Studio Code",
+          "link": {
+            "href": "https://code.visualstudio.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/vscode.webp",
+          "faIcon": "fa-solid fa-code",
+          "faIconColors": {
+            "bg": "#0D1117",
+            "bgLight": "#EDF2F7",
+            "fill": "#2962FF",
+            "fillLight": "#1E88E5"
+          },
+          "locales": {
+            "en": {
+              "title": "Code Editor",
+              "text": "VS Code is the [[Swiss-army knife]] of development environments. Lightweight at its core, yet endlessly extendable through its ecosystem."
+            },
+            "de": {
+              "title": "Code-Editor",
+              "text": "VS Code ist das [[Schweizer Taschenmesser]] der Entwicklungsumgebungen."
+            },
+            "hr": {
+              "title": "Uređivač koda",
+              "text": "VS Code je [[švicarski nož]] među editorima koda."
+            },
+            "tr": {
+              "title": "Kod Editörü",
+              "text": "VS Code geliştiriciler için [[çok yönlü]] bir editördür."
+            }
+          }
+        },
+        {
+          "id": 36,
+          "label": "GitHub Desktop",
+          "link": {
+            "href": "https://desktop.github.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/github-desktop.webp",
+          "faIcon": "fa-brands fa-github",
+          "faIconColors": {
+            "bg": "#1F2937",
+            "bgLight": "#F3F4F6",
+            "fill": "#10B981",
+            "fillLight": "#059669"
+          },
+          "locales": {
+            "en": {
+              "title": "Git Client",
+              "text": "GitHub Desktop lowers the barrier to version control. It turns complex Git workflows into something [[visual and approachable]]."
+            },
+            "de": {
+              "title": "Git-Client",
+              "text": "GitHub Desktop macht Versionskontrolle [[visuell und zugänglich]]."
+            },
+            "hr": {
+              "title": "Git klijent",
+              "text": "GitHub Desktop čini Git [[lakšim za razumjeti]]."
+            },
+            "tr": {
+              "title": "Git İstemcisi",
+              "text": "GitHub Desktop, Git işlemlerini [[görsel ve kolay]] hale getirir."
+            }
+          }
+        },
+        {
+          "id": 37,
+          "label": "Thunderbird",
+          "link": {
+            "href": "https://www.thunderbird.net/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/thunderbird.webp",
+          "faIcon": "fa-solid fa-envelope",
+          "faIconColors": {
+            "bg": "#1E3A8A",
+            "bgLight": "#DBEAFE",
+            "fill": "#3B82F6",
+            "fillLight": "#2563EB"
+          },
+          "locales": {
+            "en": {
+              "title": "Email Client",
+              "text": "Thunderbird remains one of the few email clients that still respects [[user control]]. Open-source, customizable, and surprisingly powerful."
+            },
+            "de": {
+              "title": "E-Mail-Client",
+              "text": "Thunderbird respektiert noch immer [[die Kontrolle des Nutzers]]."
+            },
+            "hr": {
+              "title": "Email klijent",
+              "text": "Thunderbird je [[moćan open-source]] email klijent."
+            },
+            "tr": {
+              "title": "E-posta İstemcisi",
+              "text": "Thunderbird, kullanıcıya [[kontrol veren]] açık kaynaklı bir e-posta istemcisidir."
+            }
+          }
+        },
+        {
+          "id": 38,
+          "label": "Wireshark",
+          "link": {
+            "href": "https://www.wireshark.org/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/wireshark.webp",
+          "faIcon": "fa-solid fa-network-wired",
+          "faIconColors": {
+            "bg": "#1E40AF",
+            "bgLight": "#DBEAFE",
+            "fill": "#3B82F6",
+            "fillLight": "#2563EB"
+          },
+          "locales": {
+            "en": {
+              "title": "Network Analyzer",
+              "text": "Wireshark lets you literally [[see the internet]] packet by packet. For anyone studying networking, it turns theory into something observable."
+            },
+            "de": {
+              "title": "Netzwerkanalyse",
+              "text": "Wireshark lässt Sie das Internet [[Paket für Paket]] sehen."
+            },
+            "hr": {
+              "title": "Analiza mreže",
+              "text": "Wireshark omogućuje da [[vidite mrežni promet]]."
+            },
+            "tr": {
+              "title": "Ağ Analizi",
+              "text": "Wireshark, ağ trafiğini [[paket paket]] analiz etmenizi sağlar."
+            }
+          }
+        },
+        {
+          "id": 39,
+          "label": "Bitwarden",
+          "link": {
+            "href": "https://bitwarden.com/",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/bitwarden.webp",
+          "faIcon": "fa-solid fa-lock",
+          "faIconColors": {
+            "bg": "#0F172A",
+            "bgLight": "#EFF6FF",
+            "fill": "#3B82F6",
+            "fillLight": "#1D4ED8"
+          },
+          "locales": {
+            "en": {
+              "title": "Password Manager",
+              "text": "Bitwarden solves one of the most common security problems: humans and passwords. Open-source and transparent, it’s a [[solid foundation]] for personal security."
+            },
+            "de": {
+              "title": "Passwort-Manager",
+              "text": "Bitwarden löst eines der größten Sicherheitsprobleme: [[Passwörter]]."
+            },
+            "hr": {
+              "title": "Upravitelj lozinki",
+              "text": "Bitwarden je [[sigurno rješenje]] za upravljanje lozinkama."
+            },
+            "tr": {
+              "title": "Şifre Yöneticisi",
+              "text": "Bitwarden, [[güvenli şifre yönetimi]] için sağlam bir çözümdür."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "component": "ArticleTestimonials",
+      "locales": {
+        "en": {
+          "title": "My {{Mobile App}} Recommendations"
+        },
+        "de": {
+          "title": "Meine {{Mobile-App}}-Empfehlungen"
+        },
+        "hr": {
+          "title": "Moje preporuke za {{mobilne aplikacije}}"
+        },
+        "tr": {
+          "title": "{{Mobil Uygulama}} Önerilerim"
+        }
+      },
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 41,
+          "label": "bitchat",
+          "link": {
+            "href": "https://github.com",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/bitchat.webp",
+          "faIcon": "fa-solid fa-comments",
+          "faIconColors": {
+            "bg": "#1E293B",
+            "bgLight": "#F1F5F9",
+            "fill": "#22C55E",
+            "fillLight": "#16A34A"
+          },
+          "locales": {
+            "en": {
+              "title": "Decentralized Messaging",
+              "text": "bitchat explores an intriguing idea: communication without centralized control. It’s a small but fascinating example of [[decentralized technology]] challenging the traditional messaging model."
+            },
+            "de": {
+              "title": "Dezentrale Kommunikation",
+              "text": "bitchat zeigt eine spannende Idee: Kommunikation ohne zentrale Kontrolle – ein Beispiel für [[dezentrale Technologie]]."
+            },
+            "hr": {
+              "title": "Decentralizirana komunikacija",
+              "text": "bitchat istražuje ideju komunikacije bez centralne kontrole – zanimljiv primjer [[decentralizirane tehnologije]]."
+            },
+            "tr": {
+              "title": "Merkezi Olmayan Mesajlaşma",
+              "text": "bitchat, merkezi kontrol olmadan iletişim fikrini araştıran ilginç bir [[merkeziyetsiz teknoloji]] örneğidir."
+            }
+          }
+        },
+        {
+          "id": 42,
+          "label": "yr",
+          "link": {
+            "href": "https://www.yr.no",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/yr.webp",
+          "faIcon": "fa-solid fa-cloud-sun",
+          "faIconColors": {
+            "bg": "#0EA5E9",
+            "bgLight": "#E0F2FE",
+            "fill": "#0369A1",
+            "fillLight": "#0284C7"
+          },
+          "locales": {
+            "en": {
+              "title": "Weather Forecast",
+              "text": "yr delivers weather forecasts with impressive accuracy and scientific transparency. It’s one of the rare weather apps where the data feels genuinely [[meteorology-driven]] rather than ad-driven."
+            },
+            "de": {
+              "title": "Wettervorhersage",
+              "text": "yr liefert erstaunlich präzise Vorhersagen und wirkt stark [[wissenschaftlich fundiert]]."
+            },
+            "hr": {
+              "title": "Vremenska prognoza",
+              "text": "yr pruža vrlo precizne prognoze temeljene na [[meteorološkim podacima]]."
+            },
+            "tr": {
+              "title": "Hava Durumu",
+              "text": "yr, gerçekten [[meteoroloji temelli]] hava tahminleri sunan güvenilir bir uygulamadır."
+            }
+          }
+        },
+        {
+          "id": 43,
+          "label": "Yuka",
+          "link": {
+            "href": "https://yuka.io",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/yuka.webp",
+          "faIcon": "fa-solid fa-carrot",
+          "faIconColors": {
+            "bg": "#16A34A",
+            "bgLight": "#DCFCE7",
+            "fill": "#14532D",
+            "fillLight": "#166534"
+          },
+          "locales": {
+            "en": {
+              "title": "Food Transparency",
+              "text": "Yuka transforms grocery shopping into a small investigation. Scan a product and suddenly you see ingredients, additives, and health ratings—giving consumers [[real informational leverage]]."
+            },
+            "de": {
+              "title": "Lebensmittel-Transparenz",
+              "text": "Yuka macht Einkaufen zu einer kleinen Analyse: Inhaltsstoffe und Bewertungen schaffen [[Transparenz]]."
+            },
+            "hr": {
+              "title": "Transparentnost hrane",
+              "text": "Yuka pretvara kupovinu hrane u malu analizu – daje potrošačima [[informacijsku prednost]]."
+            },
+            "tr": {
+              "title": "Gıda Şeffaflığı",
+              "text": "Yuka, ürünleri tarayarak içerikleri ve katkı maddelerini gösterir ve kullanıcılara [[bilgi gücü]] verir."
+            }
+          }
+        },
+        {
+          "id": 44,
+          "label": "BibleAI",
+          "link": {
+            "href": "https://bibleai.com",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/bibleai.webp",
+          "faIcon": "fa-solid fa-book",
+          "faIconColors": {
+            "bg": "#7C3AED",
+            "bgLight": "#F3E8FF",
+            "fill": "#4C1D95",
+            "fillLight": "#6D28D9"
+          },
+          "locales": {
+            "en": {
+              "title": "AI Bible Study",
+              "text": "BibleAI mixes ancient texts with modern machine intelligence. It allows quick exploration of passages, themes, and interpretations—turning scripture study into a surprisingly [[interactive experience]]."
+            },
+            "de": {
+              "title": "KI Bibelstudium",
+              "text": "BibleAI verbindet alte Texte mit moderner KI und macht das Studium der Bibel [[interaktiv]]."
+            },
+            "hr": {
+              "title": "AI proučavanje Biblije",
+              "text": "BibleAI kombinira drevne tekstove s umjetnom inteligencijom za [[interaktivno proučavanje]]."
+            },
+            "tr": {
+              "title": "Yapay Zeka ile İncil",
+              "text": "BibleAI, kutsal metinleri yapay zekâ ile analiz ederek [[etkileşimli bir çalışma]] sunar."
+            }
+          }
+        },
+        {
+          "id": 45,
+          "label": "Floor Plan Creator",
+          "link": {
+            "href": "https://floorplancreator.net",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/floorplan.webp",
+          "faIcon": "fa-solid fa-ruler-combined",
+          "faIconColors": {
+            "bg": "#334155",
+            "bgLight": "#F1F5F9",
+            "fill": "#F97316",
+            "fillLight": "#EA580C"
+          },
+          "locales": {
+            "en": {
+              "title": "Architecture & Planning",
+              "text": "Floor Plan Creator turns a smartphone into a surprisingly capable [[architectural sketchpad]]. Designing rooms or planning renovations becomes intuitive and visual."
+            },
+            "de": {
+              "title": "Raumplanung",
+              "text": "Floor Plan Creator verwandelt das Smartphone in ein [[Werkzeug für Raumplanung]]."
+            },
+            "hr": {
+              "title": "Planiranje prostora",
+              "text": "Floor Plan Creator omogućuje jednostavno [[dizajniranje prostora]]."
+            },
+            "tr": {
+              "title": "Kat Planı Tasarımı",
+              "text": "Floor Plan Creator, telefonunuzu bir [[mimari tasarım aracı]] haline getirir."
+            }
+          }
+        },
+        {
+          "id": 46,
+          "label": "AnkiDroid",
+          "link": {
+            "href": "https://ankidroid.org",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/ankidroid.webp",
+          "faIcon": "fa-solid fa-brain",
+          "faIconColors": {
+            "bg": "#0F172A",
+            "bgLight": "#E2E8F0",
+            "fill": "#22C55E",
+            "fillLight": "#16A34A"
+          },
+          "locales": {
+            "en": {
+              "title": "Spaced Repetition Learning",
+              "text": "AnkiDroid uses one of the most powerful learning techniques known: [[spaced repetition]]. Knowledge resurfaces exactly when your brain is about to forget it."
+            },
+            "de": {
+              "title": "Spaced-Repetition Lernen",
+              "text": "AnkiDroid nutzt [[Spaced Repetition]] – eine der effektivsten Lernmethoden."
+            },
+            "hr": {
+              "title": "Učenje ponavljanjem",
+              "text": "AnkiDroid koristi [[spaced repetition]] za dugoročno pamćenje."
+            },
+            "tr": {
+              "title": "Aralıklı Tekrar Öğrenme",
+              "text": "AnkiDroid, [[spaced repetition]] yöntemiyle öğrenmeyi güçlendirir."
+            }
+          }
+        },
+        {
+          "id": 47,
+          "label": "Picsart",
+          "link": {
+            "href": "https://picsart.com",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/picsart.webp",
+          "faIcon": "fa-solid fa-palette",
+          "faIconColors": {
+            "bg": "#BE185D",
+            "bgLight": "#FCE7F3",
+            "fill": "#831843",
+            "fillLight": "#9D174D"
+          },
+          "locales": {
+            "en": {
+              "title": "Creative Image Editing",
+              "text": "Picsart transforms the phone into a portable [[creative studio]]. From quick edits to surprisingly complex compositions, it encourages visual experimentation."
+            },
+            "de": {
+              "title": "Bildbearbeitung",
+              "text": "Picsart verwandelt das Smartphone in ein [[kreatives Studio]]."
+            },
+            "hr": {
+              "title": "Uređivanje slika",
+              "text": "Picsart pretvara telefon u [[kreativni studio]]."
+            },
+            "tr": {
+              "title": "Görsel Düzenleme",
+              "text": "Picsart, telefonu [[yaratıcı bir stüdyoya]] dönüştürür."
+            }
+          }
+        },
+        {
+          "id": 48,
+          "label": "Google Maps",
+          "link": {
+            "href": "https://www.google.com/maps",
+            "tooltipString": "open_website"
+          },
+          "img": "/images/contant/google-maps.webp",
+          "faIcon": "fa-solid fa-map",
+          "faIconColors": {
+            "bg": "#10B981",
+            "bgLight": "#D1FAE5",
+            "fill": "#059669",
+            "fillLight": "#047857"
+          },
+          "locales": {
+            "en": {
+              "title": "Navigation & Exploration",
+              "text": "Google Maps quietly became one of humanity’s most powerful navigation tools. Entire cities unfold on your screen, turning exploration into a [[data-guided adventure]]."
+            },
+            "de": {
+              "title": "Navigation & Erkundung",
+              "text": "Google Maps macht Städte zu einer [[datenbasierten Entdeckungsreise]]."
+            },
+            "hr": {
+              "title": "Navigacija i istraživanje",
+              "text": "Google Maps pretvara gradove u [[digitalnu kartu istraživanja]]."
+            },
+            "tr": {
+              "title": "Navigasyon & Keşif",
+              "text": "Google Maps, şehirleri [[veri destekli keşiflere]] dönüştürür."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "component": "ArticleStack",
+      "locales": {
+        "en": {
+          "category_all": "All",
+          "category_phone": "Phone",
+          "category_pc": "PC",
+          "category_cloud": "Cloud",
+          "category_igre": "Games",
+          "category_life": "Life",
+          "category_career": "Career"
+        },
+        "de": {
+          "category_all": "Alle",
+          "category_phone": "Handy",
+          "category_pc": "PC",
+          "category_cloud": "Cloud",
+          "category_igre": "Spiele",
+          "category_life": "Leben",
+          "category_career": "Karriere"
+        },
+        "hr": {
+          "category_all": "Sve",
+          "category_phone": "Mobitel",
+          "category_pc": "PC",
+          "category_cloud": "Cloud",
+          "category_igre": "Igre",
+          "category_life": "Život",
+          "category_career": "Karijera"
+        },
+        "tr": {
+          "category_all": "Tümü",
+          "category_phone": "Telefon",
+          "category_pc": "PC",
+          "category_cloud": "Bulut",
+          "category_igre": "Oyun",
+          "category_life": "Hayat",
+          "category_career": "Kariyer"
+        }
+      },
+      "settings": {
+        "categorize_by": [
+          "category_phone",
+          "category_pc",
+          "category_cloud",
+          "category_igre",
+          "category_life",
+          "category_career"
+        ],
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "items": [
+        {
+          "id": 1,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-git-alt",
+          "faIconColors": {
+            "fill": "#F05032"
+          },
+          "locales": {
+            "en": {
+              "title": "Git"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-github",
+          "faIconColors": {
+            "fill": "#24292E",
+            "fillLight": "#24292E"
+          },
+          "locales": {
+            "en": {
+              "title": "GitHub"
+            }
+          }
+        },
+        {
+          "id": 3,
+          "categoryId": "category_pc",
+          "img": "public/images/contant/vscode.webp",
+          "locales": {
+            "en": {
+              "title": "VS Code"
+            }
+          }
+        },
+        {
+          "id": 4,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-terminal",
+          "faIconColors": {
+            "fill": "#6B7280"
+          },
+          "locales": {
+            "en": {
+              "title": "Bash/Zsh"
+            }
+          }
+        },
+        {
+          "id": 5,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-docker",
+          "faIconColors": {
+            "fill": "#2496ED"
+          },
+          "locales": {
+            "en": {
+              "title": "Docker"
+            }
+          }
+        },
+        {
+          "id": 7,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-linux",
+          "faIconColors": {
+            "fill": "#FCC624"
+          },
+          "locales": {
+            "en": {
+              "title": "Linux"
+            }
+          }
+        },
+        {
+          "id": 8,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-windows",
+          "faIconColors": {
+            "fill": "#0078D6"
+          },
+          "locales": {
+            "en": {
+              "title": "Windows"
+            }
+          }
+        },
+        {
+          "id": 9,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-network-wired",
+          "faIconColors": {
+            "fill": "#1565C0"
+          },
+          "locales": {
+            "en": {
+              "title": "Wireshark"
+            }
+          }
+        },
+        {
+          "id": 10,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-shield-halved",
+          "faIconColors": {
+            "fill": "#43A047"
+          },
+          "locales": {
+            "en": {
+              "title": "Bitwarden"
+            }
+          }
+        },
+        {
+          "id": 11,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-lock",
+          "faIconColors": {
+            "fill": "#1F2937"
+          },
+          "locales": {
+            "en": {
+              "title": "KeePassXC"
+            }
+          }
+        },
+        {
+          "id": 12,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-cloudflare",
+          "faIconColors": {
+            "fill": "#F38020"
+          },
+          "locales": {
+            "en": {
+              "title": "Cloudflare"
+            }
+          }
+        },
+        {
+          "id": 13,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-globe",
+          "faIconColors": {
+            "fill": "#2563EB"
+          },
+          "locales": {
+            "en": {
+              "title": "Nginx Proxy Manager"
+            }
+          }
+        },
+        {
+          "id": 14,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-server",
+          "faIconColors": {
+            "fill": "#6B7280"
+          },
+          "locales": {
+            "en": {
+              "title": "VPS (Linux Server)"
+            }
+          }
+        },
+        {
+          "id": 15,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-key",
+          "faIconColors": {
+            "fill": "#0F172A"
+          },
+          "locales": {
+            "en": {
+              "title": "SSH"
+            }
+          }
+        },
+        {
+          "id": 16,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-rotate",
+          "faIconColors": {
+            "fill": "#10B981"
+          },
+          "locales": {
+            "en": {
+              "title": "Uptime Kuma"
+            }
+          }
+        },
+        {
+          "id": 17,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-diagram-project",
+          "faIconColors": {
+            "fill": "#8B5CF6"
+          },
+          "locales": {
+            "en": {
+              "title": "Portainer"
+            }
+          }
+        },
+        {
+          "id": 18,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#F29111"
+          },
+          "locales": {
+            "en": {
+              "title": "PostgreSQL"
+            }
+          }
+        },
+        {
+          "id": 19,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#4479A1"
+          },
+          "locales": {
+            "en": {
+              "title": "MySQL/MariaDB"
+            }
+          }
+        },
+        {
+          "id": 20,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "fill": "#00BCD4"
+          },
+          "locales": {
+            "en": {
+              "title": "n8n"
+            }
+          }
+        },
+        {
+          "id": 21,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-plug",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "Home Assistant"
+            }
+          }
+        },
+        {
+          "id": 22,
+          "categoryId": "category_phone",
+          "faIcon": "fa-brands fa-android",
+          "faIconColors": {
+            "fill": "#3DDC84"
+          },
+          "locales": {
+            "en": {
+              "title": "Android"
+            }
+          }
+        },
+        {
+          "id": 24,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-map-location-dot",
+          "faIconColors": {
+            "fill": "#EA4335"
+          },
+          "locales": {
+            "en": {
+              "title": "Google Maps"
+            }
+          }
+        },
+        {
+          "id": 25,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-message",
+          "faIconColors": {
+            "fill": "#25D366"
+          },
+          "locales": {
+            "en": {
+              "title": "WhatsApp"
+            }
+          }
+        },
+        {
+          "id": 26,
+          "categoryId": "category_phone",
+          "faIcon": "fa-brands fa-telegram",
+          "faIconColors": {
+            "fill": "#0088CC"
+          },
+          "locales": {
+            "en": {
+              "title": "Telegram"
+            }
+          }
+        },
+        {
+          "id": 27,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-qrcode",
+          "faIconColors": {
+            "fill": "#111827"
+          },
+          "locales": {
+            "en": {
+              "title": "2FA"
+            }
+          }
+        },
+        {
+          "id": 28,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-wifi",
+          "faIconColors": {
+            "fill": "#2563EB"
+          },
+          "locales": {
+            "en": {
+              "title": "Termux"
+            }
+          }
+        },
+        {
+          "id": 29,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#FF9800"
+          },
+          "locales": {
+            "en": {
+              "title": "Tasker"
+            }
+          }
+        },
+        {
+          "id": 30,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-toggle-on",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "IFTTT"
+            }
+          }
+        },
+        {
+          "id": 31,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "fill": "#8B5CF6"
+          },
+          "locales": {
+            "en": {
+              "title": "Automate LlamaLab"
+            }
+          }
+        },
+        {
+          "id": 32,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-list-check",
+          "faIconColors": {
+            "fill": "#7C3AED"
+          },
+          "locales": {
+            "en": {
+              "title": "Notion"
+            }
+          }
+        },
+        {
+          "id": 33,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-note-sticky",
+          "faIconColors": {
+            "fill": "#F4B400"
+          },
+          "locales": {
+            "en": {
+              "title": "Obsidian"
+            }
+          }
+        },
+        {
+          "id": 34,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-calendar-days",
+          "faIconColors": {
+            "fill": "#4285F4"
+          },
+          "locales": {
+            "en": {
+              "title": "Google Calendar"
+            }
+          }
+        },
+        {
+          "id": 35,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-dumbbell",
+          "faIconColors": {
+            "fill": "#EF4444"
+          },
+          "locales": {
+            "en": {
+              "title": "MuscleWiki"
+            }
+          }
+        },
+        {
+          "id": 36,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-linkedin",
+          "faIconColors": {
+            "fill": "#0A66C2"
+          },
+          "locales": {
+            "en": {
+              "title": "LinkedIn"
+            }
+          }
+        },
+        {
+          "id": 37,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-file-lines",
+          "faIconColors": {
+            "fill": "#374151"
+          },
+          "locales": {
+            "en": {
+              "title": "Foxit"
+            }
+          }
+        },
+        {
+          "id": 38,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-diagram-project",
+          "faIconColors": {
+            "fill": "#10B981"
+          },
+          "locales": {
+            "en": {
+              "title": "Jira"
+            }
+          }
+        },
+        {
+          "id": 39,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-people-group",
+          "faIconColors": {
+            "fill": "#4F46E5"
+          },
+          "locales": {
+            "en": {
+              "title": "Confluence"
+            }
+          }
+        },
+        {
+          "id": 40,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-comments",
+          "faIconColors": {
+            "fill": "#0EA5E9"
+          },
+          "locales": {
+            "en": {
+              "title": "Slack"
+            }
+          }
+        },
+        {
+          "id": 41,
+          "categoryId": "category_igre",
+          "faIcon": "fa-brands fa-steam",
+          "faIconColors": {
+            "fill": "#171A21",
+            "fillLight": "#171A21"
+          },
+          "locales": {
+            "en": {
+              "title": "Steam"
+            }
+          }
+        },
+        {
+          "id": 42,
+          "categoryId": "category_igre",
+          "faIcon": "fa-brands fa-discord",
+          "faIconColors": {
+            "fill": "#5865F2"
+          },
+          "locales": {
+            "en": {
+              "title": "Discord"
+            }
+          }
+        },
+        {
+          "id": 43,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-gamepad",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "RetroArch"
+            }
+          }
+        },
+        {
+          "id": 44,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-chess",
+          "faIconColors": {
+            "fill": "#111827"
+          },
+          "locales": {
+            "en": {
+              "title": "Chess.com"
+            }
+          }
+        },
+        {
+          "id": 45,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-chart-line",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "Grafana"
+            }
+          }
+        },
+        {
+          "id": 46,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-fire",
+          "faIconColors": {
+            "fill": "#F97316"
+          },
+          "locales": {
+            "en": {
+              "title": "Prometheus"
+            }
+          }
+        },
+        {
+          "id": 47,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-inbox",
+          "faIconColors": {
+            "fill": "#4B5563"
+          },
+          "locales": {
+            "en": {
+              "title": "MQTT"
+            }
+          }
+        },
+        {
+          "id": 48,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-tower-broadcast",
+          "faIconColors": {
+            "fill": "#06B6D4"
+          },
+          "locales": {
+            "en": {
+              "title": "Node-RED"
+            }
+          }
+        },
+        {
+          "id": 49,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-house",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "Zigbee2MQTT"
+            }
+          }
+        },
+        {
+          "id": 50,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-wifi",
+          "faIconColors": {
+            "fill": "#2563EB"
+          },
+          "locales": {
+            "en": {
+              "title": "Tailscale"
+            }
+          }
+        },
+        {
+          "id": 51,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-user-shield",
+          "faIconColors": {
+            "fill": "#0EA5E9"
+          },
+          "locales": {
+            "en": {
+              "title": "WireGuard"
+            }
+          }
+        },
+        {
+          "id": 52,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-layer-group",
+          "faIconColors": {
+            "fill": "#7C3AED"
+          },
+          "locales": {
+            "en": {
+              "title": "Proxmox"
+            }
+          }
+        },
+        {
+          "id": 53,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-box-archive",
+          "faIconColors": {
+            "fill": "#64748B"
+          },
+          "locales": {
+            "en": {
+              "title": "TrueNAS"
+            }
+          }
+        },
+        {
+          "id": 54,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-timeline",
+          "faIconColors": {
+            "fill": "#10B981"
+          },
+          "locales": {
+            "en": {
+              "title": "Ansible"
+            }
+          }
+        },
+        {
+          "id": 55,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-file-code",
+          "faIconColors": {
+            "fill": "#6366F1"
+          },
+          "locales": {
+            "en": {
+              "title": "Terraform"
+            }
+          }
+        },
+        {
+          "id": 56,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-tower-cell",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "Postman"
+            }
+          }
+        },
+        {
+          "id": 58,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-vial",
+          "faIconColors": {
+            "fill": "#06B6D4"
+          },
+          "locales": {
+            "en": {
+              "title": "Insomnia (API Client)"
+            }
+          }
+        },
+        {
+          "id": 59,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-bug",
+          "faIconColors": {
+            "fill": "#EF4444"
+          },
+          "locales": {
+            "en": {
+              "title": "Burp Suite"
+            }
+          }
+        },
+        {
+          "id": 60,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-keyboard",
+          "faIconColors": {
+            "fill": "#6B7280"
+          },
+          "locales": {
+            "en": {
+              "title": "Gboard"
+            }
+          }
+        },
+        {
+          "id": 61,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-python",
+          "faIconColors": {
+            "fill": "#3776AB"
+          },
+          "locales": {
+            "en": {
+              "title": "Python"
+            }
+          }
+        },
+        {
+          "id": 62,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-js",
+          "faIconColors": {
+            "fill": "#F7DF1E"
+          },
+          "locales": {
+            "en": {
+              "title": "JavaScript"
+            }
+          }
+        },
+        {
+          "id": 63,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-code",
+          "faIconColors": {
+            "fill": "#3178C6"
+          },
+          "locales": {
+            "en": {
+              "title": "TypeScript"
+            }
+          }
+        },
+        {
+          "id": 64,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-rust",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Rust"
+            }
+          }
+        },
+        {
+          "id": 65,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-golang",
+          "faIconColors": {
+            "fill": "#00ADD8"
+          },
+          "locales": {
+            "en": {
+              "title": "Go"
+            }
+          }
+        },
+        {
+          "id": 66,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-react",
+          "faIconColors": {
+            "fill": "#61DAFB"
+          },
+          "locales": {
+            "en": {
+              "title": "React"
+            }
+          }
+        },
+        {
+          "id": 67,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-n",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Next.js"
+            }
+          }
+        },
+        {
+          "id": 68,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-node-js",
+          "faIconColors": {
+            "fill": "#339933"
+          },
+          "locales": {
+            "en": {
+              "title": "Node.js"
+            }
+          }
+        },
+        {
+          "id": 69,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-hashtag",
+          "faIconColors": {
+            "fill": "#239120"
+          },
+          "locales": {
+            "en": {
+              "title": "C# / .NET"
+            }
+          }
+        },
+        {
+          "id": 70,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-java",
+          "faIconColors": {
+            "fill": "#007396"
+          },
+          "locales": {
+            "en": {
+              "title": "Java"
+            }
+          }
+        },
+        {
+          "id": 71,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-gears",
+          "faIconColors": {
+            "fill": "#008FD3"
+          },
+          "locales": {
+            "en": {
+              "title": "SAP S/4HANA"
+            }
+          }
+        },
+        {
+          "id": 72,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-microsoft",
+          "faIconColors": {
+            "fill": "#00A4EF"
+          },
+          "locales": {
+            "en": {
+              "title": "Dynamics 365"
+            }
+          }
+        },
+        {
+          "id": 73,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-cloud-bolt",
+          "faIconColors": {
+            "fill": "#4169E1"
+          },
+          "locales": {
+            "en": {
+              "title": "Oracle NetSuite"
+            }
+          }
+        },
+        {
+          "id": 74,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-box-open",
+          "faIconColors": {
+            "fill": "#875A7B"
+          },
+          "locales": {
+            "en": {
+              "title": "Odoo"
+            }
+          }
+        },
+        {
+          "id": 75,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-building-columns",
+          "faIconColors": {
+            "fill": "#002F4F"
+          },
+          "locales": {
+            "en": {
+              "title": "Frappe ERPNext"
+            }
+          }
+        },
+        {
+          "id": 76,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-salesforce",
+          "faIconColors": {
+            "fill": "#00A1E0"
+          },
+          "locales": {
+            "en": {
+              "title": "Salesforce CRM"
+            }
+          }
+        },
+        {
+          "id": 77,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-calculator",
+          "faIconColors": {
+            "fill": "#0072C6"
+          },
+          "locales": {
+            "en": {
+              "title": "Sage Intacct"
+            }
+          }
+        },
+        {
+          "id": 78,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-users-gear",
+          "faIconColors": {
+            "fill": "#EE3D42"
+          },
+          "locales": {
+            "en": {
+              "title": "Workday ERP"
+            }
+          }
+        },
+        {
+          "id": 79,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-industry",
+          "faIconColors": {
+            "fill": "#D32F2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Infor CloudSuite"
+            }
+          }
+        },
+        {
+          "id": 80,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-mountain",
+          "faIconColors": {
+            "fill": "#007ACC"
+          },
+          "locales": {
+            "en": {
+              "title": "Acumatica"
+            }
+          }
+        },
+        {
+          "id": 81,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-chart-simple",
+          "faIconColors": {
+            "fill": "#F2C811"
+          },
+          "locales": {
+            "en": {
+              "title": "Power BI"
+            }
+          }
+        },
+        {
+          "id": 82,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-table-cells",
+          "faIconColors": {
+            "fill": "#E97627"
+          },
+          "locales": {
+            "en": {
+              "title": "Tableau"
+            }
+          }
+        },
+        {
+          "id": 83,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-google",
+          "faIconColors": {
+            "fill": "#4285F4"
+          },
+          "locales": {
+            "en": {
+              "title": "Looker Studio"
+            }
+          }
+        },
+        {
+          "id": 84,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#509EE3"
+          },
+          "locales": {
+            "en": {
+              "title": "Metabase"
+            }
+          }
+        },
+        {
+          "id": 85,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-arrows-spin",
+          "faIconColors": {
+            "fill": "#FF6B4A"
+          },
+          "locales": {
+            "en": {
+              "title": "dbt (Data Build Tool)"
+            }
+          }
+        },
+        {
+          "id": 86,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-stream",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Apache Kafka"
+            }
+          }
+        },
+        {
+          "id": 87,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-snowflake",
+          "faIconColors": {
+            "fill": "#29B6F6"
+          },
+          "locales": {
+            "en": {
+              "title": "Snowflake"
+            }
+          }
+        },
+        {
+          "id": 88,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-magnifying-glass-chart",
+          "faIconColors": {
+            "fill": "#4285F4"
+          },
+          "locales": {
+            "en": {
+              "title": "Google BigQuery"
+            }
+          }
+        },
+        {
+          "id": 89,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-dharmachakra",
+          "faIconColors": {
+            "fill": "#326CE5"
+          },
+          "locales": {
+            "en": {
+              "title": "Kubernetes (K8s)"
+            }
+          }
+        },
+        {
+          "id": 90,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-anchor",
+          "faIconColors": {
+            "fill": "#0F1628"
+          },
+          "locales": {
+            "en": {
+              "title": "Helm"
+            }
+          }
+        },
+        {
+          "id": 91,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-gitlab",
+          "faIconColors": {
+            "fill": "#FC6D26"
+          },
+          "locales": {
+            "en": {
+              "title": "GitLab"
+            }
+          }
+        },
+        {
+          "id": 92,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-aws",
+          "faIconColors": {
+            "fill": "#FF9900"
+          },
+          "locales": {
+            "en": {
+              "title": "AWS"
+            }
+          }
+        },
+        {
+          "id": 93,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-microsoft",
+          "faIconColors": {
+            "fill": "#0089D6"
+          },
+          "locales": {
+            "en": {
+              "title": "Microsoft Azure"
+            }
+          }
+        },
+        {
+          "id": 94,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-google-drive",
+          "faIconColors": {
+            "fill": "#EA4335"
+          },
+          "locales": {
+            "en": {
+              "title": "Google Cloud (GCP)"
+            }
+          }
+        },
+        {
+          "id": 95,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-bug",
+          "faIconColors": {
+            "fill": "#FB4226"
+          },
+          "locales": {
+            "en": {
+              "title": "Sentry"
+            }
+          }
+        },
+        {
+          "id": 96,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-dog",
+          "faIconColors": {
+            "fill": "#632CA6"
+          },
+          "locales": {
+            "en": {
+              "title": "Datadog"
+            }
+          }
+        },
+        {
+          "id": 97,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-magnifying-glass-plus",
+          "faIconColors": {
+            "fill": "#005571"
+          },
+          "locales": {
+            "en": {
+              "title": "ELK Stack"
+            }
+          }
+        },
+        {
+          "id": 98,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-vault",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "HashiCorp Vault"
+            }
+          }
+        },
+        {
+          "id": 99,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-jenkins",
+          "faIconColors": {
+            "fill": "#D24939"
+          },
+          "locales": {
+            "en": {
+              "title": "Jenkins"
+            }
+          }
+        },
+        {
+          "id": 100,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-bolt-lightning",
+          "faIconColors": {
+            "fill": "#D82C20"
+          },
+          "locales": {
+            "en": {
+              "title": "Redis"
+            }
+          }
+        },
+        {
+          "id": 101,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-leaf",
+          "faIconColors": {
+            "fill": "#47A248"
+          },
+          "locales": {
+            "en": {
+              "title": "MongoDB"
+            }
+          }
+        },
+        {
+          "id": 102,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-chart-area",
+          "faIconColors": {
+            "fill": "#FFCC00"
+          },
+          "locales": {
+            "en": {
+              "title": "ClickHouse"
+            }
+          }
+        },
+        {
+          "id": 103,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#3ECF8E"
+          },
+          "locales": {
+            "en": {
+              "title": "Supabase"
+            }
+          }
+        },
+        {
+          "id": 104,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-fire-flame-curved",
+          "faIconColors": {
+            "fill": "#FFCA28"
+          },
+          "locales": {
+            "en": {
+              "title": "Firebase"
+            }
+          }
+        },
+        {
+          "id": 105,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#382923"
+          },
+          "locales": {
+            "en": {
+              "title": "DBeaver"
+            }
+          }
+        },
+        {
+          "id": 107,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-paper-plane",
+          "faIconColors": {
+            "fill": "#EF4444"
+          },
+          "locales": {
+            "en": {
+              "title": "Bruno (API Client)"
+            }
+          }
+        },
+        {
+          "id": 108,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-file-signature",
+          "faIconColors": {
+            "fill": "#85EA2D"
+          },
+          "locales": {
+            "en": {
+              "title": "Swagger / OpenAPI"
+            }
+          }
+        },
+        {
+          "id": 109,
+          "categoryId": "category_life",
+          "faIcon": "fa-brands fa-figma",
+          "faIconColors": {
+            "fill": "#F24E1E"
+          },
+          "locales": {
+            "en": {
+              "title": "Figma"
+            }
+          }
+        },
+        {
+          "id": 110,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-diagram-successor",
+          "faIconColors": {
+            "fill": "#FF3E00"
+          },
+          "locales": {
+            "en": {
+              "title": "Mermaid.js"
+            }
+          }
+        },
+        {
+          "id": 111,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-sitemap",
+          "faIconColors": {
+            "fill": "#F08705"
+          },
+          "locales": {
+            "en": {
+              "title": "Draw.io"
+            }
+          }
+        },
+        {
+          "id": 112,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-palette",
+          "faIconColors": {
+            "fill": "#00C4CC"
+          },
+          "locales": {
+            "en": {
+              "title": "Canva"
+            }
+          }
+        },
+        {
+          "id": 113,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-chalkboard",
+          "faIconColors": {
+            "fill": "#050038"
+          },
+          "locales": {
+            "en": {
+              "title": "Miro"
+            }
+          }
+        },
+        {
+          "id": 114,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "fill": "#10A37F"
+          },
+          "locales": {
+            "en": {
+              "title": "ChatGPT"
+            }
+          }
+        },
+        {
+          "id": 115,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-brain",
+          "faIconColors": {
+            "fill": "#D97757"
+          },
+          "locales": {
+            "en": {
+              "title": "Claude AI"
+            }
+          }
+        },
+        {
+          "id": 116,
+          "categoryId": "category_life",
+          "faIcon": "fa-brands fa-github",
+          "faIconColors": {
+            "fill": "#24292E"
+          },
+          "locales": {
+            "en": {
+              "title": "GitHub Copilot"
+            }
+          }
+        },
+        {
+          "id": 117,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-wand-magic-sparkles",
+          "faIconColors": {
+            "fill": "#1E293B"
+          },
+          "locales": {
+            "en": {
+              "title": "Cursor AI Editor"
+            }
+          }
+        },
+        {
+          "id": 118,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#22C55E"
+          },
+          "locales": {
+            "en": {
+              "title": "Perplexity"
+            }
+          }
+        },
+        {
+          "id": 119,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Ollama (Local AI)"
+            }
+          }
+        },
+        {
+          "id": 120,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-network-wired",
+          "faIconColors": {
+            "fill": "#555555"
+          },
+          "locales": {
+            "en": {
+              "title": "Nmap"
+            }
+          }
+        },
+        {
+          "id": 121,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-book-bookmark",
+          "faIconColors": {
+            "fill": "#204969"
+          },
+          "locales": {
+            "en": {
+              "title": "Joplin (Note-taking)"
+            }
+          }
+        },
+        {
+          "id": 122,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-envelope-open-text",
+          "faIconColors": {
+            "fill": "#0A84FF"
+          },
+          "locales": {
+            "en": {
+              "title": "Thunderbird"
+            }
+          }
+        },
+        {
+          "id": 123,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-moon",
+          "faIconColors": {
+            "fill": "#3B82F6"
+          },
+          "locales": {
+            "en": {
+              "title": "Sleep as Android"
+            }
+          }
+        },
+        {
+          "id": 124,
+          "categoryId": "category_pc",
+          "faIcon": "fa-regular fa-traffic-cone",
+          "faIconColors": {
+            "fill": "#FF8800"
+          },
+          "locales": {
+            "en": {
+              "title": "VLC Media Player"
+            }
+          }
+        },
+        {
+          "id": 125,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-file-zipper",
+          "faIconColors": {
+            "fill": "#24292E"
+          },
+          "locales": {
+            "en": {
+              "title": "7-Zip"
+            }
+          }
+        },
+        {
+          "id": 126,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-firefox-browser",
+          "faIconColors": {
+            "fill": "#E66033"
+          },
+          "locales": {
+            "en": {
+              "title": "Firefox"
+            }
+          }
+        },
+        {
+          "id": 127,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-brave",
+          "faIconColors": {
+            "fill": "#FB542B"
+          },
+          "locales": {
+            "en": {
+              "title": "Brave Browser"
+            }
+          }
+        },
+        {
+          "id": 128,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-palette",
+          "faIconColors": {
+            "fill": "#5C5543"
+          },
+          "locales": {
+            "en": {
+              "title": "GIMP"
+            }
+          }
+        },
+        {
+          "id": 129,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-cloud-arrow-down",
+          "faIconColors": {
+            "fill": "#3C63A6"
+          },
+          "locales": {
+            "en": {
+              "title": "qBittorrent"
+            }
+          }
+        },
+        {
+          "id": 130,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-bezier-curve",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Inkscape"
+            }
+          }
+        },
+        {
+          "id": 131,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-wolf-pack-battalion",
+          "faIconColors": {
+            "fill": "#C62828"
+          },
+          "locales": {
+            "en": {
+              "title": "The Witcher 3 (2015)"
+            }
+          }
+        },
+        {
+          "id": 132,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-skull-crossbones",
+          "faIconColors": {
+            "fill": "#4527A0"
+          },
+          "locales": {
+            "en": {
+              "title": "Bloodborne"
+            }
+          }
+        },
+        {
+          "id": 133,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-radiation",
+          "faIconColors": {
+            "fill": "#FBC02D"
+          },
+          "locales": {
+            "en": {
+              "title": "Fallout 4"
+            }
+          }
+        },
+        {
+          "id": 134,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-eye-slash",
+          "faIconColors": {
+            "fill": "#2E7D32"
+          },
+          "locales": {
+            "en": {
+              "title": "Metal Gear Solid V"
+            }
+          }
+        },
+        {
+          "id": 135,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-heart",
+          "faIconColors": {
+            "fill": "#E91E63"
+          },
+          "locales": {
+            "en": {
+              "title": "Undertale"
+            }
+          }
+        },
+        {
+          "id": 136,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-car-side",
+          "faIconColors": {
+            "fill": "#039BE5"
+          },
+          "locales": {
+            "en": {
+              "title": "Rocket League"
+            }
+          }
+        },
+        {
+          "id": 137,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hammer",
+          "faIconColors": {
+            "fill": "#EF5350"
+          },
+          "locales": {
+            "en": {
+              "title": "Super Mario Maker"
+            }
+          }
+        },
+        {
+          "id": 138,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-camera-retro",
+          "faIconColors": {
+            "fill": "#9C27B0"
+          },
+          "locales": {
+            "en": {
+              "title": "Life is Strange"
+            }
+          }
+        },
+        {
+          "id": 139,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-biohazard",
+          "faIconColors": {
+            "fill": "#827717"
+          },
+          "locales": {
+            "en": {
+              "title": "Dying Light"
+            }
+          }
+        },
+        {
+          "id": 140,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-mask",
+          "faIconColors": {
+            "fill": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Batman: Arkham Knight"
+            }
+          }
+        },
+        {
+          "id": 141,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ghost",
+          "faIconColors": {
+            "fill": "#FDD835"
+          },
+          "locales": {
+            "en": {
+              "title": "Pac-Man (Classic)"
+            }
+          }
+        },
+        {
+          "id": 142,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-cubes",
+          "faIconColors": {
+            "fill": "#1E88E5"
+          },
+          "locales": {
+            "en": {
+              "title": "Tetris (Classic)"
+            }
+          }
+        },
+        {
+          "id": 143,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-fire",
+          "faIconColors": {
+            "fill": "#B71C1C"
+          },
+          "locales": {
+            "en": {
+              "title": "Doom (Classic)"
+            }
+          }
+        },
+        {
+          "id": 144,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hand-fist",
+          "faIconColors": {
+            "fill": "#6D4C41"
+          },
+          "locales": {
+            "en": {
+              "title": "Donkey Kong (Classic)"
+            }
+          }
+        },
+        {
+          "id": 145,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-mushroom",
+          "faIconColors": {
+            "fill": "#E53935"
+          },
+          "locales": {
+            "en": {
+              "title": "Super Mario Bros."
+            }
+          }
+        },
+        {
+          "id": 146,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-shield-halved",
+          "faIconColors": {
+            "fill": "#43A047"
+          },
+          "locales": {
+            "en": {
+              "title": "The Legend of Zelda (Classic)"
+            }
+          }
+        },
+        {
+          "id": 147,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-flask-vial",
+          "faIconColors": {
+            "fill": "#FF9800"
+          },
+          "locales": {
+            "en": {
+              "title": "Half-Life 2 (Classic)"
+            }
+          }
+        },
+        {
+          "id": 148,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-chess-rook",
+          "faIconColors": {
+            "fill": "#3F51B5"
+          },
+          "locales": {
+            "en": {
+              "title": "Age of Empires II (Classic)"
+            }
+          }
+        },
+        {
+          "id": 149,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-rocket",
+          "faIconColors": {
+            "fill": "#1565C0"
+          },
+          "locales": {
+            "en": {
+              "title": "StarCraft (Classic)"
+            }
+          }
+        },
+        {
+          "id": 150,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hat-wizard",
+          "faIconColors": {
+            "fill": "#4E342E"
+          },
+          "locales": {
+            "en": {
+              "title": "Diablo II (Classic)"
+            }
+          }
+        },
+        {
+          "id": 151,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-stack-overflow",
+          "faIconColors": {
+            "fill": "#F48024"
+          },
+          "locales": {
+            "en": {
+              "title": "Stack Overflow"
+            }
+          }
+        },
+        {
+          "id": 152,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-file-code",
+          "faIconColors": {
+            "fill": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "MDN Web Docs"
+            }
+          }
+        },
+        {
+          "id": 153,
+          "categoryId": "category_life",
+          "faIcon": "fa-brands fa-wikipedia-w",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Wikipedia"
+            }
+          }
+        },
+        {
+          "id": 154,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-hacker-news",
+          "faIconColors": {
+            "fill": "#FF6600"
+          },
+          "locales": {
+            "en": {
+              "title": "Hacker News (Y Combinator)"
+            }
+          }
+        },
+        {
+          "id": 155,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-code-merge",
+          "faIconColors": {
+            "fill": "#FFA116"
+          },
+          "locales": {
+            "en": {
+              "title": "LeetCode"
+            }
+          }
+        },
+        {
+          "id": 156,
+          "categoryId": "category_life",
+          "faIcon": "fa-brands fa-reddit",
+          "faIconColors": {
+            "fill": "#FF4500"
+          },
+          "locales": {
+            "en": {
+              "title": "Reddit"
+            }
+          }
+        },
+        {
+          "id": 157,
+          "categoryId": "category_career",
+          "faIcon": "fa-brands fa-bitbucket",
+          "faIconColors": {
+            "fill": "#0052CC"
+          },
+          "locales": {
+            "en": {
+              "title": "Bitbucket"
+            }
+          }
+        },
+        {
+          "id": 158,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-graduation-cap",
+          "faIconColors": {
+            "fill": "#0056D2"
+          },
+          "locales": {
+            "en": {
+              "title": "Coursera"
+            }
+          }
+        },
+        {
+          "id": 159,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-certificate",
+          "faIconColors": {
+            "fill": "#A51417"
+          },
+          "locales": {
+            "en": {
+              "title": "edX"
+            }
+          }
+        },
+        {
+          "id": 160,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-chalkboard-user",
+          "faIconColors": {
+            "fill": "#A435F0"
+          },
+          "locales": {
+            "en": {
+              "title": "Udemy"
+            }
+          }
+        },
+        {
+          "id": 161,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-compass",
+          "faIconColors": {
+            "fill": "#0047AB"
+          },
+          "locales": {
+            "en": {
+              "title": "Engineering.com"
+            }
+          }
+        },
+        {
+          "id": 162,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-toolbox",
+          "faIconColors": {
+            "fill": "#D32F2F"
+          },
+          "locales": {
+            "en": {
+              "title": "The Engineering ToolBox"
+            }
+          }
+        },
+        {
+          "id": 163,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-square-root-variable",
+          "faIconColors": {
+            "fill": "#DA0E1B"
+          },
+          "locales": {
+            "en": {
+              "title": "WolframAlpha"
+            }
+          }
+        },
+        {
+          "id": 164,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-stripe",
+          "faIconColors": {
+            "fill": "#635BFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Stripe Payments"
+            }
+          }
+        },
+        {
+          "id": 165,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-paypal",
+          "faIconColors": {
+            "fill": "#003087"
+          },
+          "locales": {
+            "en": {
+              "title": "PayPal"
+            }
+          }
+        },
+        {
+          "id": 166,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-shopify",
+          "faIconColors": {
+            "fill": "#96BF48"
+          },
+          "locales": {
+            "en": {
+              "title": "Shopify"
+            }
+          }
+        },
+        {
+          "id": 167,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-hubspot",
+          "faIconColors": {
+            "fill": "#FF7A59"
+          },
+          "locales": {
+            "en": {
+              "title": "HubSpot"
+            }
+          }
+        },
+        {
+          "id": 168,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-headset",
+          "faIconColors": {
+            "fill": "#03363D"
+          },
+          "locales": {
+            "en": {
+              "title": "Zendesk"
+            }
+          }
+        },
+        {
+          "id": 169,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-mailchimp",
+          "faIconColors": {
+            "fill": "#FFE01B"
+          },
+          "locales": {
+            "en": {
+              "title": "Mailchimp"
+            }
+          }
+        },
+        {
+          "id": 170,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-comments",
+          "faIconColors": {
+            "fill": "#F22F46"
+          },
+          "locales": {
+            "en": {
+              "title": "Twilio"
+            }
+          }
+        },
+        {
+          "id": 171,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-clapperboard",
+          "faIconColors": {
+            "fill": "#E5A00D"
+          },
+          "locales": {
+            "en": {
+              "title": "Plex Media Server"
+            }
+          }
+        },
+        {
+          "id": 172,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-film",
+          "faIconColors": {
+            "fill": "#00A4EF"
+          },
+          "locales": {
+            "en": {
+              "title": "Jellyfin"
+            }
+          }
+        },
+        {
+          "id": 173,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-filter",
+          "faIconColors": {
+            "fill": "#96060C"
+          },
+          "locales": {
+            "en": {
+              "title": "Pi-hole"
+            }
+          }
+        },
+        {
+          "id": 174,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-cloud-arrow-up",
+          "faIconColors": {
+            "fill": "#0082C9"
+          },
+          "locales": {
+            "en": {
+              "title": "Nextcloud"
+            }
+          }
+        },
+        {
+          "id": 175,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-sync",
+          "faIconColors": {
+            "fill": "#0882C5"
+          },
+          "locales": {
+            "en": {
+              "title": "Syncthing"
+            }
+          }
+        },
+        {
+          "id": 176,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-key",
+          "faIconColors": {
+            "fill": "#6BB13D"
+          },
+          "locales": {
+            "en": {
+              "title": "KeePassXC"
+            }
+          }
+        },
+        {
+          "id": 177,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-lock",
+          "faIconColors": {
+            "fill": "#D62121"
+          },
+          "locales": {
+            "en": {
+              "title": "1Password"
+            }
+          }
+        },
+        {
+          "id": 178,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-shield",
+          "faIconColors": {
+            "fill": "#6D4AFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Proton Mail"
+            }
+          }
+        },
+        {
+          "id": 179,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-message",
+          "faIconColors": {
+            "fill": "#3A76F0"
+          },
+          "locales": {
+            "en": {
+              "title": "Signal Messenger"
+            }
+          }
+        },
+        {
+          "id": 180,
+          "categoryId": "category_life",
+          "faIcon": "fa-brands fa-spotify",
+          "faIconColors": {
+            "fill": "#1DB954"
+          },
+          "locales": {
+            "en": {
+              "title": "Spotify"
+            }
+          }
+        },
+        {
+          "id": 181,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-gears",
+          "faIconColors": {
+            "fill": "#0054a6"
+          },
+          "locales": {
+            "en": {
+              "title": "Siemens TIA Portal (PLC)"
+            }
+          }
+        },
+        {
+          "id": 182,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#eb1a23"
+          },
+          "locales": {
+            "en": {
+              "title": "Beckhoff TwinCAT"
+            }
+          }
+        },
+        {
+          "id": 183,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-memory",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "CODESYS (IEC 61131-3)"
+            }
+          }
+        },
+        {
+          "id": 184,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-square-root-variable",
+          "faIconColors": {
+            "fill": "#e16a03"
+          },
+          "locales": {
+            "en": {
+              "title": "MATLAB"
+            }
+          }
+        },
+        {
+          "id": 185,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-diagram-project",
+          "faIconColors": {
+            "fill": "#0076a8"
+          },
+          "locales": {
+            "en": {
+              "title": "Simulink"
+            }
+          }
+        },
+        {
+          "id": 186,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-flask",
+          "faIconColors": {
+            "fill": "#ffcc00"
+          },
+          "locales": {
+            "en": {
+              "title": "LabVIEW"
+            }
+          }
+        },
+        {
+          "id": 187,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-compass-drafting",
+          "faIconColors": {
+            "fill": "#fa2e3c"
+          },
+          "locales": {
+            "en": {
+              "title": "AutoCAD"
+            }
+          }
+        },
+        {
+          "id": 188,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-cube",
+          "faIconColors": {
+            "fill": "#005696"
+          },
+          "locales": {
+            "en": {
+              "title": "SolidWorks"
+            }
+          }
+        },
+        {
+          "id": 189,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-bolt-lightning",
+          "faIconColors": {
+            "fill": "#ff7500"
+          },
+          "locales": {
+            "en": {
+              "title": "EPLAN Electric P8"
+            }
+          }
+        },
+        {
+          "id": 190,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "fill": "#22314e"
+          },
+          "locales": {
+            "en": {
+              "title": "ROS (Robot Operating System)"
+            }
+          }
+        },
+        {
+          "id": 191,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-industry",
+          "faIconColors": {
+            "fill": "#009cde"
+          },
+          "locales": {
+            "en": {
+              "title": "OPC UA (Standard)"
+            }
+          }
+        },
+        {
+          "id": 192,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-network-wired",
+          "faIconColors": {
+            "fill": "#004a99"
+          },
+          "locales": {
+            "en": {
+              "title": "Profinet / Profibus"
+            }
+          }
+        },
+        {
+          "id": 193,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-ethernet",
+          "faIconColors": {
+            "fill": "#333333"
+          },
+          "locales": {
+            "en": {
+              "title": "Modbus TCP/RTU"
+            }
+          }
+        },
+        {
+          "id": 194,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-link",
+          "faIconColors": {
+            "fill": "#e1001a"
+          },
+          "locales": {
+            "en": {
+              "title": "EtherCAT"
+            }
+          }
+        },
+        {
+          "id": 195,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-car",
+          "faIconColors": {
+            "fill": "#cc0000"
+          },
+          "locales": {
+            "en": {
+              "title": "Vector CANoe / CANalyzer"
+            }
+          }
+        },
+        {
+          "id": 196,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-infinity",
+          "faIconColors": {
+            "fill": "#ef7b4d"
+          },
+          "locales": {
+            "en": {
+              "title": "ArgoCD (GitOps)"
+            }
+          }
+        },
+        {
+          "id": 197,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-water",
+          "faIconColors": {
+            "fill": "#326ce5"
+          },
+          "locales": {
+            "en": {
+              "title": "FluxCD"
+            }
+          }
+        },
+        {
+          "id": 198,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-dharmachakra",
+          "faIconColors": {
+            "fill": "#466bb0"
+          },
+          "locales": {
+            "en": {
+              "title": "Istio (Service Mesh)"
+            }
+          }
+        },
+        {
+          "id": 199,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-brands fa-redhat",
+          "faIconColors": {
+            "fill": "#ee0000"
+          },
+          "locales": {
+            "en": {
+              "title": "OpenShift"
+            }
+          }
+        },
+        {
+          "id": 200,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-cow",
+          "faIconColors": {
+            "fill": "#0075a8"
+          },
+          "locales": {
+            "en": {
+              "title": "Rancher"
+            }
+          }
+        },
+        {
+          "id": 201,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-vial-circle-check",
+          "faIconColors": {
+            "fill": "#00285a"
+          },
+          "locales": {
+            "en": {
+              "title": "Robot Framework"
+            }
+          }
+        },
+        {
+          "id": 202,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-vial",
+          "faIconColors": {
+            "fill": "#43b02a"
+          },
+          "locales": {
+            "en": {
+              "title": "Selenium"
+            }
+          }
+        },
+        {
+          "id": 203,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-vials",
+          "faIconColors": {
+            "fill": "#17202c"
+          },
+          "locales": {
+            "en": {
+              "title": "Cypress"
+            }
+          }
+        },
+        {
+          "id": 204,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-play",
+          "faIconColors": {
+            "fill": "#2e8b57"
+          },
+          "locales": {
+            "en": {
+              "title": "Playwright"
+            }
+          }
+        },
+        {
+          "id": 205,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-python",
+          "faIconColors": {
+            "fill": "#3776ab"
+          },
+          "locales": {
+            "en": {
+              "title": "PyTest"
+            }
+          }
+        },
+        {
+          "id": 206,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-j",
+          "faIconColors": {
+            "fill": "#d0413e"
+          },
+          "locales": {
+            "en": {
+              "title": "JUnit"
+            }
+          }
+        },
+        {
+          "id": 207,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-magnifying-glass",
+          "faIconColors": {
+            "fill": "#4e9bcd"
+          },
+          "locales": {
+            "en": {
+              "title": "SonarQube"
+            }
+          }
+        },
+        {
+          "id": 208,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-user-shield",
+          "faIconColors": {
+            "fill": "#6b7280"
+          },
+          "locales": {
+            "en": {
+              "title": "Checkov (IaC Security)"
+            }
+          }
+        },
+        {
+          "id": 209,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-shield-virus",
+          "faIconColors": {
+            "fill": "#191919"
+          },
+          "locales": {
+            "en": {
+              "title": "Trivy"
+            }
+          }
+        },
+        {
+          "id": 210,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-box",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "HashiCorp Packer"
+            }
+          }
+        },
+        {
+          "id": 211,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-truck-ramp-box",
+          "faIconColors": {
+            "fill": "#1563ff"
+          },
+          "locales": {
+            "en": {
+              "title": "Vagrant"
+            }
+          }
+        },
+        {
+          "id": 212,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-terminal",
+          "faIconColors": {
+            "fill": "#8a3391"
+          },
+          "locales": {
+            "en": {
+              "title": "Pulumi"
+            }
+          }
+        },
+        {
+          "id": 213,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-sliders",
+          "faIconColors": {
+            "fill": "#326ce5"
+          },
+          "locales": {
+            "en": {
+              "title": "Kustomize"
+            }
+          }
+        },
+        {
+          "id": 214,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-mountain-sun",
+          "faIconColors": {
+            "fill": "#4285f4"
+          },
+          "locales": {
+            "en": {
+              "title": "Google Anthos"
+            }
+          }
+        },
+        {
+          "id": 215,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-server",
+          "faIconColors": {
+            "fill": "#607078"
+          },
+          "locales": {
+            "en": {
+              "title": "VMware vSphere"
+            }
+          }
+        },
+        {
+          "id": 216,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#333333"
+          },
+          "locales": {
+            "en": {
+              "title": "KVM / QEMU"
+            }
+          }
+        },
+        {
+          "id": 217,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-cloud",
+          "faIconColors": {
+            "fill": "#f01742"
+          },
+          "locales": {
+            "en": {
+              "title": "OpenStack"
+            }
+          }
+        },
+        {
+          "id": 218,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#ef4135"
+          },
+          "locales": {
+            "en": {
+              "title": "Ceph Storage"
+            }
+          }
+        },
+        {
+          "id": 219,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-folder-tree",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "GlusterFS"
+            }
+          }
+        },
+        {
+          "id": 220,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-boxes-stacked",
+          "faIconColors": {
+            "fill": "#1a73e8"
+          },
+          "locales": {
+            "en": {
+              "title": "NetBox (IPAM)"
+            }
+          }
+        },
+        {
+          "id": 221,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-chart-line",
+          "faIconColors": {
+            "fill": "#d40000"
+          },
+          "locales": {
+            "en": {
+              "title": "Zabbix"
+            }
+          }
+        },
+        {
+          "id": 222,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-eye",
+          "faIconColors": {
+            "fill": "#7ed321"
+          },
+          "locales": {
+            "en": {
+              "title": "Nagios"
+            }
+          }
+        },
+        {
+          "id": 223,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-snowflake",
+          "faIconColors": {
+            "fill": "#ff7500"
+          },
+          "locales": {
+            "en": {
+              "title": "Icinga 2"
+            }
+          }
+        },
+        {
+          "id": 224,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-file-waveform",
+          "faIconColors": {
+            "fill": "#ff5252"
+          },
+          "locales": {
+            "en": {
+              "title": "Graylog (DE)"
+            }
+          }
+        },
+        {
+          "id": 225,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-search",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Splunk"
+            }
+          }
+        },
+        {
+          "id": 226,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-server",
+          "faIconColors": {
+            "fill": "#003087"
+          },
+          "locales": {
+            "en": {
+              "title": "PowerDNS"
+            }
+          }
+        },
+        {
+          "id": 227,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-globe",
+          "faIconColors": {
+            "fill": "#d12026"
+          },
+          "locales": {
+            "en": {
+              "title": "BIND9"
+            }
+          }
+        },
+        {
+          "id": 228,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-terminal",
+          "faIconColors": {
+            "fill": "#555555"
+          },
+          "locales": {
+            "en": {
+              "title": "Tcpdump"
+            }
+          }
+        },
+        {
+          "id": 229,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-user-secret",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "OWASP ZAP"
+            }
+          }
+        },
+        {
+          "id": 230,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-biohazard",
+          "faIconColors": {
+            "fill": "#ff6600"
+          },
+          "locales": {
+            "en": {
+              "title": "Metasploit"
+            }
+          }
+        },
+        {
+          "id": 231,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#2d2d2d"
+          },
+          "locales": {
+            "en": {
+              "title": "KiCad"
+            }
+          }
+        },
+        {
+          "id": 232,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-palette",
+          "faIconColors": {
+            "fill": "#a52a2a"
+          },
+          "locales": {
+            "en": {
+              "title": "Altium Designer"
+            }
+          }
+        },
+        {
+          "id": 233,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-code",
+          "faIconColors": {
+            "fill": "#03234b"
+          },
+          "locales": {
+            "en": {
+              "title": "STM32CubeIDE"
+            }
+          }
+        },
+        {
+          "id": 234,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#e7352c"
+          },
+          "locales": {
+            "en": {
+              "title": "ESP-IDF"
+            }
+          }
+        },
+        {
+          "id": 235,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-clock",
+          "faIconColors": {
+            "fill": "#1a1a1a"
+          },
+          "locales": {
+            "en": {
+              "title": "FreeRTOS"
+            }
+          }
+        },
+        {
+          "id": 236,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-wind",
+          "faIconColors": {
+            "fill": "#2b579a"
+          },
+          "locales": {
+            "en": {
+              "title": "Zephyr RTOS"
+            }
+          }
+        },
+        {
+          "id": 237,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-code",
+          "faIconColors": {
+            "fill": "#008fd3"
+          },
+          "locales": {
+            "en": {
+              "title": "SAP ABAP"
+            }
+          }
+        },
+        {
+          "id": 238,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-window-maximize",
+          "faIconColors": {
+            "fill": "#008fd3"
+          },
+          "locales": {
+            "en": {
+              "title": "SAP Fiori"
+            }
+          }
+        },
+        {
+          "id": 239,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-cloud",
+          "faIconColors": {
+            "fill": "#008fd3"
+          },
+          "locales": {
+            "en": {
+              "title": "SAP BTP"
+            }
+          }
+        },
+        {
+          "id": 240,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-diagram-next",
+          "faIconColors": {
+            "fill": "#ff6600"
+          },
+          "locales": {
+            "en": {
+              "title": "Camunda (BPMN DE)"
+            }
+          }
+        },
+        {
+          "id": 241,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-brain",
+          "faIconColors": {
+            "fill": "#10A37F"
+          },
+          "locales": {
+            "en": {
+              "title": "OpenAI API"
+            }
+          }
+        },
+        {
+          "id": 242,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#FF6F00"
+          },
+          "locales": {
+            "en": {
+              "title": "TensorFlow"
+            }
+          }
+        },
+        {
+          "id": 243,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-fire-flame-curved",
+          "faIconColors": {
+            "fill": "#EE4C2C"
+          },
+          "locales": {
+            "en": {
+              "title": "PyTorch"
+            }
+          }
+        },
+        {
+          "id": 244,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-book",
+          "faIconColors": {
+            "fill": "#F37626"
+          },
+          "locales": {
+            "en": {
+              "title": "Jupyter Notebooks"
+            }
+          }
+        },
+        {
+          "id": 245,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#E25A1C"
+          },
+          "locales": {
+            "en": {
+              "title": "Apache Spark"
+            }
+          }
+        },
+        {
+          "id": 246,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-wind",
+          "faIconColors": {
+            "fill": "#017CEE"
+          },
+          "locales": {
+            "en": {
+              "title": "Apache Airflow"
+            }
+          }
+        },
+        {
+          "id": 247,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-chart-pie",
+          "faIconColors": {
+            "fill": "#00B2D9"
+          },
+          "locales": {
+            "en": {
+              "title": "Apache Superset"
+            }
+          }
+        },
+        {
+          "id": 248,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-user-ninja",
+          "faIconColors": {
+            "fill": "#555555"
+          },
+          "locales": {
+            "en": {
+              "title": "Kali Linux"
+            }
+          }
+        },
+        {
+          "id": 249,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-file-shield",
+          "faIconColors": {
+            "fill": "#336791"
+          },
+          "locales": {
+            "en": {
+              "title": "Ghidra (Reverse Eng.)"
+            }
+          }
+        },
+        {
+          "id": 250,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-ubuntu",
+          "faIconColors": {
+            "fill": "#E95420"
+          },
+          "locales": {
+            "en": {
+              "title": "Ubuntu Server"
+            }
+          }
+        },
+        {
+          "id": 251,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-fedora",
+          "faIconColors": {
+            "fill": "#294172"
+          },
+          "locales": {
+            "en": {
+              "title": "Fedora IoT"
+            }
+          }
+        },
+        {
+          "id": 252,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-mountain",
+          "faIconColors": {
+            "fill": "#0D597F"
+          },
+          "locales": {
+            "en": {
+              "title": "Alpine Linux"
+            }
+          }
+        },
+        {
+          "id": 253,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-network-wired",
+          "faIconColors": {
+            "fill": "#FFB13B"
+          },
+          "locales": {
+            "en": {
+              "title": "ZeroTier"
+            }
+          }
+        },
+        {
+          "id": 254,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-bridge",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Kong API Gateway"
+            }
+          }
+        },
+        {
+          "id": 255,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-route",
+          "faIconColors": {
+            "fill": "#24A1C1"
+          },
+          "locales": {
+            "en": {
+              "title": "Traefik Proxy"
+            }
+          }
+        },
+        {
+          "id": 256,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-server",
+          "faIconColors": {
+            "fill": "#0091E2"
+          },
+          "locales": {
+            "en": {
+              "title": "HAProxy"
+            }
+          }
+        },
+        {
+          "id": 257,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#003B57"
+          },
+          "locales": {
+            "en": {
+              "title": "SQLite"
+            }
+          }
+        },
+        {
+          "id": 258,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-database",
+          "faIconColors": {
+            "fill": "#128767"
+          },
+          "locales": {
+            "en": {
+              "title": "Neo4j (Graph DB)"
+            }
+          }
+        },
+        {
+          "id": 259,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-magnifying-glass",
+          "faIconColors": {
+            "fill": "#005A9E"
+          },
+          "locales": {
+            "en": {
+              "title": "Elasticsearch"
+            }
+          }
+        },
+        {
+          "id": 260,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-envelope",
+          "faIconColors": {
+            "fill": "#F66000"
+          },
+          "locales": {
+            "en": {
+              "title": "RabbitMQ"
+            }
+          }
+        },
+        {
+          "id": 261,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-check-double",
+          "faIconColors": {
+            "fill": "#F7B93E"
+          },
+          "locales": {
+            "en": {
+              "title": "Prettier"
+            }
+          }
+        },
+        {
+          "id": 262,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-shield-halved",
+          "faIconColors": {
+            "fill": "#4B32C3"
+          },
+          "locales": {
+            "en": {
+              "title": "ESLint"
+            }
+          }
+        },
+        {
+          "id": 263,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-wind",
+          "faIconColors": {
+            "fill": "#38B2AC"
+          },
+          "locales": {
+            "en": {
+              "title": "Tailwind CSS"
+            }
+          }
+        },
+        {
+          "id": 264,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-bootstrap",
+          "faIconColors": {
+            "fill": "#7952B3"
+          },
+          "locales": {
+            "en": {
+              "title": "Bootstrap"
+            }
+          }
+        },
+        {
+          "id": 265,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-vuejs",
+          "faIconColors": {
+            "fill": "#4FC08D"
+          },
+          "locales": {
+            "en": {
+              "title": "Vue.js"
+            }
+          }
+        },
+        {
+          "id": 266,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-angular",
+          "faIconColors": {
+            "fill": "#DD0031"
+          },
+          "locales": {
+            "en": {
+              "title": "Angular"
+            }
+          }
+        },
+        {
+          "id": 267,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-fire",
+          "faIconColors": {
+            "fill": "#FF3E00"
+          },
+          "locales": {
+            "en": {
+              "title": "Svelte"
+            }
+          }
+        },
+        {
+          "id": 268,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-laravel",
+          "faIconColors": {
+            "fill": "#FF2D20"
+          },
+          "locales": {
+            "en": {
+              "title": "Laravel"
+            }
+          }
+        },
+        {
+          "id": 269,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-pepper-hot",
+          "faIconColors": {
+            "fill": "#092E20"
+          },
+          "locales": {
+            "en": {
+              "title": "Django"
+            }
+          }
+        },
+        {
+          "id": 270,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#05998B"
+          },
+          "locales": {
+            "en": {
+              "title": "FastAPI"
+            }
+          }
+        },
+        {
+          "id": 271,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-php",
+          "faIconColors": {
+            "fill": "#777BB4"
+          },
+          "locales": {
+            "en": {
+              "title": "PHP 8"
+            }
+          }
+        },
+        {
+          "id": 272,
+          "categoryId": "category_pc",
+          "faIcon": "fa-brands fa-swift",
+          "faIconColors": {
+            "fill": "#F05138"
+          },
+          "locales": {
+            "en": {
+              "title": "Swift"
+            }
+          }
+        },
+        {
+          "id": 273,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-k",
+          "faIconColors": {
+            "fill": "#7F52FF"
+          },
+          "locales": {
+            "en": {
+              "title": "Kotlin"
+            }
+          }
+        },
+        {
+          "id": 274,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-terminal",
+          "faIconColors": {
+            "fill": "#01579B"
+          },
+          "locales": {
+            "en": {
+              "title": "PowerShell Core"
+            }
+          }
+        },
+        {
+          "id": 275,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-diagram-project",
+          "faIconColors": {
+            "fill": "#0052CC"
+          },
+          "locales": {
+            "en": {
+              "title": "Trello"
+            }
+          }
+        },
+        {
+          "id": 276,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-file-excel",
+          "faIconColors": {
+            "fill": "#1D6F42"
+          },
+          "locales": {
+            "en": {
+              "title": "Microsoft Excel (VBA)"
+            }
+          }
+        },
+        {
+          "id": 277,
+          "categoryId": "category_career",
+          "faIcon": "fa-solid fa-file-word",
+          "faIconColors": {
+            "fill": "#2B579A"
+          },
+          "locales": {
+            "en": {
+              "title": "Technical Documentation"
+            }
+          }
+        },
+        {
+          "id": 279,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-newspaper",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Heise Online"
+            }
+          }
+        },
+        {
+          "id": 280,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#D32F2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Golem.de"
+            }
+          }
+        },
+        {
+          "id": 281,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-server",
+          "faIconColors": {
+            "fill": "#D32F2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Hetzner Cloud"
+            }
+          }
+        },
+        {
+          "id": 282,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-cloud",
+          "faIconColors": {
+            "fill": "#005596"
+          },
+          "locales": {
+            "en": {
+              "title": "OVHcloud"
+            }
+          }
+        },
+        {
+          "id": 283,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-shield",
+          "faIconColors": {
+            "fill": "#1F2937"
+          },
+          "locales": {
+            "en": {
+              "title": "TISAX Compliance"
+            }
+          }
+        },
+        {
+          "id": 284,
+          "categoryId": "category_cloud",
+          "faIcon": "fa-solid fa-certificate",
+          "faIconColors": {
+            "fill": "#0091E2"
+          },
+          "locales": {
+            "en": {
+              "title": "ISO Standards"
+            }
+          }
+        },
+        {
+          "id": 286,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Arduino IDE"
+            }
+          }
+        },
+        {
+          "id": 287,
+          "categoryId": "category_phone",
+          "faIcon": "fa-solid fa-house-signal",
+          "faIconColors": {
+            "fill": "#00A4EF"
+          },
+          "locales": {
+            "en": {
+              "title": "FRITZ!App"
+            }
+          }
+        },
+        {
+          "id": 288,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-gauge-high",
+          "faIconColors": {
+            "fill": "#F05032"
+          },
+          "locales": {
+            "en": {
+              "title": "Speedtest CLI"
+            }
+          }
+        },
+        {
+          "id": 289,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-hard-drive",
+          "faIconColors": {
+            "fill": "#4B5563"
+          },
+          "locales": {
+            "en": {
+              "title": "Clonezilla"
+            }
+          }
+        },
+        {
+          "id": 290,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-terminal",
+          "faIconColors": {
+            "fill": "#4E9BCD"
+          },
+          "locales": {
+            "en": {
+              "title": "Moby (Docker Project)"
+            }
+          }
+        },
+        {
+          "id": 291,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-chess-knight",
+          "faIconColors": {
+            "fill": "#C19A6B"
+          },
+          "locales": {
+            "en": {
+              "title": "Mount & Blade: Warband"
+            }
+          }
+        },
+        {
+          "id": 292,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-city",
+          "faIconColors": {
+            "fill": "#00B2FF"
+          },
+          "locales": {
+            "en": {
+              "title": "Cities: Skylines"
+            }
+          }
+        },
+        {
+          "id": 293,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-shuttle-space",
+          "faIconColors": {
+            "fill": "#6B7280"
+          },
+          "locales": {
+            "en": {
+              "title": "Elite Dangerous"
+            }
+          }
+        },
+        {
+          "id": 294,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-explosion",
+          "faIconColors": {
+            "fill": "#E64A19"
+          },
+          "locales": {
+            "en": {
+              "title": "Just Cause 3"
+            }
+          }
+        },
+        {
+          "id": 295,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-helmet-safety",
+          "faIconColors": {
+            "fill": "#FFCC00"
+          },
+          "locales": {
+            "en": {
+              "title": "Factorio (Engineering)"
+            }
+          }
+        },
+        {
+          "id": 296,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#333333"
+          },
+          "locales": {
+            "en": {
+              "title": "Shenzhen I/O"
+            }
+          }
+        },
+        {
+          "id": 297,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-dumbbell",
+          "faIconColors": {
+            "fill": "#1F2937"
+          },
+          "locales": {
+            "en": {
+              "title": "Zwift (Cycling)"
+            }
+          }
+        },
+        {
+          "id": 298,
+          "categoryId": "category_life",
+          "faIcon": "fa-solid fa-headphones",
+          "faIconColors": {
+            "fill": "#FF0000"
+          },
+          "locales": {
+            "en": {
+              "title": "YouTube Music"
+            }
+          }
+        },
+        {
+          "id": 299,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-code-compare",
+          "faIconColors": {
+            "fill": "#0078D4"
+          },
+          "locales": {
+            "en": {
+              "title": "WinMerge"
+            }
+          }
+        },
+        {
+          "id": 300,
+          "categoryId": "category_pc",
+          "faIcon": "fa-solid fa-terminal",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Tmux"
+            }
+          }
+        },
+        {
+          "id": 301,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-earth-americas",
+          "faIconColors": {
+            "fill": "#2c3e50"
+          },
+          "locales": {
+            "en": {
+              "title": "Sid Meier's Civilization VI"
+            }
+          }
+        },
+        {
+          "id": 302,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-rocket",
+          "faIconColors": {
+            "fill": "#0078D7"
+          },
+          "locales": {
+            "en": {
+              "title": "StarCraft II"
+            }
+          }
+        },
+        {
+          "id": 303,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ship",
+          "faIconColors": {
+            "fill": "#A0522D"
+          },
+          "locales": {
+            "en": {
+              "title": "Anno 1800"
+            }
+          }
+        },
+        {
+          "id": 304,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-archway",
+          "faIconColors": {
+            "fill": "#D4AF37"
+          },
+          "locales": {
+            "en": {
+              "title": "Age of Empires IV"
+            }
+          }
+        },
+        {
+          "id": 305,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dragon",
+          "faIconColors": {
+            "fill": "#8B0000"
+          },
+          "locales": {
+            "en": {
+              "title": "Total War: Warhammer III"
+            }
+          }
+        },
+        {
+          "id": 306,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-user-astronaut",
+          "faIconColors": {
+            "fill": "#4B0082"
+          },
+          "locales": {
+            "en": {
+              "title": "Stellaris"
+            }
+          }
+        },
+        {
+          "id": 307,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-crown",
+          "faIconColors": {
+            "fill": "#FFD700"
+          },
+          "locales": {
+            "en": {
+              "title": "Crusader Kings III"
+            }
+          }
+        },
+        {
+          "id": 308,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-alien-8bit",
+          "faIconColors": {
+            "fill": "#00FF00"
+          },
+          "locales": {
+            "en": {
+              "title": "XCOM 2"
+            }
+          }
+        },
+        {
+          "id": 309,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-castle",
+          "faIconColors": {
+            "fill": "#708090"
+          },
+          "locales": {
+            "en": {
+              "title": "Manor Lords"
+            }
+          }
+        },
+        {
+          "id": 310,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-shield-halved",
+          "faIconColors": {
+            "fill": "#B22222"
+          },
+          "locales": {
+            "en": {
+              "title": "Hearts of Iron IV"
+            }
+          }
+        },
+        {
+          "id": 311,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-helmet-safety",
+          "faIconColors": {
+            "fill": "#556B2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Company of Heroes 3"
+            }
+          }
+        },
+        {
+          "id": 312,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#FF0000"
+          },
+          "locales": {
+            "en": {
+              "title": "C&C: Red Alert 3"
+            }
+          }
+        },
+        {
+          "id": 313,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-wand-magic-sparkles",
+          "faIconColors": {
+            "fill": "#483D8B"
+          },
+          "locales": {
+            "en": {
+              "title": "Warcraft III: Reforged"
+            }
+          }
+        },
+        {
+          "id": 314,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-temple",
+          "faIconColors": {
+            "fill": "#DAA520"
+          },
+          "locales": {
+            "en": {
+              "title": "Age of Mythology"
+            }
+          }
+        },
+        {
+          "id": 315,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-map",
+          "faIconColors": {
+            "fill": "#696969"
+          },
+          "locales": {
+            "en": {
+              "title": "Europa Universalis IV"
+            }
+          }
+        },
+        {
+          "id": 316,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-mask",
+          "faIconColors": {
+            "fill": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Assassin's Creed II"
+            }
+          }
+        },
+        {
+          "id": 317,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-skull-crossbones",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "AC IV: Black Flag"
+            }
+          }
+        },
+        {
+          "id": 318,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-helm-battle",
+          "faIconColors": {
+            "fill": "#FFD700"
+          },
+          "locales": {
+            "en": {
+              "title": "Assassin's Creed Odyssey"
+            }
+          }
+        },
+        {
+          "id": 319,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-axe",
+          "faIconColors": {
+            "fill": "#2F4F4F"
+          },
+          "locales": {
+            "en": {
+              "title": "Assassin's Creed Valhalla"
+            }
+          }
+        },
+        {
+          "id": 320,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dagger",
+          "faIconColors": {
+            "fill": "#191970"
+          },
+          "locales": {
+            "en": {
+              "title": "Assassin's Creed Mirage"
+            }
+          }
+        },
+        {
+          "id": 321,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-house-user",
+          "faIconColors": {
+            "fill": "#00BFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "The Sims 4"
+            }
+          }
+        },
+        {
+          "id": 322,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-biohazard",
+          "faIconColors": {
+            "fill": "#808000"
+          },
+          "locales": {
+            "en": {
+              "title": "RimWorld"
+            }
+          }
+        },
+        {
+          "id": 323,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-snowflake",
+          "faIconColors": {
+            "fill": "#00CED1"
+          },
+          "locales": {
+            "en": {
+              "title": "Frostpunk 2"
+            }
+          }
+        },
+        {
+          "id": 324,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-shuttle-space",
+          "faIconColors": {
+            "fill": "#4682B4"
+          },
+          "locales": {
+            "en": {
+              "title": "Kerbal Space Program"
+            }
+          }
+        },
+        {
+          "id": 325,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-conveyor-belt",
+          "faIconColors": {
+            "fill": "#FF8C00"
+          },
+          "locales": {
+            "en": {
+              "title": "Satisfactory"
+            }
+          }
+        },
+        {
+          "id": 326,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-city",
+          "faIconColors": {
+            "fill": "#4169E1"
+          },
+          "locales": {
+            "en": {
+              "title": "Cities: Skylines II"
+            }
+          }
+        },
+        {
+          "id": 327,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-wheat-awn",
+          "faIconColors": {
+            "fill": "#DAA520"
+          },
+          "locales": {
+            "en": {
+              "title": "Stardew Valley"
+            }
+          }
+        },
+        {
+          "id": 328,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-tree",
+          "faIconColors": {
+            "fill": "#228B22"
+          },
+          "locales": {
+            "en": {
+              "title": "Terraria"
+            }
+          }
+        },
+        {
+          "id": 329,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hippo",
+          "faIconColors": {
+            "fill": "#556B2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Planet Zoo"
+            }
+          }
+        },
+        {
+          "id": 330,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ferris-wheel",
+          "faIconColors": {
+            "fill": "#FF1493"
+          },
+          "locales": {
+            "en": {
+              "title": "RollerCoaster Tycoon"
+            }
+          }
+        },
+        {
+          "id": 331,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dna",
+          "faIconColors": {
+            "fill": "#008B8B"
+          },
+          "locales": {
+            "en": {
+              "title": "Jurassic World Evolution 2"
+            }
+          }
+        },
+        {
+          "id": 332,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-sun",
+          "faIconColors": {
+            "fill": "#FFCC00"
+          },
+          "locales": {
+            "en": {
+              "title": "Dyson Sphere Program"
+            }
+          }
+        },
+        {
+          "id": 333,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-mountain",
+          "faIconColors": {
+            "fill": "#A9A9A9"
+          },
+          "locales": {
+            "en": {
+              "title": "Valheim"
+            }
+          }
+        },
+        {
+          "id": 334,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-paw",
+          "faIconColors": {
+            "fill": "#48D1CC"
+          },
+          "locales": {
+            "en": {
+              "title": "Palworld"
+            }
+          }
+        },
+        {
+          "id": 335,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-handcuffs",
+          "faIconColors": {
+            "fill": "#708090"
+          },
+          "locales": {
+            "en": {
+              "title": "Prison Architect"
+            }
+          }
+        },
+        {
+          "id": 336,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-crosshairs",
+          "faIconColors": {
+            "fill": "#FFD700"
+          },
+          "locales": {
+            "en": {
+              "title": "Counter-Strike 2"
+            }
+          }
+        },
+        {
+          "id": 337,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-gun",
+          "faIconColors": {
+            "fill": "#FF4655"
+          },
+          "locales": {
+            "en": {
+              "title": "Valorant"
+            }
+          }
+        },
+        {
+          "id": 338,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-robot",
+          "faIconColors": {
+            "fill": "#F99E1A"
+          },
+          "locales": {
+            "en": {
+              "title": "Overwatch 2"
+            }
+          }
+        },
+        {
+          "id": 339,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-person-running",
+          "faIconColors": {
+            "fill": "#FF0000"
+          },
+          "locales": {
+            "en": {
+              "title": "Apex Legends"
+            }
+          }
+        },
+        {
+          "id": 340,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-building-shield",
+          "faIconColors": {
+            "fill": "#1F2937"
+          },
+          "locales": {
+            "en": {
+              "title": "Rainbow Six Siege"
+            }
+          }
+        },
+        {
+          "id": 341,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-explosion",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Battlefield 2042"
+            }
+          }
+        },
+        {
+          "id": 342,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-parachute-box",
+          "faIconColors": {
+            "fill": "#2E8B57"
+          },
+          "locales": {
+            "en": {
+              "title": "Call of Duty: Warzone"
+            }
+          }
+        },
+        {
+          "id": 343,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-skull",
+          "faIconColors": {
+            "fill": "#8B0000"
+          },
+          "locales": {
+            "en": {
+              "title": "Doom Eternal"
+            }
+          }
+        },
+        {
+          "id": 344,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ghost",
+          "faIconColors": {
+            "fill": "#6A5ACD"
+          },
+          "locales": {
+            "en": {
+              "title": "Destiny 2"
+            }
+          }
+        },
+        {
+          "id": 345,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-user-group",
+          "faIconColors": {
+            "fill": "#B8860B"
+          },
+          "locales": {
+            "en": {
+              "title": "Team Fortress 2"
+            }
+          }
+        },
+        {
+          "id": 346,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-vest",
+          "faIconColors": {
+            "fill": "#556B2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Escape from Tarkov"
+            }
+          }
+        },
+        {
+          "id": 347,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-biohazard",
+          "faIconColors": {
+            "fill": "#00FF00"
+          },
+          "locales": {
+            "en": {
+              "title": "Left 4 Dead 2"
+            }
+          }
+        },
+        {
+          "id": 348,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-cloud",
+          "faIconColors": {
+            "fill": "#F5DEB3"
+          },
+          "locales": {
+            "en": {
+              "title": "BioShock Infinite"
+            }
+          }
+        },
+        {
+          "id": 349,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-vr-cardboard",
+          "faIconColors": {
+            "fill": "#FFA500"
+          },
+          "locales": {
+            "en": {
+              "title": "Half-Life: Alyx"
+            }
+          }
+        },
+        {
+          "id": 350,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-jet-fighter",
+          "faIconColors": {
+            "fill": "#708090"
+          },
+          "locales": {
+            "en": {
+              "title": "Titanfall 2"
+            }
+          }
+        },
+        {
+          "id": 351,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ring",
+          "faIconColors": {
+            "fill": "#FFD700"
+          },
+          "locales": {
+            "en": {
+              "title": "Elden Ring"
+            }
+          }
+        },
+        {
+          "id": 352,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dice-d20",
+          "faIconColors": {
+            "fill": "#800080"
+          },
+          "locales": {
+            "en": {
+              "title": "Baldur's Gate 3"
+            }
+          }
+        },
+        {
+          "id": 353,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#FFFF00"
+          },
+          "locales": {
+            "en": {
+              "title": "Cyberpunk 2077"
+            }
+          }
+        },
+        {
+          "id": 354,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-scroll",
+          "faIconColors": {
+            "fill": "#8B4513"
+          },
+          "locales": {
+            "en": {
+              "title": "The Elder Scrolls V: Skyrim"
+            }
+          }
+        },
+        {
+          "id": 355,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-horse",
+          "faIconColors": {
+            "fill": "#A52A2A"
+          },
+          "locales": {
+            "en": {
+              "title": "Red Dead Redemption 2"
+            }
+          }
+        },
+        {
+          "id": 356,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-fire-flame-simple",
+          "faIconColors": {
+            "fill": "#FF4500"
+          },
+          "locales": {
+            "en": {
+              "title": "Hades II"
+            }
+          }
+        },
+        {
+          "id": 357,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-axe-battle",
+          "faIconColors": {
+            "fill": "#D3D3D3"
+          },
+          "locales": {
+            "en": {
+              "title": "God of War (PC)"
+            }
+          }
+        },
+        {
+          "id": 358,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-bow-arrow",
+          "faIconColors": {
+            "fill": "#4682B4"
+          },
+          "locales": {
+            "en": {
+              "title": "Horizon Zero Dawn"
+            }
+          }
+        },
+        {
+          "id": 359,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dragon",
+          "faIconColors": {
+            "fill": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Monster Hunter: World"
+            }
+          }
+        },
+        {
+          "id": 360,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ninja",
+          "faIconColors": {
+            "fill": "#8B0000"
+          },
+          "locales": {
+            "en": {
+              "title": "Sekiro: Shadows Die Twice"
+            }
+          }
+        },
+        {
+          "id": 361,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-clone",
+          "faIconColors": {
+            "fill": "#FFCB05",
+            "fillLight": "#2A75BB"
+          },
+          "locales": {
+            "en": {
+              "title": "Pokémon TCG Pocket"
+            },
+            "hr": {
+              "title": "Pokémon TCG Pocket"
+            }
+          }
+        },
+        {
+          "id": 362,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-train",
+          "faIconColors": {
+            "fill": "#F9A825",
+            "fillLight": "#F44336"
+          },
+          "locales": {
+            "en": {
+              "title": "Subway Surfers"
+            },
+            "hr": {
+              "title": "Subway Surfers"
+            }
+          }
+        },
+        {
+          "id": 363,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-candy-cane",
+          "faIconColors": {
+            "fill": "#E91E63",
+            "fillLight": "#FFEB3B"
+          },
+          "locales": {
+            "en": {
+              "title": "Candy Crush Saga"
+            },
+            "hr": {
+              "title": "Candy Crush Saga"
+            }
+          }
+        },
+        {
+          "id": 364,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-shield-halved",
+          "faIconColors": {
+            "fill": "#795548",
+            "fillLight": "#FFD700"
+          },
+          "locales": {
+            "en": {
+              "title": "Clash of Clans"
+            },
+            "hr": {
+              "title": "Clash of Clans"
+            }
+          }
+        },
+        {
+          "id": 365,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-fire",
+          "faIconColors": {
+            "fill": "#FF5722",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Garena Free Fire"
+            },
+            "hr": {
+              "title": "Garena Free Fire"
+            }
+          }
+        },
+        {
+          "id": 366,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-cubes",
+          "faIconColors": {
+            "fill": "#FFFFFF",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Roblox"
+            },
+            "hr": {
+              "title": "Roblox"
+            }
+          }
+        },
+        {
+          "id": 367,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-circle-dot",
+          "faIconColors": {
+            "fill": "#000000",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "8 Ball Pool"
+            },
+            "hr": {
+              "title": "8 Ball Pool"
+            }
+          }
+        },
+        {
+          "id": 368,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dice",
+          "faIconColors": {
+            "fill": "#4CAF50",
+            "fillLight": "#FFC107"
+          },
+          "locales": {
+            "en": {
+              "title": "Ludo King"
+            },
+            "hr": {
+              "title": "Ludo King"
+            }
+          }
+        },
+        {
+          "id": 369,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-square",
+          "faIconColors": {
+            "fill": "#2196F3",
+            "fillLight": "#FF9800"
+          },
+          "locales": {
+            "en": {
+              "title": "Block Blast!"
+            },
+            "hr": {
+              "title": "Block Blast!"
+            }
+          }
+        },
+        {
+          "id": 370,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-truck-monster",
+          "faIconColors": {
+            "fill": "#FFEB3B",
+            "fillLight": "#4CAF50"
+          },
+          "locales": {
+            "en": {
+              "title": "Hill Climb Racing"
+            },
+            "hr": {
+              "title": "Hill Climb Racing"
+            }
+          }
+        },
+        {
+          "id": 371,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-person-running",
+          "faIconColors": {
+            "fill": "#795548",
+            "fillLight": "#FFD600"
+          },
+          "locales": {
+            "en": {
+              "title": "Temple Run 2"
+            },
+            "hr": {
+              "title": "Temple Run 2"
+            }
+          }
+        },
+        {
+          "id": 372,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-user-astronaut",
+          "faIconColors": {
+            "fill": "#F44336",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Among Us"
+            },
+            "hr": {
+              "title": "Among Us"
+            }
+          }
+        },
+        {
+          "id": 373,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-star",
+          "faIconColors": {
+            "fill": "#FFC107",
+            "fillLight": "#03A9F4"
+          },
+          "locales": {
+            "en": {
+              "title": "Brawl Stars"
+            },
+            "hr": {
+              "title": "Brawl Stars"
+            }
+          }
+        },
+        {
+          "id": 374,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-bolt",
+          "faIconColors": {
+            "fill": "#9C27B0",
+            "fillLight": "#FFEB3B"
+          },
+          "locales": {
+            "en": {
+              "title": "Marvel Snap"
+            },
+            "hr": {
+              "title": "Marvel Snap"
+            }
+          }
+        },
+        {
+          "id": 375,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-skull-crossbones",
+          "faIconColors": {
+            "fill": "#FF5252",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Dead Cells"
+            },
+            "hr": {
+              "title": "Dead Cells"
+            }
+          }
+        },
+        {
+          "id": 376,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-sparkles",
+          "faIconColors": {
+            "fill": "#81D4FA",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Genshin Impact"
+            },
+            "hr": {
+              "title": "Genshin Impact"
+            }
+          }
+        },
+        {
+          "id": 377,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-train-subway",
+          "faIconColors": {
+            "fill": "#3F51B5",
+            "fillLight": "#FFC107"
+          },
+          "locales": {
+            "en": {
+              "title": "Honkai: Star Rail"
+            },
+            "hr": {
+              "title": "Honkai: Star Rail"
+            }
+          }
+        },
+        {
+          "id": 378,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-person-walking-arrow-right",
+          "faIconColors": {
+            "fill": "#00BCD4",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Stumble Guys"
+            },
+            "hr": {
+              "title": "Stumble Guys"
+            }
+          }
+        },
+        {
+          "id": 379,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-crown",
+          "faIconColors": {
+            "fill": "#FFD700",
+            "fillLight": "#3F51B5"
+          },
+          "locales": {
+            "en": {
+              "title": "Royal Match"
+            },
+            "hr": {
+              "title": "Royal Match"
+            }
+          }
+        },
+        {
+          "id": 380,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-shapes",
+          "faIconColors": {
+            "fill": "#FFAB91",
+            "fillLight": "#4DB6AC"
+          },
+          "locales": {
+            "en": {
+              "title": "Monument Valley"
+            },
+            "hr": {
+              "title": "Monument Valley"
+            }
+          }
+        },
+        {
+          "id": 381,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-car-side",
+          "faIconColors": {
+            "fill": "#4CAF50",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Grand Theft Auto: San Andreas"
+            },
+            "hr": {
+              "title": "Grand Theft Auto: San Andreas"
+            }
+          }
+        },
+        {
+          "id": 382,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-sun",
+          "faIconColors": {
+            "fill": "#E91E63",
+            "fillLight": "#00BCD4"
+          },
+          "locales": {
+            "en": {
+              "title": "Grand Theft Auto: Vice City"
+            },
+            "hr": {
+              "title": "Grand Theft Auto: Vice City"
+            }
+          }
+        },
+        {
+          "id": 383,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-eye-low-vision",
+          "faIconColors": {
+            "fill": "#2E7D32",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Metal Gear Solid 3: Snake Eater"
+            },
+            "hr": {
+              "title": "Metal Gear Solid 3: Snake Eater"
+            }
+          }
+        },
+        {
+          "id": 384,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-cloud-showers-heavy",
+          "faIconColors": {
+            "fill": "#9E9E9E",
+            "fillLight": "#424242"
+          },
+          "locales": {
+            "en": {
+              "title": "Silent Hill 2"
+            },
+            "hr": {
+              "title": "Silent Hill 2"
+            }
+          }
+        },
+        {
+          "id": 385,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-wand-sparkles",
+          "faIconColors": {
+            "fill": "#3F51B5",
+            "fillLight": "#03A9F4"
+          },
+          "locales": {
+            "en": {
+              "title": "Final Fantasy X"
+            },
+            "hr": {
+              "title": "Final Fantasy X"
+            }
+          }
+        },
+        {
+          "id": 386,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-gauge-high",
+          "faIconColors": {
+            "fill": "#BDBDBD",
+            "fillLight": "#D32F2F"
+          },
+          "locales": {
+            "en": {
+              "title": "Gran Turismo 4"
+            },
+            "hr": {
+              "title": "Gran Turismo 4"
+            }
+          }
+        },
+        {
+          "id": 387,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hand-fist",
+          "faIconColors": {
+            "fill": "#D32F2F",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "God of War II"
+            },
+            "hr": {
+              "title": "God of War II"
+            }
+          }
+        },
+        {
+          "id": 388,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-key",
+          "faIconColors": {
+            "fill": "#FFD700",
+            "fillLight": "#1E88E5"
+          },
+          "locales": {
+            "en": {
+              "title": "Kingdom Hearts II"
+            },
+            "hr": {
+              "title": "Kingdom Hearts II"
+            }
+          }
+        },
+        {
+          "id": 389,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-mountain-sun",
+          "faIconColors": {
+            "fill": "#795548",
+            "fillLight": "#E0E0E0"
+          },
+          "locales": {
+            "en": {
+              "title": "Shadow of the Colossus"
+            },
+            "hr": {
+              "title": "Shadow of the Colossus"
+            }
+          }
+        },
+        {
+          "id": 390,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-virus",
+          "faIconColors": {
+            "fill": "#C62828",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Resident Evil 4"
+            },
+            "hr": {
+              "title": "Resident Evil 4"
+            }
+          }
+        },
+        {
+          "id": 391,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hand-back-fist",
+          "faIconColors": {
+            "fill": "#B71C1C",
+            "fillLight": "#FFD600"
+          },
+          "locales": {
+            "en": {
+              "title": "Tekken 5"
+            },
+            "hr": {
+              "title": "Tekken 5"
+            }
+          }
+        },
+        {
+          "id": 392,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-gun",
+          "faIconColors": {
+            "fill": "#0288D1",
+            "fillLight": "#7B1FA2"
+          },
+          "locales": {
+            "en": {
+              "title": "Ratchet & Clank: Up Your Arsenal"
+            },
+            "hr": {
+              "title": "Ratchet & Clank: Up Your Arsenal"
+            }
+          }
+        },
+        {
+          "id": 393,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-volcano",
+          "faIconColors": {
+            "fill": "#EF6C00",
+            "fillLight": "#3E2723"
+          },
+          "locales": {
+            "en": {
+              "title": "Jak 3"
+            },
+            "hr": {
+              "title": "Jak 3"
+            }
+          }
+        },
+        {
+          "id": 394,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-burst",
+          "faIconColors": {
+            "fill": "#F44336",
+            "fillLight": "#FFEB3B"
+          },
+          "locales": {
+            "en": {
+              "title": "Burnout 3: Takedown"
+            },
+            "hr": {
+              "title": "Burnout 3: Takedown"
+            }
+          }
+        },
+        {
+          "id": 395,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-sword",
+          "faIconColors": {
+            "fill": "#B71C1C",
+            "fillLight": "#607D8B"
+          },
+          "locales": {
+            "en": {
+              "title": "Devil May Cry 3"
+            },
+            "hr": {
+              "title": "Devil May Cry 3"
+            }
+          }
+        },
+        {
+          "id": 396,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dragon",
+          "faIconColors": {
+            "fill": "#FFD600",
+            "fillLight": "#1976D2"
+          },
+          "locales": {
+            "en": {
+              "title": "Dragon Quest VIII"
+            },
+            "hr": {
+              "title": "Dragon Quest VIII"
+            }
+          }
+        },
+        {
+          "id": 397,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-graduation-cap",
+          "faIconColors": {
+            "fill": "#37474F",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Bully"
+            },
+            "hr": {
+              "title": "Bully"
+            }
+          }
+        },
+        {
+          "id": 398,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-brush",
+          "faIconColors": {
+            "fill": "#D32F2F",
+            "fillLight": "#FFFFFF"
+          },
+          "locales": {
+            "en": {
+              "title": "Okami"
+            },
+            "hr": {
+              "title": "Okami"
+            }
+          }
+        },
+        {
+          "id": 399,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hands-holding",
+          "faIconColors": {
+            "fill": "#BCAAA4",
+            "fillLight": "#E0E0E0"
+          },
+          "locales": {
+            "en": {
+              "title": "Ico"
+            },
+            "hr": {
+              "title": "Ico"
+            }
+          }
+        },
+        {
+          "id": 400,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hourglass-half",
+          "faIconColors": {
+            "fill": "#FFA000",
+            "fillLight": "#3E2723"
+          },
+          "locales": {
+            "en": {
+              "title": "Prince of Persia: The Sands of Time"
+            },
+            "hr": {
+              "title": "Prince of Persia: The Sands of Time"
+            }
+          }
+        },
+        {
+          "id": 401,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-biohazard",
+          "faIconColors": {
+            "fill": "#5D4037",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "DayZ"
+            },
+            "hr": {
+              "title": "DayZ"
+            }
+          }
+        },
+        {
+          "id": 402,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dungeon",
+          "faIconColors": {
+            "fill": "#F44336",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Dota 2"
+            },
+            "hr": {
+              "title": "Dota 2"
+            }
+          }
+        },
+        {
+          "id": 403,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dice-d20",
+          "faIconColors": {
+            "fill": "#9C27B0",
+            "fillLight": "#FFD700"
+          },
+          "locales": {
+            "en": {
+              "title": "Baldur's Gate 3"
+            },
+            "hr": {
+              "title": "Baldur's Gate 3"
+            }
+          }
+        },
+        {
+          "id": 404,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ring",
+          "faIconColors": {
+            "fill": "#FFB300",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Elden Ring"
+            },
+            "hr": {
+              "title": "Elden Ring"
+            }
+          }
+        },
+        {
+          "id": 405,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-microchip",
+          "faIconColors": {
+            "fill": "#FFFF00",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Cyberpunk 2077"
+            },
+            "hr": {
+              "title": "Cyberpunk 2077"
+            }
+          }
+        },
+        {
+          "id": 406,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-earth-americas",
+          "faIconColors": {
+            "fill": "#FFD600",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Helldivers 2"
+            },
+            "hr": {
+              "title": "Helldivers 2"
+            }
+          }
+        },
+        {
+          "id": 407,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-tree",
+          "faIconColors": {
+            "fill": "#4CAF50",
+            "fillLight": "#795548"
+          },
+          "locales": {
+            "en": {
+              "title": "Terraria"
+            },
+            "hr": {
+              "title": "Terraria"
+            }
+          }
+        },
+        {
+          "id": 408,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-walkie-talkie",
+          "faIconColors": {
+            "fill": "#F44336",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Lethal Company"
+            },
+            "hr": {
+              "title": "Lethal Company"
+            }
+          }
+        },
+        {
+          "id": 409,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-bat",
+          "faIconColors": {
+            "fill": "#B71C1C",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Vampire Survivors"
+            },
+            "hr": {
+              "title": "Vampire Survivors"
+            }
+          }
+        },
+        {
+          "id": 410,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-skull",
+          "faIconColors": {
+            "fill": "#4CAF50",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Hades II"
+            },
+            "hr": {
+              "title": "Hades II"
+            }
+          }
+        },
+        {
+          "id": 411,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-wheat-awn",
+          "faIconColors": {
+            "fill": "#FFA726",
+            "fillLight": "#4CAF50"
+          },
+          "locales": {
+            "en": {
+              "title": "Stardew Valley"
+            },
+            "hr": {
+              "title": "Stardew Valley"
+            }
+          }
+        },
+        {
+          "id": 412,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-bug",
+          "faIconColors": {
+            "fill": "#FFFFFF",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Hollow Knight"
+            },
+            "hr": {
+              "title": "Hollow Knight"
+            }
+          }
+        },
+        {
+          "id": 413,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-clover",
+          "faIconColors": {
+            "fill": "#1976D2",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Slay the Spire"
+            },
+            "hr": {
+              "title": "Slay the Spire"
+            }
+          }
+        },
+        {
+          "id": 414,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-wrench",
+          "faIconColors": {
+            "fill": "#E65100",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Team Fortress 2"
+            },
+            "hr": {
+              "title": "Team Fortress 2"
+            }
+          }
+        },
+        {
+          "id": 415,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-hammer",
+          "faIconColors": {
+            "fill": "#795548",
+            "fillLight": "#000000"
+          },
+          "locales": {
+            "en": {
+              "title": "Rust"
+            },
+            "hr": {
+              "title": "Rust"
+            }
+          }
+        },
+        {
+          "id": 416,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-ghost",
+          "faIconColors": {
+            "fill": "#FFFFFF",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Phasmophobia"
+            },
+            "hr": {
+              "title": "Phasmophobia"
+            }
+          }
+        },
+        {
+          "id": 417,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-landmark",
+          "faIconColors": {
+            "fill": "#FFB300",
+            "fillLight": "#1E88E5"
+          },
+          "locales": {
+            "en": {
+              "title": "Civilization VI"
+            },
+            "hr": {
+              "title": "Civilization VI"
+            }
+          }
+        },
+        {
+          "id": 418,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-dragon",
+          "faIconColors": {
+            "fill": "#E0E0E0",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Monster Hunter Wilds"
+            },
+            "hr": {
+              "title": "Monster Hunter Wilds"
+            }
+          }
+        },
+        {
+          "id": 419,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-spade",
+          "faIconColors": {
+            "fill": "#D32F2F",
+            "fillLight": "#212121"
+          },
+          "locales": {
+            "en": {
+              "title": "Balatro"
+            },
+            "hr": {
+              "title": "Balatro"
+            }
+          }
+        },
+        {
+          "id": 420,
+          "categoryId": "category_igre",
+          "faIcon": "fa-solid fa-gears",
+          "faIconColors": {
+            "fill": "#FF9800",
+            "fillLight": "#424242"
+          },
+          "locales": {
+            "en": {
+              "title": "Factorio"
+            },
+            "hr": {
+              "title": "Factorio"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+

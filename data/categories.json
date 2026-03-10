@@ -1,0 +1,59 @@
+{
+  "categories": [
+    {
+      "id": "home",
+      "faIcon": "fa-solid fa-house",
+      "locales": {
+        "en": {
+          "title": "Home"
+        },
+        "de": {
+          "title": "Home"
+        },
+        "hr": {
+          "title": "Početna"
+        },
+        "tr": {
+          "title": "Ana sayfa"
+        }
+      }
+    },
+    {
+      "id": "experience",
+      "faIcon": "fa-solid fa-mountain-sun",
+      "locales": {
+        "en": {
+          "title": "Experience"
+        },
+        "de": {
+          "title": "Erlebnis"
+        },
+        "hr": {
+          "title": "Doživljaj"
+        },
+        "tr": {
+          "title": "Deneyim"
+        }
+      }
+    },
+    {
+      "id": "contact",
+      "faIcon": "fa-solid fa-envelope-open-text",
+      "locales": {
+        "en": {
+          "title": "Contact us"
+        },
+        "de": {
+          "title": "Kontakt"
+        },
+        "hr": {
+          "title": "Kontakt"
+        },
+        "tr": {
+          "title": "Bize ulaşın"
+        }
+      }
+    }
+  ]
+}
+
