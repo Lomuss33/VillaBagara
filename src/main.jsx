@@ -5,6 +5,7 @@ import {useApi} from "/src/hooks/api.js"
 import {useConstants} from "/src/hooks/constants.js"
 import {useUtils} from "/src/hooks/utils.js"
 import Preloader from "/src/components/loaders/Preloader.jsx"
+import StartupScreen from "/src/components/loaders/StartupScreen.jsx"
 import DataProvider, {useData} from "/src/providers/DataProvider.jsx"
 import LanguageProvider from "/src/providers/LanguageProvider.jsx"
 import ViewportProvider from "/src/providers/ViewportProvider.jsx"
@@ -14,17 +15,6 @@ import FeedbacksProvider from "/src/providers/FeedbacksProvider.jsx"
 import InputProvider from "/src/providers/InputProvider.jsx"
 import NavigationProvider from "/src/providers/NavigationProvider.jsx"
 import Portfolio from "/src/components/Portfolio.jsx"
-
-/** Initialization Script... **/
-let container = null
-
-document.addEventListener('DOMContentLoaded', function(event) {
-    if(container)
-        return
-
-    container = document.getElementById('root')
-    createRoot(document.getElementById('root')).render(<App/>)
-})
 
 /**
  * This is the main app component. It wraps the content of the app with AppEssentialsWrapper and AppCapabilitiesWrapper.
@@ -52,24 +42,48 @@ const AppEssentialsWrapper = ({children}) => {
     const utils = useUtils()
     const constants = useConstants()
 
-    const [settings, setSettings] = useState()
+    const [settings, setSettings] = useState(null)
+    const [startupError, setStartupError] = useState("")
 
     useEffect(() => {
-        if (window.location.pathname !== utils.file.BASE_URL)
-            window.history.pushState({}, '', utils.file.BASE_URL)
+        let isMounted = true
 
-        utils.file.loadJSON("/data/settings.json").then(response => {
-            _applyDeveloperSettings(response)
-            setSettings(response)
+        const bootstrapApplication = async() => {
+            const baseUrl = utils.file.BASE_URL || "/"
+            if(window.location.pathname !== baseUrl) {
+                window.history.replaceState({}, '', `${baseUrl}${window.location.search}${window.location.hash}`)
+            }
 
-            const consoleMessageForDevelopers = response?.consoleMessageForDevelopers
+            const response = await utils.file.loadJSON("data/settings.json")
+            if(!isMounted)
+                return
+
+            if(!response) {
+                setStartupError("The site settings could not be loaded. Check the deployed base path and the public data files.")
+                return
+            }
+
+            const preparedSettings = _applyDeveloperSettings(response)
+            setSettings(preparedSettings)
+
+            const consoleMessageForDevelopers = preparedSettings?.consoleMessageForDevelopers
             if(consoleMessageForDevelopers) {
                 const primaryColor = utils.css.getRootSCSSVariable('--bs-primary')
                 utils.log.info(consoleMessageForDevelopers.title, consoleMessageForDevelopers.items, primaryColor)
             }
+        }
+
+        bootstrapApplication().catch(() => {
+            if(!isMounted)
+                return
+            setStartupError("Villa Bagara could not finish booting.")
         })
 
-        api.analytics.reportVisit().then(() => {})
+        api.analytics.reportVisit().catch(() => {})
+
+        return () => {
+            isMounted = false
+        }
     }, [])
 
     const _applyDeveloperSettings = (settings) => {
@@ -97,17 +111,33 @@ const AppEssentialsWrapper = ({children}) => {
             utils.storage.setWindowVariable("stayOnThePreloaderScreen", true)
             utils.log.warn("DataProvider", "Preloader screen will be displayed indefinitely because the developer flag 'stayOnThePreloaderScreen' is on. This is only for development purposes and will be disabled automatically in production.")
         }
+
+        return settings
+    }
+
+    if(startupError) {
+        return (
+            <StartupScreen title={"Villa Bagara"}
+                           errorMessage={startupError}/>
+        )
+    }
+
+    if(!settings) {
+        return (
+            <StartupScreen title={"Villa Bagara"}
+                           message={"Loading the site..."}/>
+        )
     }
 
     return (
         <StrictMode>
-            {settings && (
-                <Preloader preloaderSettings={settings["preloaderSettings"]}>
-                    <DataProvider settings={settings}>
-                        {children}
-                    </DataProvider>
-                </Preloader>
-            )}
+            <Preloader preloaderSettings={settings["preloaderSettings"]}>
+                <DataProvider settings={settings}
+                              loadingFallback={<StartupScreen title={"Villa Bagara"}
+                                                              message={"Preparing stay details..."} />}>
+                    {children}
+                </DataProvider>
+            </Preloader>
         </StrictMode>
     )
 }
@@ -160,4 +190,9 @@ const AppCapabilitiesWrapper = ({ children }) => {
             </ViewportProvider>
         </LanguageProvider>
     )
+}
+
+const container = document.getElementById('root')
+if(container) {
+    createRoot(container).render(<App/>)
 }

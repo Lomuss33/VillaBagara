@@ -7,7 +7,7 @@
 import React, {createContext, useContext, useEffect, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 
-function DataProvider({ children, settings }) {
+function DataProvider({ children, settings, loadingFallback = null }) {
     const utils = useUtils()
 
     const DataProviderStatus = {
@@ -75,10 +75,12 @@ function DataProvider({ children, settings }) {
     }, [status === DataProviderStatus.STATUS_LOADED])
 
     const _loadData = async () => {
-        const jStrings = await utils.file.loadJSON("/data/strings.json")
-        const jProfile = await utils.file.loadJSON("/data/profile.json")
-        const jCategories = await utils.file.loadJSON("/data/categories.json")
-        const jSections = await utils.file.loadJSON("/data/sections.json")
+        const [jStrings, jProfile, jCategories, jSections] = await Promise.all([
+            utils.file.loadJSON("data/strings.json"),
+            utils.file.loadJSON("data/profile.json"),
+            utils.file.loadJSON("data/categories.json"),
+            utils.file.loadJSON("data/sections.json")
+        ])
 
         if(!jStrings || !jProfile || !jCategories || !jSections) {
             return {
@@ -141,22 +143,24 @@ function DataProvider({ children, settings }) {
     }
 
     const _loadSectionsData = async (sections) => {
-        for(const section of sections) {
+        const results = await Promise.all(sections.map(async(section) => {
             const sectionJsonPath = section.jsonPath
-            if(sectionJsonPath) {
-                const jSectionData = await utils.file.loadJSON(sectionJsonPath)
-                if(!jSectionData) {
-                    return {
-                        success: false,
-                        message: `Failed to load section data from "${sectionJsonPath}".`
-                    }
+            if(!sectionJsonPath)
+                return {success: true}
+
+            const jSectionData = await utils.file.loadJSON(sectionJsonPath)
+            if(!jSectionData) {
+                return {
+                    success: false,
+                    message: `Failed to load section data from "${sectionJsonPath}".`
                 }
-
-                section.data = jSectionData
             }
-        }
 
-        return {success: true}
+            section.data = jSectionData
+            return {success: true}
+        }))
+
+        return results.find(result => !result.success) || {success: true}
     }
 
     const _validateData = () => {
@@ -209,6 +213,10 @@ function DataProvider({ children, settings }) {
         }}>
             {status === DataProviderStatus.STATUS_EVALUATED && (
                 <>{children}</>
+            )}
+
+            {status !== DataProviderStatus.STATUS_EVALUATED && status !== DataProviderStatus.STATUS_FAILED && (
+                <>{loadingFallback}</>
             )}
 
             {status === DataProviderStatus.STATUS_FAILED && (

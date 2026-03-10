@@ -3,8 +3,10 @@
 div.preloader-window {
     position: fixed;
     z-index: $z-index-loader;
-    background-color: $loader-background;
     color: $loader-contrast;
+    background:
+        radial-gradient(circle at top, rgba(230, 177, 73, 0.12), transparent 30%),
+        linear-gradient(180deg, rgba(12, 8, 5, 0.98) 0%, rgba(8, 5, 3, 1) 100%);
 
     width: 100vw;
     height: 125vh;
@@ -15,13 +17,13 @@ div.preloader-window {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 24px;
 }
 
 div.preloader-window-hidden {
     top: -15.5vh;
     opacity: 0;
-    transition: 0.3s all ease-in;
+    transition: 0.45s all ease-in;
     pointer-events: none;
 }
 
@@ -29,29 +31,13 @@ div.preloader-window-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    width: min(520px, 100%);
     pointer-events: none;
     user-select: none;
+    transition: 0.45s opacity ease-out, 0.45s transform ease-out;
 }
 
-div.preloader-window-info {
-    margin-top: 12px;
-    transition: 0.3s opacity ease-out, 0.3s transform ease-out;
-}
-
-div.preloader-window-info-hidden {
+div.preloader-window-content-hidden {
     opacity: 0;
-    transform: translateY(30px);
-    transition: none;
-}
-
-div.preloader-window-info-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div.preloader-window-info-developer {
-    opacity: 0.5;
-    text-align: center;
+    transform: translateY(22px);
 }

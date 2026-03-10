@@ -6,7 +6,7 @@
     "version": "1.0.1"
   },
   "preloaderSettings": {
-    "enabled": false,
+    "enabled": true,
     "title": "Villa <b>Bagara</b>",
     "subtitle": "Mountain land. Quiet comfort. Thoughtful stays.",
     "logoOffset": {

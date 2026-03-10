@@ -2,9 +2,27 @@
 
 div.logo-wrapper {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     img {
         width: 100%;
+        height: 100%;
     }
+}
+
+div.logo-fallback {
+    width: 100%;
+    height: 100%;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 0.42em;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-indent: 0.18em;
 }
 
 div.logo-wrapper-size-1 {
