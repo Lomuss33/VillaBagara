@@ -6,13 +6,16 @@ User-facing clickable controls are documented in [USER_GUIDE.md](./USER_GUIDE.md
 
 ## Overview
 
-This repo is a Vite + React single-page portfolio/resume site. It is content-driven: most day-to-day changes happen in `public/data`, not in React components.
+This repo is the Villa Bagara Vite + React static website, adapted from a portfolio template. It is content-driven: most day-to-day changes happen in `public/data`, not in React components. Agent onboarding starts in [AGENTS.md](AGENTS.md); release instructions live in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
 ## Commands
 
 - `npm run dev`: start local development
 - `npm run build`: produce a production build
 - `npm run lint`: run ESLint
+- `npm run check:static`: validate active section schemas, locale coverage, and case-sensitive asset paths
+- `npm run check:docs`: check documentation links and agent word budgets
+- `npm run check`: run lint, docs/content checks, production build, and artifact checks
 - `npm run resume:make:article <ArticleName>`: scaffold a new article component and register it
 - `npm run resume:clear`: reset the repo to a blank template state
 
@@ -91,10 +94,23 @@ Change navigation or transitions:
 
 Before merging changes, run:
 
-1. `npm run lint`
-2. `npm run build`
+1. `npm run check`
+2. Inspect the changed UI at desktop/mobile sizes when applicable. For deployment changes, follow the production base-path preview in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
-## Known Quirks
+## Image and context budgets
 
-- The app is deployed with Vite `base: "/myWebsite/"`, so asset and path handling assumes that base path.
-- The preloader waits for image preload completion through `LayoutImageCache`, so missing image paths can affect perceived startup behavior.
+`scripts/budgets.json` is the source of truth for the agent word limits and production payload limits. `npm run check` enforces them. The estate image is served as `front-porch.webp` (approximately 518 KB, 85% smaller than the PNG); the original PNG remains available for social metadata.
+
+To reproduce the WebP export without adding an application dependency:
+
+```sh
+npm exec --yes --package=sharp-cli@6.1.0 -- sharp -i public/images/villa_bagara/estate/front-porch.png -o public/images/villa_bagara/estate/front-porch.webp -f webp -q 85
+```
+
+Inspect the output before committing. When changing a payload budget, record the measured reason in `docs/STATE.md`. Dependabot proposes weekly npm and GitHub Actions updates; CI validates them before review.
+
+## Hosting Notes
+
+- GitHub Actions derives the project base from `GITHUB_REPOSITORY`; this repo publishes under `/VillaBagara/`. Local development defaults to `/`, with `VITE_BASE_PATH` as an override.
+- `LayoutImageCache` defers image caching. Keep this work outside the initial render; use `npm run check:static` to catch missing files before publishing.
+- Static publishing does not provide an email backend. Contact delivery uses the configured external EmailJS service.

@@ -16,10 +16,10 @@ This file explains the visible clickable controls in the website and what each o
 - On desktop, the left sidebar is the main navigation.
 - On mobile, the current section links appear near the top and the category tabs appear at the bottom.
 
-### Category tabs
+### Mobile tabs
 
-- Bottom tabs on mobile switch between the top-level groups like Home, History, Hobbys, and Contact.
-- When a category contains multiple sections, the app remembers the last visited section inside that category.
+- Bottom tabs provide shortcuts to First page, Stay, Services, and Story (translated into the selected language).
+- The mobile header provides additional section links. The floating contact button opens the contact section.
 
 ## Profile Area
 

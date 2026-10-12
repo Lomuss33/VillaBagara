@@ -1,7 +1,6 @@
 import "/src/styles/app.scss"
 import {StrictMode, useEffect, useState} from 'react'
 import {createRoot} from 'react-dom/client'
-import {useApi} from "/src/hooks/api.js"
 import {useConstants} from "/src/hooks/constants.js"
 import {useUtils} from "/src/hooks/utils.js"
 import Preloader from "/src/components/loaders/Preloader.jsx"
@@ -38,7 +37,6 @@ const App = () => {
  * @constructor
  */
 const AppEssentialsWrapper = ({children}) => {
-    const api = useApi()
     const utils = useUtils()
     const constants = useConstants()
 
@@ -78,8 +76,6 @@ const AppEssentialsWrapper = ({children}) => {
                 return
             setStartupError("Villa Bagara could not finish booting.")
         })
-
-        api.analytics.reportVisit().catch(() => {})
 
         return () => {
             isMounted = false

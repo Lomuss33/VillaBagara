@@ -1,12 +1,26 @@
-# myWebsite
+# Villa Bagara
 
-Personal portfolio/resume site built with Vite, React, SCSS, and JSON-driven content.
+Villa Bagara website built with Vite, React, SCSS, and JSON-driven content.
 
 ## Quick Start
 
-- `npm run dev`
-- `npm run lint`
-- `npm run build`
+Install Node.js 24 with npm (`.nvmrc`), then run these commands from the repository root:
+
+```sh
+npm ci
+npm run dev
+```
+
+Open the local URL printed by Vite (normally `http://localhost:5173/`). Keep the terminal running while developing; press `Ctrl+C` to stop the server.
+
+Other commands:
+
+- `npm run lint`: check the application code
+- `npm run check:static`: validate active content and asset paths
+- `npm run check:docs`: check documentation links and agent word budgets
+- `npm run check`: run lint, docs/content validation, production build, and artifact checks
+- `npm run build`: create a production build in `dist/`
+- `npm run preview`: serve the production build locally
 
 ## Repo Structure
 
@@ -14,6 +28,14 @@ Personal portfolio/resume site built with Vite, React, SCSS, and JSON-driven con
 - `public/data/`: settings, profile, strings, sections, and section content
 - `public/images/`: static assets
 - `npm/`: helper scripts for scaffolding/resetting template content
+- `scripts/`: development/CI validation
+- `docs/`: current handoff, delivery plan, and deployment instructions
+
+## GitHub Pages and AI Agents
+
+The target is `https://lomuss33.github.io/VillaBagara/`. The prepared workflow checks pull requests and deploys pushes to `main`; first select **GitHub Actions** in repository Pages settings. See [deployment instructions](docs/DEPLOYMENT.md) for local production checks, publication, and rollback.
+
+Agents start with [AGENTS.md](AGENTS.md) and the short [current state](docs/STATE.md). The [delivery plan](docs/PLAN.md) maps priorities, acceptance criteria, and the documentation system. Detailed guides below are read as needed.
 
 ## Content Editing
 

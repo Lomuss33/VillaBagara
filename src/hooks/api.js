@@ -14,8 +14,7 @@ const utils = useUtils()
 export const useApi = () => {
     return {
         validators,
-        handlers,
-        analytics
+        handlers
     }
 }
 
@@ -49,7 +48,7 @@ const validators = {
                 custom_subject: subject,
                 message: message,
                 custom_source: utils.url.getAbsoluteLocation(),
-                custom_source_name: "React Portfolio"
+                custom_source_name: "Villa Bagara"
             }
         }
     }
@@ -88,25 +87,5 @@ const handlers = {
         }
 
         return response
-    }
-}
-
-const analytics = {
-    /**
-     * @description This method can be used to report a visit to an external analytics service.
-     * Here, you can integrate Google Analytics, Mixpanel, or your own custom analytics implementation.
-     * @returns {Promise<void>}
-     */
-    reportVisit: async() => {
-        await fetch("https://admin.lovro-music.com/api/analytics/mock", {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                params: {
-                    url: utils.url.getRootLocation(),
-                    template_id: "react-portfolio"
-                }
-            })
-        })
     }
 }
