@@ -9,7 +9,7 @@ Goal: reliable GitHub Pages hosting and fast agent onboarding with small, accura
 | 1. Prepare | Modern workflow in `.github/workflows/deploy.yml`; Pages paths in `vite.config.js`/`index.html`; dependency patches; static checks in `scripts/` | Locked install, lint, content/build checks, zero current audit findings, desktop/mobile production preview |
 | 2. Publish | Follow `docs/DEPLOYMENT.md`; switch repository Pages source to GitHub Actions; push reviewed changes to `main` | Green build/deploy, live assets without 404s, hash-route refreshes, correct share metadata |
 | 3. Confirm guest flows | Gallery, language/theme tools, mobile tabs, WhatsApp/e-mail destinations; EmailJS provider configuration | Browser checks and owner-confirmed message delivery; record remaining service limitations in `docs/STATE.md` |
-| 4. Improve performance | WebP estate image implemented in `public/images/` and active JSON content; limits in `scripts/budgets.json` | 3,495,768 to 517,906 bytes (85% reduction), preserved dimensions; production JS/CSS stays below 270 KB gzip. Responsive variants are a future improvement |
+| 4. Improve performance | WebP estate image and responsive derivatives in `public/images/`; manifest/candidates in `ImageView`; limits in `scripts/budgets.json` | PNG to full WebP: 85% smaller. The 480px candidate is 57,832 bytes (89% below full WebP); 960px is 222,674 bytes. Gallery keeps full resolution; production JS/CSS stays below 270 KB gzip. See `docs/IMAGES.md` |
 | 5. Maintain | CI checks documentation links, agent word limits, content, metadata, and payload budgets; Dependabot checks npm/actions weekly | Passing CI and dated handoff evidence; updates receive review before merge |
 
 Stages 1, 2, and 4 are complete: the release is published and live desktop/mobile checks pass. Maintenance checks and weekly update proposals are configured. External contact delivery requires owner verification; keyboard/accessibility work is the next engineering priority described in `docs/REFERENCE_MYWEBSITE.md`.
@@ -23,6 +23,7 @@ Stages 1, 2, and 4 are complete: the release is published and live desktop/mobil
 | `docs/PLAN.md` | Priorities, acceptance criteria, design decisions | Read for planning; update when scope or priorities change |
 | `docs/DEPLOYMENT.md` | Pages setup, exact preview steps, rollback | Read when touching hosting or release configuration |
 | `docs/REFERENCE_MYWEBSITE.md` | Reference capabilities, owners, compatibility, proposed improvements | Read when adapting a myWebsite feature; recheck owning source before implementation |
+| `docs/IMAGES.md` | Responsive assets, regeneration and validation | Read only for image or image-loading changes |
 | `MAINTANER.md` / `USER_GUIDE.md` | Existing schema details / visible UI behavior | Read only for the relevant implementation or interface task |
 | Git commits and PR descriptions | Durable change history and review evidence | Consult scoped history; keep transcripts and raw logs out of agent context |
 
@@ -35,7 +36,7 @@ The [reference guide](REFERENCE_MYWEBSITE.md) records the 2026-10-12 comparison 
 | Order | Work | Acceptance |
 | --- | --- | --- |
 | 1 | Named, keyboard-reachable compact navigation and language/theme tools | Localized names, focus and native control behavior; desktop/mobile navigation retain correct hashes |
-| 2 | Measure responsive thumbnail variants against the existing estate WebP | Smaller measured transfers justify derivatives; base-aware candidates, cached/source-change behavior and full-resolution gallery pass |
+| 2 | Responsive thumbnail variants complete | Cold Home uses 57,832 bytes; gallery tiles share one full-resolution download. Both bases, cached navigation, resizing and 390px layout pass; JS/CSS is 244,927 bytes gzip |
 | 3 | Viewport, scrolling, overlay and animation lifecycle | Navigation agrees after resize; contact stays reachable; modal dismissal and pause/resume preserve interaction; reduced motion works |
 | 4 | Configurable guest photo/text blocks, then content-backed filters/location/decoration | Four locales/two themes reflow; keyboard/touch pass; performance remains within current budgets |
 

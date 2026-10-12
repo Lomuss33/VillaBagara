@@ -52,6 +52,7 @@ function ArticleGalleryWallItem({ itemWrapper }) {
               tooltip={language.getString("open_gallery")}
               className={`article-gallery-wall-item`}>
             <ImageView src={itemWrapper.img}
+                       responsive={false}
                        alt={itemWrapper.imageAlt}
                        className={`article-gallery-wall-image-view`}/>
 

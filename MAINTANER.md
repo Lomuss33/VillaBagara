@@ -99,15 +99,15 @@ Before merging changes, run:
 
 ## Image and context budgets
 
-`scripts/budgets.json` is the source of truth for the agent word limits and production payload limits. `npm run check` enforces them. The estate image is served as `front-porch.webp` (approximately 518 KB, 85% smaller than the PNG); the original PNG remains available for social metadata.
+`scripts/budgets.json` is the source of truth for the agent word limits and production payload limits. `npm run check` enforces them. Estate thumbnails select 480px/960px WebPs; the gallery retains `front-porch.webp` (approximately 518 KB, 85% smaller than the PNG). The original PNG remains available for social metadata.
 
-To reproduce the WebP export without adding an application dependency:
+To regenerate all candidates and their manifest without adding an application dependency:
 
 ```sh
-npm exec --yes --package=sharp-cli@6.1.0 -- sharp -i public/images/villa_bagara/estate/front-porch.png -o public/images/villa_bagara/estate/front-porch.webp -f webp -q 85
+npm run images:responsive
 ```
 
-Inspect the output before committing. When changing a payload budget, record the measured reason in `docs/STATE.md`. Dependabot proposes weekly npm and GitHub Actions updates; CI validates them before review.
+Inspect and commit the outputs together; [docs/IMAGES.md](docs/IMAGES.md) lists source owners and validation. When changing a payload budget, record the measured reason in `docs/STATE.md`. Dependabot proposes weekly npm and GitHub Actions updates; CI validates them before review.
 
 ## Hosting Notes
 

@@ -18,6 +18,7 @@ Read [docs/STATE.md](docs/STATE.md) for verified progress and the next task. Rea
 | Deployment | `docs/DEPLOYMENT.md`, `.github/workflows/deploy.yml`, `vite.config.js`, `index.html` |
 | Priorities and decisions | `docs/PLAN.md`; history: `git log -5 --oneline` |
 | CI limits and checks | `scripts/budgets.json`, `scripts/check-*.mjs` |
+| Responsive photos | `docs/IMAGES.md`; regenerate with `npm run images:responsive` |
 | Learn or adapt from myWebsite | `docs/REFERENCE_MYWEBSITE.md`; compare matching source owners before porting |
 
 ## Work efficiently

@@ -2,6 +2,9 @@ import {readFileSync, readdirSync} from 'node:fs'
 import {join} from 'node:path'
 import {fileURLToPath} from 'node:url'
 import {gzipSync} from 'node:zlib'
+import imageManifest from '../src/data/generated/imageManifest.generated.js'
+import {imageDimensions} from './lib/image-dimensions.mjs'
+import {resolveResponsiveImage} from '../src/hooks/utils/_image-utils.js'
 
 const fromDist = process.argv.includes('--dist')
 const workspace = fileURLToPath(new URL('../', import.meta.url))
@@ -83,6 +86,38 @@ for(const section of sections) {
 }
 for(const category of categories) expect(sections.some(section => section.categoryId === category.id), `Empty category: ${category.id}`)
 for(const [name, content] of Object.entries({settings, profile, strings, categories, sections})) validateTree(content, name)
+
+for(const [source, image] of Object.entries(imageManifest)) {
+    expect(files.has(source), `Responsive source is missing or has incorrect letter case: ${source}`)
+    expect(image.variants.length >= 2, `${source}: expected responsive variants`)
+    let previousWidth = 0
+    for(const variant of image.variants) {
+        expect(files.has(variant.src), `Responsive variant is missing or has incorrect letter case: ${variant.src}`)
+        expect(variant.width > previousWidth && variant.width <= image.width, `${variant.src}: widths must increase without upscaling`)
+        previousWidth = variant.width
+        if(!files.has(variant.src)) continue
+        const bytes = readFileSync(join(root, variant.src))
+        const dimensions = imageDimensions(bytes)
+        expect(dimensions?.width === variant.width && dimensions?.height === variant.height, `${variant.src}: binary dimensions disagree with the manifest`)
+        expect(Math.abs(variant.width / variant.height - image.width / image.height) < 0.01, `${variant.src}: aspect ratio changed`)
+        const limit = budgets.estateThumbnailBytes[variant.width]
+        if(limit) expect(bytes.length <= limit, `${variant.src}: ${bytes.length} bytes exceeds ${limit}`)
+    }
+    const full = image.variants.at(-1)
+    expect(full.src === source && full.width === image.width && full.height === image.height, `${source}: full-resolution gallery source must remain available`)
+    // Exercise the same candidate resolver used by ImageView at both supported bases.
+    for(const base of ['/', '/VillaBagara/']) {
+        const resolved = resolveResponsiveImage(source, path => base + path)
+        for(const candidate of resolved.srcSet.split(', ')) {
+            const [url, width] = candidate.split(' ')
+            const valid = url.startsWith(base) && files.has(url.slice(base.length))
+            expect(valid, `Invalid responsive candidate: ${candidate}`)
+            if(!valid) continue
+            const dimensions = imageDimensions(readFileSync(join(root, url.slice(base.length))))
+            expect(`${dimensions?.width}w` === width, `Incorrect responsive width descriptor: ${candidate}`)
+        }
+    }
+}
 
 if(fromDist) {
     const repository = process.env.GITHUB_REPOSITORY?.split('/')[1]

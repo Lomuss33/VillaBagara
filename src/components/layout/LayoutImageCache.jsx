@@ -3,6 +3,7 @@ import "./LayoutImageCache.scss"
 // React 18 forwards this native HTML attribute without a warning when it is lowercase.
 import React, {useEffect, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
+import {getResponsiveImage} from "/src/hooks/utils/_image-utils.js"
 
 function LayoutImageCache({ profile, settings, sections }) {
     const utils = useUtils()
@@ -53,7 +54,8 @@ function LayoutImageCache({ profile, settings, sections }) {
         })
     }
 
-    const filtered = [...imagesToCache].filter(image => image && !image.includes('{theme}'))
+    // Responsive views cache their chosen candidate; prefetching the full photo wastes bandwidth.
+    const filtered = [...imagesToCache].filter(image => image && !image.includes('{theme}') && !getResponsiveImage(image))
 
     if(!isCacheReady || filtered.length === 0)
         return null
