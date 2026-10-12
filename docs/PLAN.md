@@ -12,7 +12,7 @@ Goal: reliable GitHub Pages hosting and fast agent onboarding with small, accura
 | 4. Improve performance | WebP estate image implemented in `public/images/` and active JSON content; limits in `scripts/budgets.json` | 3,495,768 to 517,906 bytes (85% reduction), preserved dimensions; production JS/CSS stays below 270 KB gzip. Responsive variants are a future improvement |
 | 5. Maintain | CI checks documentation links, agent word limits, content, metadata, and payload budgets; Dependabot checks npm/actions weekly | Passing CI and dated handoff evidence; updates receive review before merge |
 
-Stages 1 and 4 pass local verification, recorded in `docs/STATE.md`. Publication/live verification is the next step. Maintenance checks and weekly update proposals are configured; external contact delivery requires owner verification.
+Stages 1, 2, and 4 are complete: the release is published and live desktop/mobile checks pass. Maintenance checks and weekly update proposals are configured. External contact delivery requires owner verification; keyboard/accessibility work is the next engineering priority described in `docs/REFERENCE_MYWEBSITE.md`.
 
 ## Small documentation system
 

@@ -2,10 +2,12 @@
 
 Target: [Villa Bagara](https://lomuss33.github.io/VillaBagara/). Source: `main`. Published artifact: `dist/`.
 
-## First publication with the new workflow
+GitHub Pages is configured for **GitHub Actions**. Release `560a763` was published and verified on 2026-10-12: [successful build and deployment](https://github.com/Lomuss33/VillaBagara/actions/runs/38282721363).
+
+## Publication and migration procedure
 
 1. Review the local changes and run the checks below.
-2. Open [repository Pages settings](https://github.com/Lomuss33/VillaBagara/settings/pages). Under **Build and deployment**, change **Source** from the current `gh-pages` branch to **GitHub Actions**.
+2. Confirm **Source** is **GitHub Actions** in [repository Pages settings](https://github.com/Lomuss33/VillaBagara/settings/pages). This migration is already complete for Villa Bagara.
 3. Commit and push the prepared changes to `main`. A push to `main` publishes automatically; pull requests only run checks. Alternatively, run **Check and deploy Villa Bagara** manually from the Actions tab after the workflow reaches `main`.
 4. Wait for both `build` and `deploy` to succeed. Confirm the deployment URL in the `github-pages` environment.
 5. Verify the live homepage, gallery/modal, contact section, and a refresh at `/#gallery` under the repository URL. Check mobile navigation and each configured language.
