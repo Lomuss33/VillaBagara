@@ -99,7 +99,7 @@ Before merging changes, run:
 
 ## Image and context budgets
 
-`scripts/budgets.json` is the source of truth for the agent word limits and production payload limits. `npm run check` enforces them. Estate thumbnails select 480px/960px WebPs; the gallery retains `front-porch.webp` (approximately 518 KB, 85% smaller than the PNG). The original PNG remains available for social metadata.
+`scripts/budgets.json` defines agent word and production payload limits; `npm run check` enforces them. Estate thumbnails select 480px/960px WebPs; the gallery retains `front-porch.webp` (approximately 518 KB, 85% below PNG). Social metadata uses `share.jpg`; the original PNG is the regeneration source. Static pages, fonts/icons and browser checks: [docs/STATIC_SITE.md](docs/STATIC_SITE.md).
 
 To regenerate all candidates and their manifest without adding an application dependency:
 
