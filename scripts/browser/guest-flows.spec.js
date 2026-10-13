@@ -74,7 +74,7 @@ async function fillInquiry(page) {
 }
 
 async function enableMockProvider(page) {
-    await page.route('**/data/sections/contact.json', async route => {
+    await page.route('**/data/sections/contact.json*', async route => {
         const response = await route.fetch()
         const content = await response.json()
         content.articles.find(article => article.component === 'ArticleContactForm').settings.delivery_mode = 'emailjs'

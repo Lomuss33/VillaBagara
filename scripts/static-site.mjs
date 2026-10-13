@@ -1,6 +1,7 @@
 import {readFileSync, mkdirSync, writeFileSync} from 'node:fs'
 import {join, dirname} from 'node:path'
 import {fileURLToPath} from 'node:url'
+import {createHash} from 'node:crypto'
 import {pagePath, pageLanguages} from '../src/hooks/siteRoutes.js'
 import {resolveResponsiveImage} from '../src/hooks/utils/_image-utils.js'
 
@@ -19,6 +20,15 @@ const labels = {
 function contentData() {
     const registry = publicJSON('data/sections.json').sections
     return registry.map(section => ({...section, content: publicJSON(section.jsonPath.replace(/^\//, ''))}))
+}
+
+export function staticDataVersion() {
+    const hash = createHash('sha256')
+    for(const name of ['settings', 'profile', 'strings', 'categories', 'sections']) {
+        hash.update(JSON.stringify(publicJSON(`data/${name}.json`)))
+    }
+    hash.update(JSON.stringify(contentData()))
+    return hash.digest('hex').slice(0, 16)
 }
 
 export function renderStaticPage(template, sectionId = 'home', language = 'en', base = '/') {

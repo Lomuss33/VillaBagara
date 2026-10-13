@@ -16,6 +16,8 @@ The build emits seven sections in English, German, Croatian and Turkish: 28 HTML
 
 The HTML contains meaningful localized content and crawlable links before JavaScript loads. React enhances the same page. The fallback remains usable until the application is ready; a startup error reveals the error view. Every page has its own title, description, canonical, language alternatives and structured data. `sitemap.xml` lists real URLs without fragments. Submit that URL in Google Search Console after owner verification. Project-level `robots.txt` cannot set origin-root policy, so robots directives stay in the HTML.
 
+Public JSON requests carry a build-derived content version. Updated content/settings receive a new cache key, so a deployment does not combine fresh JavaScript with cached old configuration. No server cache-header customization is needed.
+
 ## Assets
 
 Run `npm run fonts:generate` only when intentionally updating fonts. It downloads licensed Saira/Orbitron Latin and extended-Latin WOFF2 subsets; commit files and licenses. All four locales retain their characters. Font display uses `swap`. The unused Lato import is removed.

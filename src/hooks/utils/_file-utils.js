@@ -24,7 +24,9 @@ export const _fileUtils = {
         const resolvedPath = _fileUtils.resolvePath(path)
 
         try {
-            const response = await fetch(resolvedPath)
+            const version = import.meta.env.VITE_SITE_DATA_VERSION
+            const requestPath = version ? `${resolvedPath}${resolvedPath.includes('?') ? '&' : '?'}v=${version}` : resolvedPath
+            const response = await fetch(requestPath)
             const contentType = response.headers.get("content-type") || ""
 
             if (!response.ok || !contentType.includes("application/json")) {
