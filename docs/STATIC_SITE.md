@@ -34,4 +34,6 @@ The single authorized live test on 2026-10-13 returned HTTP 400: configured serv
 
 `npm run check:browser` requires `npx playwright install chromium` and a completed production build. Match `VITE_BASE_PATH` to the build. The suite checks desktop/phone routes, refreshes, no-JavaScript pages, languages, axe accessibility, galleries, and failure/success/duplicate inquiry handling. It blocks real EmailJS and mocks responses. `npm run check:lighthouse` measures Home/Contact three times; accessibility, SEO, CLS and font-count limits gate releases, while performance timings initially warn. Reports are retained in GitHub Actions for seven days, without runtime code.
 
+Single-commit pushes changing only the root guides or `docs/*.md` run the fast documentation check without rebuilding/deploying the unchanged app. PRs, multi-commit pushes and application/public/workflow changes retain full release gates. `scripts/check-ci-scope.mjs` owns this conservative rule.
+
 Only send a real inquiry after explicit recipient authorization, once, with test data. Record the provider result and ask the recipient to confirm arrival. Property address, capacity, amenities and arrival policies require owner-supplied facts; keep unsupported values out of public copy. Owner approved the existing gallery on 2026-10-13. Guest FAQs explain how to obtain confirmations.
