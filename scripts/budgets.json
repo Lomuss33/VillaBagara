@@ -3,5 +3,7 @@
   "handoffWords": 250,
   "jsCssGzipBytes": 270000,
   "estateImageBytes": 550000,
+  "fontBytes": 80000,
+  "socialImageBytes": 350000,
   "estateThumbnailBytes": {"480": 65000, "960": 235000}
 }

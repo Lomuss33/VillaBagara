@@ -158,9 +158,9 @@ if(fromDist) {
     expect(estateBytes <= budgets.estateImageBytes, `Estate image size ${estateBytes} exceeds ${budgets.estateImageBytes} bytes`)
     console.log(`Payload budgets: JS/CSS ${gzipBytes}/${budgets.jsCssGzipBytes} bytes gzip; estate image ${estateBytes}/${budgets.estateImageBytes} bytes.`)
     const shareBytes = readFileSync(join(root, 'images/villa_bagara/estate/share.jpg')).length
-    expect(shareBytes <= 350000, `Social image exceeds 350 KB: ${shareBytes}`)
+    expect(shareBytes <= budgets.socialImageBytes, `Social image exceeds ${budgets.socialImageBytes} bytes: ${shareBytes}`)
     const fontBytes = [...files].filter(path => /^fonts\/.*\.woff2$/.test(path)).reduce((sum, path) => sum + readFileSync(join(root, path)).length, 0)
-    expect(fontBytes <= 80000, `Font subset budget exceeded: ${fontBytes}`)
+    expect(fontBytes <= budgets.fontBytes, `Font subset budget exceeded: ${fontBytes}`)
     expect(![...files].some(path => /(?:fa-(?:solid|regular|brands)|primeicons).*\.(?:woff2?|ttf|eot)$/.test(path)), 'Unused icon fonts leaked into the build')
     let htmlPages = 0
     for(const path of files) {

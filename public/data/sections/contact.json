@@ -129,6 +129,7 @@
       "id": 2,
       "component": "ArticleContactForm",
       "settings": {
+        "delivery_mode": "email-draft",
         "email_js_public_key": "j1Kq3rfeTdVXEZYWh",
         "email_js_service_id": "myWebsite",
         "email_js_template_id": "template_puj7mco"

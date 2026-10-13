@@ -73,7 +73,30 @@ async function fillInquiry(page) {
     await page.locator('#contact-form-textarea').fill('This is a mocked browser test. No email should be sent.')
 }
 
+async function enableMockProvider(page) {
+    await page.route('**/data/sections/contact.json', async route => {
+        const response = await route.fetch()
+        const content = await response.json()
+        content.articles.find(article => article.component === 'ArticleContactForm').settings.delivery_mode = 'emailjs'
+        await route.fulfill({response, json: content})
+    })
+}
+
+test('default inquiry prepares a reviewable email draft without contacting a provider', async ({page}) => {
+    let providerRequests = 0
+    page.on('request', request => { if(request.url().includes('api.emailjs.com')) providerRequests++ })
+    await fillInquiry(page)
+    await page.locator('#contact-form button[type=submit]').click()
+    await expect(page.locator('#contact-form .contact-draft')).toBeVisible()
+    const href = await page.locator('.contact-draft a').getAttribute('href')
+    expect(href).toContain('mailto:contact@lovro-music.de?')
+    expect(decodeURIComponent(href)).toContain('TEST ONLY: no booking')
+    expect(providerRequests).toBe(0)
+    await expect(page.locator('#contact-form-textarea')).toHaveValue('This is a mocked browser test. No email should be sent.')
+})
+
 test('provider failure preserves the inquiry and offers direct contact', async ({page}) => {
+    await enableMockProvider(page)
     await page.unroute('https://api.emailjs.com/**')
     await page.route('https://api.emailjs.com/**', route => route.fulfill({status: 503, body: 'Unavailable'}))
     await fillInquiry(page)
@@ -85,6 +108,7 @@ test('provider failure preserves the inquiry and offers direct contact', async (
 })
 
 test('pending inquiry disables duplicate submissions and accepted response shows success', async ({page}) => {
+    await enableMockProvider(page)
     let requests = 0
     await page.unroute('https://api.emailjs.com/**')
     await page.route('https://api.emailjs.com/**', async route => {

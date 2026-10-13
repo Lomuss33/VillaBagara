@@ -80,7 +80,10 @@
       "play_name_pronunciation": "Hear how to pronounce {name}",
       "contact_alternative": "You can also send your inquiry directly:",
       "contact_email_direct": "Email us",
-      "contact_send_unconfirmed": "We could not confirm whether your inquiry was sent. Use email or WhatsApp to contact us directly."
+      "contact_send_unconfirmed": "We could not confirm whether your inquiry was sent. Use email or WhatsApp to contact us directly.",
+      "contact_prepare_draft": "Prepare email inquiry",
+      "contact_draft_review": "Review your inquiry, then open it in your email app to send it. You can also contact us on WhatsApp.",
+      "contact_open_draft": "Open prepared email"
     },
     "de": {
       "about_video": "Über Video",
@@ -162,7 +165,10 @@
       "play_name_pronunciation": "Aussprache von {name} anhören",
       "contact_alternative": "Sie können Ihre Anfrage auch direkt senden:",
       "contact_email_direct": "E-Mail senden",
-      "contact_send_unconfirmed": "Wir konnten den Versand Ihrer Anfrage nicht bestätigen. Kontaktieren Sie uns direkt per E-Mail oder WhatsApp."
+      "contact_send_unconfirmed": "Wir konnten den Versand Ihrer Anfrage nicht bestätigen. Kontaktieren Sie uns direkt per E-Mail oder WhatsApp.",
+      "contact_prepare_draft": "E-Mail-Anfrage vorbereiten",
+      "contact_draft_review": "Prüfen Sie Ihre Anfrage und öffnen Sie sie zum Senden in Ihrer E-Mail-App. Sie können uns auch per WhatsApp kontaktieren.",
+      "contact_open_draft": "Vorbereitete E-Mail öffnen"
     },
     "hr": {
       "about_video": "O videu",
@@ -244,7 +250,10 @@
       "play_name_pronunciation": "Poslušaj izgovor imena {name}",
       "contact_alternative": "Upit možeš poslati i izravno:",
       "contact_email_direct": "Pošalji e-poštu",
-      "contact_send_unconfirmed": "Nismo mogli potvrditi slanje upita. Kontaktiraj nas izravno e-poštom ili WhatsAppom."
+      "contact_send_unconfirmed": "Nismo mogli potvrditi slanje upita. Kontaktiraj nas izravno e-poštom ili WhatsAppom.",
+      "contact_prepare_draft": "Pripremi upit e-poštom",
+      "contact_draft_review": "Pregledaj upit, zatim ga otvori u aplikaciji za e-poštu i pošalji. Možeš nas kontaktirati i WhatsAppom.",
+      "contact_open_draft": "Otvori pripremljenu e-poštu"
     },
     "tr": {
       "about_video": "Video hakkında",
@@ -326,7 +335,10 @@
       "play_name_pronunciation": "{name} adının telaffuzunu dinle",
       "contact_alternative": "Talebinizi doğrudan da gönderebilirsiniz:",
       "contact_email_direct": "E-posta gönderin",
-      "contact_send_unconfirmed": "Talebinizin gönderildiğini doğrulayamadık. E-posta veya WhatsApp ile doğrudan iletişime geçin."
+      "contact_send_unconfirmed": "Talebinizin gönderildiğini doğrulayamadık. E-posta veya WhatsApp ile doğrudan iletişime geçin.",
+      "contact_prepare_draft": "E-posta talebini hazırlayın",
+      "contact_draft_review": "Talebinizi gözden geçirin, ardından göndermek için e-posta uygulamanızda açın. WhatsApp ile de iletişime geçebilirsiniz.",
+      "contact_open_draft": "Hazırlanan e-postayı açın"
     }
   }
 }

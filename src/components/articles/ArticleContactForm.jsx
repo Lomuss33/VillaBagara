@@ -68,6 +68,11 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
     const [validationError, setValidationError] = useState(null)
     const [status, setStatus] = useState(windowStatus || ArticleContactForm.Status.WAITING_FOR_SUBMISSION)
     const submitting = useRef(false)
+    const [draftReady, setDraftReady] = useState(false)
+    const emailDraftMode = dataWrapper.settings.contactDeliveryMode === 'email-draft'
+    const methods = data.getSections().find(section => section.id === 'contact')?.data?.articles?.find(article => article.component === 'ArticleInfoList')?.items || []
+    const emailAddress = methods.find(item => item.link?.href?.startsWith('mailto:'))?.link.href.slice(7) || ''
+    const whatsappURL = methods.find(item => item.link?.href?.startsWith('https://wa.me/'))?.link.href || ''
 
     const name = fieldsBundle?.name
     const email = fieldsBundle?.email
@@ -75,6 +80,8 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
     const message = fieldsBundle?.message
     const emailDisplay = utils.storage.getWindowVariable(id + "-email")
     const didSubmit = status === ArticleContactForm.Status.SUBMITTED
+    const draftBody = `${name || ''}\n${email || ''}\n\n${message || ''}`
+    const draftURL = `mailto:${emailAddress}?subject=${encodeURIComponent(subject || 'Villa Bagara stay inquiry')}&body=${encodeURIComponent(draftBody)}`
 
     const errorMessage = validationError ?
         language.getString(validationError.errorCode).replace("{x}", validationError.errorParameter) :
@@ -99,6 +106,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
     }, [status])
 
     const _onReset = () => {
+        setDraftReady(false)
         setShouldHideTitle(false)
         setStatus(ArticleContactForm.Status.WAITING_FOR_SUBMISSION)
     }
@@ -120,6 +128,10 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
         }
 
         setValidationError(null)
+        if(emailDraftMode) {
+            setDraftReady(true)
+            return
+        }
         submitting.current = true
         setStatus(ArticleContactForm.Status.SUBMITTING)
         feedbacks.setActivitySpinnerVisible(true, dataWrapper.uniqueId, language.getString("sending_message"))
@@ -130,7 +142,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
         try {
         if(!fakeEmailRequests) {
             apiResponse = await api.handlers.sendEmailRequest(
-                apiValidation.bundle,
+                {...apiValidation.bundle, to_email: emailAddress},
                 dataWrapper.settings.emailJsPublicKey,
                 dataWrapper.settings.emailJsServiceId,
                 dataWrapper.settings.emailJsTemplateId,
@@ -172,10 +184,16 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
                 <ArticleContactFormContentFields onInput={setFieldsBundle}
                                                  didSubmit={didSubmit}/>
             )}
+            {draftReady && !validationError && (
+                <RowFormGroup className="col-12 contact-draft">
+                    <p role="status">{language.getString('contact_draft_review')}</p>
+                    <a href={draftURL}>{language.getString('contact_open_draft')}</a>
+                </RowFormGroup>
+            )}
             <RowFormGroup className="col-12 contact-fallback">
                 <p>{language.getString('contact_alternative')}</p>
-                <a href={`mailto:contact@lovro-music.de?subject=${encodeURIComponent(subject || 'Villa Bagara stay inquiry')}&body=${encodeURIComponent(message || '')}`}>{language.getString('contact_email_direct')}</a>
-                {' · '}<a href="https://wa.me/4917662236934" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href={draftURL}>{language.getString('contact_email_direct')}</a>
+                {' · '}<a href={whatsappURL} target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </RowFormGroup>
 
             {didSubmit && (
@@ -186,7 +204,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
 
             {!didSubmit && (
                 <RowFormGroupSubmit faIcon={`fa-solid fa-envelope`}
-                                    label={language.getString("send_message")}/>
+                                    label={language.getString(emailDraftMode ? 'contact_prepare_draft' : 'send_message')}/>
             )}
         </RowForm>
     )

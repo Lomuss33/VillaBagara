@@ -23,6 +23,8 @@ function contentData() {
 
 export function renderStaticPage(template, sectionId = 'home', language = 'en', base = '/') {
     const sections = contentData()
+    const contactItems = sections.find(item => item.id === 'contact')?.content.articles.find(article => article.component === 'ArticleInfoList')?.items || []
+    const contactLinks = contactItems.filter(item => /^(?:mailto:|https:\/\/wa\.me\/)/.test(item.link?.href || '')).map(item => `<a href="${escape(item.link.href)}">${format(item.locales?.[language]?.label || item.locales?.[language]?.title)}</a>`).join(' · ')
     const section = sections.find(section => section.id === sectionId) || sections[0]
     const text = labels[language]
     const path = pagePath(section.id, language, base)
@@ -39,17 +41,17 @@ export function renderStaticPage(template, sectionId = 'home', language = 'en', 
         const items = (article.items || []).map(item => {
             const itemText = item.locales?.[language] || item.locales?.en || {}
             const candidates = article.component !== 'ArticleGalleryWall' ? resolveResponsiveImage(item.img, path => base + path) : null
-            const responsive = candidates ? ` srcset="${escape(candidates.srcSet)}" sizes="(min-width:1100px) 340px, (min-width:650px) 50vw, 90vw"` : ''
+            const responsive = candidates ? ` srcset="${escape(candidates.srcSet)}" sizes="(min-width:1400px) 357px, (min-width:1200px) 338px, (min-width:992px) 251px, (min-width:768px) 225px, (min-width:576px) 188px, 162px"` : ''
             const image = item.img ? `<img src="${base}${item.img.replace(/^\//, '')}"${responsive} alt="${escape(plain(itemText.title || itemText.label || text.photos))}" width="480" height="320" loading="lazy" decoding="async" />` : ''
             const destination = link(item.link?.href)
             return `<div class="static-card">${image}${itemText.title ? `<h3>${format(itemText.title)}</h3>` : ''}${itemText.text ? `<p>${format(itemText.text)}</p>` : ''}${destination ? `<a href="${escape(destination)}">${format(itemText.label || itemText.title || text.contact)}</a>` : ''}</div>`
         }).join('')
-        const contact = article.component === 'ArticleContactForm' ? `<p>${escape(text.note)}</p><a href="mailto:contact@lovro-music.de">contact@lovro-music.de</a> · <a href="https://wa.me/4917662236934">WhatsApp</a>` : ''
+        const contact = article.component === 'ArticleContactForm' ? `<p>${escape(text.note)}</p>${contactLinks}` : ''
         return `<section>${locale.title ? `<h2>${format(locale.title)}</h2>` : ''}<div class="static-cards">${items}${contact}</div></section>`
     }).join('')
     const heading = section.content.title.locales[language]
     const languages = pageLanguages.map(locale => `<a lang="${locale}" hreflang="${locale}" href="${pagePath(section.id, locale, base)}">${{en:'English', de:'Deutsch', hr:'Hrvatski', tr:'Türkçe'}[locale]}</a>`).join(' · ')
-    const body = `<div id="static-content" class="static-shell"><header><a class="static-brand" href="${pagePath('home', language, base)}">Villa <span>Bagara</span></a><nav aria-label="${escape(text.menu)}">${nav}</nav><div aria-label="${escape(text.language)}">${languages}</div></header><main><h1>${format([heading.title_long_prefix, heading.title_long].filter(Boolean).join(' '))}</h1>${articles}<p class="static-action"><a href="${pagePath('contact', language, base)}">${escape(text.contact)} →</a></p></main><footer><p>${escape(text.note)}</p><a href="mailto:contact@lovro-music.de">contact@lovro-music.de</a> · <a href="https://wa.me/4917662236934">WhatsApp</a></footer></div>`
+    const body = `<div id="static-content" class="static-shell"><header><a class="static-brand" href="${pagePath('home', language, base)}">Villa <span>Bagara</span></a><nav aria-label="${escape(text.menu)}">${nav}</nav><div aria-label="${escape(text.language)}">${languages}</div></header><main><h1>${format([heading.title_long_prefix, heading.title_long].filter(Boolean).join(' '))}</h1>${articles}<p class="static-action"><a href="${pagePath('contact', language, base)}">${escape(text.contact)} →</a></p></main><footer><p>${escape(text.note)}</p>${contactLinks}</footer></div>`
     let html = template.replace(/<html[^>]*>/, `<html lang="${language}" data-page-language="${language}">`)
         .replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(title)}</title>`)
         .replace(/rel="canonical" href="[^"]+"/, `rel="canonical" href="${canonical}"`)
