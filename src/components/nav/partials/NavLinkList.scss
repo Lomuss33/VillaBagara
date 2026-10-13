@@ -18,7 +18,7 @@ a.nav-link {
     direction: ltr;
     border-top: 1px solid var(--theme-standard-borders);
     transition: none!important;
-    min-height: 39px;
+    min-height: 44px;
 
     padding: 0 5px;
 
@@ -54,7 +54,6 @@ a.nav-link-active {
     background-color: var(--theme-primary)!important;
     border-top-color: var(--theme-primary);
     user-select: none;
-    pointer-events: none;
 
     i {
         color: var(--theme-texts-inv)!important;
@@ -70,14 +69,23 @@ a.nav-link-active {
 
 nav.nav-link-list-shrink {
     a.nav-link {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        padding: 4px 5px;
         span {
-            display: none;
+            display: block;
+            font-size: 0.72rem;
+            line-height: 1.2;
+            opacity: 1;
+            text-align: center;
+            overflow-wrap: anywhere;
         }
 
         i {
             user-select: none;
             pointer-events: none;
-            width: 100%;
+            min-width: 0;
         }
     }
 }

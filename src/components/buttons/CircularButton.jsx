@@ -1,12 +1,16 @@
 import "./CircularButton.scss"
-import React, {useEffect, useState} from 'react'
+import React from 'react'
+import {_stringUtils} from "/src/hooks/utils/_string-utils.js"
 
-function CircularButton({ faIcon, onClick, variant = "circular-button-variant-default", size = "circular-button-size-default", tooltip = null, className = "" }) {
+function CircularButton({ faIcon, onClick, variant = "circular-button-variant-default", size = "circular-button-size-default", tooltip = null, className = "", ariaLabel = null, ...rest }) {
     return (
-        <button className={`circular-button ${variant} ${size} ${className}`}
+        <button {...rest}
+                type="button"
+                aria-label={_stringUtils.stripHTMLTags(ariaLabel || tooltip || "") || undefined}
+                className={`circular-button ${variant} ${size} ${className}`}
                 data-tooltip={tooltip}
                 onClick={onClick}>
-            <i className={`${faIcon}`}/>
+            <i className={`${faIcon}`} aria-hidden="true"/>
         </button>
     )
 }

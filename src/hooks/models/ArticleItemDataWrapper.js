@@ -40,6 +40,7 @@ export default class ArticleItemDataWrapper {
         this.faIconColors = this._parseColor(rawData.faIconColors, theme)
 
         this.img = language.parseJsonText(rawData.img)
+        this.map = rawData.map
         this.label = rawData.label
         this.link = this._parseLink(rawData.link, language)
         this.copyToClipboardButton = rawData.copyToClipboardButton || false

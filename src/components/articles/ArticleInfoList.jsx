@@ -66,11 +66,12 @@ function ArticleInfoListItems({ dataWrapper, selectedItemCategoryId }) {
     }, [dataWrapper?.id, viewport.innerWidth])
 
     return (
-        <div className={`article-info-list-items ${shrinkClass}`}
+        <div className={`article-info-list-items ${shrinkClass} ${dataWrapper.settings.layout === "cards" ? "article-info-list-items-cards" : ""}`}
              id={id}>
-            {filteredItems.map((itemWrapper, key) => (
+            {filteredItems.map((itemWrapper) => (
                 <ArticleInfoListItem itemWrapper={itemWrapper}
-                                     key={key}/>
+                                     card={dataWrapper.settings.layout === "cards"}
+                                     key={itemWrapper.uniqueId}/>
             ))}
         </div>
     )
@@ -81,8 +82,16 @@ function ArticleInfoListItems({ dataWrapper, selectedItemCategoryId }) {
  * @return {JSX.Element}
  * @constructor
  */
-function ArticleInfoListItem({ itemWrapper}) {
+function ArticleInfoListItem({ itemWrapper, card = false }) {
     const [linkHovered, setLinkHovered] = useState(false)
+    const fullCardLink = card && itemWrapper.link?.href && !itemWrapper.copyToClipboardButton
+    const Container = fullCardLink ? Link : "div"
+    const containerProps = fullCardLink ? {
+        href: itemWrapper.link.href,
+        tooltip: itemWrapper.link.tooltip,
+        metadata: itemWrapper.link.metadata,
+        onHoverStatus: setLinkHovered,
+    } : {}
 
     const hoverClass = linkHovered ?
         `article-info-list-item-hovered` :
@@ -93,7 +102,8 @@ function ArticleInfoListItem({ itemWrapper}) {
     const textClass = `text-${baseTextSize}`
 
     return (
-        <div className={`article-info-list-item ${hoverClass}`}>
+        <Container {...containerProps}
+                   className={`article-info-list-item ${fullCardLink ? "article-info-list-item-card" : ""} ${hoverClass}`}>
             <AvatarView src={itemWrapper.img}
                         faIcon={itemWrapper.faIconWithFallback}
                         style={itemWrapper.faIconStyle}
@@ -108,7 +118,14 @@ function ArticleInfoListItem({ itemWrapper}) {
                     <div className={`article-info-list-item-info-text ${textClass}`}
                          dangerouslySetInnerHTML={{__html: itemWrapper.locales.text}}/>
 
-                    {itemWrapper.link?.href && (
+                    {fullCardLink && (
+                        <span className="article-info-list-card-label text-3">
+                            <span dangerouslySetInnerHTML={{__html: itemWrapper.locales.label || itemWrapper.label || itemWrapper.locales.title}}/>
+                            <i className="fa-solid fa-arrow-right" aria-hidden="true"/>
+                        </span>
+                    )}
+
+                    {itemWrapper.link?.href && !fullCardLink && (
                         <Link href={itemWrapper.link?.href || null}
                               tooltip={itemWrapper.link?.tooltip}
                               metadata={itemWrapper.link?.metadata}
@@ -125,7 +142,7 @@ function ArticleInfoListItem({ itemWrapper}) {
                     )}
                 </div>
             </div>
-        </div>
+        </Container>
     )
 }
 

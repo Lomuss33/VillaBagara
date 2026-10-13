@@ -2,16 +2,21 @@ import "./Link.scss"
 import React, {useEffect, useState} from 'react'
 import {useFeedbacks} from "/src/providers/FeedbacksProvider.jsx"
 import {useLanguage} from "/src/providers/LanguageProvider.jsx"
-import {useLocation} from "/src/providers/LocationProvider.jsx"
+import {useNavigation} from "/src/providers/NavigationProvider.jsx"
+import {isPlainActivation} from "/src/hooks/navigationAccessibility.js"
 import {useUtils} from "/src/hooks/utils.js"
 import {useScheduler} from "/src/hooks/scheduler.js"
 
 function Link({ id = null, className = "", href, children, tooltip = null, metadata = null, onClick = null, onClickTimeout = 0, onHoverStatus = null, intercept = false }) {
     const feedbacks = useFeedbacks()
     const language = useLanguage()
-    const location = useLocation()
+    const navigation = useNavigation()
     const scheduler = useScheduler()
     const utils = useUtils()
+    const opensGallery = Boolean(href?.startsWith("#gallery:open"))
+    const Element = opensGallery || (!href && onClick) ? "button" : href ? "a" : "span"
+    const popupLabel = opensGallery ? language.getString("open_gallery") + ': ' +
+        utils.string.stripHTMLTags(metadata?.title || language.getString("gallery")) : undefined
 
     const hrefClass = !href ?
         `link-no-href` :
@@ -26,7 +31,12 @@ function Link({ id = null, className = "", href, children, tooltip = null, metad
     }
 
     const _onClick = (e) => {
+        if(!opensGallery && !isPlainActivation(e)) return
         onClick && onClick()
+        if(!href) {
+            e.preventDefault()
+            return
+        }
         if(href.includes('mailto') || href.includes('tel:'))
             return
 
@@ -46,12 +56,10 @@ function Link({ id = null, className = "", href, children, tooltip = null, metad
     }
 
     const _open = () => {
-        if(href.startsWith("#cat:"))
-            location.goToCategoryWithId(href.replaceAll("#cat:", ""))
-        else if(href.startsWith("#gallery:open"))
+        if(href.startsWith("#gallery:open"))
             _openGalleryLink()
         else if(href.startsWith("#"))
-            location.goToSectionWithId(href.replaceAll("#", ""))
+            navigation.navigateToSectionWithLink(href)
         else if(href.includes("youtube.com/embed") || href.includes("youtube.com/watch?v="))
             _openYoutubeLink()
         else
@@ -79,7 +87,7 @@ function Link({ id = null, className = "", href, children, tooltip = null, metad
 
     const _openExternalLink = () => {
         const shortenedHref = utils.string.limitTextSize(href, 45)
-        const formattedUrl = `<br><span class="text-secondary">« <b>${shortenedHref}</b> »</span><br><br>`
+        const formattedUrl = `<br><span class="text-default">« <b>${shortenedHref}</b> »</span><br><br>`
         const text = language.getString("leaving_site").replace("{url}", formattedUrl) +
             language.getString("confirm_to_continue")
 
@@ -95,7 +103,10 @@ function Link({ id = null, className = "", href, children, tooltip = null, metad
     }
 
     return (
-        <a href={href}
+        <Element href={Element === "a" ? href : undefined}
+           type={Element === "button" ? "button" : undefined}
+           aria-label={popupLabel}
+           aria-haspopup={opensGallery || href?.includes("youtube.com/") ? "dialog" : undefined}
            id={id}
            className={`${className} ${hrefClass}`}
            onClick={_onClick}
@@ -104,7 +115,7 @@ function Link({ id = null, className = "", href, children, tooltip = null, metad
            data-tooltip={tooltip}
            draggable={false}>
             {children}
-        </a>
+        </Element>
     )
 }
 

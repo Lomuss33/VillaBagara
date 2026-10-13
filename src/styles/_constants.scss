@@ -44,5 +44,6 @@ $timeline-merge-mode-breakpoint: sm;
 /** Layout Constraints - Nav **/
 $nav-tabs-height: 55px;
 $nav-tabs-height-with-offset: 75px;
-$nav-pills-height: 50px;
-$nav-pills-height-compressed: 50px;
+$nav-pills-height: 64px;
+// Two rows of named destinations on narrow phones.
+$nav-pills-height-compressed: 64px;

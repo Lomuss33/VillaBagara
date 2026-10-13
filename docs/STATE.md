@@ -1,24 +1,25 @@
 # Current state
 
-Updated: 2026-10-12. See Git history for older changes.
+Updated: 2026-10-13. Use Git history for older changes.
 
 ## Target and status
 
-- `Lomuss33/VillaBagara`, branch `main`; target `https://lomuss33.github.io/VillaBagara/`.
-- Pages source is `workflow`; pushes to `main` publish automatically. [Main checks/deployments](https://github.com/Lomuss33/VillaBagara/actions/workflows/deploy.yml?query=branch%3Amain) record release status.
+- `Lomuss33/VillaBagara`, `main`; [live site](https://lomuss33.github.io/VillaBagara/).
+- Published baseline `8e8514c`; [deployment](https://github.com/Lomuss33/VillaBagara/actions/runs/38312162813). Completion release below is prepared for CI/deployment.
 
-## Release and workspace work
+## Completion release
 
-- Release: Node 24/npm, restricted Pages workflow, base-aware metadata, patched dependencies, automated checks, compact agent docs, and weekly Dependabot.
-- Responsive estate images: 480px (57,832 bytes), 960px (222,674), full 1536px (517,906). `ImageView` chooses small-card candidates; gallery tiles/modal share the full file. The cache skips full-photo prefetch. Source, regeneration and budgets: [IMAGES.md](IMAGES.md).
-- Independent loader, navigation/accessibility and gallery-map edits remain local and outside this release. Preserve their files and temporary development settings.
-- [Reference guide](REFERENCE_MYWEBSITE.md) records source owners and compatibility; reference checkout preserved.
+- Existing loader, Home terrain/climate maps and named keyboard/mobile controls are included. Details: [ACCESSIBILITY.md](ACCESSIBILITY.md), [GALLERY_MAPS.md](GALLERY_MAPS.md).
+- 28 generated HTML pages: seven sections/four locales, real URLs, metadata, hreflang, sitemap and 404. Hash compatibility remains. [Owners/commands](STATIC_SITE.md).
+- Local Saira/Orbitron fonts: 70,164 bytes; used SVG icons replace icon fonts. Share JPEG: 312,072 bytes, 91% below PNG. Gallery assets approved by owner.
+- Inquiry: pending lock, preserved fields on failure, timeout, persistent errors and direct email/WhatsApp. Automated checks mock EmailJS.
+- Development remains port 5000, strict.
 
 ## Verification
 
-- Clean release: `npm ci`, audit 0, full `/VillaBagara/` check; 7 sections/4 languages, JS/CSS 244,927 bytes gzip.
-- Production browser: cold Home downloads only the 58 KB candidate; gallery repeats download the full photo once. Modal retains 1536px. Resizing, cached navigation and 390px layout pass; no failed assets or horizontal overflow.
+- `npm run check` passes: lint, docs, six keyboard/route tests, seven-section content, 28 HTML pages; JS/CSS about 226 KB gzip; audit zero.
+- Production browser: Stay/Contact real URLs, German selection, local fonts/icons and validation pass. Desktop/phone regression suite and three-run Lighthouse gates configured in Actions.
 
 ## Next
 
-Finish verification of independent keyboard/navigation work, then publish those changes separately. Owner confirmation of EmailJS delivery remains; no message was sent.
+Pass release CI, verify live pages, send the one authorized labeled test to `contact@lovro-music.de`, and confirm inbox arrival. Owner address, capacity, amenities and check-in/out facts are requested; do not invent values.

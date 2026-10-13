@@ -128,9 +128,10 @@ if(fromDist) {
     expect(base.startsWith('/') && base.endsWith('/'), `Invalid base: ${base}`)
     expect(/type="module"/.test(html), 'Missing built JavaScript entry')
     for(const [, url] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
-        if(/^(?:https?:|data:|#|\/\/)/.test(url)) continue
+        if(/^(?:https?:|mailto:|tel:|data:|#|\/\/)/.test(url)) continue
         expect(url.startsWith(base), `HTML asset is outside ${base}: ${url}`)
-        expect(files.has(url.slice(base.length)), `Missing HTML asset: ${url}`)
+        const path = url.slice(base.length)
+        expect(files.has(path.endsWith('/') || !path ? `${path}index.html` : path), `Missing HTML asset: ${url}`)
     }
     const canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1]
     expect(canonical?.startsWith('https://'), 'Missing HTTPS canonical URL')
@@ -156,6 +157,31 @@ if(fromDist) {
     const estateBytes = readFileSync(join(root, 'images/villa_bagara/estate/front-porch.webp')).length
     expect(estateBytes <= budgets.estateImageBytes, `Estate image size ${estateBytes} exceeds ${budgets.estateImageBytes} bytes`)
     console.log(`Payload budgets: JS/CSS ${gzipBytes}/${budgets.jsCssGzipBytes} bytes gzip; estate image ${estateBytes}/${budgets.estateImageBytes} bytes.`)
+    const shareBytes = readFileSync(join(root, 'images/villa_bagara/estate/share.jpg')).length
+    expect(shareBytes <= 350000, `Social image exceeds 350 KB: ${shareBytes}`)
+    const fontBytes = [...files].filter(path => /^fonts\/.*\.woff2$/.test(path)).reduce((sum, path) => sum + readFileSync(join(root, path)).length, 0)
+    expect(fontBytes <= 80000, `Font subset budget exceeded: ${fontBytes}`)
+    expect(![...files].some(path => /(?:fa-(?:solid|regular|brands)|primeicons).*\.(?:woff2?|ttf|eot)$/.test(path)), 'Unused icon fonts leaked into the build')
+    let htmlPages = 0
+    for(const path of files) {
+        if(!path.endsWith('index.html')) continue
+        htmlPages++
+        const page = readFileSync(join(root, path), 'utf8')
+        expect(page.includes('id="static-content"') && /<h1>.+<\/h1>/.test(page), `${path}: missing meaningful static HTML`)
+        const expectedURL = 'https://lomuss33.github.io' + base + path.replace(/index\.html$/, '')
+        expect(page.includes(`rel="canonical" href="${expectedURL}"`), `${path}: incorrect canonical`)
+        expect(page.includes('hreflang="x-default"'), `${path}: missing language alternatives`)
+        for(const [, url] of page.matchAll(/(?:src|href)="([^"]+)"/g)) {
+            if(!url.startsWith(base)) continue
+            const local = url.slice(base.length)
+            expect(files.has(local.endsWith('/') || !local ? `${local}index.html` : local), `${path}: broken local link ${url}`)
+        }
+    }
+    expect(htmlPages === sections.length * languages.length, `Expected ${sections.length * languages.length} static pages; got ${htmlPages}`)
+    expect(files.has('sitemap.xml') && files.has('404.html'), 'Missing sitemap or 404 page')
+    const sitemap = readFileSync(join(root, 'sitemap.xml'), 'utf8')
+    expect(!sitemap.includes('#') && (sitemap.match(/<loc>/g) || []).length === htmlPages, 'Sitemap contains fragments or misses pages')
+    console.log(`Static SEO checked: ${htmlPages} pages; local fonts ${fontBytes} bytes; social image ${shareBytes} bytes.`)
 }
 
 if(errors.length) {

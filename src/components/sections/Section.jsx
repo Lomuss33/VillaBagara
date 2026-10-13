@@ -2,12 +2,11 @@ import "./Section.scss"
 import React, {useEffect, useState} from 'react'
 import {useScheduler} from "/src/hooks/scheduler.js"
 import Scrollable from "/src/components/capabilities/Scrollable.jsx"
-import {useFeedbacks} from "/src/providers/FeedbacksProvider.jsx"
-import {useInput} from "/src/providers/InputProvider.jsx"
 import {useViewport} from "/src/providers/ViewportProvider.jsx"
 import SectionContent from "/src/components/sections/SectionContent.jsx"
 import NavToolFullscreenToggle from "/src/components/nav/tools/NavToolFullscreenToggle.jsx"
 import {useNavigation} from "/src/providers/NavigationProvider.jsx"
+import {useFeedbacks} from "/src/providers/FeedbacksProvider.jsx"
 
 function Section({ section, visible, shouldTransition }) {
     const [status, setStatus] = useState(Section.Status.HIDDEN)
@@ -59,14 +58,17 @@ function SectionRenderer({ section, status, shouldResetScroll, setShouldResetScr
 
     return (
         <section className={`section ${statusClassName}`}
-                 id={`section-${section.id}`}>
+                 id={`section-${section.id}`}
+                 aria-labelledby={'section-heading-' + section.id}
+                 aria-hidden={status !== Section.Status.SHOWN ? true : undefined}
+                 inert={status !== Section.Status.SHOWN ? "" : undefined}>
             {canToggleFullscreen && (
                 <NavToolFullscreenToggle className={`section-fullscreen-toggle`}/>
             )}
 
             <Scrollable id={`scrollable-${section.id}`}
                         className={`section-scrollable`}
-                        pluginEnabled={status !== Section.Status.HIDDEN}
+                        labelledBy={'section-heading-' + section.id}
                         shouldResetScroll={shouldResetScroll}
                         setShouldResetScroll={setShouldResetScroll}>
                 <SectionContent section={section}/>
@@ -81,7 +83,7 @@ function SectionTransitionManager({ section, visible, shouldTransition, status, 
     const schedulerTag = section?.id + "-transition"
 
     useEffect(() => {
-        if(!shouldTransition) {
+        if(!shouldTransition || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
             if(visible) _showInstantly()
             else _hideInstantly()
         }
@@ -117,56 +119,15 @@ function SectionTransitionManager({ section, visible, shouldTransition, status, 
 }
 
 function SectionFocusManager({ section, status }) {
+    const navigation = useNavigation()
     const feedbacks = useFeedbacks()
-    const input = useInput()
-    const viewport = useViewport()
-
-    const isFocusingForbidden = viewport.isMobileLayout() ||
-        feedbacks.isBlockedByOverlay() ||
-        status !== Section.Status.SHOWN
+    const overlayBlocked = feedbacks.isBlockedByOverlay()
 
     useEffect(() => {
-        if(status === Section.Status.SHOWN) _focus()
-        else if(status !== Section.Status.HIDDEN) _blur()
-    }, [status])
-
-    useEffect(() => {
-        if(status !== Section.Status.SHOWN)
-            return
-
-        const keyId = input.lastKeyPressed?.id
-        if(keyId === "ArrowUp" || keyId === "ArrowDown")
-            _focus(true)
-    }, [input.lastKeyPressed])
-
-    const _getScrollableElement = () => {
-        if(!section?.id)
-            return null
-
-        const sectionEl = document.getElementById(`section-${section.id}`)
-        if(!sectionEl)
-            return null
-
-        return sectionEl.querySelector('.scrollable')
-    }
-
-    const _focus = () => {
-        const sectionScrollableEl = _getScrollableElement()
-        if(!sectionScrollableEl)
-            return
-
-        if(!isFocusingForbidden && document.activeElement !== sectionScrollableEl)
-            sectionScrollableEl.focus()
-    }
-
-    const _blur = () => {
-        const sectionScrollableEl = _getScrollableElement()
-        if(!sectionScrollableEl)
-            return
-
-        if(!isFocusingForbidden && document.activeElement === sectionScrollableEl)
-            sectionScrollableEl.blur()
-    }
+        if(status !== Section.Status.SHOWN) return
+        const frame = requestAnimationFrame(() => navigation.focusPendingSection(section.id))
+        return () => cancelAnimationFrame(frame)
+    }, [status, navigation.transitionStatus, navigation.shouldForceScrollToTopCount, overlayBlocked])
 }
 
 Section.Status = {

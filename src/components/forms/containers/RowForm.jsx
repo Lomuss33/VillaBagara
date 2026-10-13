@@ -4,7 +4,7 @@ import {Alert, Row} from "react-bootstrap"
 import StandardButton from "/src/components/buttons/StandardButton.jsx"
 import {useTheme} from "/src/providers/ThemeProvider.jsx"
 
-function RowForm({ children, id, className = "", onSubmit }) {
+function RowForm({ children, id, className = "", onSubmit, busy = false }) {
     const theme = useTheme()
 
     useEffect(() => {
@@ -14,10 +14,13 @@ function RowForm({ children, id, className = "", onSubmit }) {
 
     return (
         <form id={id}
+              aria-busy={busy}
               onSubmit={onSubmit}>
+            <fieldset disabled={busy} style={{border: 0, padding: 0, margin: 0, minWidth: 0}}>
             <Row className={`row-form gx-3 ${className}`}>
                 {children}
             </Row>
+            </fieldset>
         </form>
     )
 }

@@ -60,6 +60,7 @@ export default class ArticleDataWrapper {
             // General Settings...
             orderItemsBy: rawSettings["order_items_by"] || "id",
             orderItemsSort: rawSettings["order_items_sort"] || "asc",
+            layout: rawSettings["layout"] || undefined,
 
             // - ArticleInlineList
             displayAsListIfWidthIsLowerThan: rawSettings["display_as_list_if_width_is_lower_than"] || undefined,

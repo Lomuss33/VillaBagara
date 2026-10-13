@@ -29,7 +29,9 @@ function NavLinkPillsFixed({ links, className = "" }) {
     }, [viewport.scrollY, navigation.nextSection, navigation.scheduledNextSection])
 
     return (
-        <div className={`nav-link-pills-fixed-wrapper nav-link-pills-fixed-wrapper-${status}`}>
+        <div className={`nav-link-pills-fixed-wrapper nav-link-pills-fixed-wrapper-${status}`}
+             inert={status !== NavLinkPillsFixed.Status.SHOWN ? "" : undefined}
+             aria-hidden={status !== NavLinkPillsFixed.Status.SHOWN ? true : undefined}>
             <NavLinkPills id={"nav-link-pills-fixed"}
                           className={className}
                           links={links}/>

@@ -41,6 +41,8 @@ function NavToolCursorToggle() {
                                     options={options}
                                     selectedOptionId={selectedOptionId}
                                     onOptionSelected={_onOptionSelected}
+                                    label={language.getString(isEnabledAndActive ? "deactivate_magic_cursor" : "activate_magic_cursor")}
+                                    ariaPressed={isEnabledAndActive}
                                     tooltipLabel={tooltipLabel}/>
             )}
         </>

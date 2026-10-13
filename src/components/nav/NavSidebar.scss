@@ -1,6 +1,6 @@
 @import "/src/styles/extend.scss";
 
-nav.nav-sidebar {
+aside.nav-sidebar {
     --width: 280px;
 
     display: flex;
@@ -27,7 +27,7 @@ nav.nav-sidebar {
     }
 }
 
-nav.nav-sidebar-shrink {
+aside.nav-sidebar-shrink {
     --width: 120px;
 
     div.nav-sidebar-card-wrapper {

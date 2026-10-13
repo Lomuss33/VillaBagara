@@ -1,118 +1,73 @@
 import "./OptionPickerButton.scss"
-import React, {useEffect, useState} from 'react'
+import React, {useRef} from 'react'
 import {Dropdown} from "react-bootstrap"
+import {_stringUtils} from "/src/hooks/utils/_string-utils.js"
 
-function OptionPickerButton({ mode, options, selectedOptionId, onOptionSelected, tooltipLabel, showSelectedOptionOnDropdown = false }) {
-    const defaultOption = {
-        id: "default",
-        faIcon: "fa-solid fa-circle"
-    }
-
-    const selectedOption = options.find(option => option.id === selectedOptionId)
-        || defaultOption
+function OptionPickerButton({ mode, options, selectedOptionId, onOptionSelected, tooltipLabel, label = null,
+    ariaPressed = undefined, selectionMenu = false, showSelectedOptionOnDropdown = false }) {
+    const toggleRef = useRef(null)
+    const selectedOption = options.find(option => option.id === selectedOptionId) || options[0]
+    if(!selectedOption) return null
 
     const availableOptions = options.filter(option =>
-        showSelectedOptionOnDropdown ||
-        option.id !== selectedOption.id
-    )
-
+        showSelectedOptionOnDropdown || option.id !== selectedOption.id)
     const buttonBehaviorEnabled = mode === OptionPickerButton.Modes.MODE_BUTTON ||
         (mode === OptionPickerButton.Modes.MODE_AUTO && options.length <= 2)
-
-    const caretIcon = !buttonBehaviorEnabled && selectedOption.img ?
-        `fa-solid fa-caret-down` :
-        null
-
-    const _onToggleClicked = () => {
-        if(!buttonBehaviorEnabled)
-            return
-
-        const optionIndex = options.indexOf(selectedOption)
-        const targetIndex = optionIndex < options.length - 1 ?
-            optionIndex + 1 :
-            0
-
-        onOptionSelected(options[targetIndex]?.id)
+    const accessibleLabel = _stringUtils.stripHTMLTags(label || tooltipLabel || selectedOption.label || "")
+    const onCycle = () => {
+        const index = options.indexOf(selectedOption)
+        onOptionSelected(options[(index + 1) % options.length].id)
     }
-
-    const _onDropdownOptionClicked = (option) => {
-        if(!option || !option.id)
-            return
+    const onSelect = option => {
         onOptionSelected(option.id)
+        requestAnimationFrame(() => toggleRef.current?.focus({preventScroll: true}))
     }
+    const icon = <OptionPickerButtonPickerIcon option={selectedOption} size={2}/>
 
     return (
-        <div className={`btn-option-picker`}>
-            <Dropdown>
-                <OptionPickerButtonToggle option={selectedOption}
-                                          caretIcon={caretIcon}
-                                          onClick={_onToggleClicked}
-                                          tooltipLabel={tooltipLabel}/>
-
-                {!buttonBehaviorEnabled && (
-                    <OptionPickerButtonMenu availableOptions={availableOptions}
-                                            selectedOptionId={selectedOptionId}
-                                            onClick={_onDropdownOptionClicked}/>
-                )}
-            </Dropdown>
+        <div className="btn-option-picker">
+            {buttonBehaviorEnabled ? (
+                <button className="btn btn-transparent btn-option-picker-toggle" type="button"
+                        aria-label={accessibleLabel} aria-pressed={ariaPressed}
+                        data-tooltip={label || tooltipLabel} title={accessibleLabel} onClick={onCycle}>
+                    {icon}
+                </button>
+            ) : (
+                <Dropdown focusFirstItemOnShow={true}>
+                    <Dropdown.Toggle ref={toggleRef} variant="transparent"
+                                     className="btn-option-picker-toggle"
+                                     aria-label={accessibleLabel} aria-haspopup="menu"
+                                     data-tooltip={tooltipLabel} title={accessibleLabel}>
+                        {icon}
+                        <i className="fa-caret-icon fa-solid fa-caret-down" aria-hidden="true"/>
+                    </Dropdown.Toggle>
+                    <Dropdown.Menu role="menu" aria-label={_stringUtils.stripHTMLTags(tooltipLabel || accessibleLabel)}>
+                        {availableOptions.map(option => (
+                            <Dropdown.Item key={option.id} as="button" type="button"
+                                           role={selectionMenu ? "menuitemradio" : "menuitem"}
+                                           aria-checked={selectionMenu ? option.id === selectedOptionId : undefined}
+                                           lang={option.lang}
+                                           className={'btn-option-picker-menu-item ' + (option.id === selectedOptionId ? 'btn-option-picker-menu-item-selected' : '')}
+                                           onClick={() => onSelect(option)}>
+                                <OptionPickerButtonPickerIcon option={option} size={1}/>
+                                <span className="btn-option-picker-menu-item-label">{option.label}</span>
+                                {selectionMenu && option.id === selectedOptionId && (
+                                    <i className="fa-solid fa-check ms-auto" aria-hidden="true"/>
+                                )}
+                            </Dropdown.Item>
+                        ))}
+                    </Dropdown.Menu>
+                </Dropdown>
+            )}
         </div>
     )
 }
 
-function OptionPickerButtonToggle({ option, caretIcon, onClick, tooltipLabel }) {
-    return (
-        <Dropdown.Toggle variant={`transparent`}
-                         className={`btn-option-picker-toggle`}
-                         onClickCapture={onClick}
-                         data-tooltip={tooltipLabel}>
-            <OptionPickerButtonPickerIcon   option={option}
-                                            size={2}/>
-
-            {caretIcon && (
-                <i className={`fa-caret-icon ${caretIcon}`}/>
-            )}
-        </Dropdown.Toggle>
-    )
-}
-
-function OptionPickerButtonMenu({ availableOptions, selectedOptionId, onClick }) {
-    const hasSelectedOption = availableOptions.some(option => option.id === selectedOptionId)
-    const borderClass = hasSelectedOption ? 'dropdown-item-no-border' : ''
-
-    return (
-        <Dropdown.Menu>
-            {availableOptions.map((option, key) => (
-                <Dropdown.Item key={key}
-                               className={`btn-option-picker-menu-item ${borderClass} ${option.id === selectedOptionId ? 'btn-option-picker-menu-item-selected' : ''}`}
-                               onClick={() => { onClick(option) }}>
-                    <OptionPickerButtonPickerIcon   option={option}
-                                                    size={1}/>
-
-                    <span className={`btn-option-picker-menu-item-label`}>
-                        {option.label}
-                    </span>
-                </Dropdown.Item>
-            ))}
-        </Dropdown.Menu>
-    )
-}
-
 function OptionPickerButtonPickerIcon({ option, size }) {
-    const sizeClass = `btn-option-picker-icon-size-${size}`
-    const willRenderImage = option.img
-    const willRenderFaIcon = !willRenderImage
-
     return (
-        <div className={`btn-option-picker-icon ${sizeClass}`}>
-            {willRenderImage && (
-                <img src={option.img}
-                     alt={option.label}
-                     className={`img`}/>
-            )}
-
-            {willRenderFaIcon && (
-                <i className={`fa-icon ${option.faIcon}`}/>
-            )}
+        <div className={'btn-option-picker-icon btn-option-picker-icon-size-' + size} aria-hidden="true">
+            {option.img ? <img src={option.img} alt="" className="img"/> :
+                <i className={'fa-icon ' + option.faIcon}/>}
         </div>
     )
 }

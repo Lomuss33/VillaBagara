@@ -5,16 +5,8 @@
 @import 'bootstrap/scss/bootstrap';
 @import "swiper/swiper-bundle.css";
 
-// Importing core FontAwesome styling file...
-$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
-@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// Our project needs Solid + Brands
-@import "@fortawesome/fontawesome-free/scss/solid.scss";
-@import "@fortawesome/fontawesome-free/scss/regular.scss";
-@import "@fortawesome/fontawesome-free/scss/brands.scss";
-
-// Importing PrimeIcons...
-@import "primeicons/primeicons.css";
+// Only the used SVG glyphs; generated locally before dev/build.
+@import "generated/icons.css";
 
 // Importing styles...
 @import "root-flags";
@@ -23,3 +15,4 @@ $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "customization/primitives-customization";
 @import "customization/bootstrap-customization";
 @import "customization/plugin-customization";
+@import "accessibility";

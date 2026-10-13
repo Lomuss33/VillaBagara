@@ -37,16 +37,20 @@ function ArticleFactsItems({ dataWrapper, selectedItemCategoryId }) {
     const constants = useConstants()
 
     const filteredItems = dataWrapper.getOrderedItemsFilteredBy(selectedItemCategoryId)
+    const items = filteredItems.map(itemWrapper => (
+        <ArticleFactsItem itemWrapper={itemWrapper} key={itemWrapper.uniqueId}/>
+    ))
+
+    if(dataWrapper.settings.layout === "grid") {
+        return <div className="article-facts-items article-facts-items-grid">{items}</div>
+    }
 
     return (
         <Swipeable className={`article-facts-items`}
                    slidesPerView={4}
                    loop={true}
                    breakpoints={constants.SWIPER_BREAKPOINTS_FOR_FOUR_SLIDES}>
-            {filteredItems.map((itemWrapper, key) => (
-                <ArticleFactsItem itemWrapper={itemWrapper} 
-                                      key={key}/>
-            ))}
+            {items}
         </Swipeable>
     )
 }

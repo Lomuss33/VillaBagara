@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import {generateIcons} from './scripts/generate-icons.mjs'
+import {renderStaticPage, buildStaticPages} from './scripts/static-site.mjs'
 
 const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] || ''
 const isUserPagesRepository = repositoryName.toLowerCase().endsWith('.github.io')
@@ -11,7 +13,16 @@ const base = process.env.VITE_BASE_PATH
 // https://vitejs.dev/config/
 export default defineConfig({
     base,
-    plugins: [react()],
+    plugins: [react(), {name: 'villa-icons', buildStart() { generateIcons() }}, {
+        name: 'villa-static-pages',
+        apply: 'build',
+        transformIndexHtml: {order: 'pre', handler(html) { return renderStaticPage(html, 'home', 'en', base) }},
+        closeBundle() { buildStaticPages('dist', base) },
+    }],
+    server: {
+        port: 5000,
+        strictPort: true,
+    },
     build: {
         rollupOptions: {
             output: {

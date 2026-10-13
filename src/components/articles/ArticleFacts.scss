@@ -55,3 +55,39 @@ div.article-facts-item-info {
         color: var(--theme-texts-light);
     }
 }
+
+div.article-facts-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+
+    .article-facts-item {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+        margin: 0;
+        padding: 20px;
+        border: 1px solid var(--theme-standard-borders);
+        border-radius: $standard-border-radius;
+        background: var(--theme-boards-background);
+    }
+
+    .article-facts-item-avatar {
+        flex: 0 0 56px;
+        width: 56px;
+        height: 56px;
+        font-size: 24px !important;
+    }
+
+    .article-facts-item-info {
+        min-width: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: minmax(0, 1fr);
+        .article-facts-item { padding: 16px; gap: 12px; }
+    }
+}

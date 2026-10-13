@@ -2,10 +2,12 @@ import "./AudioButton.scss"
 import React, {useEffect, useRef, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 import {useFeedbacks} from "/src/providers/FeedbacksProvider.jsx"
+import {useLanguage} from "/src/providers/LanguageProvider.jsx"
 import HoverStaticTooltip from "/src/components/widgets/HoverStaticTooltip.jsx"
 
-function AudioButton({ url = "", tooltip = "", size = "", buttonClassName = "", tooltipClassName = "" }) {
+function AudioButton({ url = "", tooltip = "", ariaLabel = null, size = "", buttonClassName = "", tooltipClassName = "" }) {
     const feedbacks = useFeedbacks()
+    const language = useLanguage()
     const utils = useUtils()
 
     const audioRef = useRef(null)
@@ -90,10 +92,15 @@ function AudioButton({ url = "", tooltip = "", size = "", buttonClassName = "", 
             )}
 
             <button className={`audio-button ${buttonClassName}`}
+                    type="button"
+                    aria-label={status === AudioButton.Status.PLAYING ? language.getString("stop_audio") :
+                        utils.string.stripHTMLTags(ariaLabel || tooltip || language.getString("play_audio"))}
+                    aria-busy={status === AudioButton.Status.LOADING ? true : undefined}
+                    disabled={!url || status === AudioButton.Status.LOADING}
                     id={uniqueId}
                     data-tooltip={tooltip}
                     onClick={_onClick}>
-                <i className={statusIcon}/>
+                <i className={statusIcon} aria-hidden="true"/>
             </button>
         </div>
     )

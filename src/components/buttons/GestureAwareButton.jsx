@@ -1,57 +1,37 @@
 import "./GestureAwareButton.scss"
-import React, {useEffect, useState} from 'react'
+import React from 'react'
+import {isPlainActivation} from "/src/hooks/navigationAccessibility.js"
+import {_stringUtils} from "/src/hooks/utils/_string-utils.js"
 
-function GestureAwareButton({ children, className = "", onClick = null, tooltip = "", disabled = false, hrefToolTip = null }) {
-    const [isTouched, setIsTouched] = useState(false)
-    const [dispatchClickAt, setDispatchClickAt] = useState(0)
-
-    useEffect(() => {
-        if(!dispatchClickAt)
+// Native clicks handle mouse, keyboard, touch, and assistive activation.
+function GestureAwareButton({ children, className = "", onClick = null, tooltip = "", disabled = false,
+    hrefToolTip = null, ariaLabel = null, ...rest }) {
+    const label = _stringUtils.stripHTMLTags(ariaLabel || tooltip || "")
+    const common = {
+        ...rest,
+        className: 'gesture-aware-button ' + className,
+        'aria-label': label || undefined,
+        'data-tooltip': tooltip || undefined,
+        title: label || undefined,
+        draggable: false
+    }
+    const handleClick = event => {
+        if(disabled) {
+            event.preventDefault()
             return
-        onClick && onClick()
-    }, [dispatchClickAt])
-
-    const _onTouchStart = (e) => {
-        setIsTouched(true)
-    }
-
-    const _onTouchMove = (e) => {
-        setIsTouched(false)
-    }
-
-    const _onTouchEnd = (e) => {
-        if(isTouched)
-            _dispatchClick()
-        setIsTouched(false)
-    }
-
-    const _onClick = (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        _dispatchClick()
-    }
-
-    const _dispatchClick = () => {
-        const now = new Date().getTime()
-        const timespan = now - dispatchClickAt
-        if(timespan > 150) {
-            setDispatchClickAt(now)
+        }
+        if(hrefToolTip && !isPlainActivation(event)) return
+        if(onClick) {
+            event.preventDefault()
+            onClick(event)
         }
     }
 
-    return (
-        <a  className={`gesture-aware-button ${className}`}
-            data-tooltip={tooltip}
-            type={`button`}
-            href={hrefToolTip}
-            onTouchStart={_onTouchStart}
-            onTouchMove={_onTouchMove}
-            onTouchEnd={_onTouchEnd}
-            onClick={_onClick}
-            draggable={false}>
-            {children}
-        </a>
-    )
+    if(hrefToolTip) {
+        return <a {...common} href={hrefToolTip} aria-disabled={disabled || undefined}
+                  tabIndex={disabled ? -1 : rest.tabIndex} onClick={handleClick}>{children}</a>
+    }
+    return <button {...common} type="button" disabled={disabled} onClick={handleClick}>{children}</button>
 }
 
 export default GestureAwareButton

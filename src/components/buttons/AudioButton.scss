@@ -13,7 +13,7 @@ button.audio-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--theme-texts-light-4);
+    color: var(--theme-texts);
     outline: none;
 
     i {
@@ -36,7 +36,8 @@ div.audio-button-wrapper-size-default {
     button.audio-button {
         font-size: 1rem;
         margin-left: 8px;
-        min-width: 1.3rem;
+        min-width: 44px;
+        min-height: 44px;
     }
 
     div.audio-button-tooltip {
@@ -49,7 +50,8 @@ div.audio-button-wrapper-size-dynamic-for-nav-title {
     button.audio-button {
         font-size: 1rem;
         position: relative;
-        min-width: 1.3rem;
+        min-width: 44px;
+        min-height: 44px;
         margin-left: 9px;
         @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
             margin-left: 10px;

@@ -331,7 +331,120 @@
           }
         }
       ]
+    },
+    {
+      "id": 4,
+      "component": "ArticleInfoList",
+      "settings": {
+        "order_items_by": "id",
+        "order_items_sort": "asc"
+      },
+      "locales": {
+        "en": {
+          "title": "Before your {{stay}}"
+        },
+        "de": {
+          "title": "Vor Ihrem {{Aufenthalt}}"
+        },
+        "hr": {
+          "title": "Prije tvog {{boravka}}"
+        },
+        "tr": {
+          "title": "{{Konaklamanızdan}} önce"
+        }
+      },
+      "items": [
+        {
+          "id": 1,
+          "faIcon": "fa-solid fa-circle-question",
+          "link": {
+            "href": "#contact",
+            "tooltipString": "book_now"
+          },
+          "locales": {
+            "en": {
+              "title": "How do I ask about dates?",
+              "text": "Send your preferred arrival and departure dates, the number of guests and any requests by email or WhatsApp. Ask the host to confirm availability before making travel plans.",
+              "label": "Ask the host"
+            },
+            "de": {
+              "title": "Wie frage ich Termine an?",
+              "text": "Senden Sie Ihre gewünschten An- und Abreisedaten, die Gästezahl und Wünsche per E-Mail oder WhatsApp. Lassen Sie die Verfügbarkeit vor Ihrer Reiseplanung bestätigen.",
+              "label": "Gastgeber fragen"
+            },
+            "hr": {
+              "title": "Kako provjeriti datume?",
+              "text": "Pošalji željene datume dolaska i odlaska, broj gostiju i posebne želje e-poštom ili WhatsAppom. Prije planiranja putovanja zatraži potvrdu dostupnosti.",
+              "label": "Pitaj domaćina"
+            },
+            "tr": {
+              "title": "Tarihleri nasıl sorabilirim?",
+              "text": "Tercih ettiğiniz giriş ve çıkış tarihlerini, misafir sayısını ve isteklerinizi e-posta veya WhatsApp ile gönderin. Seyahat planlamadan önce müsaitliği teyit ettirin.",
+              "label": "Ev sahibine sorun"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "faIcon": "fa-solid fa-circle-question",
+          "link": {
+            "href": "#contact",
+            "tooltipString": "book_now"
+          },
+          "locales": {
+            "en": {
+              "title": "How should I plan arrival?",
+              "text": "Request the exact address, directions, parking instructions and check-in arrangements from the host before you travel.",
+              "label": "Ask the host"
+            },
+            "de": {
+              "title": "Wie plane ich die Anreise?",
+              "text": "Fragen Sie den Gastgeber vor der Reise nach der genauen Adresse, Wegbeschreibung, Parkmöglichkeiten und Check-in-Vereinbarung.",
+              "label": "Gastgeber fragen"
+            },
+            "hr": {
+              "title": "Kako planirati dolazak?",
+              "text": "Prije putovanja zatraži od domaćina točnu adresu, upute za dolazak, informacije o parkiranju i dogovor za prijavu.",
+              "label": "Pitaj domaćina"
+            },
+            "tr": {
+              "title": "Varışımı nasıl planlamalıyım?",
+              "text": "Seyahatten önce ev sahibinden tam adresi, yol tarifini, park bilgilerini ve giriş düzenini isteyin.",
+              "label": "Ev sahibine sorun"
+            }
+          }
+        },
+        {
+          "id": 3,
+          "faIcon": "fa-solid fa-circle-question",
+          "link": {
+            "href": "#contact",
+            "tooltipString": "book_now"
+          },
+          "locales": {
+            "en": {
+              "title": "Where can I confirm facilities and pricing?",
+              "text": "Ask for current property photos, confirmed amenities and the total price for your dates, including any fees or conditions.",
+              "label": "Ask the host"
+            },
+            "de": {
+              "title": "Wo bestätige ich Ausstattung und Preise?",
+              "text": "Fragen Sie nach aktuellen Fotos, bestätigter Ausstattung und dem Gesamtpreis für Ihre Termine, einschließlich Gebühren und Bedingungen.",
+              "label": "Gastgeber fragen"
+            },
+            "hr": {
+              "title": "Gdje potvrditi sadržaje i cijenu?",
+              "text": "Zatraži aktualne fotografije, potvrđene sadržaje i ukupnu cijenu za svoje datume, uključujući naknade i uvjete.",
+              "label": "Pitaj domaćina"
+            },
+            "tr": {
+              "title": "Olanakları ve fiyatı nereden teyit edebilirim?",
+              "text": "Güncel fotoğrafları, teyit edilmiş olanakları ve tarihleriniz için ücret ve koşulları içeren toplam fiyatı sorun.",
+              "label": "Ev sahibine sorun"
+            }
+          }
+        }
+      ]
     }
   ]
 }
-

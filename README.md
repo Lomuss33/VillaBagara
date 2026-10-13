@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite (normally `http://localhost:5173/`). Keep the terminal running while developing; press `Ctrl+C` to stop the server.
+Open `http://localhost:5000/`. Vite uses port 5000 and fails if it is occupied. Keep the terminal running while developing; press `Ctrl+C` to stop the server.
 
 Other commands:
 
@@ -21,6 +21,8 @@ Other commands:
 - `npm run check`: run lint, docs/content validation, production build, and artifact checks
 - `npm run build`: create a production build in `dist/`
 - `npm run preview`: serve the production build locally
+- `npm run check:browser`: production browser/axe and mocked inquiry checks (install Chromium with `npx playwright install chromium`)
+- `npm run check:lighthouse`: repeat mobile performance/SEO audits and enforce quality budgets
 
 ## Repo Structure
 

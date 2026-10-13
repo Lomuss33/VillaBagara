@@ -35,3 +35,20 @@ span.activity-ticker-line {
         transform: translate3d(-50%, 0, 0);
     }
 }
+
+.nav-sidebar:focus-within .activity-ticker-track,
+.nav-header-mobile:focus-within .activity-ticker-track,
+.activity-ticker:hover .activity-ticker-track {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    div.activity-ticker-track {
+        animation: none;
+        will-change: auto;
+        white-space: normal;
+        width: auto;
+    }
+    div.activity-ticker-mask { mask-image: none; -webkit-mask-image: none; }
+    span.activity-ticker-line[aria-hidden="true"] { display: none; }
+}

@@ -5,6 +5,7 @@
  */
 
 import React, {createContext, useContext, useEffect, useState} from 'react'
+import {syncPageAddress} from '/src/hooks/siteRoutes.js'
 
 function LocationProvider({ children, sections, categories }) {
     const [didMount, setDidMount] = useState(false)
@@ -107,6 +108,7 @@ function LocationProvider({ children, sections, categories }) {
 
         const targetSection = sections.find(section => section.id === hash)
         if(targetSection) {
+            syncPageAddress(targetSection.id, document.documentElement.lang, import.meta.env.BASE_URL)
             setNextSectionId(targetSection.id)
         }
         else {

@@ -20,7 +20,7 @@ div.layout-navigation-wrapper {
     }
 }
 
-div.layout-navigation-children-wrapper {
+main.layout-navigation-children-wrapper {
     width: 100%;
     min-height: 100%;
     margin-left: var(--default-card-spacing);
@@ -29,10 +29,11 @@ div.layout-navigation-children-wrapper {
         margin-left: 0;
         margin-top: calc(var(--default-card-spacing) - 1px);
         margin-bottom: $nav-tabs-height;
+        padding-bottom: calc(6rem + env(safe-area-inset-bottom));
     }
 }
 
-div.layout-navigation-children-wrapper-with-offset {
+main.layout-navigation-children-wrapper-with-offset {
     @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
         margin-bottom: $nav-tabs-height-with-offset;
     }

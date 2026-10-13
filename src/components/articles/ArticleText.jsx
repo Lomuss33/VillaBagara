@@ -2,6 +2,7 @@ import "./ArticleText.scss"
 import React, {useEffect, useState} from 'react'
 import Article from "/src/components/articles/base/Article.jsx"
 import AvatarView from "/src/components/generic/AvatarView.jsx"
+import GalleryMap from "/src/components/articles/partials/GalleryMap.jsx"
 
 /**
  * @param {ArticleDataWrapper} dataWrapper
@@ -33,12 +34,13 @@ function ArticleText({ dataWrapper, id }) {
  */
 function ArticleTextItems({ dataWrapper, selectedItemCategoryId }) {
     const filteredItems = dataWrapper.getOrderedItemsFilteredBy(selectedItemCategoryId)
+    const hasMaps = filteredItems.some(itemWrapper => itemWrapper.map)
 
     return (
-        <div className={`article-text-items`}>
-            {filteredItems.map((itemWrapper, key) => (
+        <div className={`article-text-items ${hasMaps ? "article-text-items-with-maps" : ""}`}>
+            {filteredItems.map((itemWrapper) => (
                 <ArticleTextItem itemWrapper={itemWrapper} 
-                                      key={key}/>
+                                 key={itemWrapper.uniqueId}/>
             ))}
         </div>
     )
@@ -50,6 +52,16 @@ function ArticleTextItems({ dataWrapper, selectedItemCategoryId }) {
  * @constructor
  */
 function ArticleTextItem({ itemWrapper }) {
+    if(itemWrapper.map) {
+        return (
+            <div className="article-text-map-item">
+                <GalleryMap itemWrapper={itemWrapper}/>
+                <div className="article-text-map-excerpt last-p-no-margin text-3"
+                     dangerouslySetInnerHTML={{__html: itemWrapper.locales.text || itemWrapper.placeholder}}/>
+            </div>
+        )
+    }
+
     const positioningClass = itemWrapper.id % 2 === 0 ?
         `article-text-item-reverse` :
         ``

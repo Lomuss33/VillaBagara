@@ -18,9 +18,12 @@ function FloatingContactButton({ link }) {
     return (
         <GestureAwareButton
             className={`floating-contact-button ${offsetClass} ${activeClass}`}
+            hrefToolTip={link.href}
+            ariaLabel={link.label}
+            aria-current={link.active ? "page" : undefined}
             tooltip={link.label}
             onClick={() => navigation.navigateToSectionWithLink(link.href)}>
-            <i className={link.faIcon}/>
+            <i className={link.faIcon} aria-hidden="true"/>
             <span dangerouslySetInnerHTML={{ __html: link.label }}/>
         </GestureAwareButton>
     )

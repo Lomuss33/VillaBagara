@@ -26,9 +26,9 @@ function ArticleGalleryWallItems({ dataWrapper, selectedItemCategoryId }) {
 
     return (
         <div className={`article-gallery-wall-grid`}>
-            {filteredItems.map((itemWrapper, key) => (
+            {filteredItems.map((itemWrapper) => (
                 <ArticleGalleryWallItem itemWrapper={itemWrapper}
-                                        key={key}/>
+                                        key={itemWrapper.uniqueId}/>
             ))}
         </div>
     )

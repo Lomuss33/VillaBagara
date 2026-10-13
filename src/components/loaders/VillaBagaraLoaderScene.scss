@@ -1,284 +1,523 @@
-@import "/src/styles/extend.scss";
-
 div.villa-loader-scene-shell {
-    width: min(420px, 100%);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
     text-align: center;
+    background:
+        radial-gradient(circle at 72% 37%, rgba(214, 171, 96, 0.18), transparent 27%),
+        linear-gradient(180deg, #131c20 0%, #303b3a 57%, #1b241a 100%);
 }
 
 h1.villa-loader-title {
-    margin: 0 0 18px;
+    position: absolute;
+    z-index: 3;
+    top: 22%;
+    left: 20px;
+    right: 20px;
+    margin: 0;
     color: #f4ead7;
     font-family: "Orbitron", sans-serif;
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(2.1rem, 6vw, 4.5rem);
     font-weight: 700;
     letter-spacing: 0.06em;
+    line-height: 1.2;
     text-transform: uppercase;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.45);
 
-    b {
-        color: #d3952c;
-        font-weight: 700;
-    }
+    b { color: #d3952c; font-weight: 700; }
+}
+
+p.villa-loader-subtitle {
+    position: absolute;
+    z-index: 3;
+    top: calc(22% + clamp(3.5rem, 8vw, 6rem));
+    left: 20px;
+    right: 20px;
+    margin: 0;
+    color: rgba(244, 234, 215, 0.78);
+    font-size: clamp(0.82rem, 2vw, 1rem);
+    letter-spacing: 0.08em;
+    line-height: 1.6;
 }
 
 div.villa-loader-scene {
-    position: relative;
-    width: min(380px, 100%);
-    height: 210px;
-    margin: 0 auto;
+    position: absolute;
+    inset: 0;
     overflow: hidden;
-    border: 1px solid rgba(230, 197, 131, 0.22);
-    border-radius: 28px;
-    background:
-        radial-gradient(circle at 25% 18%, rgba(227, 171, 66, 0.18), transparent 24%),
-        linear-gradient(180deg, rgba(30, 20, 8, 0.96) 0%, rgba(17, 11, 6, 0.98) 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+div.villa-loader-scene:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 45%, rgba(12, 18, 9, 0.08) 68%, rgba(9, 16, 7, 0.32) 100%);
 }
 
 div.villa-loader-sun {
     position: absolute;
-    top: 28px;
-    right: 56px;
-    width: 28px;
-    height: 28px;
+    top: 15%;
+    right: 19%;
+    width: clamp(44px, 6vw, 72px);
+    aspect-ratio: 1;
     border-radius: 50%;
-    background: radial-gradient(circle, #ffd472 0%, #d69729 72%);
-    box-shadow: 0 0 24px rgba(214, 151, 41, 0.4);
-    animation: loaderSunFloat 2.8s ease-in-out infinite;
+    background: radial-gradient(circle at 35% 35%, #ffe2a0, #d3952c 72%);
+    box-shadow: 0 0 55px 20px rgba(211, 149, 44, 0.17);
+    animation: loaderSunFloat 4s ease-in-out infinite;
 }
 
 div.villa-loader-cloud {
     position: absolute;
-    top: 24px;
-    width: 58px;
+    top: 17%;
+    width: clamp(65px, 9vw, 130px);
     height: 18px;
-    border-radius: 999px;
-    background: rgba(255, 246, 228, 0.12);
-    filter: blur(0.2px);
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(244, 234, 215, 0.15), rgba(244, 234, 215, 0) 72%);
+    animation: loaderCloudDrift 9s ease-in-out infinite alternate;
 }
 
-div.villa-loader-cloud:before,
-div.villa-loader-cloud:after {
-    content: "";
-    position: absolute;
-    background: inherit;
-    border-radius: 999px;
-}
-
-div.villa-loader-cloud:before {
-    width: 24px;
-    height: 24px;
-    left: 10px;
-    top: -8px;
-}
-
-div.villa-loader-cloud:after {
-    width: 20px;
-    height: 20px;
-    right: 8px;
-    top: -6px;
-}
-
-div.villa-loader-cloud-left {
-    left: 32px;
-    animation: loaderCloudLeft 7s linear infinite;
-}
-
-div.villa-loader-cloud-right {
-    right: 18px;
-    top: 52px;
-    transform: scale(0.82);
-    animation: loaderCloudRight 8s linear infinite;
-}
+div.villa-loader-cloud-left { left: 13%; }
+div.villa-loader-cloud-right { top: 30%; right: 12%; animation-delay: -4s; }
 
 div.villa-loader-mountain {
     position: absolute;
-    bottom: 68px;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    z-index: 0;
+    bottom: 20%;
+    height: 47%;
+    clip-path: polygon(0 100%, 0 78%, 10% 65%, 17% 68%, 28% 42%, 33% 47%, 40% 25%, 45% 34%, 52% 8%, 56% 14%, 61% 32%, 66% 29%, 74% 54%, 81% 49%, 91% 78%, 100% 100%);
 }
 
 div.villa-loader-mountain-back {
-    left: 22px;
-    width: 150px;
-    height: 104px;
-    background: linear-gradient(180deg, rgba(120, 90, 43, 0.85), rgba(64, 45, 20, 0.96));
+    left: -12%;
+    width: 76%;
+    background: linear-gradient(158deg, #b1aea0 0%, #777f77 45%, #3d514e 100%);
+    opacity: 0.78;
+    clip-path: polygon(0 100%, 0 76%, 9% 64%, 18% 69%, 27% 41%, 32% 48%, 41% 21%, 46% 34%, 54% 8%, 59% 18%, 65% 40%, 73% 38%, 83% 66%, 91% 62%, 100% 100%);
 }
 
 div.villa-loader-mountain-mid {
-    right: 20px;
-    width: 184px;
-    height: 126px;
-    background: linear-gradient(180deg, rgba(154, 114, 53, 0.9), rgba(83, 56, 25, 1));
+    right: -13%;
+    bottom: 17%;
+    width: 81%;
+    height: 53%;
+    background: linear-gradient(151deg, #d0c5ad 0%, #9c9b86 38%, #6e806f 70%, #465c50 100%);
+    clip-path: polygon(0 100%, 0 82%, 8% 73%, 16% 75%, 24% 57%, 31% 62%, 39% 39%, 46% 47%, 53% 22%, 59% 30%, 65% 9%, 69% 14%, 75% 38%, 81% 34%, 88% 62%, 94% 59%, 100% 77%, 100% 100%);
 }
+
+div.villa-loader-mountain-back:after,
+div.villa-loader-mountain-mid:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(145deg, rgba(236, 228, 205, 0.42), transparent 36%);
+}
+
+div.villa-loader-mountain-back:before,
+div.villa-loader-mountain-mid:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(108deg, transparent 0 32px, rgba(245, 235, 212, 0.2) 33px 34px, transparent 35px 67px);
+    opacity: 0.5;
+}
+
+div.villa-loader-mountain-back:before {
+    clip-path: polygon(8% 100%, 27% 41%, 32% 48%, 41% 21%, 46% 34%, 54% 8%, 59% 18%, 65% 40%, 58% 34%, 53% 23%, 46% 46%, 40% 39%, 32% 60%, 27% 53%, 15% 85%);
+}
+
+div.villa-loader-mountain-mid:before {
+    clip-path: polygon(6% 100%, 24% 57%, 31% 62%, 39% 39%, 46% 47%, 53% 22%, 59% 30%, 65% 9%, 69% 14%, 75% 38%, 68% 31%, 63% 20%, 57% 43%, 52% 36%, 45% 58%, 38% 51%, 28% 73%);
+}
+
+div.villa-loader-mountain-back:after {
+    clip-path: polygon(0 100%, 27% 41%, 32% 48%, 41% 21%, 46% 34%, 54% 8%, 59% 18%, 65% 40%, 57% 30%, 53% 20%, 46% 43%, 40% 36%, 32% 59%, 27% 52%, 12% 81%);
+}
+
+div.villa-loader-mountain-mid:after {
+    clip-path: polygon(0 100%, 24% 57%, 31% 62%, 39% 39%, 46% 47%, 53% 22%, 59% 30%, 65% 9%, 69% 14%, 75% 38%, 67% 28%, 63% 18%, 57% 41%, 52% 34%, 45% 57%, 38% 50%, 28% 72%);
+}
+
+div.villa-loader-sea-horizon {
+    position: absolute;
+    z-index: 1;
+    top: 61%;
+    left: 0;
+    right: 0;
+    height: 7%;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(146, 171, 165, 0) 0%, rgba(133, 164, 161, 0.1) 36%, rgba(99, 139, 141, 0.24) 72%, rgba(61, 106, 112, 0.12) 100%);
+    box-shadow: 0 -16px 34px rgba(159, 190, 185, 0.06);
+}
+
+span.villa-loader-island {
+    position: absolute;
+    bottom: 47%;
+    display: block;
+    height: 28%;
+    background: #566e70;
+    clip-path: polygon(0 100%, 12% 61%, 28% 66%, 43% 15%, 52% 0, 63% 45%, 78% 35%, 100% 100%);
+    opacity: 0.78;
+}
+
+span.island-one { left: 21%; width: 14%; height: 22%; }
+span.island-two { left: 39%; width: 20%; }
+span.island-three { right: 17%; width: 12%; height: 19%; opacity: 0.62; }
 
 div.villa-loader-ground {
     position: absolute;
-    inset: auto -20px 0 -20px;
-    height: 96px;
-    border-radius: 48% 48% 0 0 / 100% 100% 0 0;
+    z-index: 2;
+    inset: auto -5% 0;
+    height: 31%;
+    border-radius: 50% 50% 0 0 / 28% 28% 0 0;
     background:
-        radial-gradient(circle at 40% 18%, rgba(216, 153, 49, 0.16), transparent 20%),
-        linear-gradient(180deg, #2f3d18 0%, #223013 55%, #18230e 100%);
+        radial-gradient(ellipse at 48% 0, rgba(184, 173, 108, 0.34), transparent 54%),
+        radial-gradient(ellipse at 22% 32%, rgba(161, 144, 83, 0.16), transparent 34%),
+        linear-gradient(180deg, #586b49, #263e31 66%, #172c26 100%);
 }
 
-div.villa-loader-trail {
+div.villa-loader-ground:after {
+    content: "";
     position: absolute;
-    left: 58px;
-    right: 46px;
-    bottom: 32px;
-    height: 44px;
-    border: 2px dashed rgba(239, 196, 118, 0.58);
-    border-color: rgba(239, 196, 118, 0.58) transparent transparent transparent;
-    border-radius: 55% 45% 0 0;
-    transform: rotate(-2deg);
+    left: 5%;
+    right: 8%;
+    top: 29%;
+    height: 56%;
+    opacity: 0.3;
+    background: repeating-linear-gradient(174deg, transparent 0 19px, rgba(206, 190, 127, 0.28) 20px 21px, transparent 22px 35px);
+    clip-path: ellipse(48% 50% at 50% 50%);
 }
+
+div.villa-loader-mist {
+    position: absolute;
+    z-index: 2;
+    top: 53%;
+    left: -8%;
+    right: -8%;
+    height: 29%;
+    overflow: hidden;
+    opacity: 0.82;
+    pointer-events: none;
+}
+
+div.villa-loader-mist:before,
+div.villa-loader-mist:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+div.villa-loader-mist:before {
+    background-image:
+        radial-gradient(ellipse 25% 24% at 8% 69%, rgba(204, 218, 205, 0.4), transparent 76%),
+        radial-gradient(ellipse 22% 26% at 31% 42%, rgba(194, 211, 202, 0.32), transparent 78%),
+        radial-gradient(ellipse 28% 23% at 60% 70%, rgba(213, 220, 197, 0.37), transparent 77%),
+        radial-gradient(ellipse 24% 24% at 91% 43%, rgba(196, 213, 201, 0.3), transparent 78%);
+}
+
+div.villa-loader-mist:after {
+    inset: 19% -4% 8%;
+    opacity: 0.7;
+    background-image:
+        radial-gradient(ellipse 34% 36% at 19% 51%, rgba(215, 220, 200, 0.32), transparent 76%),
+        radial-gradient(ellipse 30% 30% at 51% 40%, rgba(196, 212, 203, 0.28), transparent 79%),
+        radial-gradient(ellipse 35% 34% at 82% 59%, rgba(217, 220, 200, 0.3), transparent 78%);
+}
+
+div.villa-loader-hill {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    height: 35%;
+    pointer-events: none;
+}
+
+div.villa-loader-hill-left {
+    left: -3%;
+    width: 61%;
+    clip-path: polygon(0 17%, 11% 12%, 23% 17%, 35% 28%, 48% 48%, 62% 69%, 78% 78%, 100% 83%, 100% 100%, 0 100%);
+    background: linear-gradient(160deg, #788057, #526848 55%, #354b3a);
+}
+
+div.villa-loader-hill-right {
+    right: -4%;
+    width: 64%;
+    height: 42%;
+    clip-path: polygon(0 88%, 16% 76%, 30% 52%, 40% 26%, 50% 12%, 58% 7%, 68% 9%, 80% 14%, 92% 22%, 100% 29%, 100% 100%, 0 100%);
+    background: linear-gradient(205deg, #83845a 0%, #5d704b 49%, #344a3a 100%);
+}
+
+svg.villa-loader-trail {
+    position: absolute;
+    inset: auto 0 0;
+    width: 100%;
+    height: 45%;
+    overflow: visible;
+    z-index: 4;
+}
+
+.villa-loader-trail-edge,
+.villa-loader-trail-surface,
+.villa-loader-trail-gravel,
+.villa-loader-trail-light {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.villa-loader-trail-edge { fill: #6b6857; }
+.villa-loader-trail-surface { fill: #a99d7e; }
+.villa-loader-trail-gravel { fill: url(#loaderRoadGravel); }
+.villa-loader-trail-light {
+    fill: none;
+    stroke: rgba(227, 214, 174, 0.34);
+    stroke-width: 2;
+}
+
+div.villa-loader-village {
+    position: absolute;
+    z-index: 5;
+    left: 4%;
+    bottom: 10%;
+    width: clamp(104px, 15vw, 190px);
+    height: clamp(45px, 7vw, 78px);
+}
+
+span.villa-loader-village-house {
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+    height: 48%;
+    background:
+        linear-gradient(#f3d88f, #f3d88f) 22% 36% / 12% 20% no-repeat,
+        linear-gradient(#edcc7c, #edcc7c) 68% 36% / 12% 20% no-repeat,
+        linear-gradient(180deg, #c9b48d, #927b5c);
+    border-bottom: 2px solid rgba(69, 53, 38, 0.42);
+    box-shadow: 0 6px 8px rgba(16, 29, 24, 0.2);
+}
+
+span.villa-loader-village-house:before {
+    content: "";
+    position: absolute;
+    left: -12%;
+    top: -43%;
+    width: 124%;
+    height: 54%;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: #72553b;
+}
+
+span.villa-loader-village-house:after {
+    content: "";
+    position: absolute;
+    left: 42%;
+    bottom: 0;
+    width: 18%;
+    height: 47%;
+    background: #493a2c;
+}
+
+span.village-house-one { left: 0; height: 54%; width: 36%; }
+span.village-house-two { left: 37%; width: 31%; height: 72%; z-index: 1; }
+span.village-house-three { right: 0; height: 44%; width: 30%; }
+span.village-house-one:before { background: #80543e; }
+span.village-house-two:before { background: #6d6250; }
+span.village-house-three:before { background: #755d42; }
+
+div.villa-loader-field {
+    position: absolute;
+    z-index: 4;
+    right: 5%;
+    bottom: 31%;
+    width: clamp(76px, 13vw, 150px);
+    height: clamp(24px, 4vw, 42px);
+    clip-path: polygon(0 66%, 28% 42%, 58% 0, 100% 16%, 100% 100%, 0 100%);
+    background:
+        repeating-linear-gradient(174deg, transparent 0 6px, rgba(240, 211, 143, 0.62) 7px 8px, transparent 9px 13px),
+        linear-gradient(180deg, #a99b5f, #68734c 85%);
+    filter: drop-shadow(0 5px 4px rgba(27, 37, 25, 0.2));
+    opacity: 0.88;
+}
+
+div.villa-loader-ruins {
+    position: absolute;
+    z-index: 5;
+    right: 38%;
+    bottom: 26%;
+    width: clamp(48px, 7vw, 92px);
+    height: clamp(29px, 4vw, 48px);
+}
+
+div.villa-loader-ruins span {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 38%;
+    height: 68%;
+    clip-path: polygon(0 100%, 0 31%, 18% 24%, 18% 0, 39% 19%, 56% 13%, 70% 33%, 100% 27%, 100% 100%);
+    background: linear-gradient(180deg, #8d8978, #625f51);
+    box-shadow: inset 0 -3px rgba(39, 43, 36, 0.38);
+}
+
+div.villa-loader-ruins span:after {
+    content: "";
+    position: absolute;
+    left: 43%;
+    bottom: 0;
+    width: 24%;
+    height: 48%;
+    background: #343b34;
+}
+
+div.villa-loader-ruins span.ruin-one { left: 0; height: 60%; }
+div.villa-loader-ruins span.ruin-two { left: 28%; width: 43%; height: 100%; }
+div.villa-loader-ruins span.ruin-three { right: 0; height: 70%; }
+
+div.villa-loader-meadow {
+    position: absolute;
+    z-index: 1;
+    bottom: 21%;
+    width: 42px;
+    height: 35px;
+    opacity: 0.72;
+    clip-path: polygon(48% 100%, 10% 24%, 39% 72%, 32% 0, 57% 70%, 82% 13%, 69% 77%, 100% 36%, 78% 100%);
+    background: linear-gradient(90deg, #798453, #c2aa68 54%, #66764a);
+}
+
+div.villa-loader-meadow-left { left: 29%; }
+div.villa-loader-meadow-right { right: 7%; bottom: 27%; transform: scale(0.72); }
 
 div.villa-loader-tree {
     position: absolute;
-    bottom: 58px;
-    width: 22px;
-    height: 54px;
+    z-index: 5;
+    bottom: 23%;
+    width: 62px;
+    height: 132px;
     transform-origin: bottom center;
-    animation: loaderTreeSway 2.6s ease-in-out infinite;
+    isolation: isolate;
 }
 
-div.villa-loader-tree:after {
+div.villa-loader-tree-left { left: 36%; height: 108px; }
+div.villa-loader-tree-right { right: 2%; height: 150px; }
+div.villa-loader-tree:before {
     content: "";
     position: absolute;
+    z-index: 0;
     bottom: 0;
-    left: 9px;
-    width: 4px;
-    height: 16px;
-    border-radius: 4px;
-    background: #5a3b1f;
+    left: 44%;
+    width: 12%;
+    height: 28%;
+    background: #493f31;
 }
 
 div.villa-loader-tree span {
     position: absolute;
+    z-index: 1;
     left: 50%;
     transform: translateX(-50%);
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    background: linear-gradient(180deg, #7aa13c 0%, #44601c 100%);
+    clip-path: polygon(52% 0, 57% 15%, 70% 27%, 63% 29%, 78% 47%, 69% 49%, 91% 75%, 78% 73%, 100% 100%, 0 100%, 20% 73%, 9% 75%, 31% 49%, 22% 47%, 37% 29%, 30% 27%, 44% 15%);
+    background: linear-gradient(108deg, #284f43 0%, #42634b 39%, #24463c 70%, #173632 100%);
 }
 
-div.villa-loader-tree span:nth-child(1) {
-    bottom: 20px;
-    width: 22px;
-    height: 22px;
+div.villa-loader-tree span:nth-child(1) { bottom: 19%; width: 100%; height: 57%; }
+div.villa-loader-tree span:nth-child(2) { bottom: 39%; width: 73%; height: 43%; }
+div.villa-loader-tree span:nth-child(3) { bottom: 58%; width: 49%; height: 30%; }
+
+div.villa-loader-tree-distant {
+    z-index: 4;
+    opacity: 0.9;
 }
 
-div.villa-loader-tree span:nth-child(2) {
-    bottom: 28px;
-    width: 18px;
-    height: 18px;
-}
-
-div.villa-loader-tree span:nth-child(3) {
-    bottom: 36px;
-    width: 14px;
-    height: 14px;
-}
-
-div.villa-loader-tree-left {
-    left: 48px;
-}
-
-div.villa-loader-tree-right {
-    right: 38px;
-    animation-delay: -1.2s;
+div.villa-loader-tree-distant span {
+    background: linear-gradient(108deg, #426454, #517058 39%, #355747 70%, #2c4e42);
 }
 
 div.villa-loader-house {
     position: absolute;
-    left: 132px;
-    bottom: 54px;
-    width: 78px;
-    height: 72px;
+    z-index: 6;
+    right: 17%;
+    bottom: 32%;
+    width: clamp(60px, 6.4vw, 88px);
+    height: clamp(54px, 5.8vw, 82px);
+    filter: drop-shadow(0 12px 12px rgba(0, 0, 0, 0.25));
 }
 
 div.villa-loader-house-roof {
     position: absolute;
     top: 0;
-    left: 8px;
-    width: 62px;
-    height: 30px;
+    left: 0;
+    width: 100%;
+    height: 45%;
     clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    background: linear-gradient(180deg, #d49a39 0%, #8a571f 100%);
+    background: linear-gradient(180deg, #d49a39, #8a571f);
 }
 
 div.villa-loader-house-body {
     position: absolute;
-    left: 14px;
-    right: 14px;
+    left: 10%;
+    right: 10%;
     bottom: 0;
-    height: 44px;
-    border-radius: 8px 8px 10px 10px;
-    background: linear-gradient(180deg, #f1d39f 0%, #d0a86d 100%);
-    box-shadow: inset 0 -8px 0 rgba(130, 84, 31, 0.16);
+    height: 58%;
+    background: linear-gradient(180deg, #f1d39f, #caa36e);
 }
 
 div.villa-loader-house-door {
     position: absolute;
+    left: 43%;
     bottom: 0;
-    left: 18px;
-    width: 10px;
-    height: 22px;
-    border-radius: 4px 4px 0 0;
+    width: 18%;
+    height: 52%;
+    border-radius: 5px 5px 0 0;
     background: #70461f;
 }
 
 div.villa-loader-house-window {
     position: absolute;
-    top: 10px;
-    width: 9px;
-    height: 9px;
-    border-radius: 3px;
+    top: 28%;
+    width: 13%;
+    aspect-ratio: 1;
     background: #fff0b5;
-    box-shadow: 0 0 12px rgba(255, 219, 123, 0.35);
+    box-shadow: 0 0 18px #ffd472;
 }
 
-div.villa-loader-house-window-left {
-    left: 10px;
-}
-
-div.villa-loader-house-window-right {
-    right: 10px;
-}
-
+div.villa-loader-house-window-left { left: 16%; }
+div.villa-loader-house-window-right { right: 16%; }
 div.villa-loader-house-chimney {
     position: absolute;
-    top: 8px;
-    right: 12px;
-    width: 8px;
-    height: 18px;
-    border-radius: 3px 3px 0 0;
+    top: 9%;
+    right: 16%;
+    width: 10%;
+    height: 25%;
     background: #7c4d23;
 }
 
 span.villa-loader-smoke {
     position: absolute;
-    top: -2px;
-    right: 10px;
-    width: 9px;
-    height: 9px;
+    top: 0;
+    right: 13%;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: rgba(245, 239, 226, 0.55);
-    animation: loaderSmoke 2.4s ease-out infinite;
+    animation: loaderSmoke 2.6s ease-out infinite;
 }
 
-span.villa-loader-smoke-2 {
-    animation-delay: 0.7s;
-}
-
-span.villa-loader-smoke-3 {
-    animation-delay: 1.4s;
-}
+span.villa-loader-smoke-2 { animation-delay: 0.85s; }
+span.villa-loader-smoke-3 { animation-delay: 1.7s; }
 
 div.villa-loader-hiker-track {
     position: absolute;
-    left: 48px;
-    right: 62px;
-    bottom: 38px;
-    height: 34px;
+    z-index: 7;
+    left: 18%;
+    bottom: 8%;
+    width: 72%;
+    height: 36px;
 }
 
 i.villa-loader-hiker {
@@ -286,105 +525,89 @@ i.villa-loader-hiker {
     bottom: 0;
     left: 0;
     color: #f5cb73;
-    font-size: 20px;
-    text-shadow: 0 0 10px rgba(245, 203, 115, 0.18);
-    animation: loaderHike 3.4s ease-in-out infinite;
+    font-size: clamp(25px, 3vw, 38px);
+    text-shadow: 0 0 14px rgba(245, 203, 115, 0.35);
+    animation: loaderHike 5s ease-in-out infinite;
 }
 
-p.villa-loader-subtitle {
-    margin: 16px auto 0;
-    max-width: 360px;
-    color: rgba(244, 234, 215, 0.72);
-    font-size: 0.96rem;
+p.villa-loader-status {
+    position: absolute;
+    z-index: 8;
+    left: 24px;
+    right: 24px;
+    bottom: 4.5%;
+    margin: 0;
+    color: rgba(244, 234, 215, 0.76);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
     line-height: 1.5;
+    text-transform: uppercase;
+    text-shadow: 0 2px 12px rgba(8, 14, 11, 0.7);
+    pointer-events: none;
 }
 
-@keyframes loaderSunFloat {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-4px) scale(1.04); }
+p.villa-loader-status:after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 34px);
+    bottom: -12px;
+    width: 68px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(223, 177, 91, 0.95), transparent);
+    transform-origin: center;
+    animation: loaderStatusPulse 2.2s ease-in-out infinite;
 }
 
-@keyframes loaderCloudLeft {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes loaderCloudRight {
-    0% { transform: translateX(0) scale(0.82); }
-    50% { transform: translateX(-12px) scale(0.82); }
-    100% { transform: translateX(0) scale(0.82); }
-}
-
-@keyframes loaderTreeSway {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(3deg); }
-}
-
+@keyframes loaderSunFloat { to { transform: translateY(-8px); } }
+@keyframes loaderCloudDrift { to { transform: translateX(28px); } }
 @keyframes loaderSmoke {
-    0% {
-        opacity: 0;
-        transform: translateY(0) scale(0.6);
-    }
-    25% {
-        opacity: 0.55;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-26px) translateX(8px) scale(1.4);
-    }
+    0% { opacity: 0; transform: translateY(0) scale(0.6); }
+    25% { opacity: 0.55; }
+    100% { opacity: 0; transform: translate(12px, -38px) scale(1.5); }
 }
-
 @keyframes loaderHike {
-    0% {
-        transform: translateX(0) translateY(1px) rotate(-4deg);
-    }
-    25% {
-        transform: translateX(54px) translateY(-4px) rotate(3deg);
-    }
-    50% {
-        transform: translateX(112px) translateY(-10px) rotate(-2deg);
-    }
-    75% {
-        transform: translateX(168px) translateY(-6px) rotate(3deg);
-    }
-    100% {
-        transform: translateX(226px) translateY(1px) rotate(-4deg);
-    }
+    0% { opacity: 0; transform: translate(0, 0) rotate(-4deg); }
+    4% { opacity: 1; }
+    25% { transform: translate(11vw, 4vh) rotate(3deg); }
+    50% { transform: translate(22vw, 3vh) rotate(-2deg); }
+    75% { transform: translate(33vw, -2vh) rotate(3deg); }
+    94% { opacity: 1; }
+    100% { opacity: 0; transform: translate(52vw, -16vh) rotate(-4deg); }
+}
+@keyframes loaderStatusPulse {
+    0%, 100% { opacity: 0.35; transform: scaleX(0.62); }
+    50% { opacity: 0.95; transform: scaleX(1); }
 }
 
 @media (max-width: 575.98px) {
-    div.villa-loader-scene {
-        height: 186px;
-        border-radius: 24px;
+    h1.villa-loader-title { top: 19%; font-size: clamp(2rem, 9vw, 2.8rem); }
+    p.villa-loader-subtitle { top: 35%; }
+    div.villa-loader-sun { top: 9%; right: 12%; }
+    div.villa-loader-mountain { bottom: 22%; height: 37%; }
+    div.villa-loader-mountain-mid { bottom: 20%; height: 40%; }
+    div.villa-loader-ground { height: 29%; }
+    div.villa-loader-house { right: 12%; bottom: 32%; }
+    div.villa-loader-hill-left { width: 67%; height: 31%; }
+    div.villa-loader-hill-right { width: 70%; height: 39%; }
+    div.villa-loader-village { left: 2%; bottom: 8%; }
+    div.villa-loader-tree-left { left: 29%; bottom: 16%; height: 92px; }
+    div.villa-loader-ruins { right: 38%; bottom: 26%; }
+    div.villa-loader-field { right: -5%; bottom: 31%; }
+    div.villa-loader-tree-right { right: -4%; bottom: 20%; transform: scale(0.62); }
+    div.villa-loader-tree-left { transform: scale(0.7); }
+    p.villa-loader-status {
+        right: 5%;
+        left: auto;
+        bottom: 3.5%;
+        width: fit-content;
+        max-width: 72%;
+        text-align: right;
+        font-size: 0.66rem;
     }
+}
 
-    div.villa-loader-house {
-        left: 112px;
-        transform: scale(0.92);
-        transform-origin: bottom center;
-    }
-
-    div.villa-loader-hiker-track {
-        left: 34px;
-        right: 48px;
-    }
-
-    @keyframes loaderHike {
-        0% {
-            transform: translateX(0) translateY(1px) rotate(-4deg);
-        }
-        25% {
-            transform: translateX(38px) translateY(-3px) rotate(3deg);
-        }
-        50% {
-            transform: translateX(82px) translateY(-9px) rotate(-2deg);
-        }
-        75% {
-            transform: translateX(124px) translateY(-5px) rotate(3deg);
-        }
-        100% {
-            transform: translateX(164px) translateY(1px) rotate(-4deg);
-        }
-    }
+@media (prefers-reduced-motion: reduce) {
+    div.villa-loader-sun, div.villa-loader-cloud, div.villa-loader-tree,
+    span.villa-loader-smoke, i.villa-loader-hiker, p.villa-loader-status:after { animation: none; }
 }

@@ -1,6 +1,6 @@
 # Learning from myWebsite
 
-Reviewed: 2026-10-12. Scope: local source, configuration, current guidance, scoped Git history, and limited development-browser inspection. The adaptation sequence below is proposed work.
+Reviewed: 2026-10-12. Scope: local source, configuration, current guidance, scoped Git history, and limited development-browser inspection. Navigation is now adapted locally; see [ACCESSIBILITY.md](ACCESSIBILITY.md). Other candidates retain the scope described below.
 
 ## Reference and evidence
 
@@ -58,7 +58,7 @@ Reference links identify source owners. Additional named reference files are rel
 
 ## Prepared improvement sequence
 
-Publication remains the next delivery step in [PLAN.md](PLAN.md). This review prepares the following engineering candidates.
+Current implementation and delivery progress are tracked in [PLAN.md](PLAN.md). This review prepared the following engineering candidates.
 
 1. **Named, keyboard-reachable navigation/tools.** Start in `GestureAwareButton`, desktop/mobile navigation, and language/theme tools. Sampled Villa collapsed desktop links exposed empty accessible names: labels use `display: none`, and `data-tooltip` supplies no accessible name. Several actions use anchors without `href`; the shared control declares `disabled` without applying native disabled behavior. Adapt semantic controls and label forwarding; check compact/expanded navigation, Tab/Enter/Space, focus, active state, and four locales. Retain real hash links.
 2. **Measure responsive estate thumbnails.** The current WebP optimization is complete. Use it as the baseline, inspect rendered thumbnail sizes/transfers, then add derivatives/manifest only if worthwhile. Acceptance: comparable visuals, smaller measured transfers, correct `/VillaBagara/` candidates, cached/source-change reliability, and working full-resolution gallery viewing.

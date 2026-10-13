@@ -47,7 +47,7 @@ button.btn-option-picker-toggle:hover {
 }
 
 
-a.btn-option-picker-menu-item {
+button.btn-option-picker-menu-item {
     i.fa-icon {
         opacity: 0.4;
     }
@@ -59,11 +59,10 @@ a.btn-option-picker-menu-item {
     }
 }
 
-a.btn-option-picker-menu-item-selected {
+button.btn-option-picker-menu-item-selected {
     background-color: var(--theme-texts-light-2)!important;
     color: var(--theme-texts-inv)!important;
     user-select: none;
-    pointer-events: none;
 
     i.fa-icon {
         opacity: 1;

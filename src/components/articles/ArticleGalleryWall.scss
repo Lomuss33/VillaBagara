@@ -2,61 +2,36 @@
 
 div.article-gallery-wall-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
 
     @include media-breakpoint-down(lg) {
-        grid-template-columns: repeat(6, 1fr);
         gap: 14px;
     }
 
     @include media-breakpoint-down(sm) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         gap: 12px;
     }
 }
 
-a.article-gallery-wall-item {
+.article-gallery-wall-item {
+    padding: 0;
+    border: 0;
+    text-align: inherit;
     position: relative;
     display: block;
     overflow: hidden;
     border-radius: $standard-border-radius;
-    min-height: 240px;
+    min-width: 0;
+    width: 100%;
+    aspect-ratio: 3 / 2;
     background: var(--theme-boards-background);
-
-    grid-column: span 4;
-
-    &:nth-child(4n + 1) {
-        grid-column: span 8;
-        min-height: 360px;
-    }
-
-    &:nth-child(4n + 4) {
-        min-height: 300px;
-    }
-
-    @include media-breakpoint-down(lg) {
-        grid-column: span 3;
-        min-height: 220px;
-
-        &:nth-child(4n + 1) {
-            grid-column: span 6;
-            min-height: 300px;
-        }
-    }
-
-    @include media-breakpoint-down(sm) {
-        grid-column: span 2;
-        min-height: 220px;
-
-        &:nth-child(4n + 1) {
-            grid-column: span 2;
-            min-height: 260px;
-        }
-    }
 }
 
 div.article-gallery-wall-image-view {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
 
@@ -66,17 +41,26 @@ div.article-gallery-wall-image-view {
     }
 }
 
-a.article-gallery-wall-item:hover div.article-gallery-wall-image-view img.image-view-img {
+.article-gallery-wall-item:is(:hover, :focus-visible) div.article-gallery-wall-image-view img.image-view-img {
     transform: scale(1.03);
 }
 
 div.article-gallery-wall-caption {
     position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 44px 14px 14px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
     color: #fff;
     font-weight: 600;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
     pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    div.article-gallery-wall-image-view img.image-view-img { transition: none; }
+    .article-gallery-wall-item:is(:hover, :focus-visible) div.article-gallery-wall-image-view img.image-view-img {
+        transform: none;
+    }
 }

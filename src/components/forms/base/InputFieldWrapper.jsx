@@ -27,7 +27,7 @@ function InputFieldWrapperPrefixIcon({ isFocused, faIcon }) {
 
     return (
         <InputGroupText className={`input-field-wrapper-attach ${focusClass}`}>
-            <i className={faIcon}/>
+            <i className={faIcon} aria-hidden="true"/>
         </InputGroupText>
     )
 }

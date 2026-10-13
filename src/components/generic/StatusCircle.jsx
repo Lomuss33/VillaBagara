@@ -3,23 +3,26 @@ import React, {useEffect, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 import HoverStaticTooltip from "/src/components/widgets/HoverStaticTooltip.jsx"
 
-function StatusCircle({ variant, message, size = "status-circle-size-default", className = "", onClick = null }) {
+function StatusCircle({ variant, message, size = "status-circle-size-default", className = "", onClick = null, ariaLabel = null }) {
     const utils = useUtils()
     const [uniqueId, setUniqueId] = useState(utils.string.generateUniqueRandomString("status-circle-"))
+    const Element = onClick ? "button" : "span"
 
     return (
-        <div className={`status-circle ${className} ${size} status-circle-variant-${variant}`}
-             id={uniqueId}>
+        <span className={`status-circle-host ${className} ${size}`}>
+            <Element className={`status-circle ${size} status-circle-variant-${variant}`}
+                     type={onClick ? "button" : undefined} id={uniqueId} onClick={onClick}
+                     aria-label={utils.string.stripHTMLTags(ariaLabel || message || "")}
+                     role={onClick ? undefined : "img"}>
+                <span className={`status-circle-pulse`} aria-hidden="true"/>
+                <span className={`status-circle-body`} aria-hidden="true"/>
+            </Element>
             <HoverStaticTooltip label={message}
                                 className={`status-circle-tooltip text-center`}
                                 id={uniqueId + "-tooltip"}
                                 targetId={uniqueId}
-                                onDesktopClick={onClick}
-                                toggleBehaviorOnTouchScreens={true}/>
-
-            <div className={`status-circle-pulse`}/>
-            <div className={`status-circle-body`}/>
-        </div>
+                                toggleBehaviorOnTouchScreens={!onClick}/>
+        </span>
     )
 }
 

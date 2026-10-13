@@ -41,6 +41,7 @@ function YoutubeVideoModal({ target, onDismiss }) {
 
             <ModalWrapperBody className={`youtube-modal-body`}>
                 <iframe src={parsedUrl}
+                        title={utils.string.stripHTMLTags(title || language.getString("watch_video"))}
                         className={`youtube-iframe`}/>
             </ModalWrapperBody>
 

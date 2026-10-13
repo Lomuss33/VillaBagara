@@ -1,6 +1,6 @@
 # Agent guide
 
-Villa Bagara is a static Vite + React 18 + SCSS website. Use Node 24 (`.nvmrc`) and npm. Sections use URL hashes; GitHub Pages serves `dist/`.
+Villa Bagara uses Vite, React 18 and SCSS. Use Node 24 (`.nvmrc`) and npm. Localized HTML pages retain hash navigation; GitHub Pages serves `dist/`.
 
 ## Start here
 
@@ -13,12 +13,14 @@ Read [docs/STATE.md](docs/STATE.md) for verified progress and the next task. Rea
 | Section order, categories | `public/data/sections.json`, `public/data/categories.json` |
 | Boot or loading failures | `src/main.jsx`, `src/providers/DataProvider.jsx` |
 | Routing, transitions | `src/providers/LocationProvider.jsx`, `src/providers/NavigationProvider.jsx` |
+| Keyboard, focus, dialogs | `docs/ACCESSIBILITY.md`; owning component and `src/styles/_accessibility.scss` |
 | Article schema or rendering | `MAINTANER.md`, `src/components/sections/SectionBody.jsx`, `src/hooks/models/` |
 | Appearance | Matching component `.scss`, then `src/styles/themes/` |
 | Deployment | `docs/DEPLOYMENT.md`, `.github/workflows/deploy.yml`, `vite.config.js`, `index.html` |
 | Priorities and decisions | `docs/PLAN.md`; history: `git log -5 --oneline` |
 | CI limits and checks | `scripts/budgets.json`, `scripts/check-*.mjs` |
 | Responsive photos | `docs/IMAGES.md`; regenerate with `npm run images:responsive` |
+| SEO, fonts/icons, browser CI, inquiries | `docs/STATIC_SITE.md` |
 | Learn or adapt from myWebsite | `docs/REFERENCE_MYWEBSITE.md`; compare matching source owners before porting |
 
 ## Work efficiently

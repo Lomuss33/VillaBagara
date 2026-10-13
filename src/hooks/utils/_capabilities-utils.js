@@ -16,7 +16,7 @@ export const _capabilitiesUtils = {
      * @param {Boolean} instant
      */
     scrollTo: (top, instant) => {
-        const behavior = instant ?
+        const behavior = instant || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?
             "instant" :
             "smooth"
 

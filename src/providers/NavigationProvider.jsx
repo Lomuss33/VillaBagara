@@ -4,7 +4,8 @@
  * @description This provider manages the navigation between sections and categories in the application.
  */
 
-import React, {createContext, useContext, useEffect, useState} from 'react'
+import React, {createContext, useContext, useEffect, useRef, useState} from 'react'
+import {focusSectionHeading} from "/src/hooks/navigationAccessibility.js"
 import {useLocation} from "/src/providers/LocationProvider.jsx"
 import {useLanguage} from "/src/providers/LanguageProvider.jsx"
 import {useConstants} from "/src/hooks/constants.js"
@@ -23,6 +24,8 @@ function NavigationProvider({ children, sections, categories }) {
     const viewport = useViewport()
     const utils = useUtils()
     const layout = useLayout()
+    const pendingFocusRef = useRef(null)
+    const initialLocationSyncedRef = useRef(false)
 
     const [didMount, setDidMount] = useState(false)
     const [transitionStatus, setTransitionStatus] = useState(NavigationProvider.TransitionStatus.NONE)
@@ -131,7 +134,7 @@ function NavigationProvider({ children, sections, categories }) {
         setTargetSection(transitionTarget)
         _updateLinks(transitionTarget, transitionTarget.category)
 
-        if(!transitionEnabled) {
+        if(!transitionEnabled || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
             setTransitionStatus(NavigationProvider.TransitionStatus.FINISHING)
             return
         }
@@ -250,6 +253,15 @@ function NavigationProvider({ children, sections, categories }) {
 
         const locationSection = location.getActiveSection()
         const safeLocationSection = _resolveSection(locationSection)
+        // Resolve the initial hash without moving focus away from the first Tab stop.
+        if(safeLocationSection && !initialLocationSyncedRef.current) {
+            initialLocationSyncedRef.current = true
+            if(targetSection?.id !== safeLocationSection.id) {
+                setTargetSection(safeLocationSection)
+                _updateLinks(safeLocationSection, safeLocationSection.category)
+            }
+            return
+        }
         setTransitionEnabled(Boolean(targetSection))
         if(safeLocationSection) {
             navigateToSection(safeLocationSection)
@@ -275,6 +287,10 @@ function NavigationProvider({ children, sections, categories }) {
         const safeSection = _resolveSection(section)
         if(!safeSection)
             return
+
+        if(targetSection) {
+            pendingFocusRef.current = {sectionId: safeSection.id, origin: document.activeElement}
+        }
 
         if(!nextSection) {
             if(targetSection?.id !== safeSection.id) setNextSection(safeSection)
@@ -315,6 +331,27 @@ function NavigationProvider({ children, sections, categories }) {
         return transitionStatus === NavigationProvider.TransitionStatus.RUNNING
     }
 
+    const focusPendingSection = (sectionId) => {
+        const request = pendingFocusRef.current
+        if(!request || request.sectionId !== sectionId || targetSection?.id !== sectionId ||
+            nextSection || scheduledNextSection || transitionStatus !== NavigationProvider.TransitionStatus.NONE ||
+            feedbacks.isBlockedByOverlay()) return
+
+        const active = document.activeElement
+        // Respect a visitor who moved focus while the page was changing.
+        if(active !== request.origin && active !== document.body && active !== document.documentElement) {
+            pendingFocusRef.current = null
+            return
+        }
+        if(focusSectionHeading(sectionId)) pendingFocusRef.current = null
+    }
+
+    useEffect(() => {
+        if(!targetSection) return
+        const title = language.getTranslation(targetSection.data?.title?.locales, 'title_short_nav')
+        document.title = 'Villa Bagara | ' + utils.string.stripHTMLTags(title)
+    }, [targetSection?.id, language.selectedLanguageId])
+
     const _updateLinks = (targetSection, targetCategory) => {
         const safeTargetSection = _resolveSection(targetSection)
         const safeTargetCategory = safeTargetSection?.category || targetCategory || null
@@ -346,7 +383,7 @@ function NavigationProvider({ children, sections, categories }) {
             if(mobileNavData.navHeaderElHeight) {
                 window.scrollTo({
                     top: mobileNavData.contentTop,
-                    behavior: "smooth"
+                    behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? "instant" : "smooth"
                 })
             }
         }
@@ -368,7 +405,8 @@ function NavigationProvider({ children, sections, categories }) {
             navigateToSection,
             navigateToSectionWithId,
             isTransitioning,
-            forceScrollToTop
+            forceScrollToTop,
+            focusPendingSection
         }}>
             {didMount && children}
         </NavigationContext.Provider>

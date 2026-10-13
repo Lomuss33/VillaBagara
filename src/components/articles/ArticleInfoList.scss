@@ -71,7 +71,7 @@ div.article-info-list-item {
 
     div.article-info-list-item-info-text {
         display: inline;
-        color: var(--theme-texts-light-2)!important;
+        color: var(--theme-texts)!important;
         margin-bottom: 0;
     }
 }
@@ -108,4 +108,79 @@ div.article-info-list-items-shrink {
         --grid-template-columns: repeat(1, 1fr);
         --grid-row-gap: 10px;
     }
+}
+
+div.article-info-list-items-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    @include media-breakpoint-down(xl) { grid-template-columns: minmax(0, 1fr); }
+}
+
+.article-info-list-items-cards .article-info-list-item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--theme-standard-borders);
+    border-radius: $standard-border-radius;
+    background: var(--theme-boards-background);
+    color: var(--theme-texts);
+    text-decoration: none;
+    transition: border-color 180ms ease, background-color 180ms ease;
+
+    &:is(:hover, :focus-visible) {
+        border-color: var(--theme-primary);
+        background: color-mix(in srgb, var(--theme-primary) 8%, var(--theme-boards-background));
+    }
+
+    .article-info-list-item-avatar {
+        flex: 0 0 56px;
+        min-width: 56px;
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+        color: var(--theme-primary) !important;
+        font-size: 24px !important;
+    }
+
+    .article-info-list-item-content {
+        flex: 1;
+        min-width: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .article-info-list-item-info-title {
+        margin-bottom: 6px;
+        color: var(--theme-texts-light);
+        font-weight: 600;
+    }
+
+    .article-info-list-item-info-body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .article-info-list-card-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: auto;
+        color: var(--theme-primary);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    @include media-breakpoint-down(xl) {
+        flex-direction: row;
+        .article-info-list-item-avatar { flex-basis: 56px; }
+    }
+
+    @include media-breakpoint-down(sm) { padding: 16px; gap: 12px; }
 }

@@ -8,14 +8,55 @@ nav.nav-link-pills {
     width: 100%;
     height: var(--nav-pills-height);
     background-color: var(--theme-card-background);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    @include media-breakpoint-down(sm) {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+
+        &.nav-link-pills-many-links {
+            --nav-pills-visible-count: 3;
+            grid-auto-columns: calc(100% / var(--nav-pills-visible-count));
+
+            @media (min-width: 312px) {
+                --nav-pills-visible-count: 4;
+            }
+
+            @media (min-width: 384px) {
+                --nav-pills-visible-count: 5;
+            }
+
+            @media (min-width: 456px) {
+                --nav-pills-visible-count: 6;
+            }
+
+            @media (min-width: 528px) {
+                --nav-pills-visible-count: 7;
+            }
+        }
+
+        > a.nav-link-pills-link {
+            min-width: 0;
+            scroll-snap-align: start;
+        }
+
+        &::-webkit-scrollbar { display: none; }
+    }
 }
 
-a.nav-link-pills-link {
+nav.nav-link-pills a.nav-link-pills-link {
     display: flex;
     justify-content: center;
     align-items: center;
 
     width: 100%;
+    min-width: 44px;
     height: 100%;
     padding: 5px;
     border: 0;
@@ -36,9 +77,19 @@ a.nav-link-pills-link {
         opacity: 0.6;
     }
 
-    @include media-breakpoint-down(sm) {
-        i {font-size: 1.05rem;}
-        span {display: none;}
+    @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
+        flex-direction: column;
+        gap: 3px;
+        i {font-size: 1.05rem; margin-right: 0;}
+        span {
+            max-width: 100%;
+            overflow: hidden;
+            font-size: 0.8rem;
+            line-height: 1.2;
+            opacity: 1;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     }
 }
 
@@ -59,7 +110,6 @@ a.nav-link-pills-link-active {
     background-color: var(--theme-mobile-nav-selected-background)!important;
     border-top-color: var(--theme-mobile-nav-selected-border);
     user-select: none;
-    pointer-events: none;
 
     i {
         color: var(--theme-mobile-nav-selected)!important;

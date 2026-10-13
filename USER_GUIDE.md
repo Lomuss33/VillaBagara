@@ -8,17 +8,26 @@ Maintainer and schema notes: [MAINTANER.md](./MAINTANER.md)
 
 This file explains the visible clickable controls in the website and what each one does. It is focused on the live interface, not the internal code structure.
 
+## Keyboard access
+
+- Press Tab to reveal **Skip to page content**, then Enter to move directly to the current page heading.
+- Tab and Shift+Tab move between links, tools and fields. Enter opens a page; Enter or Space activates a button.
+- Within section navigation, use Up/Down on the desktop list and Left/Right on phone links. Home/End reach the first/last link. Press Enter to open the focused page.
+- Enter/Space opens the language menu. Arrow keys select a language, Enter/Space chooses it, and Escape closes the menu.
+- Dialogs keep focus inside. Escape closes/cancels and returns to the control that opened the dialog. Photo collections also provide keyboard controls or a scrollable image stack.
+- Contact fields have visible labels; arrow keys edit the text normally. Browser zoom remains available.
+
 ## Main Navigation
 
 ### Sidebar and section links
 
 - Clicking a section link opens that section.
 - On desktop, the left sidebar is the main navigation.
-- On mobile, the current section links appear near the top and the category tabs appear at the bottom.
+- On mobile, all seven page links appear near the top; narrow phones use two rows with visible labels. Four shortcuts appear at the bottom.
 
 ### Mobile tabs
 
-- Bottom tabs provide shortcuts to First page, Stay, Services, and Story (translated into the selected language).
+- Bottom links provide shortcuts to Home, Stay, Services, and Story (translated into the selected language).
 - The mobile header provides additional section links. The floating contact button opens the contact section.
 
 ## Profile Area

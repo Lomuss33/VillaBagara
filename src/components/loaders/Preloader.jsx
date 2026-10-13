@@ -1,187 +1,103 @@
 import "./Preloader.scss"
 import React, {useEffect, useState} from 'react'
 import VillaBagaraLoaderScene from "/src/components/loaders/VillaBagaraLoaderScene.jsx"
-import {useScheduler} from "/src/hooks/scheduler.js"
 import {useUtils} from "/src/hooks/utils.js"
 import {useConstants} from "/src/hooks/constants.js"
 
 const PreloaderState = {
-    NONE:               { id: 0, key: "none" },
-    PREPARING:          { id: 1, key: "preparing" },
-    SHOWING:            { id: 2, key: "showing" },
-    SHOWN:              { id: 3, key: "shown" },
-    READY_TO_HIDE:      { id: 4, key: "readyToHide" },
-    HIDING:             { id: 5, key: "hiding" },
-    HIDDEN:             { id: 6, key: "hidden" },
+    PREPARING:          { id: 1 },
+    SHOWING:            { id: 2 },
+    HIDING:             { id: 3 },
+    HIDDEN:             { id: 4 },
 }
 
-function Preloader({ children, preloaderSettings }) {
-    const scheduler = useScheduler()
+const HIDE_TRANSITION_TIME_MS = 180
+const SHOW_DELAY_TIME_MS = 200
+
+function Preloader({ children, preloaderSettings, isReady = false }) {
     const utils = useUtils()
     const constants = useConstants()
+    const dom = utils.dom
+    const storage = utils.storage
+    const bodyAfterLoadingClass = constants.HTML_CLASSES.bodyAfterLoading
+    const stayOnPreloaderScreen = storage.getWindowVariable("stayOnThePreloaderScreen")
 
     const enabled = preloaderSettings?.enabled
     const title = preloaderSettings?.title || ""
     const subtitle = preloaderSettings?.subtitle || ""
 
-    const [state, setState] = useState(PreloaderState.NONE)
-    const [didLoadAllImages, setDidLoadAllImages] = useState(false)
+    const [state, setState] = useState(() => enabled ? PreloaderState.PREPARING : PreloaderState.HIDDEN)
 
-    const tag = "Preloader"
-    const minDisplayTime = 1000
-    const shouldShowPreloaderWindow = state.id > PreloaderState.NONE.id && state.id < PreloaderState.HIDDEN.id
-    const shouldShowContent = state.id >= PreloaderState.SHOWN.id
-    const shouldShowContentElements = state.id >= PreloaderState.SHOWING.id
-    const isHiding = state.id >= PreloaderState.HIDING.id
+    const shouldShowPreloaderWindow = state === PreloaderState.SHOWING || state === PreloaderState.HIDING
+    const shouldShowContentElements = shouldShowPreloaderWindow
+    const isHiding = state === PreloaderState.HIDING
 
-    /** @constructs **/
+    /** Keep the page inert and scroll-locked only while the overlay blocks it. **/
     useEffect(() => {
-        setState(PreloaderState.NONE)
-
-        if(!enabled) {
-            setState(PreloaderState.HIDDEN)
-            return
-        }
-
-        setState(PreloaderState.PREPARING)
-    }, [null])
-
-    /**
-     * @listens PreloaderState.PREPARING
-     */
-    useEffect(() => {
-        if(state !== PreloaderState.PREPARING || !didLoadAllImages)
-            return
-        utils.dom.setBodyScrollEnabled(false)
-        scheduler.clearAllWithTag(tag)
-        setState(PreloaderState.SHOWING)
-    }, [state === PreloaderState.PREPARING, didLoadAllImages])
+        dom.setBodyScrollEnabled(!shouldShowPreloaderWindow || isHiding)
+        if(!shouldShowPreloaderWindow)
+            document.body.classList.add(bodyAfterLoadingClass)
+    }, [shouldShowPreloaderWindow, isHiding, dom, bodyAfterLoadingClass])
 
     useEffect(() => {
         if(state !== PreloaderState.PREPARING)
             return
+        if(isReady && !stayOnPreloaderScreen) {
+            setState(PreloaderState.HIDDEN)
+            return
+        }
 
-        scheduler.clearAllWithTag(`${tag}-failsafe`)
-        scheduler.schedule(() => {
-            setDidLoadAllImages(true)
-        }, 1500, `${tag}-failsafe`)
-    }, [state === PreloaderState.PREPARING])
+        const timeoutId = window.setTimeout(() => setState(PreloaderState.SHOWING), SHOW_DELAY_TIME_MS)
+        return () => window.clearTimeout(timeoutId)
+    }, [state, isReady, stayOnPreloaderScreen])
 
-    /**
-     * @listens PreloaderState.SHOWING
-     */
     useEffect(() => {
-        if(state !== PreloaderState.SHOWING)
+        if(state !== PreloaderState.SHOWING || !isReady || stayOnPreloaderScreen)
             return
-        scheduler.clearAllWithTag(tag)
-        scheduler.schedule(() => {
-            setState(PreloaderState.SHOWN)
-        }, 1000, tag)
-    }, [state === PreloaderState.SHOWING])
+        setState(PreloaderState.HIDING)
+    }, [state, isReady, stayOnPreloaderScreen])
 
-    /**
-     * @listens PreloaderState.SHOWN
-     */
-    useEffect(() => {
-        if(state !== PreloaderState.SHOWN)
-            return
-        scheduler.clearAllWithTag(tag)
-        scheduler.schedule(() => {
-            setState(PreloaderState.READY_TO_HIDE)
-        }, minDisplayTime, tag)
-    }, [state === PreloaderState.SHOWN])
-
-    /**
-     * @listens PreloaderState.READY_TO_HIDE
-     */
-    useEffect(() => {
-        if(state !== PreloaderState.READY_TO_HIDE)
-            return
-        scheduler.clearAllWithTag(tag)
-
-        if(utils.storage.getWindowVariable("stayOnThePreloaderScreen"))
-            return
-
-        let timePassed = 0
-        scheduler.interval(() => {
-            timePassed += 0.1
-            const imageCount = utils.dom.getImageCount(constants.HTML_CLASSES.imageView)
-            const imageLoadPercentage = utils.dom.getImageLoadPercentage(constants.HTML_CLASSES.imageView)
-
-            const didLoadAllImages = imageLoadPercentage >= 100 && imageCount > 0 && timePassed >= 0.5
-            const noImagesFound = timePassed >= 4 && imageCount === 0
-            const didLoadEnoughTime = timePassed >= 5
-
-            if(didLoadAllImages || noImagesFound || didLoadEnoughTime) {
-                setState(PreloaderState.HIDING)
-            }
-        }, 100, tag)
-    }, [state === PreloaderState.READY_TO_HIDE])
-
-    /**
-     * @listens PreloaderState.HIDING
-     */
     useEffect(() => {
         if(state !== PreloaderState.HIDING)
             return
 
-        scheduler.clearAllWithTag(tag)
-        utils.dom.setBodyScrollEnabled(true)
-        scheduler.schedule(() => {
-            setState(PreloaderState.HIDDEN)
-        }, 500, tag)
-    }, [state === PreloaderState.HIDING])
-
-    /**
-     * @listens PreloaderState.HIDDEN
-     */
-    useEffect(() => {
-        if(state !== PreloaderState.HIDDEN)
-            return
-        scheduler.clearAllWithTag(tag)
-        scheduler.clearAllWithTag(`${tag}-failsafe`)
-        utils.dom.setBodyScrollEnabled(true)
-        document.body.classList.add(constants.HTML_CLASSES.bodyAfterLoading)
-    }, [state === PreloaderState.HIDDEN])
+        const timeoutId = window.setTimeout(() => setState(PreloaderState.HIDDEN), HIDE_TRANSITION_TIME_MS)
+        return () => window.clearTimeout(timeoutId)
+    }, [state])
 
     return (
         <div className={`preloader-content-wrapper`}>
             {shouldShowPreloaderWindow && (
                 <PreloaderWindow title={title}
                                  subtitle={subtitle}
-                                 setDidLoadAllImages={setDidLoadAllImages}
                                  showElements={shouldShowContentElements}
                                  isHiding={isHiding}/>
             )}
 
-            {shouldShowContent && (
-                <PreloaderContent>{children}</PreloaderContent>
-            )}
+            <PreloaderContent blocked={shouldShowPreloaderWindow}>{children}</PreloaderContent>
         </div>
     )
 }
 
-function PreloaderWindow({ title, subtitle, setDidLoadAllImages, showElements, isHiding }) {
+function PreloaderWindow({ title, subtitle, showElements, isHiding }) {
     const hiddenClass = isHiding ?
         `preloader-window-hidden` : ``
 
-    useEffect(() => {
-        setDidLoadAllImages(true)
-    }, [setDidLoadAllImages])
-
     return (
-        <div className={`preloader-window ${hiddenClass}`}>
+        <div className={`preloader-window ${hiddenClass}`} role="status" aria-live="polite"
+             aria-hidden={isHiding ? true : undefined} inert={isHiding ? "" : undefined}>
             <div className={`preloader-window-content ${showElements ? `` : `preloader-window-content-hidden`}`}>
                 <VillaBagaraLoaderScene title={title}
-                                        subtitle={subtitle}/>
+                                        subtitle={subtitle}
+                                        status="Preparing your stay"/>
             </div>
         </div>
     )
 }
 
-function PreloaderContent({ children }) {
+function PreloaderContent({ children, blocked }) {
     return (
-        <div className={`preloader-content`}>
+        <div className={`preloader-content`} inert={blocked ? "" : undefined} aria-hidden={blocked ? true : undefined}>
             {children}
         </div>
     )

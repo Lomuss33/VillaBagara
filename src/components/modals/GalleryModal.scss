@@ -2,7 +2,7 @@
 
 #gallery-modal {
     --header-size: 80px;
-    --padding-bottom: 36px;
+    --padding-bottom: 52px;
     --spacing: 5px;
     --min-swiper-height: calc(100vh - var(--header-size) - var(--padding-bottom) - var(--spacing));
 
@@ -73,6 +73,15 @@ div.gallery-modal-loading {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .swiper-pagination-bullet {
+        width: 44px;
+        height: 44px;
+        border: 2px solid var(--theme-texts);
+        background: var(--theme-card-background);
+        opacity: 1;
+        &-active { background: var(--theme-primary); }
     }
 
     // Size variants...

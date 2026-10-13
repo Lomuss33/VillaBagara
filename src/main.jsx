@@ -1,5 +1,5 @@
 import "/src/styles/app.scss"
-import {StrictMode, useEffect, useState} from 'react'
+import {StrictMode, useCallback, useEffect, useState} from 'react'
 import {createRoot} from 'react-dom/client'
 import {useConstants} from "/src/hooks/constants.js"
 import {useUtils} from "/src/hooks/utils.js"
@@ -14,6 +14,7 @@ import FeedbacksProvider from "/src/providers/FeedbacksProvider.jsx"
 import InputProvider from "/src/providers/InputProvider.jsx"
 import NavigationProvider from "/src/providers/NavigationProvider.jsx"
 import Portfolio from "/src/components/Portfolio.jsx"
+import {readPageRoute} from '/src/hooks/siteRoutes.js'
 
 /**
  * This is the main app component. It wraps the content of the app with AppEssentialsWrapper and AppCapabilitiesWrapper.
@@ -42,13 +43,18 @@ const AppEssentialsWrapper = ({children}) => {
 
     const [settings, setSettings] = useState(null)
     const [startupError, setStartupError] = useState("")
+    const [isDataReady, setIsDataReady] = useState(false)
+    const handleDataReady = useCallback(() => setIsDataReady(true), [])
 
     useEffect(() => {
         let isMounted = true
 
         const bootstrapApplication = async() => {
             const baseUrl = utils.file.BASE_URL || "/"
-            if(window.location.pathname !== baseUrl) {
+            const pageRoute = readPageRoute(window.location.pathname, baseUrl)
+            if(pageRoute && !window.location.hash) {
+                window.history.replaceState({}, '', `${window.location.pathname}${window.location.search}#${pageRoute.section}`)
+            } else if(!pageRoute && window.location.pathname !== baseUrl) {
                 window.history.replaceState({}, '', `${baseUrl}${window.location.search}${window.location.hash}`)
             }
 
@@ -127,10 +133,14 @@ const AppEssentialsWrapper = ({children}) => {
 
     return (
         <StrictMode>
-            <Preloader preloaderSettings={settings["preloaderSettings"]}>
+            <Preloader preloaderSettings={settings["preloaderSettings"]}
+                       isReady={isDataReady}>
                 <DataProvider settings={settings}
-                              loadingFallback={<StartupScreen title={"Villa Bagara"}
-                                                              message={"Preparing stay details..."} />}>
+                              onReady={handleDataReady}
+                              loadingFallback={settings["preloaderSettings"]?.enabled ? null : (
+                                  <StartupScreen title={"Villa Bagara"}
+                                                 message={"Preparing stay details..."}/>
+                              )}>
                     {children}
                 </DataProvider>
             </Preloader>
@@ -190,5 +200,22 @@ const AppCapabilitiesWrapper = ({ children }) => {
 
 const container = document.getElementById('root')
 if(container) {
+    const fallback = document.getElementById('static-content')
+    if(fallback) {
+        container.style.visibility = 'hidden'
+        container.inert = true
+        const reveal = () => {
+            container.style.visibility = ''
+            container.inert = false
+            fallback.remove()
+            observer.disconnect()
+        }
+        const observer = new MutationObserver(() => {
+            if(container.querySelector('.section-shown, [data-startup-error]')) reveal()
+        })
+        observer.observe(container, {childList: true, subtree: true, attributes: true, attributeFilter: ['class']})
+        // Preserve an actionable error view even if an unexpected boot failure occurs.
+        window.setTimeout(() => { if(fallback.isConnected) reveal() }, 15000)
+    }
     createRoot(container).render(<App/>)
 }

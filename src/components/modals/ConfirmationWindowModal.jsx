@@ -47,6 +47,7 @@ function ConfirmationWindowModal({ target, onDismiss }) {
                       className={`modal-md ${modalClass}`}
                       dialogClassName={modalDialogClass}
                       shouldDismiss={shouldDismiss}
+                      onRequestClose={_onClose}
                       onDismiss={onDismiss}>
             <ModalWrapperTitle title={title}
                                faIcon={faIcon}

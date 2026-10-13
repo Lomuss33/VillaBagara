@@ -8,6 +8,10 @@ yarn-error.log
 dist/
 build/
 .vite/
+playwright-report/
+test-results/
+lighthouse-report/
+.lighthouseci/
 
 # Environment variables
 .env

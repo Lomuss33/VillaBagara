@@ -2,7 +2,8 @@ import "./GalleryModal.scss"
 import React, {useEffect, useState} from 'react'
 import {ModalWrapper, ModalWrapperTitle, ModalWrapperBody} from "/src/components/modals/base/ModalWrapper"
 import { Swiper, SwiperSlide } from 'swiper/react'
-import {Pagination} from "swiper/modules"
+import {A11y, Pagination} from "swiper/modules"
+import {useLanguage} from "/src/providers/LanguageProvider.jsx"
 import {useUtils} from "/src/hooks/utils.js"
 import {useViewport} from "/src/providers/ViewportProvider.jsx"
 import {useScheduler} from "/src/hooks/scheduler.js"
@@ -71,17 +72,19 @@ function GalleryModal({ target, onDismiss }) {
                       onDismiss={onDismiss}>
             <ModalWrapperTitle title={title}
                                faIcon={`fa-regular fa-image`}
-                               onClose={_onClose} tooltip={"hidden"}/>
+                               onClose={_onClose}/>
 
             <ModalWrapperBody className={`gallery-modal-body`}>
                 {parameters.direction === "horizontal" && (
                     <GalleryModalSwiper className={visibilityClassName}
                                         images={images}
+                                        title={title}
                                         type={parameters.suffix}/>
                 )}
 
                 {parameters.direction === "vertical" && (
                     <GalleryModalImageStack className={visibilityClassName}
+                                            title={title}
                                             images={images}/>
                 )}
 
@@ -93,30 +96,65 @@ function GalleryModal({ target, onDismiss }) {
     )
 }
 
-function GalleryModalSwiper({ className, images, type }) {
+function GalleryModalSwiper({ className, images, type, title }) {
     const utils = useUtils()
+    const language = useLanguage()
+    const [swiper, setSwiper] = useState(null)
+    const [index, setIndex] = useState(0)
+    const [edges, setEdges] = useState({beginning: true, end: true})
+    const syncEdges = instance => setEdges(previous => {
+        const next = {beginning: instance.isBeginning, end: instance.isEnd}
+        return previous.beginning === next.beginning && previous.end === next.end ? previous : next
+    })
+    const photoLabel = key => language.getString("photo_position")
+        .replace('{title}', utils.string.stripHTMLTags(title || language.getString("gallery")))
+        .replace('{x}', key + 1).replace('{total}', images.length)
 
     return (
+        <>
+        {images.length > 1 && (
+            <div className="gallery-keyboard-controls">
+                <button type="button" onClick={() => {if(swiper && !swiper.isBeginning) swiper.slidePrev()}} aria-disabled={!swiper || edges.beginning}
+                        aria-label={language.getString("previous_photo")}>
+                    <i className="fa-solid fa-chevron-left" aria-hidden="true"/>
+                </button>
+                <span role="status" aria-live="polite" aria-atomic="true">
+                    {language.getString("gallery_position").replace('{x}', index + 1).replace('{total}', images.length)}
+                </span>
+                <button type="button" onClick={() => {if(swiper && !swiper.isEnd) swiper.slideNext()}} aria-disabled={!swiper || edges.end}
+                        aria-label={language.getString("next_photo")}>
+                    <i className="fa-solid fa-chevron-right" aria-hidden="true"/>
+                </button>
+            </div>
+        )}
         <Swiper slidesPerView={"auto"}
+                speed={window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 0 : 300}
+                onSwiper={instance => {setSwiper(instance); syncEdges(instance)}}
+                onSlideChange={instance => {setIndex(instance.activeIndex); syncEdges(instance)}}
+                onResize={syncEdges}
+                onUpdate={syncEdges}
+                a11y={{enabled: true, paginationBulletMessage: language.getString("gallery_position").replace('{x}', '{{index}}').replace('{total}', images.length)}}
                 direction={"horizontal"}
                 spaceBetween={15}
                 pagination={{ clickable: true }}
-                modules={[Pagination]}
+                modules={[Pagination, A11y]}
                 className={`gallery-swiper gallery-swiper-${type} ${className}`}>
             {images.map((image, key) => (
                 <SwiperSlide key={key}
                              className={`gallery-swiper-slide`}>
                     <img className={`swiper-image`}
-                         alt={`img-` + key}
+                         alt={photoLabel(key)}
                          src={utils.file.resolvePath(image)}/>
                 </SwiperSlide>
             ))}
         </Swiper>
+        </>
     )
 }
 
-function GalleryModalImageStack({ className, images }) {
+function GalleryModalImageStack({ className, images, title }) {
     const utils = useUtils()
+    const language = useLanguage()
 
     return (
         <div className={`gallery-modal-image-stack ${className}`}>
@@ -124,7 +162,9 @@ function GalleryModalImageStack({ className, images }) {
                 <div key={key}
                      className={`gallery-modal-image-stack-item`}>
                     <img className={`swiper-image`}
-                         alt={`img-` + key}
+                         alt={language.getString("photo_position")
+                             .replace('{title}', utils.string.stripHTMLTags(title || language.getString("gallery")))
+                             .replace('{x}', key + 1).replace('{total}', images.length)}
                          src={utils.file.resolvePath(image)}/>
                 </div>
             ))}
@@ -133,9 +173,10 @@ function GalleryModalImageStack({ className, images }) {
 }
 
 function GalleryModalSpinner() {
+    const language = useLanguage()
     return (
         <div className={`gallery-modal-spinner`}>
-            <Spinner/>
+            <Spinner role="status"><span className="visually-hidden">{language.getString("loading")}</span></Spinner>
         </div>
     )
 }

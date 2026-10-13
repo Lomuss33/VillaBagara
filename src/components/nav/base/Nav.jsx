@@ -1,47 +1,28 @@
-import React, {useEffect, useState} from 'react'
-import {useScheduler} from "/src/hooks/scheduler.js"
-import {useConstants} from "/src/hooks/constants.js"
+import React from 'react'
 import {useNavigation} from "/src/providers/NavigationProvider.jsx"
+import {navigationFocusIndex} from "/src/hooks/navigationAccessibility.js"
 
-function Nav({ links, itemComponent, id = null, className = "", tag, data = {} }) {
-    const scheduler = useScheduler()
-    const constants = useConstants()
+function Nav({ links, itemComponent: Component, id = null, className = "", data = {}, ariaLabel,
+    orientation = "horizontal" }) {
     const navigation = useNavigation()
-
-    const [clickedLink, setClickedLink] = useState(null)
-
-    const _isActive = (link) => {
-        const isClickedLinkAvailable = links.find(link => link.id === clickedLink?.id)
-        if(clickedLink && isClickedLinkAvailable)
-            return clickedLink.id === link.id
-        return link.active
-    }
-
-    const _onLinkClicked = (link) => {
-        setClickedLink(link)
-
-        const changeTag = "nav-change-" + tag
-        scheduler.clearAllWithTag(changeTag)
-        navigation.navigateToSectionWithLink(link.href)
-
-        scheduler.schedule(() => {
-            setClickedLink(null)
-        }, constants.SECTION_TRANSITION_TOTAL_TIME + 400, changeTag)
+    const onKeyDown = event => {
+        if(event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey)
+            return
+        const controls = [...event.currentTarget.querySelectorAll('[data-navigation-link]')]
+            .filter(link => link.getClientRects().length && !link.closest('[inert]') && link.getAttribute('aria-disabled') !== 'true')
+        const index = controls.indexOf(event.target)
+        const nextIndex = navigationFocusIndex(event.key, orientation, index, controls.length)
+        if(nextIndex === null) return
+        event.preventDefault()
+        controls[nextIndex].focus()
     }
 
     return (
-        <nav className={`nav-base ${className}`}
-             id={id}>
-            {links.map((link, key) => {
-                const Component = itemComponent
-                return (
-                    <Component key={key}
-                               link={link}
-                               active={_isActive(link)}
-                               data={data}
-                               onClick={() => { _onLinkClicked(link) }}/>
-                )
-            })}
+        <nav className={'nav-base ' + className} id={id} aria-label={ariaLabel} onKeyDown={onKeyDown}>
+            {links.map(link => (
+                <Component key={link.id} link={link} active={link.active} data={data}
+                           onClick={() => navigation.navigateToSectionWithLink(link.href)}/>
+            ))}
         </nav>
     )
 }

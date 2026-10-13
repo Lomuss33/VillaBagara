@@ -1,5 +1,5 @@
 import "./Textarea.scss"
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useId, useState} from 'react'
 import InputFieldWrapper from "/src/components/forms/base/InputFieldWrapper.jsx"
 import {useUtils} from "/src/hooks/utils.js"
 
@@ -14,15 +14,21 @@ function TextArea({
    maxLength = 2048
 }) {
     const utils = useUtils()
+    const generatedId = useId()
+    const fieldId = id || generatedId
 
     const [isFocused, setIsFocused] = useState(false)
     const placeholderFull = `${placeholder}${utils.string.if(required, " *")}`
     const focusClass = utils.string.if(isFocused, "form-textarea-focused")
 
     return (
+        <div className="form-field">
+        <label className="form-field-label" htmlFor={fieldId}>
+            {placeholder}{required && <span aria-hidden="true"> *</span>}
+        </label>
         <InputFieldWrapper isFocused={isFocused}>
             <textarea className={`form-control form-textarea ${focusClass} ${className}`}
-                      id={id}
+                      id={fieldId}
                       name={name}
                       value={model}
                       placeholder={placeholderFull}
@@ -32,6 +38,7 @@ function TextArea({
                       onFocus={(e) => { setIsFocused(true) }}
                       onBlur={(e) => { setIsFocused(false) }}/>
         </InputFieldWrapper>
+        </div>
     )
 }
 

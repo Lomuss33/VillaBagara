@@ -14,7 +14,7 @@ function CopyButton({ text = "", buttonClassName = "" }) {
 
     const [didCopy, setDidCopy] = useState(false)
     const [forceReset, setForceReset] = useState(0)
-    const [uniqueId, setUniqueId] = useState(utils.string.generateUniqueRandomString("audio-button-"))
+    const [uniqueId, setUniqueId] = useState(utils.string.generateUniqueRandomString("copy-button-"))
 
     const isTouchScreen = utils.device.isTouchDevice()
     const tooltipText = language.getString(didCopy ? "copied_to_clipboard" : "copy_to_clipboard")
@@ -50,10 +50,13 @@ function CopyButton({ text = "", buttonClassName = "" }) {
                                 targetId={uniqueId}/>
 
             <button className={`copy-button`}
+                    type="button"
+                    aria-label={utils.string.stripHTMLTags(language.getString("copy_to_clipboard")) + ': ' + text}
                     id={uniqueId}
                     onClick={_onClick}>
-                <i className={`${faIcon}`}/>
+                <i className={`${faIcon}`} aria-hidden="true"/>
             </button>
+            <span className="visually-hidden" role="status">{didCopy ? language.getString("copied_to_clipboard") : ""}</span>
         </div>
     )
 }

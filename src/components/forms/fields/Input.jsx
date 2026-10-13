@@ -1,5 +1,5 @@
 import "./Input.scss"
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useId, useState} from 'react'
 import InputFieldWrapper from "/src/components/forms/base/InputFieldWrapper.jsx"
 import {useUtils} from "/src/hooks/utils.js"
 
@@ -16,16 +16,22 @@ function Input({
     maxLength = 128
 }) {
     const utils = useUtils()
+    const generatedId = useId()
+    const fieldId = id || generatedId
 
     const [isFocused, setIsFocused] = useState(false)
     const placeholderFull = `${placeholder}${utils.string.if(required, " *")}`
     const focusClass = utils.string.if(isFocused, "form-input-focused")
 
     return (
+        <div className="form-field">
+        <label className="form-field-label" htmlFor={fieldId}>
+            {placeholder}{required && <span aria-hidden="true"> *</span>}
+        </label>
         <InputFieldWrapper isFocused={isFocused}
                            faIconPrefix={faIconPrefix}>
             <input className={`form-control form-input ${focusClass} ${className}`}
-                   id={id}
+                   id={fieldId}
                    type={type}
                    name={name}
                    value={model}
@@ -36,6 +42,7 @@ function Input({
                    onFocus={(e) => { setIsFocused(true) }}
                    onBlur={(e) => { setIsFocused(false) }}/>
         </InputFieldWrapper>
+        </div>
     )
 }
 

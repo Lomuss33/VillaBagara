@@ -35,6 +35,7 @@ function NavProfileCard({ profile, expanded, stackName = false }) {
 
     const roles = language.getTranslation(profile.locales, "roles", [])
     const staticRoleLine = roles.join(" - ")
+    const statusActionLabel = navigation.sectionLinks.find(link => link.id === "contact")?.label
 
     const statusCircleVisible = Boolean(profile.statusCircleVisible)
     const statusCircleVariant = statusCircleVisible ? profile.statusCircleVariant : ""
@@ -119,9 +120,10 @@ function NavProfileCard({ profile, expanded, stackName = false }) {
             <div className="nav-profile-card-info" ref={infoRef}>
                 <h1 className={`nav-profile-card-name ${navProfileCardNameClass} ${canStackName ? "nav-profile-card-name-stacked" : ""}`}
                     ref={nameRef}
+                    aria-label={localizedName}
                     style={canStackName ? undefined : { "--nav-profile-card-name-scale": nameScale }}>
                     {shouldShowCompactEmoji ? (
-                        <span className="nav-profile-card-name-emoji" aria-label={localizedName} title={localizedName}>🏡🌄🏕️</span>
+                        <span className="nav-profile-card-name-emoji" aria-hidden="true" title={localizedName}>🏡🌄🏕️</span>
                     ) : canStackName ? (
                         <>
                             <span className="nav-profile-card-name-line">
@@ -138,11 +140,13 @@ function NavProfileCard({ profile, expanded, stackName = false }) {
                                         message={statusCircleHoverMessage}
                                         size={statusCircleSize}
                                         onClick={_onStatusBadgeClicked}
+                                        ariaLabel={statusActionLabel}
                                     />
                                 )}
 
                                 {namePronunciationButtonVisible && (
                                     <AudioButton
+                                        ariaLabel={language.getString("play_name_pronunciation").replace('{name}', localizedName)}
                                         url={namePronunciationAudioUrl}
                                         tooltip={namePronunciationIpa}
                                         size={AudioButton.Sizes.DYNAMIC_FOR_NAV_TITLE}
@@ -161,11 +165,13 @@ function NavProfileCard({ profile, expanded, stackName = false }) {
                                     message={statusCircleHoverMessage}
                                     size={statusCircleSize}
                                     onClick={_onStatusBadgeClicked}
+                                    ariaLabel={statusActionLabel}
                                 />
                             )}
 
                             {namePronunciationButtonVisible && (
                                 <AudioButton
+                                    ariaLabel={language.getString("play_name_pronunciation").replace('{name}', localizedName)}
                                     url={namePronunciationAudioUrl}
                                     tooltip={namePronunciationIpa}
                                     size={AudioButton.Sizes.DYNAMIC_FOR_NAV_TITLE}

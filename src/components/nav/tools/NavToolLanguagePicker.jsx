@@ -15,6 +15,7 @@ function NavToolLanguagePicker() {
         return {
             id: lang.id,
             label: lang.name,
+            lang: lang.id,
             img: utils.file.resolvePath(lang.flagUrl)
         }
     })
@@ -33,6 +34,9 @@ function NavToolLanguagePicker() {
                                     options={options}
                                     selectedOptionId={selectedLanguage?.id}
                                     onOptionSelected={_onOptionSelected}
+                                    label={language.getString("select_language") + ': ' + (selectedLanguage?.name || '')}
+                                    selectionMenu={true}
+                                    showSelectedOptionOnDropdown={true}
                                     tooltipLabel={language.getString("select_language")}/>
             )}
         </>

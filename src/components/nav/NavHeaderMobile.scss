@@ -1,6 +1,6 @@
 @import "/src/styles/extend.scss";
 
-nav.nav-header-mobile {
+header.nav-header-mobile {
     width: 100%;
     position: relative;
 
@@ -14,16 +14,17 @@ nav.nav-header-mobile {
         border-bottom-right-radius: 0;
     }
 
-    div.left-tool-container, div.right-tool-container {
-        position: absolute;
-        top: 10px;
+    .nav-header-mobile-tools {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 8px;
+        min-height: 44px;
     }
 
-    div.left-tool-container {
-        left: 5px;
-    }
-
-    div.right-tool-container {
-        right: 5px;
+    div.nav-profile-card h1.nav-profile-card-name {
+        transform: none;
+        flex-wrap: wrap;
+        white-space: normal;
     }
 }

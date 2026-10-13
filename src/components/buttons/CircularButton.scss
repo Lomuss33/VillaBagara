@@ -72,22 +72,24 @@ button.circular-button-variant-blend, button.circular-button-variant-transparent
 
 /** Sizes **/
 @mixin create_size($class-name, $size, $responsive-size) {
+    $target-size: max(44px, $size);
+    $responsive-target-size: max(44px, $responsive-size);
     .#{$class-name} {
-        width: $size;
-        height: $size;
-        min-width: $size;
-        max-width: $size;
-        min-height: $size;
-        max-height: $size;
+        width: $target-size;
+        height: $target-size;
+        min-width: $target-size;
+        max-width: $target-size;
+        min-height: $target-size;
+        max-height: $target-size;
         font-size: calc(#{$size}/2.5);
 
         @include media-breakpoint-down($max-breakpoint-for-tabbed-interface) {
-            width: $responsive-size;
-            height: $responsive-size;
-            min-width: $responsive-size;
-            max-width: $responsive-size;
-            min-height: $responsive-size;
-            max-height: $responsive-size;
+            width: $responsive-target-size;
+            height: $responsive-target-size;
+            min-width: $responsive-target-size;
+            max-width: $responsive-target-size;
+            min-height: $responsive-target-size;
+            max-height: $responsive-target-size;
             font-size: calc(#{$responsive-size}/2.5);
         }
     }

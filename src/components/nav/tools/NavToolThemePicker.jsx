@@ -21,6 +21,7 @@ function NavToolThemePicker() {
             faIcon: theme.icon
         }
     })
+    const nextOption = options[(options.findIndex(option => option.id === selectedTheme?.id) + 1) % options.length]
 
     const _onOptionSelected = (optionId) => {
         const targetTheme = availableThemes.find(theme => theme.id === optionId)
@@ -36,6 +37,8 @@ function NavToolThemePicker() {
                                     options={options}
                                     selectedOptionId={selectedTheme?.id}
                                     onOptionSelected={_onOptionSelected}
+                                    label={nextOption ? language.getString("theme_switch_to").replace('{x}', nextOption.label) : tooltipLabel}
+                                    selectionMenu={true}
                                     tooltipLabel={tooltipLabel}
                                     showSelectedOptionOnDropdown={true}/>
             )}

@@ -7,6 +7,7 @@
 import React, {createContext, useContext, useEffect, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 import {useConstants} from "/src/hooks/constants.js"
+import {readPageRoute, syncPageAddress} from '/src/hooks/siteRoutes.js'
 
 function LanguageProvider({ children, supportedLanguages, defaultLanguageId, appStrings, selectedThemeId }) {
     const constants = useConstants()
@@ -31,6 +32,12 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
         }
 
         // Load the preferred language from local storage.
+        const pageRoute = readPageRoute(window.location.pathname, utils.file.BASE_URL)
+        const explicitLanguage = pageRoute && (pageRoute.language || document.documentElement.dataset.pageLanguage)
+        if(explicitLanguage) {
+            setSelectedLanguageId(explicitLanguage)
+            return
+        }
         const savedLanguageId = utils.storage.getPreferredLanguage()
         const savedLanguage = allLanguages.find(lang => lang.id === savedLanguageId)
         if(savedLanguage) {
@@ -47,7 +54,11 @@ function LanguageProvider({ children, supportedLanguages, defaultLanguageId, app
     useEffect(() => {
         if(!selectedLanguageId)
             return
+        document.documentElement.lang = selectedLanguageId
         utils.storage.setPreferredLanguage(selectedLanguageId)
+        const route = readPageRoute(window.location.pathname, utils.file.BASE_URL)
+        const section = window.location.hash.slice(1) || route?.section || 'home'
+        syncPageAddress(section, selectedLanguageId, utils.file.BASE_URL)
     }, [selectedLanguageId])
 
     const getSelectedLanguage = () => {

@@ -7,12 +7,10 @@ import NavProfileCard from "/src/components/nav/partials/NavProfileCard.jsx"
 import NavLinkList from "/src/components/nav/partials/NavLinkList.jsx"
 import NavToolList from "/src/components/nav/partials/NavToolList.jsx"
 import NavToolShrinkToggle from "/src/components/nav/tools/NavToolShrinkToggle.jsx"
-import {useInput} from "/src/providers/InputProvider.jsx"
 
 function NavSidebar({ profile, links }) {
     const constants = useConstants()
     const viewport = useViewport()
-    const input = useInput()
 
     const [expandedOption, setExpandedOption] = useState(true)
 
@@ -22,17 +20,8 @@ function NavSidebar({ profile, links }) {
         `` :
         `nav-sidebar-shrink`
 
-    useEffect(() => {
-        if(shouldForceShrink)
-            return
-
-        const keyId = input.lastKeyPressed.id
-        if(keyId === "ArrowLeft") setExpandedOption(false)
-        else if(keyId === "ArrowRight") setExpandedOption(true)
-    }, [input.lastKeyPressed])
-
     return (
-        <nav className={`nav-sidebar ${constants.HTML_CLASSES.scrollbarDecorator} ${shrinkClass}`}>
+        <aside className={`nav-sidebar ${constants.HTML_CLASSES.scrollbarDecorator} ${shrinkClass}`}>
             <Card className={`nav-sidebar-card-wrapper`}>
                 {!shouldForceShrink && (
                     <NavToolShrinkToggle expanded={expandedOption}
@@ -48,7 +37,7 @@ function NavSidebar({ profile, links }) {
 
                 <NavToolList expanded={expanded}/>
             </Card>
-        </nav>
+        </aside>
     )
 }
 

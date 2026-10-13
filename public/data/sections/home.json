@@ -3,25 +3,25 @@
     "locales": {
       "en": {
         "title_short": "Home",
-        "title_short_nav": "Your home tomorrow",
+        "title_short_nav": "Home",
         "title_long_prefix": "Arrive at",
         "title_long": "{{Villa Bagara}}"
       },
       "de": {
         "title_short": "Home",
-        "title_short_nav": "Ihr Zuhause morgen",
+        "title_short_nav": "Startseite",
         "title_long_prefix": "Willkommen in",
         "title_long": "{{Villa Bagara}}"
       },
       "hr": {
         "title_short": "Početna",
-        "title_short_nav": "Vaš dom sutra",
+        "title_short_nav": "Početna",
         "title_long_prefix": "Dobrodošli u",
         "title_long": "{{Villu Bagara}}"
       },
       "tr": {
         "title_short": "Ana sayfa",
-        "title_short_nav": "Yarınki eviniz",
+        "title_short_nav": "Ana sayfa",
         "title_long_prefix": "",
         "title_long": "{{Villa Bagara}}'ya hoş geldiniz"
       }
@@ -52,38 +52,218 @@
       "items": [
         {
           "id": 1,
-          "img": "images/villa_bagara/estate/front-porch.webp",
           "locales": {
             "en": {
-              "text": "Villa Bagara is positioned as a quiet mountain estate for guests who want privacy, beauty, and enough land around them to feel released from ordinary pace. It is not built around noise. It is built around atmosphere, long mornings, open air, and a sense of arrival."
+              "text": "Villa Bagara is positioned as a quiet mountain estate for guests who want privacy, beauty, and enough land around them to feel released from ordinary pace. It is not built around noise. It is built around atmosphere, long mornings, open air, and a sense of arrival.",
+              "title": "Terrain around the villa"
             },
             "de": {
-              "text": "Villa Bagara ist als ruhiges Berganwesen für Gäste gedacht, die Privatsphäre, Schönheit und genug Land um sich herum suchen, um aus dem gewöhnlichen Tempo auszusteigen. Es ist kein Ort für Lärm. Es ist ein Ort für Atmosphäre, lange Morgen, frische Luft und ein echtes Ankommen."
+              "text": "Villa Bagara ist als ruhiges Berganwesen für Gäste gedacht, die Privatsphäre, Schönheit und genug Land um sich herum suchen, um aus dem gewöhnlichen Tempo auszusteigen. Es ist kein Ort für Lärm. Es ist ein Ort für Atmosphäre, lange Morgen, frische Luft und ein echtes Ankommen.",
+              "title": "Gelände rund um die Villa"
             },
             "hr": {
-              "text": "Villa Bagara zamišljena je kao mirno planinsko imanje za goste koji traže privatnost, ljepotu i dovoljno prostora oko sebe da izađu iz običnog ritma. Nije građena oko buke. Građena je oko ugođaja, dugih jutara, svježeg zraka i osjećaja dolaska."
+              "text": "Villa Bagara zamišljena je kao mirno planinsko imanje za goste koji traže privatnost, ljepotu i dovoljno prostora oko sebe da izađu iz običnog ritma. Nije građena oko buke. Građena je oko ugođaja, dugih jutara, svježeg zraka i osjećaja dolaska.",
+              "title": "Teren oko vile"
             },
             "tr": {
-              "text": "Villa Bagara; mahremiyet, güzellik ve günlük hızdan kopmaya yetecek kadar geniş arazi isteyen misafirler için kurgulanmış sakin bir dağ mülküdür. Gürültü üzerine kurulmamıştır. Atmosfer, uzun sabahlar, açık hava ve gerçekten varmış olma hissi üzerine kuruludur."
+              "text": "Villa Bagara; mahremiyet, güzellik ve günlük hızdan kopmaya yetecek kadar geniş arazi isteyen misafirler için kurgulanmış sakin bir dağ mülküdür. Gürültü üzerine kurulmamıştır. Atmosfer, uzun sabahlar, açık hava ve gerçekten varmış olma hissi üzerine kuruludur.",
+              "title": "Villanın çevresindeki arazi"
             }
+          },
+          "map": {
+            "type": "topographic",
+            "latitude": 43.62781223741581,
+            "longitude": 17.205783017756797,
+            "zoom": 12,
+            "minZoom": 6,
+            "maxZoom": 13,
+      "tileUrl": "https://a.tile.opentopomap.org/{z}/{x}/{y}.png",
+      "publicMapUrl": "https://en-gb.topographic-map.com/world/"
           }
         },
         {
           "id": 2,
-          "img": "images/villa_bagara/landscape/midena.jpg",
           "locales": {
             "en": {
-              "text": "The landscape around the estate adds the second half of the experience: high ground, weather, silence, walking routes, and the feeling that the day can open slowly. It suits couples, families, founders, and private groups who want nature without giving up intention."
+              "text": "The landscape around the estate adds the second half of the experience: high ground, weather, silence, walking routes, and the feeling that the day can open slowly. It suits couples, families, founders, and private groups who want nature without giving up intention.",
+              "title": "Bioclimatic zones"
             },
             "de": {
-              "text": "Die Landschaft rund um das Anwesen bildet die zweite Hälfte des Erlebnisses: Höhe, Wetter, Stille, Spazierwege und das Gefühl, dass der Tag langsam aufgehen darf. Es passt zu Paaren, Familien, Gründern und privaten Gruppen, die Natur suchen, ohne auf Anspruch zu verzichten."
+              "text": "Die Landschaft rund um das Anwesen bildet die zweite Hälfte des Erlebnisses: Höhe, Wetter, Stille, Spazierwege und das Gefühl, dass der Tag langsam aufgehen darf. Es passt zu Paaren, Familien, Gründern und privaten Gruppen, die Natur suchen, ohne auf Anspruch zu verzichten.",
+              "title": "Bioklimatische Zonen"
             },
             "hr": {
-              "text": "Krajolik oko imanja daje drugu polovicu doživljaja: visinu, vrijeme, tišinu, rute za hodanje i osjećaj da se dan može otvoriti polako. Odgovara parovima, obiteljima, poduzetnicima i privatnim grupama koje žele prirodu bez odricanja od promišljenosti."
+              "text": "Krajolik oko imanja daje drugu polovicu doživljaja: visinu, vrijeme, tišinu, rute za hodanje i osjećaj da se dan može otvoriti polako. Odgovara parovima, obiteljima, poduzetnicima i privatnim grupama koje žele prirodu bez odricanja od promišljenosti.",
+              "title": "Bioklimatske zone"
             },
             "tr": {
-              "text": "Mülkün çevresindeki manzara deneyimin ikinci yarısını oluşturur: yüksek plato, hava, sessizlik, yürüyüş rotaları ve günün yavaşça açılabildiği bir his. Doğayı arayan ama özen duygusundan vazgeçmek istemeyen çiftler, aileler, kurucular ve özel gruplar için uygundur."
+              "text": "Mülkün çevresindeki manzara deneyimin ikinci yarısını oluşturur: yüksek plato, hava, sessizlik, yürüyüş rotaları ve günün yavaşça açılabildiği bir his. Doğayı arayan ama özen duygusundan vazgeçmek istemeyen çiftler, aileler, kurucular ve özel gruplar için uygundur.",
+              "title": "Biyoiklim bölgeleri"
             }
+          },
+          "map": {
+            "type": "climate",
+            "latitude": 43.62781223741581,
+            "longitude": 17.205783017756797,
+      "zoom": 6,
+            "minZoom": 6,
+            "maxZoom": 10,
+            "imageWidth": 2048,
+            "imageHeight": 1024,
+            "imagesByZoom": {
+              "6": "images/villa_bagara/maps/climate/zoom-6.png",
+              "7": "images/villa_bagara/maps/climate/zoom-7.png",
+              "8": "images/villa_bagara/maps/climate/zoom-8.png",
+              "9": "images/villa_bagara/maps/climate/zoom-9.png",
+              "10": "images/villa_bagara/maps/climate/zoom-10.png"
+            },
+            "legend": [
+              {
+                "code": "Csa",
+                "color": "#ffff00",
+                "locales": {
+                  "en": {
+                    "label": "Mediterranean · hot summer"
+                  },
+                  "de": {
+                    "label": "Mediterran · heißer Sommer"
+                  },
+                  "hr": {
+                    "label": "Sredozemna · vruća ljeta"
+                  },
+                  "tr": {
+                    "label": "Akdeniz · sıcak yaz"
+                  }
+                }
+              },
+              {
+                "code": "Csb",
+                "color": "#c8c800",
+                "locales": {
+                  "en": {
+                    "label": "Mediterranean · warm summer"
+                  },
+                  "de": {
+                    "label": "Mediterran · warmer Sommer"
+                  },
+                  "hr": {
+                    "label": "Sredozemna · topla ljeta"
+                  },
+                  "tr": {
+                    "label": "Akdeniz · ılık yaz"
+                  }
+                }
+              },
+              {
+                "code": "Cfa",
+                "color": "#c8ff50",
+                "locales": {
+                  "en": {
+                    "label": "Humid · hot summer"
+                  },
+                  "de": {
+                    "label": "Feucht · heißer Sommer"
+                  },
+                  "hr": {
+                    "label": "Vlažna · vruća ljeta"
+                  },
+                  "tr": {
+                    "label": "Nemli · sıcak yaz"
+                  }
+                }
+              },
+              {
+                "code": "Cfb",
+                "color": "#64ff50",
+                "locales": {
+                  "en": {
+                    "label": "Humid · warm summer"
+                  },
+                  "de": {
+                    "label": "Feucht · warmer Sommer"
+                  },
+                  "hr": {
+                    "label": "Vlažna · topla ljeta"
+                  },
+                  "tr": {
+                    "label": "Nemli · ılık yaz"
+                  }
+                }
+              },
+              {
+                "code": "Dfa",
+                "color": "#00ffff",
+                "locales": {
+                  "en": {
+                    "label": "Continental · hot summer"
+                  },
+                  "de": {
+                    "label": "Kontinental · heißer Sommer"
+                  },
+                  "hr": {
+                    "label": "Kontinentalna · vruća ljeta"
+                  },
+                  "tr": {
+                    "label": "Karasal · sıcak yaz"
+                  }
+                }
+              },
+              {
+                "code": "Dfb",
+                "color": "#37c8ff",
+                "locales": {
+                  "en": {
+                    "label": "Continental · warm summer"
+                  },
+                  "de": {
+                    "label": "Kontinental · warmer Sommer"
+                  },
+                  "hr": {
+                    "label": "Kontinentalna · topla ljeta"
+                  },
+                  "tr": {
+                    "label": "Karasal · ılık yaz"
+                  }
+                }
+              },
+              {
+                "code": "Dfc",
+                "color": "#007d7d",
+                "locales": {
+                  "en": {
+                    "label": "Continental · cool summer"
+                  },
+                  "de": {
+                    "label": "Kontinental · kühler Sommer"
+                  },
+                  "hr": {
+                    "label": "Kontinentalna · svježa ljeta"
+                  },
+                  "tr": {
+                    "label": "Karasal · serin yaz"
+                  }
+                }
+              },
+              {
+                "code": "ET",
+                "color": "#b2b2b2",
+                "locales": {
+                  "en": {
+                    "label": "Alpine / tundra"
+                  },
+                  "de": {
+                    "label": "Alpin / Tundra"
+                  },
+                  "hr": {
+                    "label": "Planinska / tundra"
+                  },
+                  "tr": {
+                    "label": "Alpin / tundra"
+                  }
+                }
+              }
+            ],
+            "caption": "Köppen–Geiger · 1991–2020 · ~1 km"
           }
         }
       ]
@@ -107,7 +287,8 @@
       },
       "settings": {
         "order_items_by": "id",
-        "order_items_sort": "asc"
+        "order_items_sort": "asc",
+        "layout": "grid"
       },
       "items": [
         {
@@ -140,7 +321,7 @@
         },
         {
           "id": 2,
-          "faIcon": "fa-solid fa-wifi-slash",
+          "faIcon": "fa-solid fa-leaf",
           "faIconColors": {
             "bg": "#151b20",
             "bgLight": "#eaf4fb",
@@ -229,7 +410,8 @@
       "component": "ArticleInfoList",
       "settings": {
         "order_items_by": "id",
-        "order_items_sort": "asc"
+        "order_items_sort": "asc",
+        "layout": "cards"
       },
       "locales": {
         "en": {
@@ -358,4 +540,3 @@
     }
   ]
 }
-

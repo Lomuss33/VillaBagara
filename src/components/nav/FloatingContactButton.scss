@@ -13,10 +13,7 @@ a.floating-contact-button {
     padding: 0.8rem 1.05rem;
     border-radius: 999px;
     border: 1px solid color-mix(in srgb, var(--theme-primary) 55%, transparent);
-    background:
-        linear-gradient(135deg,
-            color-mix(in srgb, var(--theme-primary) 88%, white 12%),
-            color-mix(in srgb, var(--theme-primary) 72%, black 28%));
+    background: var(--theme-primary);
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
     color: var(--theme-texts-inv);
     text-decoration: none;
@@ -48,14 +45,24 @@ a.floating-contact-button {
 }
 
 a.floating-contact-button-active {
-    background:
-        linear-gradient(135deg,
-            color-mix(in srgb, var(--theme-primary) 100%, white 0%),
-            color-mix(in srgb, var(--theme-primary) 78%, black 22%));
+    background: var(--theme-primary);
+    border-color: var(--theme-texts);
 }
 
 a.floating-contact-button-with-offset {
     bottom: calc(#{$nav-tabs-height-with-offset} + var(--default-card-spacing) + 0.65rem);
+}
+
+@include media-breakpoint-down(sm) {
+    a.floating-contact-button {
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        padding: 0;
+
+        // The link already has a localized accessible name.
+        span { display: none; }
+    }
 }
 
 @include media-breakpoint-up($max-breakpoint-for-tabbed-interface) {

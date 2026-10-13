@@ -1,5 +1,5 @@
 import "./ArticleContactForm.scss"
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import {useApi} from "/src/hooks/api.js"
 import {useConstants} from "/src/hooks/constants.js"
 import {useData} from "/src/providers/DataProvider.jsx"
@@ -67,6 +67,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
     const [fieldsBundle, setFieldsBundle] = useState(null)
     const [validationError, setValidationError] = useState(null)
     const [status, setStatus] = useState(windowStatus || ArticleContactForm.Status.WAITING_FOR_SUBMISSION)
+    const submitting = useRef(false)
 
     const name = fieldsBundle?.name
     const email = fieldsBundle?.email
@@ -84,7 +85,6 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
 
         switch (status) {
             case ArticleContactForm.Status.WAITING_FOR_SUBMISSION:
-                form?.reset()
                 utils.storage.setWindowVariable(id, null)
                 utils.storage.setWindowVariable(id + "-email", null)
                 setShouldHideTitle(false)
@@ -104,11 +104,9 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
     }
 
     const _onSubmit = async (e) => {
-        if(status !== ArticleContactForm.Status.WAITING_FOR_SUBMISSION)
-            return
-
         e.preventDefault && e.preventDefault()
         e.stopPropagation && e.stopPropagation()
+        if(submitting.current || status !== ArticleContactForm.Status.WAITING_FOR_SUBMISSION) return
         navigation.forceScrollToTop()
 
         const apiValidation = api.validators.validateEmailRequest(name, email, subject, message)
@@ -122,12 +120,14 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
         }
 
         setValidationError(null)
+        submitting.current = true
         setStatus(ArticleContactForm.Status.SUBMITTING)
         feedbacks.setActivitySpinnerVisible(true, dataWrapper.uniqueId, language.getString("sending_message"))
 
         const fakeEmailRequests = utils.storage.getWindowVariable("fakeEmailRequests") || false
 
-        let apiResponse
+        let apiResponse = {success: false}
+        try {
         if(!fakeEmailRequests) {
             apiResponse = await api.handlers.sendEmailRequest(
                 apiValidation.bundle,
@@ -139,20 +139,20 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
         else {
             apiResponse = await api.handlers.dummyRequest()
         }
-
-        feedbacks.setActivitySpinnerVisible(false, dataWrapper.uniqueId)
-        _onApiResponse(apiResponse?.success)
+        } catch {
+            apiResponse = {success: false}
+        } finally {
+            submitting.current = false
+            feedbacks.setActivitySpinnerVisible(false, dataWrapper.uniqueId)
+        }
+        _onApiResponse(apiResponse)
 
     }
 
-    const _onApiResponse = (success) => {
-        if(!success) {
+    const _onApiResponse = (response) => {
+        if(!response?.success) {
             setStatus(ArticleContactForm.Status.WAITING_FOR_SUBMISSION)
-            feedbacks.displayNotification(
-                language.getString("error"),
-                language.getString(constants.ErrorCodes.MESSAGE_SUBMIT_FAILED),
-                "error"
-            )
+            setValidationError({errorCode: response?.reason === 'timeout' ? 'contact_send_unconfirmed' : constants.ErrorCodes.MESSAGE_SUBMIT_FAILED})
         }
         else {
             setStatus(ArticleContactForm.Status.SUBMITTED)
@@ -161,6 +161,7 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
 
     return (
         <RowForm id={id}
+                 busy={status === ArticleContactForm.Status.SUBMITTING}
                  onSubmit={_onSubmit}>
             {validationError && (
                 <RowFormGroupAlert variant={"danger"}
@@ -171,6 +172,11 @@ function ArticleContactFormContent({ dataWrapper, selectedItemCategoryId, setSho
                 <ArticleContactFormContentFields onInput={setFieldsBundle}
                                                  didSubmit={didSubmit}/>
             )}
+            <RowFormGroup className="col-12 contact-fallback">
+                <p>{language.getString('contact_alternative')}</p>
+                <a href={`mailto:contact@lovro-music.de?subject=${encodeURIComponent(subject || 'Villa Bagara stay inquiry')}&body=${encodeURIComponent(message || '')}`}>{language.getString('contact_email_direct')}</a>
+                {' · '}<a href="https://wa.me/4917662236934" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </RowFormGroup>
 
             {didSubmit && (
                 <ArticleContactFormSuccessMessage dataWrapper={dataWrapper}

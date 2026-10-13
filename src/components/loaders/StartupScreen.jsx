@@ -7,13 +7,10 @@ function StartupScreen({ title = "Villa Bagara", message = "Loading...", errorMe
     const loaderTitle = title.includes("<") ? title : `${title.split(" ")[0] || "Villa"} <b>${title.split(" ").slice(1).join(" ") || "Bagara"}</b>`
 
     return (
-        <div className={`startup-screen`}>
-            <div className={`startup-screen-card`}>
-                <VillaBagaraLoaderScene title={loaderTitle}/>
-
-                <p className={`startup-screen-message`}>
-                    {isError ? errorMessage : message}
-                </p>
+        <div className={`startup-screen`} data-startup-error={isError ? '' : undefined}>
+            <div className="startup-screen-content">
+                <VillaBagaraLoaderScene title={loaderTitle}
+                                        status={isError ? errorMessage : message}/>
             </div>
         </div>
     )

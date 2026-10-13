@@ -15,6 +15,9 @@ function NavToolShrinkToggle({ expanded, setExpanded }) {
 
     return (
         <CircularButton onClick={() => { setExpanded(!expanded) }}
+                        ariaLabel={language.getString(expanded ? "navigation_collapse" : "navigation_expand")}
+                        aria-expanded={expanded}
+                        aria-controls="villa-primary-navigation"
                         faIcon={faIcon}
                         size={size}
                         variant={CircularButton.Variants.BLEND}

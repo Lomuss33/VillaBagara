@@ -75,17 +75,18 @@ const handlers = {
      * @return {Promise<{success: boolean}>}
      */
     sendEmailRequest: async (validationBundle, publicKey, serviceId, templateId) => {
-        emailjs.init(publicKey)
-
-        const response = {success: false}
-
+        if(!publicKey || !serviceId || !templateId) return {success: false, reason: 'configuration'}
+        let timeout
         try {
-            const result = await emailjs.send(serviceId, templateId, validationBundle)
-            response.success = result.status === 200
+            const result = await Promise.race([
+                emailjs.send(serviceId, templateId, validationBundle, {publicKey}),
+                new Promise((_, reject) => { timeout = window.setTimeout(() => reject(new Error('timeout')), 30000) })
+            ])
+            return {success: result.status === 200, status: result.status}
         } catch (error) {
-            response.success = false
+            return {success: false, reason: error?.message === 'timeout' ? 'timeout' : 'provider', status: error?.status}
+        } finally {
+            window.clearTimeout(timeout)
         }
-
-        return response
     }
 }

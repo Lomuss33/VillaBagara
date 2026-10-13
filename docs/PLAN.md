@@ -1,6 +1,6 @@
 # Delivery and agent documentation plan
 
-Goal: reliable GitHub Pages hosting and fast agent onboarding with small, accurate context. Publish at `https://lomuss33.github.io/VillaBagara/`.
+Goal: reliable GitHub Pages hosting, useful static guest pages, and fast agent onboarding with small, accurate context. Publish at `https://lomuss33.github.io/VillaBagara/`. The 2026-10-13 completion release implements static HTML, asset trimming, browser CI, guest FAQs and inquiry fallbacks; see [STATIC_SITE.md](STATIC_SITE.md).
 
 ## Delivery stages
 
@@ -12,7 +12,7 @@ Goal: reliable GitHub Pages hosting and fast agent onboarding with small, accura
 | 4. Improve performance | WebP estate image and responsive derivatives in `public/images/`; manifest/candidates in `ImageView`; limits in `scripts/budgets.json` | PNG to full WebP: 85% smaller. The 480px candidate is 57,832 bytes (89% below full WebP); 960px is 222,674 bytes. Gallery keeps full resolution; production JS/CSS stays below 270 KB gzip. See `docs/IMAGES.md` |
 | 5. Maintain | CI checks documentation links, agent word limits, content, metadata, and payload budgets; Dependabot checks npm/actions weekly | Passing CI and dated handoff evidence; updates receive review before merge |
 
-Stages 1, 2, and 4 are complete: the release is published and live desktop/mobile checks pass. Maintenance checks and weekly update proposals are configured. External contact delivery requires owner verification; keyboard/accessibility work is the next engineering priority described in `docs/REFERENCE_MYWEBSITE.md`.
+Stages 1, 2, and 4 are complete: the release is published and live desktop/mobile checks pass. Maintenance checks and weekly update proposals are configured. External contact delivery requires owner verification. Keyboard navigation is implemented locally; its contract and verification procedure are in [ACCESSIBILITY.md](ACCESSIBILITY.md).
 
 ## Small documentation system
 
@@ -24,6 +24,7 @@ Stages 1, 2, and 4 are complete: the release is published and live desktop/mobil
 | `docs/DEPLOYMENT.md` | Pages setup, exact preview steps, rollback | Read when touching hosting or release configuration |
 | `docs/REFERENCE_MYWEBSITE.md` | Reference capabilities, owners, compatibility, proposed improvements | Read when adapting a myWebsite feature; recheck owning source before implementation |
 | `docs/IMAGES.md` | Responsive assets, regeneration and validation | Read only for image or image-loading changes |
+| `docs/ACCESSIBILITY.md` | Keyboard controls, focus, dialogs, motion and verification | Read for navigation and accessibility changes |
 | `MAINTANER.md` / `USER_GUIDE.md` | Existing schema details / visible UI behavior | Read only for the relevant implementation or interface task |
 | Git commits and PR descriptions | Durable change history and review evidence | Consult scoped history; keep transcripts and raw logs out of agent context |
 
@@ -35,7 +36,7 @@ The [reference guide](REFERENCE_MYWEBSITE.md) records the 2026-10-12 comparison 
 
 | Order | Work | Acceptance |
 | --- | --- | --- |
-| 1 | Named, keyboard-reachable compact navigation and language/theme tools | Localized names, focus and native control behavior; desktop/mobile navigation retain correct hashes |
+| 1 | Keyboard navigation implemented locally | Seven named routes, native tools, skip link, heading focus, clear form labels, dialog focus/return, reduced motion and zoom; see `docs/ACCESSIBILITY.md` |
 | 2 | Responsive thumbnail variants complete | Cold Home uses 57,832 bytes; gallery tiles share one full-resolution download. Both bases, cached navigation, resizing and 390px layout pass; JS/CSS is 244,927 bytes gzip |
 | 3 | Viewport, scrolling, overlay and animation lifecycle | Navigation agrees after resize; contact stays reachable; modal dismissal and pause/resume preserve interaction; reduced motion works |
 | 4 | Configurable guest photo/text blocks, then content-backed filters/location/decoration | Four locales/two themes reflow; keyboard/touch pass; performance remains within current budgets |
@@ -44,10 +45,12 @@ Preserve Villa's gallery, contact shortcut, hiking loader, seven routes and loca
 
 ## Decisions and performance guardrails
 
-- Keep Vite/React and hash routing: no hosting backend or routing migration is needed.
+- Keep Vite/React and hash compatibility; generate real localized HTML routes at build time. No hosting backend is needed. Static pages, sitemap, metadata and asset generation share the active JSON source.
 - Use official Pages artifacts: build once, validate that output, then publish it. PRs receive no deployment permissions.
 - Use progressive reading: one short entry point, one current handoff, and task-specific detail. Target under 700 words for the two startup documents; token counts vary by model.
 - Documentation lives outside `public/` and application imports, so these documents add no browser payload. Checks run only during development/CI and add no runtime library.
 - `scripts/budgets.json` makes the context and production size limits executable; `npm run check:docs` is the fast path for documentation-only work.
 - For content-only tasks, inspect the relevant JSON and run its checks. For code/dependency changes, run the full check once and verify affected interactions. Repeat only after new changes or failures.
 - Record compressed JS/CSS and image transfer sizes before performance changes. Investigate increases above 10% against that baseline; compare loading and interaction behavior rather than relying on bundle size alone.
+- Current completion baseline: JS/CSS about 226 KB gzip, font subsets 70,164 bytes, share JPEG 312,072 bytes (91% below PNG). Browser/axe and Lighthouse gates precede deployment; reports stay in Actions for seven days. Timings initially warn while accessibility, SEO and layout-shift thresholds fail on regressions.
+- Publish the already-tested loader, map and keyboard improvements with this release. Owner approved the gallery and authorized one inquiry to `contact@lovro-music.de`. Provider acceptance and inbox delivery are separate checks. Only owner-supplied address, capacity, amenities and arrival policies may become guest facts.

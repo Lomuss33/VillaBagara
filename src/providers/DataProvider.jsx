@@ -7,7 +7,7 @@
 import React, {createContext, useContext, useEffect, useState} from 'react'
 import {useUtils} from "/src/hooks/utils.js"
 
-function DataProvider({ children, settings, loadingFallback = null }) {
+function DataProvider({ children, settings, loadingFallback = null, onReady = null }) {
     const utils = useUtils()
 
     const DataProviderStatus = {
@@ -73,6 +73,11 @@ function DataProvider({ children, settings, loadingFallback = null }) {
 
         setStatus(DataProviderStatus.STATUS_EVALUATED)
     }, [status === DataProviderStatus.STATUS_LOADED])
+
+    useEffect(() => {
+        if(status === DataProviderStatus.STATUS_EVALUATED || status === DataProviderStatus.STATUS_FAILED)
+            onReady?.()
+    }, [status, onReady])
 
     const _loadData = async () => {
         const [jStrings, jProfile, jCategories, jSections] = await Promise.all([

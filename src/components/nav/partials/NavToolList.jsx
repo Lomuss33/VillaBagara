@@ -39,7 +39,7 @@ function NavToolList({ expanded }) {
         widgets.slice(maxWidgets - 1)
 
     return (
-        <div className={`nav-tools ${shrinkClass}`}>
+        <div className={`nav-tools ${shrinkClass}`} role="group" aria-label={language.getString("navigation_settings")}>
             {visibleWidgets.map((item, key) => (
                 <div className={`nav-tools-item`}
                      key={key}>
