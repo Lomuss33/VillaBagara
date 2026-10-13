@@ -22,9 +22,9 @@
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
         "@fortawesome/fontawesome-free": "^6.6.0",
-        "bootstrap": "^5.3.3",
+        "bootstrap": "^5.3.8",
         "react": "^18.3.1",
-        "react-bootstrap": "^2.10.4",
+        "react-bootstrap": "^2.10.10",
         "react-dom": "^18.3.1",
         "smooth-scrollbar": "^8.8.4",
         "swiper": "^12.2.0"
@@ -39,9 +39,9 @@
         "eslint": "^9.9.0",
         "eslint-plugin-react": "^7.35.0",
         "eslint-plugin-react-hooks": "^5.1.0-rc.0",
-        "eslint-plugin-react-refresh": "^0.4.9",
+        "eslint-plugin-react-refresh": "^0.5.7",
         "globals": "^15.9.0",
-        "sass-embedded": "^1.78.0",
+        "sass-embedded": "^1.105.1",
         "vite": "^6.3.5"
     }
 }
