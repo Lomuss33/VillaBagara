@@ -20,6 +20,7 @@ Updated: 2026-10-13. Use Git history for older changes.
 - Release: 26 browser tests pass; live desktop and 390/320px checks pass without missing local assets or overflow.
 - Initial Lighthouse: SEO 100, accessibility 96–98, median performance 93, CLS below 0.05. One cold Home run scored 71; reports retain that outlier.
 
-## Next / owner inputs
+## Deferred tasks
 
-One authorized live email attempt returned HTTP 400: service `myWebsite` not found; no message accepted/retried. Owner must supply working EmailJS settings plus exact address, guest capacity, amenities and check-in/out policies. Do not invent facts or claim inbox delivery.
+- EmailJS delivery is deferred at the owner's request (2026-10-13). One authorized attempt returned HTTP 400: service `myWebsite` not found; no message accepted/retried. Keep email drafts enabled. Resume only when requested; follow [the checklist](STATIC_SITE.md#deferred-emailjs-task).
+- Property details remain unknown. Omit unsupported address, capacity, amenities and arrival times; guests can ask the host. Add verified facts later.

@@ -37,3 +37,13 @@ The single authorized live test on 2026-10-13 returned HTTP 400: configured serv
 Single-commit pushes changing only the root guides or `docs/*.md` run the fast documentation check without rebuilding/deploying the unchanged app. PRs, multi-commit pushes and application/public/workflow changes retain full release gates. `scripts/check-ci-scope.mjs` owns this conservative rule.
 
 Only send a real inquiry after explicit recipient authorization, once, with test data. Record the provider result and ask the recipient to confirm arrival. Property address, capacity, amenities and arrival policies require owner-supplied facts; keep unsupported values out of public copy. Owner approved the existing gallery on 2026-10-13. Guest FAQs explain how to obtain confirmations.
+
+## Deferred EmailJS task
+
+Deferred by the owner on 2026-10-13. Skip provider setup and further live tests during other work; email drafts, direct email and WhatsApp remain available.
+
+- [ ] When the owner requests resuming, obtain the current service ID, template ID and public key from their EmailJS dashboard.
+- [ ] Update `public/data/sections/contact.json` and verify template fields and recipient configuration; do not commit private credentials.
+- [ ] Run the required content/code checks and mocked browser flows. Keep `delivery_mode` as `email-draft` until delivery is verified.
+- [ ] Obtain authorization for one new, clearly labeled test to the intended recipient; record provider acceptance separately from confirmed inbox receipt.
+- [ ] After successful delivery, enable `emailjs`, run release checks, deploy and verify the live form. Update this checklist and `STATE.md`.
